@@ -25,6 +25,46 @@ For audit clarity, the manuscript treats two logically distinct obligations.
 The second item is not a restatement of the first.
 It is an extension/closure problem requiring additional uniform control.
 
+\subsection*{Local-to-global transfer principle for \texorpdfstring{$\mathcal{B}$}{B} (open theorem target)}
+This subsection isolates the missing closure bridge between Stage~5 local uniqueness and Stage~6 full-strip exclusion.
+It is recorded as a theorem target only.
+
+\paragraph{Local versus global in the present manuscript.}
+Write
+\[
+\mathcal{B}:=\{s\in\mathcal{A}_{\mathrm{strip}}:\Phi_H(s)=0\},\qquad
+\mathcal{A}_{\mathrm{strip}}:=\{s\in\mathcal{A}:0<\RePart(s)<1\}.
+\]
+``Local'' means the declared Stage-5 regime $\mathcal{R}_{\mathrm{loc}}\subseteq\mathcal{A}_{\mathrm{strip}}$ where uniqueness estimates are assumed/proved.
+``Global'' means the full admissible strip class $\mathcal{A}_{\mathrm{strip}}$, including boundary-near, non-perturbative, and large-parameter sectors not automatically covered by $\mathcal{R}_{\mathrm{loc}}$.
+
+\paragraph{Transfer theorem target (closure bridge; not proved).}
+The needed bridge can be stated in the following audit form:
+\begin{quote}
+Under a synchronized hypothesis package $\mathcal{H}_{\mathrm{tr}}$, if Stage-5 local uniqueness holds on $\mathcal{R}_{\mathrm{loc}}$, then every $s\in\mathcal{B}\cap\mathcal{A}_{\mathrm{strip}}$ satisfies $\RePart(s)=\tfrac12$.
+\end{quote}
+Equivalently, under $\mathcal{H}_{\mathrm{tr}}$ there is no off-line connected component of $\mathcal{B}$ that is disjoint from the local regime where uniqueness is established.
+
+\paragraph{What must be transferred.}
+For closure, $\mathcal{H}_{\mathrm{tr}}$ must carry all of the following from local to global:
+\begin{enumerate}
+  \item local uniqueness on/near $\RePart(s)=\tfrac12$;
+  \item local exclusion of off-line balanced points in $\mathcal{R}_{\mathrm{loc}}$;
+  \item continuation/compactness/uniformity control needed to extend estimates through the full strip class;
+  \item prevention of hidden off-line components of $\mathcal{B}$ outside $\mathcal{R}_{\mathrm{loc}}$.
+\end{enumerate}
+
+\paragraph{Likely hypothesis classes (model not fixed).}
+Without selecting a finalized operator realization, a viable transfer target will likely need:
+\begin{enumerate}
+  \item admissibility stability across local and global regimes;
+  \item compatibility of local estimates with the full admissible strip class;
+  \item continuation/compactness/uniformity hypotheses preventing loss of control outside $\mathcal{R}_{\mathrm{loc}}$;
+  \item no-loss symmetry compatibility under reflection/conjugation transport;
+  \item explicit exclusion of new alternative-locus branches appearing only outside local control.
+\end{enumerate}
+These remain open assumptions/targets in this manuscript version.
+
 \subsection*{No-alternative-locus principle for the balanced set \texorpdfstring{$\mathcal{B}$}{B} (theorem target)}
 This subsection isolates a distinct Stage~6 theorem target.
 It does not assert a proved theorem.

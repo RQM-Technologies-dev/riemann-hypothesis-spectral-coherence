@@ -89,7 +89,8 @@ Core bridge names synchronized with manuscript text:
 
 **What would count as resolution:**
 - A global contradiction or global structural theorem that covers every \(s\) with \(0<\Re(s)<1\), \(\Re(s)\neq 1/2\), under one synchronized hypothesis package, with the mechanism class stated explicitly (e.g., coercive gap, positivity/monotonicity, rigidity, or reflection-incompatibility).
-- An explicit local-to-global transfer theorem (or equivalent closure argument) from the Stage-5 regime to full-strip applicability.
+- An explicit local-to-global transfer theorem target for the balanced set \(\mathcal{B}\): local Stage-5 uniqueness on a declared \(\mathcal{R}_{\mathrm{loc}}\) extends to the full admissible strip class \(\mathcal{A}_{\mathrm{strip}}\) under synchronized hypotheses.
+- The transfer target must state concrete closure hypotheses: admissibility stability across regimes, compatibility of local estimates with the full admissible class, continuation/compactness/uniformity control, no-loss symmetry compatibility, and prevention of hidden off-line branches outside the local regime.
 - Explicit treatment of parameter ranges where hidden assumptions often occur (large imaginary part, boundary-near behavior).
 - A proof that does not rely on unproved regularity assumptions.
 

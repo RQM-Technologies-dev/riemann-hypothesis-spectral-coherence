@@ -33,6 +33,12 @@ denote the balanced set under a finalized $H/\Phi_H$ package.
 Under an explicit hypothesis set $\mathcal{H}_B$ (admissibility synchronization, symmetry compatibility, and analytic-control/rigidity ingredients), one aims to prove:
 \begin{enumerate}
   \item \textbf{Local critical-line uniqueness target:} every balanced point in the local regime $\mathcal{R}_{\mathrm{loc}}\subseteq\mathcal{A}$ covered by $\mathcal{H}_B$ satisfies $\RePart(s)=\tfrac12$.
+  \item \textbf{Local-to-global transfer target (closure bridge):} there exists a theorem-level extension principle, stated under an explicit synchronized hypothesis package $\mathcal{H}_{\mathrm{tr}}$, that transports the Stage-5 local uniqueness conclusion from $\mathcal{R}_{\mathrm{loc}}$ to all regimes used in the reduction.
+  The transfer target must explicitly control boundary-near, non-perturbative, and large-parameter regions in
+  \[
+  \mathcal{A}_{\mathrm{strip}}:=\{s\in\mathcal{A}:0<\RePart(s)<1\},
+  \]
+  and must exclude hidden off-line balanced branches that could appear only outside $\mathcal{R}_{\mathrm{loc}}$.
   \item \textbf{Global no-alternative-locus target:} in the full admissible strip class
   \[
   \mathcal{A}_{\mathrm{strip}}:=\{s\in\mathcal{A}:0<\RePart(s)<1\},
@@ -45,7 +51,7 @@ Under an explicit hypothesis set $\mathcal{H}_B$ (admissibility synchronization,
     \item disconnected off-line balanced components;
     \item regime-specific off-line loci that may appear only outside $\mathcal{R}_{\mathrm{loc}}$ unless globally excluded.
   \end{enumerate}
-  \item \textbf{Contradiction compatibility target:} any assumed off-line balanced point $s_\ast\in\mathcal{A}_{\mathrm{strip}}$ with $\RePart(s_\ast)\neq\tfrac12$ must contradict at least one ingredient of the same synchronized hypothesis package used for localization and global exclusion.
+  \item \textbf{Contradiction compatibility target:} any assumed off-line balanced point $s_\ast\in\mathcal{A}_{\mathrm{strip}}$ with $\RePart(s_\ast)\neq\tfrac12$ must contradict at least one ingredient of the same synchronized hypothesis package used for local uniqueness, transfer, and global exclusion.
 \end{enumerate}
 Equivalent formulation target:
 \[
