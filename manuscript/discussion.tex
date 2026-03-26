@@ -1,0 +1,72 @@
+We discuss the relationship between the proposed framework and prior work, note
+the significance of the approach if successful, and identify questions for future
+investigation.
+
+\subsection{Relationship to the Hilbert--Pólya Conjecture}
+
+The Hilbert--Pólya conjecture proposes that the imaginary parts of the nontrivial
+zeros of $\zeta$ are eigenvalues of a self-adjoint operator. A self-adjoint
+operator on a Hilbert space has a real spectrum, so the conjecture, if realized,
+would immediately imply that zeros lie on the critical line (since $s = \tfrac{1}{2} + it$
+with $t$ real corresponds to $\Re(s) = \tfrac{1}{2}$).
+
+The present approach does not directly construct a Hilbert--Pólya operator.
+Instead, it proposes a balance interpretation in which zeros correspond to
+cancellation states. If the spectral coherence operator $H$ of \S4 can be
+shown to be self-adjoint, the two approaches may converge.
+
+\gap{The relationship between $H$ and any Hilbert--Pólya operator is currently
+unclear and should be investigated.}
+
+\subsection{Relationship to Connes's Approach}
+
+Connes~\cite{Connes1999} constructs a spectral realization of the zeros of $\zeta$
+using a noncommutative space built from the adele ring and the action of the idele
+class group. His approach produces a trace formula analogous to Selberg's, in which
+the zeros appear as spectral data.
+
+The present approach is more elementary in its foundational machinery, relying on
+the functional equation directly rather than on adelic harmonic analysis. Whether
+the present framework can be embedded into or derived from Connes's construction
+is an open question.
+
+\subsection{Relationship to Random Matrix Theory}
+
+The Montgomery--Odlyzko law~\cite{Montgomery1973, Odlyzko1987} describes the
+pair correlation of zeros of $\zeta$ as matching the GUE (Gaussian Unitary Ensemble)
+statistics of random Hermitian matrices. This provides strong evidence for the
+existence of a Hilbert--Pólya operator and for RH, but does not constitute a proof.
+
+The proposed spectral-coherence framework does not directly predict or use the
+GUE statistics. It would be interesting to determine whether the balance criterion
+has implications for the distribution of zeros along the critical line.
+
+\subsection{Potential Significance}
+
+If the proposed framework can be made rigorous — specifically, if the spectral
+operator $H$ can be fully defined and the correspondence and uniqueness conjectures
+proved — the result would constitute a proof of the Riemann Hypothesis. Such a
+proof would have implications for:
+\begin{itemize}
+  \item The distribution of prime numbers (via the explicit formula relating zeros
+        of $\zeta$ to primes).
+  \item Numerous conjectures in analytic number theory that are known to follow
+        from RH.
+  \item The theoretical foundations of random matrix theory as applied to number theory.
+\end{itemize}
+
+These potential implications are noted here for context, not as motivation for
+overstating the current state of the work.
+
+\subsection{Open Questions for Future Investigation}
+
+\begin{enumerate}
+  \item Can $H$ be constructed as a self-adjoint operator, and if so, does this
+        give a proof of the Hilbert--Pólya conjecture as a corollary?
+  \item Is the balance criterion equivalent to any known analytic condition on
+        $\zeta$?
+  \item Does the framework generalize to $L$-functions, where the analogs of RH
+        are also open?
+  \item Are there computable consequences of the balance criterion that could be
+        tested numerically?
+\end{enumerate}

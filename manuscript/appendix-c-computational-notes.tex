@@ -1,0 +1,42 @@
+This appendix describes the computational support for the manuscript. The code
+and notebooks in \texttt{code/} are provided to visualize and explore the
+proposed spectral-coherence structure numerically. Computational results are
+illustrative and do not substitute for formal proofs.
+
+\subsection{What the Code Does}
+
+\begin{itemize}
+  \item \texttt{code/notebooks/spectral-visualization.ipynb}: Plots the magnitude
+        and phase of $\zeta(s)$ along and near the critical line. Visualizes the
+        reflection symmetry $s \mapsto 1-s$.
+  \item \texttt{code/notebooks/critical-line-geometry.ipynb}: Plots the critical
+        line and the placement of known nontrivial zeros. Illustrates the geometric
+        intuition of the balance framework.
+  \item \texttt{code/src/placeholder.py}: Placeholder module with utility functions
+        for computing $\zeta(s)$ numerically (using the \texttt{mpmath} library
+        for high-precision arithmetic).
+\end{itemize}
+
+\subsection{Numerical Limitations}
+
+All numerical computations of $\zeta(s)$ are approximate. The known zeros have
+been computed to many decimal places by other researchers (see \cite{Odlyzko1987,
+PlattTrudgian2021}), and the code in this repository does not aim to extend the
+numerical verification of RH. Rather, it supports visual understanding of the
+framework.
+
+No claim in the manuscript relies on the output of these computations.
+
+\subsection{Reproducing the Computations}
+
+To reproduce the notebooks:
+
+\begin{enumerate}
+  \item Install Python 3.9 or later with the packages listed in
+        \texttt{code/README.md}.
+  \item Navigate to \texttt{code/notebooks/} and launch Jupyter:
+        \texttt{jupyter notebook}.
+  \item Run all cells in order.
+\end{enumerate}
+
+See \texttt{code/README.md} for full instructions.

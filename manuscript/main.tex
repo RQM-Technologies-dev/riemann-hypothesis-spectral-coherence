@@ -1,0 +1,175 @@
+\documentclass[12pt, a4paper]{article}
+
+% ===== Encoding and fonts =====
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+
+% ===== Mathematics =====
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{mathtools}
+\usepackage{thmtools}
+
+% ===== Geometry =====
+\usepackage[
+  top=2.5cm,
+  bottom=2.5cm,
+  left=3cm,
+  right=3cm
+]{geometry}
+
+% ===== References and links =====
+\usepackage[
+  backend=biber,
+  style=alphabetic,
+  sorting=nyt,
+  maxnames=4
+]{biblatex}
+\addbibresource{references.bib}
+
+\usepackage[
+  colorlinks=true,
+  linkcolor=blue!60!black,
+  citecolor=green!50!black,
+  urlcolor=blue!60!black
+]{hyperref}
+\usepackage{cleveref}
+
+% ===== Theorem environments =====
+\declaretheoremstyle[
+  headfont=\bfseries,
+  notefont=\normalfont,
+  bodyfont=\itshape,
+  headpunct={.},
+  postheadspace=0.5em
+]{thmstyle}
+
+\declaretheoremstyle[
+  headfont=\bfseries,
+  notefont=\normalfont,
+  bodyfont=\normalfont,
+  headpunct={.},
+  postheadspace=0.5em
+]{defstyle}
+
+\declaretheorem[style=thmstyle, name=Theorem,     numberwithin=section]{theorem}
+\declaretheorem[style=thmstyle, name=Lemma,       sibling=theorem]{lemma}
+\declaretheorem[style=thmstyle, name=Proposition, sibling=theorem]{proposition}
+\declaretheorem[style=thmstyle, name=Corollary,   sibling=theorem]{corollary}
+\declaretheorem[style=defstyle, name=Definition,  sibling=theorem]{definition}
+\declaretheorem[style=defstyle, name=Remark,      sibling=theorem]{remark}
+\declaretheorem[style=defstyle, name=Example,     sibling=theorem]{example}
+\declaretheorem[style=defstyle, name=Conjecture,  sibling=theorem]{conjecture}
+\declaretheorem[style=defstyle, name=Heuristic,   sibling=theorem]{heuristic}
+
+% ===== Colors and notes =====
+\usepackage{xcolor}
+\usepackage{booktabs}
+\newcommand{\gap}[1]{%
+  \textcolor{red!70!black}{\textbf{[Bridge requiring proof:} #1\textbf{]}}%
+}
+\newcommand{\todo}[1]{%
+  \textcolor{orange!80!black}{\textbf{[TODO:} #1\textbf{]}}%
+}
+\newcommand{\openq}[1]{%
+  \textcolor{blue!70!black}{\textbf{[Open:} #1\textbf{]}}%
+}
+
+% ===== Operators and notation =====
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\renewcommand{\H}{\mathbb{H}}
+\renewcommand{\Re}{\operatorname{Re}}
+\renewcommand{\Im}{\operatorname{Im}}
+\newcommand{\cl}{\mathcal{L}}
+\newcommand{\hs}{\mathcal{H}}
+
+% ===== Title metadata =====
+\title{%
+  \textbf{Riemann Hypothesis via Spectral Coherence}\\[0.5em]
+  \large A Proposed Framework Linking Reflection Symmetry\\
+  to the Critical Line
+}
+
+\author{%
+  \textit{[Author name(s) to be added]}\\[0.3em]
+  \small\textit{[Institution / affiliation]}\\
+  \small\textit{[Contact address]}
+}
+
+\date{%
+  Version 0.1.0-draft\\
+  \today\\[0.5em]
+  \small\textit{Manuscript under active development and review.}
+}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+\input{abstract}
+\end{abstract}
+
+\vspace{1em}
+\noindent\textbf{Disclaimer.}
+This manuscript presents a proposed proof framework and is offered for mathematical
+review, critique, and formalization. It does not claim to be a complete proof of
+the Riemann Hypothesis. All steps that have not been rigorously established are
+explicitly marked.
+
+\tableofcontents
+\newpage
+
+% ===== Main sections =====
+\section{Introduction}
+\input{introduction}
+
+\section{Definitions and Notation}
+\input{definitions}
+
+\section{Symmetry Framework}
+\input{symmetry-framework}
+
+\section{Spectral Framework}
+\input{spectral-framework}
+
+\section{Lemmas}
+\input{lemmas}
+
+\section{Main Results}
+\input{main-results}
+
+\section{Proof Architecture}
+\input{proof-architecture}
+
+\section{The Critical Line Argument}
+\input{critical-line-argument}
+
+\section{Discussion and Related Work}
+\input{discussion}
+
+\section{Limitations and Open Problems}
+\input{limitations}
+
+% ===== Appendices =====
+\appendix
+
+\section{Intuition and Motivation}
+\input{appendix-a-intuition}
+
+\section{Operator Setup and Technical Background}
+\input{appendix-b-operator-setup}
+
+\section{Computational Notes}
+\input{appendix-c-computational-notes}
+
+% ===== References =====
+\printbibliography[heading=bibintoc, title={References}]
+
+\end{document}

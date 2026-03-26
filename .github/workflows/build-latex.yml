@@ -1,0 +1,67 @@
+name: Build LaTeX Manuscript
+
+on:
+  push:
+    paths:
+      - 'manuscript/**'
+  pull_request:
+    paths:
+      - 'manuscript/**'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build-pdf:
+    name: Compile manuscript/main.tex
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install TeX Live
+        uses: teatimeguest/setup-texlive-action@v3
+        with:
+          packages: |
+            scheme-basic
+            amsmath
+            amssymb
+            amsthm
+            hyperref
+            geometry
+            cleveref
+            mathtools
+            thmtools
+            biblatex
+            biber
+            xcolor
+            microtype
+            inputenc
+            fontenc
+            lm
+            booktabs
+
+      - name: Compile PDF (pass 1)
+        working-directory: manuscript
+        run: pdflatex -interaction=nonstopmode -halt-on-error main.tex
+
+      - name: Run Biber
+        working-directory: manuscript
+        run: biber main || true
+
+      - name: Compile PDF (pass 2)
+        working-directory: manuscript
+        run: pdflatex -interaction=nonstopmode -halt-on-error main.tex
+
+      - name: Compile PDF (pass 3 — resolve cross-references)
+        working-directory: manuscript
+        run: pdflatex -interaction=nonstopmode -halt-on-error main.tex
+
+      - name: Upload PDF artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: manuscript-pdf
+          path: manuscript/main.pdf
+          retention-days: 90

@@ -1,0 +1,82 @@
+This section develops the argument for the privilege of the critical line
+$\Re(s) = \tfrac{1}{2}$ within the proposed spectral-coherence framework.
+The argument proceeds from the structure established in \S3 (symmetry) and \S4
+(spectral framework).
+
+\subsection{Statement of the Goal}
+
+We aim to establish Conjecture~\ref{conj:uniqueness}: \emph{the balance criterion
+is satisfiable only on $\Re(s) = \tfrac{1}{2}$}. Equivalently (assuming
+Conjecture~\ref{conj:correspondence}): \emph{all nontrivial zeros of $\zeta$
+lie on the critical line.}
+
+The argument is organized as follows:
+\begin{enumerate}
+  \item[(A)] Show that the balance criterion is compatible with reflection symmetry
+             in a way that forces balance points to the fixed-point locus.
+  \item[(B)] Show that the balance criterion is \emph{not} compatible with a
+             pair $(s_0, 1-s_0)$ with $\Re(s_0) \ne \tfrac{1}{2}$.
+\end{enumerate}
+
+Step~(A) is Lemma~\ref{lem:balance-symmetric}; step~(B) is Lemma~\ref{lem:offlineasymmetry}.
+Both lemmas are currently \gap{open}.
+
+\subsection{The Symmetry Argument}
+
+Assume (pending proof of Lemma~\ref{lem:balance-symmetric}) that the balance
+criterion is symmetric: if $s$ satisfies it, so does $\sigma(s) = 1-s$.
+
+For $s$ on the critical line: $\sigma(s) = s$, so the symmetry condition is
+trivially consistent.
+
+For $s$ off the critical line: $s \ne \sigma(s)$, and both $s$ and $1-s$ would
+need to satisfy the balance criterion simultaneously. The proposed argument
+claims this is impossible.
+
+\gap{The impossibility of simultaneous balance at $s$ and $1-s$ for off-line $s$
+is the statement of Lemma~\ref{lem:offlineasymmetry} and is the central open step.
+No rigorous proof is currently available.}
+
+\subsection{Proposed Contradiction Argument for Off-Line Zeros}
+
+Suppose for contradiction that $s_0$ satisfies the balance criterion with
+$\Re(s_0) = \sigma_0 \ne \tfrac{1}{2}$. By Lemma~\ref{lem:balance-symmetric}
+(not yet proved), $\sigma(s_0) = 1 - s_0$ also satisfies the balance criterion.
+
+Now $\Re(1 - s_0) = 1 - \sigma_0 \ne \tfrac{1}{2}$ (since $\sigma_0 \ne \tfrac{1}{2}$).
+The pair $(s_0, 1-s_0)$ lies symmetrically about the critical line, at distances
+$|\sigma_0 - \tfrac{1}{2}|$ on either side.
+
+The proposed claim is that the spectral cancellation required for balance at both
+$s_0$ and $1-s_0$ simultaneously is impossible:
+\[
+  \Phi(s_0) = 0 \text{ and } \Phi(1-s_0) = 0
+  \implies \gap{\text{contradiction with the structure of } H}.
+\]
+
+\gap{The nature of this contradiction must be derived from the definition of $H$
+and $\Phi$. It cannot be stated precisely until those definitions are complete.}
+
+\subsection{What Must Be Proved}
+
+The following items must be established for the critical-line argument to be complete:
+
+\begin{enumerate}
+  \item \textbf{(Step 2 of proof architecture)} The operator $H$ and the
+        coherence functional $\Phi$ must be fully defined.
+  \item \textbf{(Lemma~\ref{lem:balance-symmetric})} The balance criterion must
+        be proved symmetric under $\sigma$.
+  \item \textbf{(Lemma~\ref{lem:offlineasymmetry})} Off-line balance must be
+        proved impossible.
+  \item \textbf{(Conjecture~\ref{conj:correspondence})} The correspondence between
+        zeros of $\zeta$ and balance points of $H$ must be established.
+\end{enumerate}
+
+Until all four items are proved, the critical-line argument is incomplete.
+
+\begin{remark}
+  The argument as currently sketched is logically coherent but not rigorous.
+  Each of the four items above requires nontrivial mathematical work. The
+  framework is designed so that, if these items are established, the conclusion
+  (RH) follows by clean logical deduction. But the framework itself is not a proof.
+\end{remark}

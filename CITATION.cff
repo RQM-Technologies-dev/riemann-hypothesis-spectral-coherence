@@ -1,0 +1,39 @@
+cff-version: 1.2.0
+message: >
+  If you reference or build upon this work, please cite it using the metadata below.
+  Note that this is a proposed proof framework under active review; please cite accordingly.
+title: "Riemann Hypothesis via Spectral Coherence"
+abstract: >
+  A proposed spectral-coherence framework for the Riemann Hypothesis, organized for
+  mathematical audit, formalization, and review. The manuscript develops a proposed
+  proof linking the functional symmetry of the Riemann zeta function to a
+  spectral-coherence interpretation of the critical line Re(s) = 1/2.
+authors:
+  - name: "RQM Technologies"
+    # Replace with individual author details when ready for public attribution:
+    # family-names: "Surname"
+    # given-names: "Given"
+    # orcid: "https://orcid.org/0000-0000-0000-0000"
+    # affiliation: "Institution"
+version: "0.1.0-draft"
+date-released: 2026-03-26
+url: "https://github.com/RQM-Technologies-dev/riemann-hypothesis-spectral-coherence"
+repository-code: "https://github.com/RQM-Technologies-dev/riemann-hypothesis-spectral-coherence"
+license: MIT
+keywords:
+  - riemann-hypothesis
+  - zeta-function
+  - analytic-number-theory
+  - spectral-theory
+  - mathematical-physics
+  - quaternionic-geometry
+  - research
+  - preprint
+type: software
+# When an arXiv identifier is assigned, add:
+# preferred-citation:
+#   type: article
+#   title: "Riemann Hypothesis via Spectral Coherence: A Proposed Framework"
+#   authors: [...]
+#   year: 2026
+#   url: "https://arxiv.org/abs/XXXX.XXXXX"

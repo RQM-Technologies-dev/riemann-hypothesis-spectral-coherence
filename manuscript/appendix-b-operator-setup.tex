@@ -1,0 +1,64 @@
+This appendix collects technical background relevant to the proposed spectral
+construction. It is intended as a reference for readers less familiar with
+operator theory and spectral analysis.
+
+\subsection{Basic Operator Theory}
+
+Let $\hs$ be a complex Hilbert space with inner product $\langle \cdot, \cdot \rangle$.
+
+\begin{itemize}
+  \item A \emph{linear operator} $T \colon \mathcal{D}(T) \to \hs$ is a linear
+        map defined on a dense subspace $\mathcal{D}(T) \subset \hs$.
+  \item $T$ is \emph{self-adjoint} if $\mathcal{D}(T) = \mathcal{D}(T^*)$ and
+        $T = T^*$.
+  \item The \emph{spectrum} of $T$, denoted $\sigma(T)$, is the set of $\lambda \in \C$
+        for which $T - \lambda I$ is not invertible (as a bounded operator from
+        $\hs$ to $\hs$).
+  \item A self-adjoint operator has real spectrum: $\sigma(T) \subset \R$.
+\end{itemize}
+
+\begin{remark}
+  Self-adjointness is a strictly stronger condition than symmetry ($T \subset T^*$).
+  Many operator constructions in spectral approaches to RH fail at the step of
+  establishing self-adjointness.
+\end{remark}
+
+\subsection{Spectral Theorem}
+
+For a self-adjoint operator $T$ on $\hs$, the spectral theorem guarantees the
+existence of a projection-valued measure $E$ such that
+\[
+  T = \int_\R \lambda \, dE(\lambda).
+\]
+Trace-class operators have a well-defined trace $\mathrm{tr}(T) = \int_\R \lambda \, d\mu_T(\lambda)$
+where $\mu_T$ is the spectral measure.
+
+\subsection{Trace Formulas}
+
+The Selberg trace formula and related trace formulas express geometric or spectral
+data as a sum over eigenvalues. In approaches to RH via spectral theory, the goal
+is to construct an operator whose trace formula reproduces the explicit formula
+for $\zeta$ or its logarithmic derivative.
+
+The explicit formula for $\zeta$ relates sums over primes to sums over zeros:
+\[
+  \sum_p \log p \cdot p^{-s} = -\frac{\zeta'(s)}{\zeta(s)} - (\text{explicit terms}).
+\]
+A spectral construction matching this would give the zeros as spectral data.
+
+\todo{The relationship between the proposed operator $H$ and any explicit formula
+should be worked out explicitly when $H$ is fully defined.}
+
+\subsection{Functional Analysis Prerequisites}
+
+The following concepts may be needed in the construction of $H$:
+
+\begin{itemize}
+  \item Hardy spaces $H^2(\C^+)$ on the upper half-plane.
+  \item Paley--Wiener theory relating Fourier transform support to analytic continuation.
+  \item The theory of Krein--Feller operators or Schrödinger operators on intervals.
+  \item Mellin transforms and their relationship to $\zeta$.
+\end{itemize}
+
+\todo{As the construction progresses, the specific functional-analytic tools needed
+will be identified and their prerequisites will be stated here.}

@@ -1,0 +1,77 @@
+We collect auxiliary lemmas used in the main argument. Lemmas that are proved in
+the manuscript are marked (Proved). Lemmas that are asserted but not yet proved
+are marked with \gap{} and should be treated as conjectures.
+
+\subsection*{Lemmas on the Symmetry Framework}
+
+\begin{lemma}[Reflection Preserves Zeros]
+  \label{lem:reflection-zeros}
+  If $\zeta(s_0) = 0$ for $s_0$ in the critical strip, then $\zeta(1 - s_0) = 0$.
+\end{lemma}
+
+\begin{proof}
+  This follows immediately from the functional equation $\xi(s) = \xi(1-s)$ and
+  the definition of $\xi$. Since $\xi(s_0) = 0$ and $\xi(s_0) = \xi(1-s_0)$,
+  we have $\xi(1-s_0) = 0$, hence $\zeta(1-s_0) = 0$ (the extra factors in $\xi$
+  have no zeros in the critical strip).
+\end{proof}
+
+\begin{lemma}[Symmetry Under Complex Conjugation]
+  \label{lem:conj-zeros}
+  If $\zeta(s_0) = 0$, then $\zeta(\bar{s}_0) = 0$.
+\end{lemma}
+
+\begin{proof}
+  Standard: $\zeta(\bar{s}) = \overline{\zeta(s)}$ for $s$ not equal to $1$.
+  Hence $\zeta(\bar{s}_0) = \overline{\zeta(s_0)} = \bar{0} = 0$.
+\end{proof}
+
+\begin{lemma}[Zeros Come in Quadruples or Lie on Symmetry Axes]
+  \label{lem:quadruples}
+  Each nontrivial zero $s_0$ belongs to the set $\{s_0, 1-s_0, \bar{s}_0, 1-\bar{s}_0\}$.
+  This set has four distinct elements unless $s_0$ lies on the critical line
+  $\Re(s_0) = \tfrac{1}{2}$ or on the real axis $\Im(s_0) = 0$.
+\end{lemma}
+
+\begin{proof}
+  Combine Lemmas~\ref{lem:reflection-zeros} and~\ref{lem:conj-zeros}. The four
+  elements coincide in pairs when $s_0 = 1 - s_0$ (i.e., $\Re(s_0) = \tfrac{1}{2}$)
+  or when $s_0 = \bar{s}_0$ (i.e., $\Im(s_0) = 0$, which does not occur for
+  nontrivial zeros by standard arguments).
+\end{proof}
+
+\subsection*{Lemmas on the Spectral Object}
+
+\begin{lemma}[Symmetry of the Operator]
+  \label{lem:op-symmetry}
+  \gap{To be proved in \S4 once $H$ is fully defined.}
+  The spectral coherence operator $H$ satisfies $H \sim H \circ \sigma$, where
+  $\sim$ denotes unitary equivalence and $\sigma \colon s \mapsto 1-s$.
+\end{lemma}
+
+\begin{lemma}[Balance Criterion is Well-Posed]
+  \label{lem:balance-well-posed}
+  \gap{To be proved in \S4.}
+  The balance criterion (Definition~\ref{def:balance}) is well-defined: for each
+  $s$ in the critical strip, the criterion either holds or fails, and the set of
+  $s$ satisfying it is closed.
+\end{lemma}
+
+\begin{lemma}[Balance Is Symmetric Under Reflection]
+  \label{lem:balance-symmetric}
+  \gap{To be proved once Lemma~\ref{lem:op-symmetry} and
+  Lemma~\ref{lem:balance-well-posed} are established.}
+  If $s$ satisfies the balance criterion, then so does $\sigma(s) = 1-s$.
+\end{lemma}
+
+\subsection*{Lemmas on Off-Line Behavior}
+
+\begin{lemma}[Off-Line Asymmetry]
+  \label{lem:offlineasymmetry}
+  \gap{This is the key lemma required for Step~4 of the proof architecture.
+  It must be proved that for $s$ with $\Re(s) \ne \tfrac{1}{2}$, the balance
+  criterion fails. This lemma is currently open and is the primary research
+  objective.}
+  For all $s$ in the critical strip with $\Re(s) \ne \tfrac{1}{2}$, $s$ does
+  not satisfy the balance criterion.
+\end{lemma}

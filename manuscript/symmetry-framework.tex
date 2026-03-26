@@ -1,0 +1,69 @@
+The functional equation $\xi(s) = \xi(1-s)$ is the foundational symmetry of
+the proposed framework. We develop its consequences systematically in this section.
+
+\subsection{The Reflection Involution}
+
+Define the reflection map $\sigma \colon \C \to \C$ by $\sigma(s) = 1 - s$.
+This is an involution ($\sigma \circ \sigma = \mathrm{id}$) whose fixed-point
+set is the critical line:
+\[
+  \sigma(s) = s \iff 1 - s = s \iff s = \tfrac{1}{2} + it \text{ for some } t \in \R.
+\]
+
+\begin{proposition}
+  The functional equation $\xi \circ \sigma = \xi$ expresses the invariance of
+  $\xi$ under the reflection $\sigma$. The critical line is the unique fixed-point
+  locus of $\sigma$ in the critical strip.
+\end{proposition}
+
+\begin{proof}
+  The first statement is a restatement of $\xi(1-s) = \xi(s)$. The second follows
+  from the computation above.
+\end{proof}
+
+\subsection{Symmetry of the Zero Set}
+
+Combining the functional equation with the conjugation symmetry $\zeta(\bar{s}) =
+\overline{\zeta(s)}$, we obtain:
+
+\begin{proposition}
+  The set $Z = \{s \in \C : \zeta(s) = 0, \, 0 < \Re(s) < 1\}$ is closed under
+  both $\sigma$ and complex conjugation.
+\end{proposition}
+
+This is Lemma~\ref{lem:quadruples} restated at the level of the zero set.
+
+\subsection{The Critical Line as Balance Axis}
+
+The proposed framework interprets the reflection symmetry geometrically: the
+critical line $\Re(s) = \tfrac{1}{2}$ is the \emph{only} locus in the critical
+strip that is invariant under $\sigma$. If a zero $s_0$ satisfies $\sigma(s_0) = s_0$,
+then $s_0$ lies on the critical line. If $s_0 \ne \sigma(s_0)$, they form a distinct
+pair symmetrically placed about the critical line.
+
+The central proposed claim is that the balance condition forces every zero to
+equal its own reflection: $\sigma(s_0) = s_0$, i.e., $\Re(s_0) = \tfrac{1}{2}$.
+This claim requires the spectral machinery of \S4. It does not follow from symmetry
+alone.
+
+\begin{remark}
+  Symmetry is a necessary condition for the argument, not a sufficient one. Many
+  symmetric functions have zeros off their symmetry axis. The proposed framework
+  must invoke additional structure — the balance criterion — to rule out this
+  possibility for $\zeta$.
+\end{remark}
+
+\subsection{The Argument from Symmetry: What It Can and Cannot Establish}
+
+From the functional equation alone, one can show:
+\begin{enumerate}
+  \item Zeros of $\zeta$ are symmetric under $\sigma$. (\checkmark, classical)
+  \item On the critical line, $\xi(s) = \xi(\sigma(s)) = \xi(s)$ is automatically
+        satisfied; the symmetry places no obstruction to zeros on the line.
+  \item Off the critical line, zeros come in $\sigma$-pairs $\{s_0, 1-s_0\}$;
+        the symmetry requires pairs but does not forbid them.
+\end{enumerate}
+
+To eliminate off-line zeros, the proposed framework must show that the balance
+criterion (Definition~\ref{def:balance}) is incompatible with $\Re(s) \ne \tfrac{1}{2}$.
+This is the task of \S4–\S8.

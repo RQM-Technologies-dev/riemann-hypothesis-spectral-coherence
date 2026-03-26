@@ -1,0 +1,91 @@
+This section develops the proposed spectral-coherence structure. The construction
+is currently at the stage of a detailed proposal; items requiring further rigorous
+development are marked explicitly.
+
+\subsection{Motivation}
+
+The Hilbert--Pólya conjecture proposes that there exists a self-adjoint operator
+whose eigenvalues are the imaginary parts of the nontrivial zeros of $\zeta$.
+If such an operator $\mathcal{A}$ exists, the reality of its spectrum would imply
+that zeros lie on the critical line.
+
+The present framework takes a related but distinct approach. Rather than seeking
+an operator whose eigenvalues reproduce the zero locations, the manuscript proposes
+an operator $H$ whose \emph{balance points} — states of spectral cancellation —
+correspond to zeros of $\zeta$. The balance interpretation is intended to make
+the role of reflection symmetry more explicit.
+
+\subsection{Proposed Construction of the Operator $H$}
+
+\todo{This subsection is the primary open construction task in the manuscript.}
+
+The operator $H$ is proposed to act on a Hilbert space $\hs$ with the following
+properties:
+
+\begin{enumerate}
+  \item \textbf{Domain:} $\hs = $ \gap{specification of the function space, e.g.,
+        $L^2(\R, \mu)$ for an appropriate measure $\mu$ related to $\zeta$, or
+        a weighted Sobolev space}.
+  \item \textbf{Action:} $H f(s) = $ \gap{specification of how $H$ acts on
+        elements of $\hs$; this should encode the functional equation $\xi(s) = \xi(1-s)$
+        or a derived object}.
+  \item \textbf{Symmetry:} $H$ should satisfy $U H U^{-1} = H$ where $U$ is the
+        unitary operator implementing $\sigma \colon s \mapsto 1-s$ on $\hs$;
+        \gap{precise statement and proof pending}.
+  \item \textbf{Spectral properties:} \gap{the spectrum, resolvent set, and
+        relevant spectral measures of $H$ should be specified}.
+\end{enumerate}
+
+\subsection{The Coherence Functional}
+
+\todo{To be completed.}
+
+Associated to $H$, define the \emph{coherence functional} $\Phi \colon \C \to \R_{\ge 0}$
+(or $\to \C$, as appropriate) by
+\[
+  \Phi(s) = \gap{\text{definition in terms of the inner product or spectral measure of } H}.
+\]
+
+The proposed claim is:
+
+\begin{conjecture}[Coherence Characterizes Zeros]
+  \label{conj:phi-zeros}
+  $\Phi(s) = 0$ if and only if $\zeta(s) = 0$ (for $s$ in the critical strip).
+\end{conjecture}
+
+This conjecture must be established by direct calculation once $H$ and $\Phi$ are
+fully defined. It cannot be assumed.
+
+\subsection{Spectral Coherence and Balance}
+
+The term \emph{spectral coherence} refers informally to the property of $H$ at
+a point $s$ that makes $\Phi(s) = 0$ possible. The physical intuition is that
+at a zero of $\zeta$, the spectral contributions from $s$ and its reflection
+$\sigma(s) = 1-s$ cancel perfectly — destructive interference in the spectral
+structure.
+
+This cancellation can only occur, by the proposed argument, when $s = \sigma(s)$,
+i.e., when $\Re(s) = \tfrac{1}{2}$. The argument for this is developed in
+\S7 and \S8 (Proof Architecture and Critical Line Argument).
+
+\begin{remark}
+  The intuition of ``destructive interference'' is an analogy, not a theorem.
+  The argument of \S8 must establish, without reference to analogy, that the
+  relevant cancellation is impossible for $\Re(s) \ne \tfrac{1}{2}$.
+\end{remark}
+
+\subsection{Relationship to Prior Spectral Constructions}
+
+Several prior constructions propose operators related to $\zeta$:
+\begin{itemize}
+  \item The Berry--Keating operator $H = xp - \tfrac{1}{4}$ (on $L^2(\R_+)$)
+        has a formal trace formula related to $\zeta$, but its self-adjointness
+        is not established in the standard sense.
+  \item Connes's construction uses an adelic space and an action of the idele
+        class group to obtain a spectral interpretation of the zeros.
+  \item Sierra--Townsend's Landau level model gives a physical Hamiltonian whose
+        eigenvalues approximate the zero spacings.
+\end{itemize}
+
+The relationship between the operator $H$ proposed here and these prior constructions
+is \gap{to be clarified in \S9 (Discussion)}.

@@ -1,0 +1,79 @@
+% ===== IMPORTANT AUTHORING NOTE =====
+% Before promoting any item below to a Theorem, verify that a complete proof
+% is present in the manuscript. Use the following hierarchy:
+%   - Theorem:     fully proved within this manuscript
+%   - Proposition: proved here or rigorously cited to the literature
+%   - Conjecture:  believed true; proof is an open problem
+%   - Heuristic:   informal claim; motivates but does not constitute a theorem
+%   - Bridge:      identified as necessary; proof is in progress or open
+% Never use the word "Theorem" for a claim that is not proved.
+% =====================================
+
+\subsection*{Established Results (from the Literature)}
+
+The following results are standard and are cited without proof.
+
+\begin{proposition}[Functional Equation, \cite{Riemann1859, Titchmarsh1986}]
+  \label{prop:functional-equation}
+  The completed zeta function $\xi(s) = \frac{1}{2}s(s-1)\pi^{-s/2}\Gamma(s/2)\zeta(s)$
+  satisfies $\xi(s) = \xi(1-s)$ for all $s \in \C$.
+\end{proposition}
+
+\begin{proposition}[Symmetry of Zeros, \cite{Titchmarsh1986}]
+  \label{prop:zero-symmetry}
+  The nontrivial zeros of $\zeta$ are symmetric under $s \mapsto 1-s$ and
+  under $s \mapsto \bar{s}$. In particular, they occur in quadruples
+  $\{s, 1-s, \bar{s}, 1-\bar{s}\}$ unless they lie on the critical line
+  or the real axis.
+\end{proposition}
+
+\subsection*{Proposed Results (status: open / under development)}
+
+% ===== Main proposed theorem =====
+% Do NOT remove the "Conjecture" label until a complete proof is present.
+
+\begin{conjecture}[Main Claim — Riemann Hypothesis]
+  \label{conj:main}
+  All nontrivial zeros of $\zeta(s)$ lie on the critical line $\Re(s) = \tfrac{1}{2}$.
+\end{conjecture}
+
+\begin{conjecture}[Zero–Balance Correspondence]
+  \label{conj:correspondence}
+  \todo{This is proposed in \S4 and \S5 but not yet proved.}
+  Let $H$ be the spectral coherence operator of Definition~\ref{def:H}. A point
+  $s \in \C$ in the critical strip is a nontrivial zero of $\zeta$ if and only if
+  $s$ satisfies the balance criterion (Definition~\ref{def:balance}).
+\end{conjecture}
+
+\begin{conjecture}[Uniqueness of the Balance Axis]
+  \label{conj:uniqueness}
+  \todo{This is the central open gap in the argument.}
+  The balance criterion (Definition~\ref{def:balance}) is satisfiable only at points
+  $s$ with $\Re(s) = \tfrac{1}{2}$.
+\end{conjecture}
+
+\begin{remark}
+  If Conjectures~\ref{conj:correspondence} and~\ref{conj:uniqueness} are both
+  proved, Conjecture~\ref{conj:main} (the Riemann Hypothesis) follows immediately.
+  The manuscript attempts to develop the framework needed to prove these conjectures.
+  Neither is currently proved.
+\end{remark}
+
+\subsection*{Auxiliary Results (proposed)}
+
+\begin{conjecture}[Symmetry of the Balance Criterion]
+  \label{conj:symmetry}
+  The balance criterion is symmetric under the reflection $\sigma \colon s \mapsto 1-s$.
+  That is, $s$ satisfies the balance criterion if and only if $\sigma(s) = 1-s$ does.
+\end{conjecture}
+
+\begin{heuristic}[Off-Line Zeros Violate Balance]
+  \label{heur:offline}
+  If $s_0$ is a nontrivial zero of $\zeta$ with $\Re(s_0) \ne \tfrac{1}{2}$, then
+  $s_0$ does not satisfy the balance criterion. \gap{This must be converted from
+  a heuristic observation into a proved statement.}
+\end{heuristic}
+
+% ===== Author instruction =====
+% As the manuscript develops, move items from "proposed" to "proved" only when
+% a complete proof is written in full. Track open items in notes/known-gaps.md.

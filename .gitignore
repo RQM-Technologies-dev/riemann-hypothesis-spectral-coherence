@@ -205,3 +205,33 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# LaTeX build artifacts
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.run.xml
+*.synctex.gz
+*.toc
+*.lof
+*.lot
+*.idx
+*.ind
+*.ilg
+*.nav
+*.snm
+*.vrb
+*.xdv
+manuscript/main.pdf
+
+# Jupyter checkpoint files (allow notebooks themselves)
+.ipynb_checkpoints/
+
+# Generated figures from notebooks (regenerate by running notebooks)
+# media/figures/*.png
+# media/figures/*.pdf
