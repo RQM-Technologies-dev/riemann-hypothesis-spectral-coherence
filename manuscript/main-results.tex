@@ -3,29 +3,31 @@ This section separates established inputs from draft theorem targets.
 \subsection*{Established inputs (from standard references)}
 \begin{proposition}[Functional symmetry]
 \label{prop:functional-symmetry}
-The completed zeta function satisfies $\xi(s)=\xi(1-s)$.
-\cite{Riemann1859,Edwards1974,Titchmarsh1986}
+The completed zeta function
+\[
+\xi(s)=\tfrac12 s(s-1)\pi^{-s/2}\Gamma\!\left(\tfrac{s}{2}\right)\zeta(s)
+\]
+satisfies $\xi(s)=\xi(1-s)$; see \cite{Riemann1859,Edwards1974,Titchmarsh1986}.
 \end{proposition}
 
 \begin{proposition}[Zero-set symmetries]
 \label{prop:zero-symmetries}
-Nontrivial zeros are stable under $s\mapsto 1-s$ and complex conjugation.
-\cite{Edwards1974,Titchmarsh1986}
+If $\rho$ is a nontrivial zero of $\zeta$, then $1-\rho$ and $\overline{\rho}$ are also nontrivial zeros; see \cite{Edwards1974,Titchmarsh1986}.
 \end{proposition}
 
 \subsection*{Draft theorem targets (not proved in this manuscript version)}
 \begin{drafttheorem}[Target A: zero--balance correspondence]
 \label{thm:target-correspondence}
-\placeholder{Draft theorem target. Proof not yet provided.}
-Assuming a completed definition of $H$ and the balance criterion, nontrivial zeros in the critical strip correspond exactly to balanced points.
+\placeholder{Theorem target under construction; proof not yet provided.}
+Target statement (conditional): once the manuscript definitions of $H$ and the balance criterion are finalized and their regularity assumptions are stated, one aims to prove that nontrivial zeros in the critical strip correspond exactly to balanced points.
 \end{drafttheorem}
 
 \begin{drafttheorem}[Target B: uniqueness of balance locus]
 \label{thm:target-uniqueness}
-\placeholder{Draft theorem target. Proof not yet provided.}
-Balanced points satisfy $\RePart(s)=\tfrac12$.
+\placeholder{Theorem target under construction; proof not yet provided.}
+Target statement (conditional): under the same finalized definitions and assumptions used in Target~A, one aims to prove that every balanced point satisfies $\RePart(s)=\tfrac12$.
 \end{drafttheorem}
 
 \begin{conjecture}[RH reduction under targets A and B]
-If Targets A and B are established under their stated assumptions, RH follows.
+Conditional implication only: if Targets~A and~B are both proved with a compatible set of explicit assumptions and definitions, then every nontrivial zero is balanced (Target~A) and every balanced point lies on $\RePart(s)=\tfrac12$ (Target~B), so RH follows under those proved hypotheses.
 \end{conjecture}
