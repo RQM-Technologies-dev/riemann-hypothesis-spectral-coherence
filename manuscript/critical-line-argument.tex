@@ -65,6 +65,48 @@ Without fixing a finalized operator model, the manuscript currently treats the f
 These are mechanism templates only.
 Any accepted version must be converted into explicit lemmas with hypotheses and dependency tracing.
 
+\subsection*{Candidate contradiction route under an assumed off-line balanced point (template only)}
+This subsection makes the Stage~6 contradiction burden explicit in assumption-conclusion form.
+It does not claim that a contradiction has been proved.
+It records the cleanest theorem shape currently targeted for audit.
+
+\paragraph{Assumed off-line balanced point package $\mathcal{O}_{\mathrm{off}}$.}
+Assume there exists
+\[
+ s_\ast\in \mathcal{A}_{\mathrm{strip}},\qquad 0<\RePart(s_\ast)<1,\qquad \RePart(s_\ast)\neq\tfrac12,
+\]
+with $\Phi_H(s_\ast)=0$.
+For this assumption to be meaningful inside the framework, $s_\ast$ must satisfy all of the following at once:
+\begin{enumerate}
+  \item \textbf{Admissibility:} $s_\ast$ lies in the same admissible class used in Targets~A/B and Stage~6 transfer.
+  \item \textbf{Balance validity:} $\Phi_H(s_\ast)$ is well defined under the declared domain/regularity hypotheses, and exact balance means $\Phi_H(s_\ast)=0$ in that theorem-level sense.
+  \item \textbf{Reflection/conjugation compatibility:} the transported points $1-s_\ast$ and $\overline{s_\ast}$ (and thus the quartet closure when required) remain inside the same admissible/regularity package.
+  \item \textbf{Regularity regime compatibility:} $s_\ast$ lies in the strip regime where all global-control and transfer assumptions are stated (including boundary-near and large-parameter side conditions, if invoked).
+\end{enumerate}
+
+\paragraph{Contradiction route target $\mathcal{C}_{\mathrm{route}}$ (not proved).}
+Under one synchronized Stage~6 hypothesis package $\mathcal{E}_{\mathrm{glob}}$, the manuscript aims to show:
+\begin{quote}
+Assumption $\mathcal{O}_{\mathrm{off}}$ forces failure of at least one theorem-level ingredient in $\mathcal{E}_{\mathrm{glob}}$; therefore no admissible off-line balanced point exists.
+\end{quote}
+The contradiction endpoint should be formalized as one of the following mechanism classes (or another explicitly stated equivalent):
+\begin{enumerate}
+  \item violation of a coercive/positive quantity required to stay nonnegative or strictly positive away from $\RePart(s)=\tfrac12$;
+  \item incompatibility with a uniqueness/rigidity equality case used by Target~B localization;
+  \item contradiction with symmetry-compatible transfer between $s_\ast$, $1-s_\ast$, and conjugates;
+  \item impossibility of extending local balance consistently into the full-strip regime;
+  \item conflict with a no-alternative-locus principle for exact balance under the same assumptions.
+\end{enumerate}
+
+\paragraph{Three-layer audit split for the contradiction route.}
+To avoid proof-status ambiguity, Stage~6 is recorded in three layers:
+\begin{enumerate}
+  \item \textbf{Assumption layer:} existence of an admissible off-line balanced point satisfying $\mathcal{O}_{\mathrm{off}}$.
+  \item \textbf{Support-lemma layer:} intermediate contradiction-support lemmas (global extension, quartet transfer, coercive/rigidity/positivity bridge, or equivalent) under one synchronized package.
+  \item \textbf{Conclusion layer:} formal contradiction and full-strip no-off-line-balance theorem target.
+\end{enumerate}
+This separation is aligned with Target~B local uniqueness versus Stage~6 global exclusion.
+
 \paragraph{Open proof obligations tied to this template.}
 To promote this template to theorem-level closure, the manuscript still needs:
 \begin{enumerate}
