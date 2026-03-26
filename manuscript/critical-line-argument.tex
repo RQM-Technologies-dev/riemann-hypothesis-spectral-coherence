@@ -13,6 +13,24 @@ Assume further that the following three inputs hold under the same $\mathcal{A}$
 Then every nontrivial zero $\rho$ of $\zeta$ satisfies $\RePart(\rho)=\tfrac12$.
 \end{proposition}
 
+\subsection*{Separation of burdens: local uniqueness vs global exclusion}
+For audit clarity, the manuscript treats two logically distinct obligations.
+\begin{enumerate}
+  \item \textbf{Local uniqueness-of-balance burden (Target B core).}
+  Prove that in a specified regime $\mathcal{R}_{\mathrm{loc}}\subseteq\mathcal{A}$, balance implies $\RePart(s)=\tfrac12$.
+  This is a localization statement.
+  \item \textbf{Global off-line exclusion burden (Stage 6 core).}
+  Prove that no admissible balanced point with $\RePart(s)\neq\tfrac12$ exists anywhere in the full strip region of interest, including non-perturbative, boundary-near, and large-parameter regimes not automatically covered by $\mathcal{R}_{\mathrm{loc}}$.
+\end{enumerate}
+The second item is not a restatement of the first.
+It is an extension/closure problem requiring additional uniform control.
+
+\subsection*{Why symmetry alone is insufficient}
+Classical symmetries give transport rules ($s\mapsto1-s$, $s\mapsto\bar s$).
+They do not by themselves imply that the only balance-supporting locus is $\RePart(s)=\tfrac12$.
+An argument can preserve symmetry and still allow paired off-line candidates.
+Hence the framework requires a separate exclusion mechanism beyond symmetry compatibility.
+
 \subsection*{Reduction proof skeleton (conditional)}
 The deduction itself is short once the above inputs are available.
 Let $\rho$ be a nontrivial zero.
@@ -39,6 +57,15 @@ The unresolved burden is to prove, under explicit assumptions, the six core open
   \item \textbf{Analytic-control burden:} justify every growth/convergence/interchange step needed to pass from local constructions to strip-wide statements.
 \end{enumerate}
 Until these bridges are proved, the reduction remains conditional.
+
+\subsection*{Insufficient argument patterns (explicitly excluded)}
+The manuscript does not treat the following as adequate for Target~B or global exclusion:
+\begin{enumerate}
+  \item \textbf{Pure symmetry arguments} that establish only mirrored pairing of candidate points.
+  \item \textbf{Local-only coercivity} without a theorem transferring estimates to the full admissible strip.
+  \item \textbf{Regime-fragmented proofs} whose hypotheses differ across subregions without compatibility/patching lemmas.
+  \item \textbf{Numerical-only exclusion} not converted into theorem-level analytic statements.
+\end{enumerate}
 
 \subsection*{Assumption-compatibility requirements}
 For the reduction to be valid as stated, the assumptions used in Target A, Target B, and global off-line exclusion must be mutually compatible.

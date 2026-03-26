@@ -59,7 +59,7 @@ Core bridge names synchronized with manuscript text:
 
 ## 3) Uniqueness of the balance axis
 
-**Gap:** The argument attempts to show that exact balance is possible only on \(\Re(s)=1/2\), but uniqueness of that axis is not proved.
+**Gap:** The argument attempts to show that exact balance is possible only on \(\Re(s)=1/2\), but the theorem target is not yet closed with explicit local regime, assumptions, and non-spuriousness controls.
 
 **Why it matters:**
 - RH requires excluding any valid balance mechanism off the critical line.
@@ -68,15 +68,18 @@ Core bridge names synchronized with manuscript text:
 **Current status:** **Open (central bridge).** Motivating geometry exists; a theorem-level uniqueness argument does not.
 
 **What would count as resolution:**
-- A theorem stating precise assumptions under which the balance set is exactly \(\Re(s)=1/2\).
-- A proof that no alternative axis/curve can satisfy the same criterion.
-- Clear dependency on previously proved structural properties of the spectral object.
+- A theorem stating precise assumptions and explicit validity regime for
+  \[
+  \Phi_H(s)=0 \Rightarrow \Re(s)=1/2.
+  \]
+- A proof that no alternative axis/curve can satisfy the same criterion under the same assumptions.
+- Explicit non-spuriousness conditions on the balance predicate and clear dependency on previously proved structural properties of the spectral object.
 
 ---
 
 ## 4) Exclusion of off-critical-line zeros
 
-**Gap:** The framework does not yet provide a complete proof excluding all off-line zeros in the critical strip.
+**Gap:** The framework does not yet provide a complete proof excluding all off-line zeros in the critical strip, and the local-to-global transfer burden is still open.
 
 **Why it matters:**
 - RH is an exclusion statement over all nontrivial zeros.
@@ -85,7 +88,8 @@ Core bridge names synchronized with manuscript text:
 **Current status:** **Open (completeness).** The intended strategy appears uniform, but this has not been proved.
 
 **What would count as resolution:**
-- A global contradiction or global structural theorem that covers every \(s\) with \(0<\Re(s)<1\), \(\Re(s)\neq 1/2\).
+- A global contradiction or global structural theorem that covers every \(s\) with \(0<\Re(s)<1\), \(\Re(s)\neq 1/2\), under one synchronized hypothesis package.
+- An explicit local-to-global transfer theorem (or equivalent closure argument) from the Stage-5 regime to full-strip applicability.
 - Explicit treatment of parameter ranges where hidden assumptions often occur (large imaginary part, boundary-near behavior).
 - A proof that does not rely on unproved regularity assumptions.
 

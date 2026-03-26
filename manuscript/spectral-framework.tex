@@ -104,16 +104,16 @@ The interface above is designed to feed specific downstream bridges.
 
 \paragraph{(ii) Inputs that directly feed Target B (Stage 5).}
 \begin{itemize}
-  \item \textbf{From $H$:} (M3)--(M4), providing the symmetry and coercive/control ingredients used to force localization to $\RePart(s)=\tfrac12$.
-  \item \textbf{From $\Phi$:} (P3)--(P5), especially the side-condition discipline needed to distinguish genuine balance points from artefacts.
-  \item \textbf{Primary lemma targets in \texttt{lemmas.tex}:} B4 off-line exclusion target, with dependencies on B1--B3 as already recorded there.
+  \item \textbf{From $H$:} (M3)--(M4), providing the symmetry and local coercive/control ingredients used to force localization to $\RePart(s)=\tfrac12$ in a declared regime.
+  \item \textbf{From $\Phi$:} (P3)--(P5), especially side-condition discipline needed to distinguish genuine balance points from artefacts and to define the local regime precisely.
+  \item \textbf{Primary lemma targets in \texttt{lemmas.tex}:} B4 local balance-axis uniqueness target (not yet global exclusion), with dependencies on B1--B3.
 \end{itemize}
 
 \paragraph{(iii) Inputs that directly feed Stage 6 off-line exclusion (global).}
 \begin{itemize}
-  \item \textbf{From $H$:} (M4)--(M5), to justify strip-wide control statements and to document exactly which operator properties are invoked globally.
-  \item \textbf{From $\Phi$:} (P3)--(P5), where global exclusion needs both well-posedness and explicit side-condition closure across the admissible strip.
-  \item \textbf{Primary lemma targets in \texttt{lemmas.tex}:} B4 quartet-compatible exclusion transfer and B5 operator/analytic-control support targets.
+  \item \textbf{From $H$:} (M4)--(M5), to justify extension from local regimes to strip-wide control and to document exactly which operator properties are invoked globally.
+  \item \textbf{From $\Phi$:} (P3)--(P5), where global exclusion needs both well-posedness and explicit side-condition closure across the entire admissible strip.
+  \item \textbf{Primary lemma targets in \texttt{lemmas.tex}:} B4 global-extension and full-strip no-off-line-balance targets, plus quartet-compatible transfer, with B5 operator/analytic-control support.
 \end{itemize}
 
 \paragraph{(iv) Stage alignment summary.}
@@ -121,8 +121,8 @@ The interface above is designed to feed specific downstream bridges.
   \item \textbf{Stage 2 (\texttt{proof-architecture.tex}):} anchored by (M1)--(M4), with B5 operator-closure support.
   \item \textbf{Stage 3:} anchored by (P1)--(P4), with B1 admissibility/well-posedness support.
   \item \textbf{Stage 4 / Target A:} uses (M3)--(M5) and (P1)--(P5), with B2--B3 bridges.
-  \item \textbf{Stage 5 / Target B:} uses (M3)--(M5) and (P3)--(P5), with B4 bridge.
-  \item \textbf{Stage 6:} uses (M4)--(M5) and (P3)--(P5), with B4--B5 global-control bridges.
+  \item \textbf{Stage 5 / Target B:} uses (M3)--(M5) and (P3)--(P5), with B4 local uniqueness bridge.
+  \item \textbf{Stage 6:} uses (M4)--(M5) and (P3)--(P5), with B4 global-extension/full-strip exclusion bridges and B5 control bridges.
 \end{itemize}
 These alignments specify dependency direction only. They do not upgrade any open bridge to proved status.
 

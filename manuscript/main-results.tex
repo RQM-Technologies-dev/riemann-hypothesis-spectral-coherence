@@ -25,8 +25,34 @@ Target statement (conditional): once the manuscript definitions of $H$ and the b
 \begin{drafttheorem}[Target B: uniqueness of balance locus]
 \label{thm:target-uniqueness}
 \placeholder{Theorem target under construction; proof not yet provided.}
-Target statement (conditional): under the same finalized definitions and assumptions used in Target~A, one aims to prove that every balanced point satisfies $\RePart(s)=\tfrac12$.
+Target statement (conditional; theorem target only): let $\mathcal{A}$ be the admissible class and let
+\[
+\mathcal{B}:=\{s\in\mathcal{A}:\Phi_H(s)=0\}
+\]
+denote the balanced set under a finalized $H/\Phi_H$ package.
+Under an explicit hypothesis set $\mathcal{H}_B$ (operator symmetry/intertwining, admissibility stability, and analytic-control assumptions), one aims to prove:
+\begin{enumerate}
+  \item \textbf{Local uniqueness-of-balance axis:} every balanced point in the local regime covered by $\mathcal{H}_B$ satisfies $\RePart(s)=\tfrac12$.
+  \item \textbf{Global extension requirement:} the local conclusion extends from the local regime to all $s\in\mathcal{A}$ with $0<\RePart(s)<1$.
+  \item \textbf{No alternative balance locus:} no other line/curve/submanifold in the admissible strip carries exact balance under the same hypotheses.
+\end{enumerate}
+Equivalent formulation target:
+\[
+\mathcal{B}=\mathcal{A}\cap\{s:\RePart(s)=\tfrac12\}.
+\]
+This manuscript version does not prove the above statement.
 \end{drafttheorem}
+
+\begin{remark}[What Target B must exclude]
+Target~B requires more than reflection symmetry.
+Symmetry can imply pairings such as $s\leftrightarrow 1-s$ without ruling out off-line balanced pairs.
+Therefore a valid proof target must exclude:
+\begin{enumerate}
+  \item regime-restricted arguments that only treat perturbative neighborhoods,
+  \item arguments that establish axis-symmetry of $\mathcal{B}$ but not axis-uniqueness,
+  \item proofs that require assumptions not inherited by the correspondence class from Target~A.
+\end{enumerate}
+\end{remark}
 
 \begin{conjecture}[RH reduction under targets A and B]
 Conditional implication only: if Targets~A and~B are both proved with a compatible set of explicit assumptions and definitions, then every nontrivial zero is balanced (Target~A) and every balanced point lies on $\RePart(s)=\tfrac12$ (Target~B), so RH follows under those proved hypotheses.

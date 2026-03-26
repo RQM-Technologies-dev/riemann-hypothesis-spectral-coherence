@@ -61,22 +61,32 @@ with all side conditions explicit.
 Stage 4 correspondence plus structural constraints sufficient to force balanced configurations onto $\Re(s)=\tfrac12$.
 
 \textbf{Intended output.}
-A uniqueness/localization statement showing that any admissible balanced point satisfies the critical-line condition.
+A theorem-level \emph{localization} statement, with explicit regime and assumptions:
+\[
+\Phi_H(s)=0 \Longrightarrow \Re(s)=\tfrac12
+\]
+for all admissible $s$ in the Stage-5 regime.
+This stage is allowed to be local/regime-scoped, provided the scope is explicit.
 
 \textbf{Current status.}
 \textbf{Open bridge}.  Target B (\cref{thm:target-uniqueness}) remains unproved.
-\openbridge{Requires a fully rigorous argument ruling out admissible balanced points with $\Re(s)\neq\tfrac12$ under the stated assumptions.}
+\openbridge{Requires a fully rigorous uniqueness-of-balance theorem target with explicit hypotheses, explicit regime of validity, and explicit non-spuriousness conditions for the balance predicate.}
 
 \subsection*{Stage 6: Global off-line exclusion mechanism}
 \textbf{Required inputs.}
 Refined estimates or monotonicity/convexity principles compatible with Stages 2--5, sufficient to upgrade local uniqueness logic to a global exclusion statement.
 
 \textbf{Intended output.}
-A global theorem-level exclusion mechanism: no admissible off-line balanced configurations in the entire critical strip.
+A global theorem-level exclusion mechanism distinct from Stage 5:
+\begin{enumerate}
+  \item transfer of Stage-5 localization hypotheses from local regime to full admissible strip,
+  \item full-strip exclusion of admissible off-line balanced configurations,
+  \item symmetry-compatible transfer (reflection/conjugation) without weakening hypotheses.
+\end{enumerate}
 
 \textbf{Current status.}
 \textbf{Open}.  Portions are heuristic/motivational and must be converted into formal estimates.
-\openbridge{Requires proof-quality global control; computational checks may guide conjecture but do not substitute for the exclusion proof.}
+\openbridge{Requires proof-quality global control, including boundary-near and large-parameter regimes; computational checks may guide conjecture but do not substitute for the exclusion proof.}
 
 \subsection*{Stage 7: Final RH reduction inside the framework}
 \textbf{Required inputs.}
