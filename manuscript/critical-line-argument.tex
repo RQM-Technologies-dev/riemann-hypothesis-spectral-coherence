@@ -25,6 +25,59 @@ For audit clarity, the manuscript treats two logically distinct obligations.
 The second item is not a restatement of the first.
 It is an extension/closure problem requiring additional uniform control.
 
+
+\subsection*{Minimum synchronized hypothesis package for the preferred Stage~6 route (formulation target only)}
+\label{subsec:min-stage6-package}
+To state the preferred Stage~6 theorem target in a single non-ambiguous form, we isolate a minimum synchronized package
+\[
+\mathcal{H}_{\mathrm{S6}}^{\min}
+\]
+for the route
+\[
+\text{local uniqueness on }\mathcal{R}_{\mathrm{loc}}\Longrightarrow\text{transfer on }\mathcal{A}_{\mathrm{strip}}\Longrightarrow\text{no-alternative-locus}\Longrightarrow\text{full-strip exclusion}.
+\]
+This package is a \emph{formulation scaffold}.
+It is not presented as sufficient for a proof.
+It is not presented as proved.
+
+\paragraph{Minimum items required to state the preferred route as a theorem target.}
+Let
+\[
+\mathcal{A}_{\mathrm{strip}}:=\{s\in\mathcal{A}:0<\RePart(s)<1\},\qquad
+\mathcal{B}:=\{s\in\mathcal{A}_{\mathrm{strip}}:\Phi_H(s)=0\},\qquad
+\mathcal{R}_{\mathrm{loc}}\subseteq\mathcal{A}_{\mathrm{strip}}.
+\]
+The synchronized minimum package $\mathcal{H}_{\mathrm{S6}}^{\min}$ consists of:
+\begin{enumerate}
+  \item \textbf{(S6-M1) Admissibility synchronization and stability.}
+  One admissible class $\mathcal{A}$ is used across Target~A, Stage~5 local uniqueness, transfer, and Stage~6 exclusion, with explicit local-to-global admissibility stability from $\mathcal{R}_{\mathrm{loc}}$ to $\mathcal{A}_{\mathrm{strip}}$.
+  \item \textbf{(S6-M2) Balance-functional well-posedness on the full strip class.}
+  $\Phi_H(s)$ is theorem-level well-defined on every $s\in\mathcal{A}_{\mathrm{strip}}$ used by transfer/no-alternative-locus statements, with no regime change in predicate meaning between local and global steps.
+  \item \textbf{(S6-M3) Symmetry compatibility without hypothesis loss.}
+  Reflection/conjugation transport preserves the admissibility and regularity assumptions used in the same theorem package.
+  \item \textbf{(S6-M4) Operator-side structural control actually used by Stage~6.}
+  Only the operator-side assumptions needed for transfer/exclusion are included (in current manuscript notation, OP7--OP8 plus their OP1--OP6 prerequisites where invoked).
+  No finalized operator realization is assumed here beyond this explicit interface requirement.
+  \item \textbf{(S6-M5) Analytic-control package required by transfer.}
+  Strip-wide continuation/compactness/uniformity and interchange legitimacy assumptions are declared at the level needed to pass from local Stage-5 control to global strip statements (AC1--AC6 in current notation).
+  \item \textbf{(S6-M6) No-hidden-off-line-branch / no-alternative-locus input.}
+  The theorem input explicitly excludes creation or persistence of off-line connected components of $\mathcal{B}$ outside $\mathcal{R}_{\mathrm{loc}}$ under the same synchronized assumptions.
+  \item \textbf{(S6-M7) Contradiction-route compatibility clause.}
+  Any assumed off-line balanced point $s_\ast\in\mathcal{A}_{\mathrm{strip}}$ with $\RePart(s_\ast)\neq\tfrac12$ is interpreted under exactly the same package $\mathcal{H}_{\mathrm{S6}}^{\min}$ (no hypothesis switching between premise and exclusion step).
+\end{enumerate}
+
+\paragraph{Theorem target that $\mathcal{H}_{\mathrm{S6}}^{\min}$ is intended to formulate.}
+Under $\mathcal{H}_{\mathrm{S6}}^{\min}$, the preferred Stage~6 target is the clean conditional implication
+\[
+\Big(\forall s\in\mathcal{B}\cap\mathcal{R}_{\mathrm{loc}},\ \RePart(s)=\tfrac12\Big)\Longrightarrow\Big(\forall s\in\mathcal{B}\cap\mathcal{A}_{\mathrm{strip}},\ \RePart(s)=\tfrac12\Big),
+\]
+together with explicit no-alternative-locus interpretation on $\mathcal{A}_{\mathrm{strip}}$.
+In this manuscript version, this remains a theorem target only.
+
+\paragraph{Minimum structural requirements versus stronger optional assumptions.}
+The package $\mathcal{H}_{\mathrm{S6}}^{\min}$ is intentionally limited to assumptions required to \emph{state} the preferred route coherently.
+Stronger hypotheses (for example stronger coercive gaps, stronger positivity monotonicity statements, or model-specific rigidity beyond what is needed to formulate transfer/no-alternative-locus) are treated as optional strengthening packages for proving the route, not as part of the minimum statement scaffold.
+
 \subsection*{Local-to-global transfer principle for \texorpdfstring{$\mathcal{B}$}{B} (open theorem target)}
 This subsection isolates the missing closure bridge between Stage~5 local uniqueness and Stage~6 full-strip exclusion.
 It is recorded as a theorem target only.

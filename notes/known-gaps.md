@@ -88,6 +88,7 @@ Core bridge names synchronized with manuscript text:
 **Current status:** **Open (completeness).** A candidate exclusion-mechanism template is now stated in the manuscript, but no theorem-level instantiation has been proved.
 The current manuscript strategy prioritizes one route under audit:
 local Stage-5 uniqueness \(\Rightarrow\) transfer to full-strip \(\Rightarrow\) no-alternative-locus closure for \(\mathcal{B}\) \(\Rightarrow\) global exclusion.
+This route is now written against a named minimum synchronized assumption scaffold \(\mathcal{H}_{\mathrm{S6}}^{\min}\), used to state the theorem target cleanly while keeping proof status open.
 Other mechanism classes (coercive/positivity/rigidity, reflection-incompatibility, contradiction templates) remain active as supporting or fallback components, not equal-status endpoints.
 
 **What would count as resolution:**

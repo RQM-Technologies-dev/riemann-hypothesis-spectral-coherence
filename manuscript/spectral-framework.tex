@@ -183,6 +183,27 @@ The proof program uses five distinct burden classes.
 This classification is a dependency statement only.
 It does not promote any open bridge to theorem status.
 
+
+\subsection*{Interface tie-in to the minimum synchronized Stage~6 package}
+The preferred Stage~6 route in \texttt{critical-line-argument.tex} is now written relative to a minimum synchronized package $\mathcal{H}_{\mathrm{S6}}^{\min}$.
+From the operator/coherence interface perspective, this means:
+\begin{enumerate}
+  \item \textbf{Minimum operator-side inputs for formulation:} OP7--OP8, together with whichever parts of OP1--OP6 are required to make OP7--OP8 well-typed in the chosen model.
+  \item \textbf{Minimum coherence-functional inputs for formulation:} P2--P4 and the non-circular side-condition discipline in P5, on the same admissible strip class used by Stage~6.
+  \item \textbf{Minimum analytic inputs for formulation:} AC1--AC6 as declared theorem-level assumptions for transfer and no-hidden-branch control.
+\end{enumerate}
+This is a dependency alignment statement only.
+It does not assert that OP/AC items are proved.
+It does not assert that $\mathcal{H}_{\mathrm{S6}}^{\min}$ is sufficient to prove exclusion.
+
+\paragraph{Structural minimum versus stronger support hypotheses.}
+For audit clarity, the manuscript separates:
+\begin{itemize}
+  \item \textbf{Minimum structural formulation requirements:} the OP/P/AC items above needed so the preferred transfer $\to$ no-alternative-locus route can be stated as a precise theorem target.
+  \item \textbf{Stronger optional support requirements:} model-specific coercive/positivity/rigidity estimates that may be used to prove the target once formulated.
+\end{itemize}
+The second class is not part of the minimum statement package unless explicitly promoted into theorem hypotheses in a later revision.
+
 \subsection*{Dependency use map to later stages and lemma targets}
 The interface above is designed to feed specific downstream bridges.
 
