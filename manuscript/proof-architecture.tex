@@ -102,6 +102,8 @@ For clarity of theorem formulation, Stage~6 is now parameterized by the minimum 
 This package is the minimum needed to \emph{state} the preferred Stage~6 route coherently.
 It is not a sufficiency claim for proving Stage~6.
 Stronger coercive/positivity/rigidity assumptions remain optional support packages unless explicitly promoted.
+Stage~6 is now centered on one explicit endpoint: the master exclusion theorem target \cref{thm:stage6-master-exclusion-target} in \texttt{critical-line-argument.tex}.
+All Stage~6 sub-burdens are organized as obligations that discharge this single theorem target.
 For dependency clarity, the intended theorem flow is:
 \[
 \underbrace{\text{Stage-5 local uniqueness on }\mathcal{R}_{\mathrm{loc}}}_{\text{local Target B control}}
@@ -115,12 +117,12 @@ For dependency clarity, the intended theorem flow is:
 The middle implication is an independent theorem target, not an automatic corollary of Stage~5.
 
 \textbf{Intended output.}
-A global theorem-level exclusion mechanism distinct from Stage 5, prioritized by the preferred closure route:
+A global theorem-level exclusion mechanism distinct from Stage 5, culminating in the master theorem target \cref{thm:stage6-master-exclusion-target}:
 \begin{enumerate}
-  \item \textbf{Primary bridge:} theorem-level transfer from Stage-5 local uniqueness on $\mathcal{R}_{\mathrm{loc}}$ to full-strip control on $\mathcal{A}_{\mathrm{strip}}$, supported by AC1--AC6.
-  \item \textbf{Primary global target:} theorem-level no-alternative-locus statement for $\mathcal{B}$ on the full admissible strip.
-  \item \textbf{Primary conclusion:} full-strip exclusion of admissible off-line balanced configurations.
-  \item \textbf{Supporting mechanism burden:} coercive/positivity/rigidity ingredients strong enough to prove items (1)--(2) under synchronized assumptions.
+  \item \textbf{Master Stage~6 theorem target (endpoint):} full-strip exclusion of admissible off-line balanced configurations, equivalently $\mathcal{B}\subseteq\{s:\RePart(s)=\tfrac12\}$ under $\mathcal{H}_{\mathrm{S6}}^{\min}$.
+  \item \textbf{Primary bridge burden:} theorem-level transfer from Stage-5 local uniqueness on $\mathcal{R}_{\mathrm{loc}}$ to full-strip control on $\mathcal{A}_{\mathrm{strip}}$, supported by AC1--AC6.
+  \item \textbf{Primary no-alternative-locus burden:} theorem-level exclusion of off-line connected components of $\mathcal{B}$ on the full admissible strip.
+  \item \textbf{Supporting mechanism burden:} coercive/positivity/rigidity ingredients strong enough to prove items (2)--(3) under synchronized assumptions.
   \item \textbf{Fallback burden:} reflection-incompatibility or direct contradiction-route closure if the primary transfer/no-alternative-locus path cannot be completed.
 \end{enumerate}
 

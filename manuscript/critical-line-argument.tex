@@ -74,6 +74,35 @@ Under $\mathcal{H}_{\mathrm{S6}}^{\min}$, the preferred Stage~6 target is the cl
 together with explicit no-alternative-locus interpretation on $\mathcal{A}_{\mathrm{strip}}$.
 In this manuscript version, this remains a theorem target only.
 
+\begin{drafttheorem}[Master Stage~6 exclusion theorem target under $\mathcal{H}_{\mathrm{S6}}^{\min}$]
+\label{thm:stage6-master-exclusion-target}
+\placeholder{Theorem target under construction; proof not yet provided.}
+Let
+\[
+\mathcal{A}_{\mathrm{strip}}:=\{s\in\mathcal{A}:0<\RePart(s)<1\},\qquad
+\mathcal{B}:=\{s\in\mathcal{A}_{\mathrm{strip}}:\Phi_H(s)=0\},\qquad
+\mathcal{R}_{\mathrm{loc}}\subseteq\mathcal{A}_{\mathrm{strip}}.
+\]
+Under the synchronized minimum package $\mathcal{H}_{\mathrm{S6}}^{\min}$, the preferred Stage~6 route aims to establish:
+\begin{enumerate}
+  \item \textbf{Transfer premise and conclusion (single route statement):}
+  \[
+  \Big(\forall s\in\mathcal{B}\cap\mathcal{R}_{\mathrm{loc}},\ \RePart(s)=\tfrac12\Big)
+  \Longrightarrow
+  \Big(\forall s\in\mathcal{B},\ \RePart(s)=\tfrac12\Big).
+  \]
+  \item \textbf{Equivalent full-strip exclusion form:}
+  there is no admissible off-line balanced point in the strip, i.e.
+  \[
+  \mathcal{B}\cap\{s\in\mathcal{A}_{\mathrm{strip}}:\RePart(s)\neq\tfrac12\}=\varnothing.
+  \]
+  \item \textbf{Equivalent no-alternative-locus form:}
+  every connected component of $\mathcal{B}$ is contained in the critical line $\RePart(s)=\tfrac12$.
+\end{enumerate}
+This theorem is the current single master Stage~6 target under audit.
+It is a formulation target only in this manuscript version and is not proved.
+\end{drafttheorem}
+
 \paragraph{Minimum structural requirements versus stronger optional assumptions.}
 The package $\mathcal{H}_{\mathrm{S6}}^{\min}$ is intentionally limited to assumptions required to \emph{state} the preferred route coherently.
 Stronger hypotheses (for example stronger coercive gaps, stronger positivity monotonicity statements, or model-specific rigidity beyond what is needed to formulate transfer/no-alternative-locus) are treated as optional strengthening packages for proving the route, not as part of the minimum statement scaffold.
@@ -81,6 +110,7 @@ Stronger hypotheses (for example stronger coercive gaps, stronger positivity mon
 \subsection*{Local-to-global transfer principle for \texorpdfstring{$\mathcal{B}$}{B} (open theorem target)}
 This subsection isolates the missing closure bridge between Stage~5 local uniqueness and Stage~6 full-strip exclusion.
 It is recorded as a theorem target only.
+It is a sub-burden intended to discharge the master target \cref{thm:stage6-master-exclusion-target}.
 
 \paragraph{Local versus global in the present manuscript.}
 Write
@@ -159,6 +189,7 @@ These remain open assumptions/targets in this manuscript version.
 \subsection*{No-alternative-locus principle for the balanced set \texorpdfstring{$\mathcal{B}$}{B} (theorem target)}
 This subsection isolates a distinct Stage~6 theorem target.
 It does not assert a proved theorem.
+In the current route, this is a sub-burden for \cref{thm:stage6-master-exclusion-target}, not a separate endpoint.
 
 \paragraph{Balanced-set notation and target form.}
 Let
@@ -261,6 +292,7 @@ Concretely, the intended logical route is
 \]
 This is a planning decision for proof development under audit.
 It is \emph{not} a claim that the route has been proved.
+The route is organized to prove the single master target \cref{thm:stage6-master-exclusion-target} under $\mathcal{H}_{\mathrm{S6}}^{\min}$.
 
 \paragraph{Why this is the current preferred route.}
 This route is currently the most coherent fit with the existing architecture because:
