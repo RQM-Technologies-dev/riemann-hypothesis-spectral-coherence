@@ -21,9 +21,10 @@ The argument attempts to show that the critical line arises as the unique balanc
 
 If you have one minute to orient and 30–60 minutes for first-pass audit, start here:
 
-1. [`docs/claim-map.md`](docs/claim-map.md) — dependency-level map of major claims and what still requires justification.
-2. [`manuscript/main.tex`](manuscript/main.tex) — primary manuscript source and formal claim context.
-3. [`notes/known-gaps.md`](notes/known-gaps.md) — explicit list of unresolved bridges and vulnerability points.
+1. [`docs/reviewer-packet.md`](docs/reviewer-packet.md) — compact expert-audit entry point with scope, claim boundaries, and priority checks.
+2. [`docs/claim-map.md`](docs/claim-map.md) — dependency-level map of major claims and what still requires justification.
+3. [`manuscript/main.tex`](manuscript/main.tex) — primary manuscript source and formal claim context.
+4. [`notes/known-gaps.md`](notes/known-gaps.md) — explicit list of unresolved bridges and vulnerability points.
 
 Suggested first-pass workflow:
 
