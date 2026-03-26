@@ -1,14 +1,22 @@
-The Riemann Hypothesis states that every nontrivial zero of $\zeta(s)$ has real part $\tfrac12$. This manuscript is organized as materials for mathematical audit of a proposed spectral-coherence argument. The argument attempts to show that a symmetry-driven balance condition can hold only on the critical line.
-Standard background on $\zeta(s)$, the completed function $\xi(s)$, and classical zero symmetries is documented in \cite{Riemann1859,Edwards1974,Titchmarsh1986}.
+The Riemann Hypothesis (RH) asserts that every nontrivial zero of the Riemann zeta function $\zeta(s)$ lies on the critical line $\RePart(s)=\tfrac12$ within the critical strip $0<\RePart(s)<1$ \cite{Riemann1859,Titchmarsh1986,Edwards1974}. Establishing RH therefore requires two ingredients: a mechanism producing candidates for zeros and a proof that no zero can occur off the critical line.
 
-This version is intentionally conservative. It distinguishes:
+Classical analytic theory provides the meromorphic continuation of $\zeta$, the completed function
+\[
+\xi(s)=\tfrac12 s(s-1)\pi^{-s/2}\Gamma\!\left(\tfrac{s}{2}\right)\zeta(s),
+\]
+and the functional equation $\xi(s)=\xi(1-s)$ \cite{Titchmarsh1986,Edwards1974}. This gives a reflection symmetry of zeros across the line $\RePart(s)=\tfrac12$, together with conjugation symmetry across the real axis. These symmetries strongly constrain any zero set. They do not, by themselves, exclude symmetric pairs with $\RePart(s)\neq \tfrac12$. In particular, functional-equation symmetry is compatible with off-line quartets unless an additional exclusion mechanism is proved.
+
+This manuscript develops a proposed proof framework in which a symmetry component and a spectral-coherence component are combined. The argument attempts to show that a certain balance condition, formulated in the manuscript as a coherence constraint tied to the completed-function symmetries, can be sustained only when zeros are on the critical line. The intended role of the spectral side is not to replace classical analysis, but to add an additional structural condition that would be violated by off-line zeros.
+
+The central burden of proof is therefore the off-line exclusion step. Concretely, one must prove that if a nontrivial zero has $\RePart(s)\neq \tfrac12$, then the associated symmetry orbit forces a failure of the proposed coherence/balance condition. Until this implication is established as a formal theorem under explicit hypotheses, the framework remains incomplete. Computational checks and consistency tests can support plausibility, but they do not substitute for this exclusion proof.
+
+For mathematical audit, this introduction separates three layers used throughout:
 \begin{itemize}
-  \item formal statements supported by known literature,
-  \item draft theorem targets that remain unproved,
-  \item heuristic motivation used only for guidance.
+  \item \textbf{Established background:} standard facts about $\zeta$, $\xi$, analytic continuation, and zero symmetries from the classical literature \cite{Titchmarsh1986,Edwards1974}.
+  \item \textbf{Proposed architecture:} the manuscript-specific decomposition into symmetry, spectral, and reduction components intended to interact in a critical-line argument.
+  \item \textbf{Open bridges:} implications that are currently targets rather than proved theorems, especially the off-line exclusion implication described above.
 \end{itemize}
 
-\paragraph{Manuscript map.}
-Definitions are fixed in \S2. Draft claims and established inputs are listed in \S3. Logical dependencies are stated in \S4. Lemma-level dependencies are tracked in \S5. The symmetry and spectral components are separated in \S6--\S7. The critical-line reduction is outlined in \S8. Scope and limitations are documented in \S10.
+The organization of the manuscript is as follows. Section~2 fixes definitions and notation. Section~3 states draft theorem targets together with established inputs. Section~4 gives the proof architecture and dependency structure. Section~5 records lemma-level dependencies and placeholders. Sections~6 and~7 treat the symmetry and spectral frameworks separately. Section~8 presents the critical-line reduction attempt, including where off-line exclusion is required. Section~9 discusses interpretation and scope. Section~10 lists limitations and unresolved bridges requiring proof.
 
-\auditnote{Citation additions are intentionally limited to standard references that directly support claims used in the manuscript.}
+\auditnote{This introduction is intended as conservative orientation for expert review. It states the claimed objective and the main burden of proof without asserting that unresolved bridges are already settled.}
