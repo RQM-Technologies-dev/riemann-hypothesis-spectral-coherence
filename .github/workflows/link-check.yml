@@ -30,7 +30,6 @@ jobs:
           args: >
             --verbose
             --no-progress
-            --exclude-mail
             --max-retries 2
             --retry-wait-time 2
             '**/*.md'
