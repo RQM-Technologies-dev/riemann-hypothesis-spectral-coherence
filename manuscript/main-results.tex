@@ -35,11 +35,18 @@ Under an explicit hypothesis set $\mathcal{H}_B$ (admissibility synchronization,
 \begin{enumerate}
   \item \textbf{Local critical-line uniqueness target:} every balanced point in the local regime $\mathcal{R}_{\mathrm{loc}}\subseteq\mathcal{A}$ covered by $\mathcal{H}_B$ satisfies $\RePart(s)=\tfrac12$.
   \item \textbf{Local-to-global transfer target (closure bridge):} there exists a theorem-level extension principle, stated under an explicit synchronized hypothesis package $\mathcal{H}_{\mathrm{tr}}$, that transports the Stage-5 local uniqueness conclusion from $\mathcal{R}_{\mathrm{loc}}$ to all regimes used in the reduction.
+  Here ``local'' means the Stage-5 regime $\mathcal{R}_{\mathrm{loc}}\subseteq\mathcal{A}_{\mathrm{strip}}$ where uniqueness estimates are proved/assumed, while ``global'' means the full admissible strip class $\mathcal{A}_{\mathrm{strip}}$.
   The transfer target must explicitly control boundary-near, non-perturbative, and large-parameter regions in
   \[
   \mathcal{A}_{\mathrm{strip}}:=\{s\in\mathcal{A}:0<\RePart(s)<1\},
   \]
   and must exclude hidden off-line balanced branches that could appear only outside $\mathcal{R}_{\mathrm{loc}}$.
+  In theorem-target form, the bridge must provide:
+  \[
+  \Big(\forall s\in\mathcal{B}\cap\mathcal{R}_{\mathrm{loc}},\ \RePart(s)=\tfrac12\Big)\ \Longrightarrow\
+  \Big(\forall s\in\mathcal{B}\cap\mathcal{A}_{\mathrm{strip}},\ \RePart(s)=\tfrac12\Big),
+  \]
+  under one synchronized package $\mathcal{H}_{\mathrm{tr}}$ compatible with Target~A, local Target~B, and Stage~6.
   \item \textbf{Global no-alternative-locus target:} in the full admissible strip class
   \[
   \mathcal{A}_{\mathrm{strip}}:=\{s\in\mathcal{A}:0<\RePart(s)<1\},

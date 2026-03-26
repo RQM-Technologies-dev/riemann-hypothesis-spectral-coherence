@@ -45,6 +45,44 @@ Under a synchronized hypothesis package $\mathcal{H}_{\mathrm{tr}}$, if Stage-5 
 \end{quote}
 Equivalently, under $\mathcal{H}_{\mathrm{tr}}$ there is no off-line connected component of $\mathcal{B}$ that is disjoint from the local regime where uniqueness is established.
 
+\begin{drafttheorem}[Local-to-global transfer principle target for $\mathcal{B}$ (Stage~6 bridge)]
+\label{thm:transfer-target-B}
+\placeholder{Theorem target under construction; proof not yet provided.}
+Let
+\[
+\mathcal{B}:=\{s\in\mathcal{A}_{\mathrm{strip}}:\Phi_H(s)=0\},
+\qquad
+\mathcal{A}_{\mathrm{strip}}:=\{s\in\mathcal{A}:0<\RePart(s)<1\},
+\]
+and let $\mathcal{R}_{\mathrm{loc}}\subseteq\mathcal{A}_{\mathrm{strip}}$ denote the Stage-5 local regime.
+The required closure bridge is a theorem target of the form:
+\[
+\Big(\forall s\in\mathcal{B}\cap\mathcal{R}_{\mathrm{loc}},\ \RePart(s)=\tfrac12\Big)
+\Longrightarrow
+\Big(\forall s\in\mathcal{B},\ \RePart(s)=\tfrac12\Big),
+\]
+under one synchronized hypothesis package $\mathcal{H}_{\mathrm{tr}}$.
+The package must include, at minimum:
+\begin{enumerate}
+  \item admissibility stability from local to global regimes;
+  \item compatibility of Stage-5 local estimates with the full admissible strip class;
+  \item continuation/compactness/uniformity control across boundary-near, non-perturbative, and large-parameter sectors;
+  \item no-loss symmetry compatibility under reflection/conjugation transport;
+  \item exclusion of new off-line connected components of $\mathcal{B}$ arising only outside $\mathcal{R}_{\mathrm{loc}}$.
+\end{enumerate}
+This theorem target is the explicit bridge between local Target~B control and full-strip off-line exclusion.
+It is not established in the current manuscript version.
+\end{drafttheorem}
+
+\paragraph{Three-way separation (local result, transfer bridge, global conclusion).}
+To avoid conflation of proof burdens:
+\begin{enumerate}
+  \item \textbf{Local Target~B control (Stage~5):} uniqueness on $\mathcal{R}_{\mathrm{loc}}$ only.
+  \item \textbf{Transfer bridge (Stage~6 target):} \cref{thm:transfer-target-B}, carrying local control to $\mathcal{A}_{\mathrm{strip}}$.
+  \item \textbf{Global exclusion conclusion:} no off-line balanced points anywhere in $\mathcal{A}_{\mathrm{strip}}$.
+\end{enumerate}
+The manuscript records item (2) as an open theorem target, not as a proved corollary of item (1).
+
 \paragraph{What must be transferred.}
 For closure, $\mathcal{H}_{\mathrm{tr}}$ must carry all of the following from local to global:
 \begin{enumerate}
