@@ -9,6 +9,35 @@ The current revision makes the Stage~6 burden more explicit by separating: (i) l
 Within that template, the manuscript now prioritizes one route: local-to-global transfer for $\mathcal{B}$ followed by no-alternative-locus closure, then full-strip exclusion. The route is now formulated under a named minimum synchronized package $\mathcal{H}_{\mathrm{S6}}^{\min}$ to make assumptions explicit for audit. This naming is a statement-format choice, not a sufficiency theorem. Coercive/positivity/rigidity ingredients are treated as supporting tools for this route. Reflection-incompatibility and direct contradiction-only closures are retained as secondary fallback paths. This prioritization is a proof-strategy choice under audit, not a theorem claim.
 The current revision also states one master Stage~6 exclusion theorem target as the single endpoint of that preferred route: under $\mathcal{H}_{\mathrm{S6}}^{\min}$, local uniqueness on $\mathcal{R}_{\mathrm{loc}}$ should transfer to full-strip exclusion of off-line balanced points in $\mathcal{A}_{\mathrm{strip}}$, equivalently $\mathcal{B}\subseteq\{s:\RePart(s)=\tfrac12\}$. For audit readability, the same endpoint is listed in pointwise, set-theoretic, component/locus, and contradiction-style forms under that same package. This is a formulation-level alignment device, not a proof that these forms are established as facts in the current manuscript version.
 
+
+\subsection*{Current first proving target inside the preferred Stage~6 route}
+Within the preferred route
+\[
+\text{local uniqueness on }\mathcal{R}_{\mathrm{loc}}
+\Rightarrow
+\text{transfer on }\mathcal{A}_{\mathrm{strip}}
+\Rightarrow
+\text{no-alternative-locus}
+\Rightarrow
+\text{full-strip exclusion},
+\]
+the manuscript now identifies one first subtheorem to try proving:
+\begin{quote}
+\textbf{Admissibility-stability transfer lemma target (B4 entry lemma):}
+local Stage-5 hypotheses must remain valid along the continuation classes used to pass from $\mathcal{R}_{\mathrm{loc}}$ to $\mathcal{A}_{\mathrm{strip}}$.
+\end{quote}
+Status label: \emph{open theorem target} (not proved).
+
+This is chosen as the best entry point for the current architecture because it is the earliest non-optional dependency in the preferred Stage~6 chain:
+\begin{enumerate}
+  \item the transfer theorem target cannot even be stated in a theorem-usable way unless admissibility is synchronized from local to strip-wide regimes;
+  \item no-hidden-off-line-component and no-alternative-locus targets both presuppose this synchronization;
+  \item this entry point does not require selecting a finalized operator realization beyond the existing OP/AC interface assumptions already recorded as open.
+\end{enumerate}
+Accordingly, the proving order is explicitly: master Stage~6 endpoint (open) $\rightarrow$ first proving target (admissibility-stability transfer, open) $\rightarrow$ later subtargets (uniform continuation/compactness, no-new-off-line-branch, no-alternative-locus, full-strip exclusion).
+This ordering is a strategy decision for audit and work planning.
+It is not evidence that any Stage~6 bridge has been discharged.
+
 \paragraph{Relation to nearby spectral programs.}
 The framework is adjacent to classical spectral programs in the broad sense that it seeks a spectral encoding of information about zeta zeros. However, it is not identical to standard formulations that center a single self-adjoint operator with a fully established spectral correspondence. Here, the emphasis is on a coherence-based architecture and on reduction through intermediate analytic objects. This placement is best interpreted as \emph{neighboring} the classical spectral agenda rather than claiming equivalence to any established program. Similar motivation does not imply interchangeability of technical hypotheses or proof obligations.
 
