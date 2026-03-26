@@ -1,19 +1,96 @@
-We record the dependency structure as a proof program.
+We record the logical dependency chain as a proof program for audit.  This section specifies required lemmas and bridges, but does not claim that those bridges are proved.
 
-\subsection*{Stage 1: Formal setup}
-Define $H$ and the balance criterion with full domain/codomain and regularity hypotheses.
+\subsection*{Program-level dependency graph}
+\begin{enumerate}
+    \item Formal setup and admissible objects
+    \item Operator construction and analytic control
+    \item Balance functional well-posedness
+    \item Zero--balance correspondence (Target A)
+    \item Critical-line uniqueness of balanced points (Target B)
+    \item Global off-line exclusion mechanism
+    \item Final RH reduction inside the framework
+\end{enumerate}
 
-\subsection*{Stage 2: Correspondence bridge}
-Prove Target A (\cref{thm:target-correspondence}).
-\openbridge{Requires explicit relation between the balance condition and the zero set of $\zeta$.}
+\subsection*{Stage 1: Formal setup and admissible class}
+\textbf{Required inputs.}
+Precise definitions of the state space $H$, admissible data class, and the balance criterion; explicit regularity, decay, and symmetry assumptions.
 
-\subsection*{Stage 3: Critical-line bridge}
-Prove Target B (\cref{thm:target-uniqueness}).
-\openbridge{Requires a rigorous exclusion argument for off-line balanced points.}
+\textbf{Intended output.}
+A fixed formal context in which all subsequent operators and functionals are well-typed (domain/codomain, topology, and admissibility constraints).
 
-\subsection*{Stage 4: Final reduction}
-Combine Stages 2 and 3 to derive RH within the framework.
+\textbf{Current status.}
+\textbf{Established} as framework definitions (subject to local clarification edits as notation evolves).
+
+\subsection*{Stage 2: Operator construction and analytic control}
+\textbf{Required inputs.}
+Stage 1 definitions, plus a concrete operator construction rule and hypotheses needed for boundedness/closability/spectral meaning (as appropriate to the chosen operator model).
+
+\textbf{Intended output.}
+A mathematically controlled operator layer: existence of the constructed operator(s), admissible action on $H$, and a traceable list of analytic properties actually used later.
+
+\textbf{Current status.}
+\textbf{Partial}.  Core construction ideas are present, but several control statements remain assumption-level and require formal proofs under explicit hypotheses.
+
+\subsection*{Stage 3: Balance functional well-posedness}
+\textbf{Required inputs.}
+Stages 1--2, including regularity and operator-control bounds sufficient to define the balance functional on the intended class.
+
+\textbf{Intended output.}
+Well-posedness package: definition on a specified domain, finiteness, continuity/differentiability properties needed downstream, and invariance/covariance statements used in correspondence arguments.
+
+\textbf{Current status.}
+\textbf{Partial}.  The functional is specified at the formal level; full well-posedness proofs are not complete in all parameter regimes.
+
+\subsection*{Stage 4: Zero--balance correspondence bridge (Target A)}
+\textbf{Required inputs.}
+Stage 3 well-posedness plus a precise matching rule between balanced configurations and zeros of $\zeta$ in the manuscript's encoding.
+
+\textbf{Intended output.}
+A bidirectional correspondence theorem (or clearly one-directional theorem plus separate converse):
+\[
+\text{balanced point} \Longleftrightarrow \text{encoded zeta zero},
+\]
+with all side conditions explicit.
+
+\textbf{Current status.}
+\textbf{Open bridge}.  Target A (\cref{thm:target-correspondence}) is not yet proved.
+\openbridge{Requires a rigorous, hypothesis-complete map between the balance condition and the zero set of $\zeta$, including injectivity/surjectivity conditions and exclusion of spurious balanced states.}
+
+\subsection*{Stage 5: Critical-line uniqueness bridge (Target B)}
+\textbf{Required inputs.}
+Stage 4 correspondence plus structural constraints sufficient to force balanced configurations onto $\Re(s)=\tfrac12$.
+
+\textbf{Intended output.}
+A uniqueness/localization statement showing that any admissible balanced point satisfies the critical-line condition.
+
+\textbf{Current status.}
+\textbf{Open bridge}.  Target B (\cref{thm:target-uniqueness}) remains unproved.
+\openbridge{Requires a fully rigorous argument ruling out admissible balanced points with $\Re(s)\neq\tfrac12$ under the stated assumptions.}
+
+\subsection*{Stage 6: Global off-line exclusion mechanism}
+\textbf{Required inputs.}
+Refined estimates or monotonicity/convexity principles compatible with Stages 2--5, sufficient to upgrade local uniqueness logic to a global exclusion statement.
+
+\textbf{Intended output.}
+A global theorem-level exclusion mechanism: no admissible off-line balanced configurations in the entire critical strip.
+
+\textbf{Current status.}
+\textbf{Open}.  Portions are heuristic/motivational and must be converted into formal estimates.
+\openbridge{Requires proof-quality global control; computational checks may guide conjecture but do not substitute for the exclusion proof.}
+
+\subsection*{Stage 7: Final RH reduction inside the framework}
+\textbf{Required inputs.}
+Completed Stages 4--6 with hypotheses synchronized and no circular dependencies.
+
+\textbf{Intended output.}
+A clean conditional reduction:
+\begin{quote}
+If Target A and Target B (with the global exclusion package) hold under assumptions $\mathcal{A}$, then RH follows within this framework.
+\end{quote}
+
+\textbf{Current status.}
+\textbf{Open/conditional}.  Reduction logic is straightforward once bridges are proved, but present manuscript status is conditional on unresolved bridges.
 
 \begin{remark}
-At present, Stages 2 and 3 remain open. This section is an architecture map, not a proof.
+Audit interpretation: failure of any open bridge (Stages 4--6) blocks the RH reduction.  This section is a dependency map for review, not a claim that those bridges are complete.
 \end{remark}
