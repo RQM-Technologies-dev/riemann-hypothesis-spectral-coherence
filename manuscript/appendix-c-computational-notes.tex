@@ -1,42 +1,71 @@
-This appendix describes the computational support for the manuscript. The code
-and notebooks in \texttt{code/} are provided to visualize and explore the
-proposed spectral-coherence structure numerically. Computational results are
-illustrative and do not substitute for formal proofs.
+This appendix records how repository computations are intended to support audit of the proposed proof framework. The computational materials are evidentiary aids for inspection, consistency checks, and heuristic orientation. They are not part of the formal proof architecture.
 
-\subsection{What the Code Does}
+\subsection{Role of Computational Materials}
+
+The repository includes code and notebooks in \texttt{code/} that provide numerical and geometric context for the manuscript.
 
 \begin{itemize}
-  \item \texttt{code/notebooks/spectral-visualization.ipynb}: Plots the magnitude
-        and phase of $\zeta(s)$ along and near the critical line. Visualizes the
-        reflection symmetry $s \mapsto 1-s$.
-  \item \texttt{code/notebooks/critical-line-geometry.ipynb}: Plots the critical
-        line and the placement of known nontrivial zeros. Illustrates the geometric
-        intuition of the balance framework.
-  \item \texttt{code/src/placeholder.py}: Placeholder module with utility functions
-        for computing $\zeta(s)$ numerically (using the \texttt{mpmath} library
-        for high-precision arithmetic).
+  \item \textbf{Visualization tasks.} Plots of $\zeta(s)$ and related symmetry patterns near the critical line are used to make qualitative structures visible (e.g., reflection behavior and observed zero placement).
+  \item \textbf{Sanity checks.} Notebook computations are used to detect obvious inconsistencies between formulas used in exploratory scripts and formulas stated in the manuscript.
+  \item \textbf{Parameter exploration.} Precision settings, sampling windows, and plotting ranges are varied to test whether qualitative patterns appear stable under reasonable numerical perturbations.
 \end{itemize}
 
-\subsection{Numerical Limitations}
+These tasks support review of the argument's framing. They do not establish theorem-level conclusions.
 
-All numerical computations of $\zeta(s)$ are approximate. The known zeros have
-been computed to many decimal places by other researchers (see \cite{Odlyzko1987,
-PlattTrudgian2021}), and the code in this repository does not aim to extend the
-numerical verification of RH. Rather, it supports visual understanding of the
-framework.
+\subsection{What Computations Can Test}
 
-No claim in the manuscript relies on the output of these computations.
+Within this project, computations can test whether a proposed heuristic picture is \emph{numerically compatible} with sampled data and whether an implementation reproduces expected identities to finite precision. Typical checks include:
 
-\subsection{Reproducing the Computations}
+\begin{itemize}
+  \item agreement of numerically evaluated expressions with known functional symmetries at sampled points;
+  \item visual consistency of plotted structures across nearby sampling choices;
+  \item reproducibility of the same outputs when rerunning notebooks with fixed settings.
+\end{itemize}
 
-To reproduce the notebooks:
+Positive outcomes from these checks are supporting evidence for coherence of the exploratory setup.
+
+\subsection{What Computations Cannot Establish}
+
+Computations in this repository cannot establish any universal claim over all relevant $s \in \mathbb{C}$, cannot replace missing reductions, and cannot convert a heuristic bridge into a formal proof.
+
+In particular, numerical agreement on finite samples does \emph{not} prove:
+
+\begin{itemize}
+  \item that a statement holds outside sampled ranges;
+  \item that an observed pattern has a unique or necessary analytic explanation;
+  \item that unresolved bridges listed in the manuscript or notes are closed.
+\end{itemize}
+
+Accordingly, manuscript claims should be read as formal only where a complete proof is supplied. Elsewhere, computational evidence is interpretive support only.
+
+\subsection{Reproducibility Expectations}
+
+The reproducibility standard for \texttt{code/} is \emph{audit reproducibility}, not formal verification. A reviewer should be able to run notebooks and recover qualitatively similar figures and numerically consistent checkpoints.
+
+Minimal expectations are:
 
 \begin{enumerate}
-  \item Install Python 3.9 or later with the packages listed in
-        \texttt{code/README.md}.
-  \item Navigate to \texttt{code/notebooks/} and launch Jupyter:
-        \texttt{jupyter notebook}.
-  \item Run all cells in order.
+  \item environment setup consistent with \texttt{code/README.md} (Python and listed dependencies);
+  \item execution of notebooks in \texttt{code/notebooks/} from a clean kernel, in cell order;
+  \item explicit reporting of precision settings and any modified plotting/sampling parameters when sharing outputs.
 \end{enumerate}
 
-See \texttt{code/README.md} for full instructions.
+If outputs differ materially across environments, those differences should be treated as an audit signal requiring diagnosis before interpretation.
+
+\subsection{Precision, Range, and Interpretation Cautions}
+
+Numerical evaluations of $\zeta(s)$ depend on arithmetic precision, algorithm choice, and conditioning at the sampled points. Figures also depend on plot window, mesh density, and color scaling.
+
+For that reason:
+
+\begin{itemize}
+  \item precision should be stated whenever numerical values are cited;
+  \item sampling ranges should be documented when making qualitative claims from plots;
+  \item visual features near resolution limits should be treated as tentative unless confirmed under refined settings.
+\end{itemize}
+
+The default precision used in current notebooks (as described in \texttt{code/README.md}) is adequate for exploratory inspection but should not be interpreted as a uniform error certificate for all derived impressions.
+
+\subsection{Boundary with Formal Mathematics}
+
+The manuscript's formal content remains the definitions, lemmas, propositions, and theorem-level arguments in the primary text. This appendix defines a boundary: computations are provided to help reviewers inspect plausibility and internal consistency of exploratory components, while the proof burden remains entirely on formal mathematics.
