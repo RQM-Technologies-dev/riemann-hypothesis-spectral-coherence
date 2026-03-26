@@ -1,13 +1,57 @@
-This section states the intended critical-line reduction in a conservative form.
+This section records the manuscript's conditional reduction step in explicit dependency form.
+The purpose is to isolate the final logical deduction from the earlier bridges that still require proof.
 
-\subsection*{Draft reduction statement}
-Assume Target A (zero--balance correspondence) and Target B (balance only on the critical line). Then each nontrivial zero must satisfy $\RePart(s)=\tfrac12$.
-
-\subsection*{Open proof obligations}
+\subsection*{Conditional reduction statement}
+\begin{proposition}[Framework-internal conditional RH reduction]
+Assume the manuscript definitions of the state space $H$, admissibility class, and balance criterion are fixed and well-posed under a hypothesis package $\mathcal{A}$.
+Assume further that the following three inputs hold under the same $\mathcal{A}$:
 \begin{enumerate}
-  \item Complete the definition of $H$ and the balance criterion.
-  \item Prove reflection invariance for balanced points.
-  \item Prove exclusion of off-line balanced points.
+  \item \textbf{Target A (zero--balance correspondence).} Every nontrivial zero in the critical strip corresponds to a balanced point in the admissible class (with converse direction as specified in the correspondence theorem).
+  \item \textbf{Target B (critical-line localization of balanced points).} Every admissible balanced point satisfies $\RePart(s)=\tfrac12$.
+  \item \textbf{Global off-line exclusion package.} No admissible off-line balanced configuration exists in the full critical strip, including boundary/degenerate regimes required by the framework's parameterization.
 \end{enumerate}
+Then every nontrivial zero $\rho$ of $\zeta$ satisfies $\RePart(\rho)=\tfrac12$.
+\end{proposition}
 
-\openbridge{The manuscript currently provides architecture and dependency labeling, not a completed proof of the reduction.}
+\subsection*{Reduction proof skeleton (conditional)}
+The deduction itself is short once the above inputs are available.
+Let $\rho$ be a nontrivial zero.
+By Target A, $\rho$ maps to a balanced admissible configuration.
+By Target B, that balanced configuration must lie on $\RePart(s)=\tfrac12$.
+Hence $\RePart(\rho)=\tfrac12$.
+The global off-line exclusion package ensures that no admissible off-line cases survive outside the local regime used to prove Target B, so the conclusion applies across the entire critical strip addressed by $\mathcal{A}$.
+
+\subsection*{Where the argument is formally straightforward}
+\begin{itemize}
+  \item The final implication from ``zero is balanced'' plus ``balanced implies critical line'' to RH-in-strip is a direct composition of statements.
+  \item No deep analytic estimate enters at this final step once hypotheses are synchronized and side conditions are already checked.
+\end{itemize}
+
+\subsection*{Where the unresolved burden lies}
+The mathematical pressure is upstream, not in the final deduction.
+The unresolved burden is to prove, under explicit assumptions, the bridges that feed the reduction:
+\begin{enumerate}
+  \item \textbf{Target A burden:} establish a rigorous correspondence map with precise domain/codomain control, and exclude spurious balanced states that do not encode zeros.
+  \item \textbf{Target B burden:} prove a theorem-level localization statement forcing every admissible balanced point onto $\RePart(s)=\tfrac12$.
+  \item \textbf{Global exclusion burden:} upgrade local or regime-restricted arguments to a full-strip exclusion theorem compatible with the assumptions used in Targets A and B.
+\end{enumerate}
+Until these bridges are proved, the reduction remains conditional.
+
+\subsection*{Assumption-compatibility requirements}
+For the reduction to be valid as stated, the assumptions used in Target A, Target B, and global off-line exclusion must be mutually compatible.
+In particular, the manuscript must avoid: (i) proving Target A on one admissible class and Target B on a narrower incompatible class without a transfer theorem, and (ii) invoking a global exclusion principle whose hypotheses are not inherited by the correspondence setup.
+
+\begin{remark}[Audit-facing interpretation]
+This section does \emph{not} claim that RH is proved.
+It states that the framework yields RH \emph{if} Targets A and B and the global off-line exclusion package are established under a common explicit hypothesis set.
+The hard work is proving those prior bridges.
+\end{remark}
+
+\begin{remark}[Common failure modes in RH-type reductions]
+Two recurring failure modes are especially relevant here.
+First, a correspondence theorem may hold only with hidden regularity assumptions, leaving uncovered zero candidates.
+Second, a localization argument may be valid only in a perturbative or local regime and fail to imply global off-line exclusion.
+The present framework therefore keeps Target A, Target B, and global exclusion as separate proof obligations.
+\end{remark}
+
+\openbridge{Current manuscript status: the conditional deduction is structurally clear, but Targets A and B and the global off-line exclusion mechanism remain open proof obligations requiring full theorem-level proofs under synchronized assumptions.}
