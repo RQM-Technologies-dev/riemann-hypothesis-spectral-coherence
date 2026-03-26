@@ -89,12 +89,27 @@ the current preferred Stage~6 route is organized around one master theorem targe
 \Longrightarrow
 \Big(\forall s\in\mathcal{B}\cap\mathcal{A}_{\mathrm{strip}},\ \RePart(s)=\tfrac12\Big).
 \]
-Equivalent forms recorded for audit are:
+For audit readability, the theorem target is recorded in the following formulation-level equivalent forms under the same synchronized package $\mathcal{H}_{\mathrm{S6}}^{\min}$:
 \begin{enumerate}
-  \item no admissible off-line balanced points in the full strip class $\mathcal{A}_{\mathrm{strip}}$;
-  \item $\mathcal{B}\subseteq\{s\in\mathcal{A}_{\mathrm{strip}}:\RePart(s)=\tfrac12\}$;
-  \item no alternative off-line connected locus of $\mathcal{B}$ in $\mathcal{A}_{\mathrm{strip}}$.
+  \item \textbf{Pointwise exclusion form:}
+  \[
+  \forall s\in\mathcal{B}\cap\mathcal{A}_{\mathrm{strip}},\quad \RePart(s)=\tfrac12,
+  \]
+  equivalently no admissible off-line balanced point exists in the strip.
+  \item \textbf{Set-theoretic inclusion form:}
+  \[
+  \mathcal{B}\subseteq\{s\in\mathcal{A}_{\mathrm{strip}}:\RePart(s)=\tfrac12\},
+  \]
+  equivalently
+  \[
+  \mathcal{B}\cap\{s\in\mathcal{A}_{\mathrm{strip}}:\RePart(s)\neq\tfrac12\}=\varnothing.
+  \]
+  \item \textbf{Component/locus exclusion form:}
+  every connected component of $\mathcal{B}$ is contained in $\RePart(s)=\tfrac12$, so no off-line connected component of $\mathcal{B}$ exists in $\mathcal{A}_{\mathrm{strip}}$.
+  \item \textbf{Contradiction-style form:}
+  if one assumes $s_\ast\in\mathcal{B}\cap\mathcal{A}_{\mathrm{strip}}$ with $\RePart(s_\ast)\neq\tfrac12$, then that assumption is intended to contradict at least one ingredient of the same synchronized package $\mathcal{H}_{\mathrm{S6}}^{\min}$.
 \end{enumerate}
+No equivalence proof is supplied here beyond recording these as theorem-target formulations under $\mathcal{H}_{\mathrm{S6}}^{\min}$.
 This is the master Stage~6 theorem target under the current preferred route.
 It is not proved in this manuscript version.
 \end{drafttheorem}

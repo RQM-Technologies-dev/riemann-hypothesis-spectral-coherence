@@ -83,25 +83,58 @@ Let
 \mathcal{B}:=\{s\in\mathcal{A}_{\mathrm{strip}}:\Phi_H(s)=0\},\qquad
 \mathcal{R}_{\mathrm{loc}}\subseteq\mathcal{A}_{\mathrm{strip}}.
 \]
-Under the synchronized minimum package $\mathcal{H}_{\mathrm{S6}}^{\min}$, the preferred Stage~6 route aims to establish:
+Under the synchronized minimum package $\mathcal{H}_{\mathrm{S6}}^{\min}$, the preferred Stage~6 route aims to establish the transfer statement
+\[
+\Big(\forall s\in\mathcal{B}\cap\mathcal{R}_{\mathrm{loc}},\ \RePart(s)=\tfrac12\Big)
+\Longrightarrow
+\Big(\forall s\in\mathcal{B}\cap\mathcal{A}_{\mathrm{strip}},\ \RePart(s)=\tfrac12\Big),
+\]
+and records the following theorem-target-equivalent formulations under the same package:
 \begin{enumerate}
-  \item \textbf{Transfer premise and conclusion (single route statement):}
+  \item \textbf{Pointwise form:} every admissible balanced point in $\mathcal{A}_{\mathrm{strip}}$ lies on $\RePart(s)=\tfrac12$.
+  \item \textbf{Set-theoretic form:}
   \[
-  \Big(\forall s\in\mathcal{B}\cap\mathcal{R}_{\mathrm{loc}},\ \RePart(s)=\tfrac12\Big)
-  \Longrightarrow
-  \Big(\forall s\in\mathcal{B},\ \RePart(s)=\tfrac12\Big).
+  \mathcal{B}\subseteq\{s\in\mathcal{A}_{\mathrm{strip}}:\RePart(s)=\tfrac12\},
   \]
-  \item \textbf{Equivalent full-strip exclusion form:}
-  there is no admissible off-line balanced point in the strip, i.e.
+  equivalently
   \[
   \mathcal{B}\cap\{s\in\mathcal{A}_{\mathrm{strip}}:\RePart(s)\neq\tfrac12\}=\varnothing.
   \]
-  \item \textbf{Equivalent no-alternative-locus form:}
-  every connected component of $\mathcal{B}$ is contained in the critical line $\RePart(s)=\tfrac12$.
+  \item \textbf{Component/locus form:} no connected component of $\mathcal{B}$ is off the critical line.
+  \item \textbf{Contradiction-style form:} assuming an admissible off-line balanced point
+  \[
+  s_\ast\in\mathcal{B}\cap\mathcal{A}_{\mathrm{strip}},\qquad \RePart(s_\ast)\neq\tfrac12,
+  \]
+  must contradict at least one ingredient of the same synchronized package $\mathcal{H}_{\mathrm{S6}}^{\min}$.
 \end{enumerate}
 This theorem is the current single master Stage~6 target under audit.
+The list above is a statement-level alignment device, not an independent proof of equivalence.
 It is a formulation target only in this manuscript version and is not proved.
 \end{drafttheorem}
+
+\subsection*{Audit list: preferred equivalent formulations of the Stage~6 endpoint}
+For cross-checking across sections, we summarize the preferred forms of
+\cref{thm:stage6-master-exclusion-target} under $\mathcal{H}_{\mathrm{S6}}^{\min}$:
+\begin{enumerate}
+  \item \textbf{Transfer form (route statement):}
+  \[
+  \Big(\forall s\in\mathcal{B}\cap\mathcal{R}_{\mathrm{loc}},\ \RePart(s)=\tfrac12\Big)
+  \Longrightarrow
+  \Big(\forall s\in\mathcal{B}\cap\mathcal{A}_{\mathrm{strip}},\ \RePart(s)=\tfrac12\Big).
+  \]
+  \item \textbf{Pointwise exclusion form:}
+  \[
+  \forall s\in\mathcal{B}\cap\mathcal{A}_{\mathrm{strip}},\quad \RePart(s)=\tfrac12.
+  \]
+  \item \textbf{Set-theoretic form:}
+  \[
+  \mathcal{B}\cap\{s\in\mathcal{A}_{\mathrm{strip}}:\RePart(s)\neq\tfrac12\}=\varnothing.
+  \]
+  \item \textbf{Component/locus form:} no off-line connected component of $\mathcal{B}$ exists in $\mathcal{A}_{\mathrm{strip}}$.
+  \item \textbf{Contradiction form:} any assumed admissible off-line balanced point contradicts at least one clause of $\mathcal{H}_{\mathrm{S6}}^{\min}$.
+\end{enumerate}
+In this manuscript version, this list is recorded for audit readability only.
+It does not assert that these formulations have been proved equivalent outside the stated theorem-target framing under $\mathcal{H}_{\mathrm{S6}}^{\min}$.
 
 \paragraph{Minimum structural requirements versus stronger optional assumptions.}
 The package $\mathcal{H}_{\mathrm{S6}}^{\min}$ is intentionally limited to assumptions required to \emph{state} the preferred route coherently.
