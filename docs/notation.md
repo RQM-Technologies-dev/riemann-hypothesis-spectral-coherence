@@ -1,113 +1,109 @@
-# Notation Reference
+# Notation and Terminology Control Sheet
 
-*This file defines all symbols, conventions, and terminology used in the manuscript.*
+This document is a controlled notation reference for the proposed proof framework.
+It is aligned to the current manuscript state and is intended for mathematical audit.
 
-When notation is introduced in the manuscript, it will be cross-referenced here.
-If you encounter a symbol that is undefined or ambiguous, please open a
-[Notation Clarification issue](../.github/ISSUE_TEMPLATE/notation-clarification.md).
+Scope:
+- Record symbols already used in the manuscript.
+- Distinguish committed notation from exploratory notation.
+- Mark unresolved notation explicitly as placeholders.
 
----
-
-## General Conventions
-
-| Convention | Description |
-|---|---|
-| `s = σ + it` | Standard decomposition of a complex variable s into real part σ and imaginary part t |
-| `s̄` | Complex conjugate of s |
-| `Re(s)` | Real part of s (also written σ when s = σ + it) |
-| `Im(s)` | Imaginary part of s (also written t when s = σ + it) |
-| `ℂ` | The field of complex numbers |
-| `ℝ` | The field of real numbers |
-| `ℕ` | The natural numbers {1, 2, 3, ...} |
-| `ℍ` | The quaternions (if used; see §Quaternionic Variables below) |
+Primary manuscript anchors:
+- `manuscript/definitions.tex`
+- `manuscript/spectral-framework.tex`
 
 ---
 
-## Zeta Function Notation
+## 1) Standard notation (classical zeta-function context)
 
-| Symbol | Definition |
-|---|---|
-| `ζ(s)` | The Riemann zeta function, defined for Re(s) > 1 by ζ(s) = Σ n^(−s), extended by analytic continuation to ℂ \ {1} |
-| `ξ(s)` | The completed (or "xi") zeta function: ξ(s) = (1/2) s(s−1) π^(−s/2) Γ(s/2) ζ(s) |
-| `Λ(s)` | *[Placeholder — define if used for a different completed L-function]* |
-| `Z(t)` | Hardy's Z-function: Z(t) = e^(iθ(t)) ζ(1/2 + it), where θ(t) is the Riemann–Siegel theta function |
-| `θ(t)` | The Riemann–Siegel theta function: θ(t) = Im(log Γ(1/4 + it/2)) − (t/2) log π |
+These symbols are standard and used in the manuscript without novelty claims.
 
-**Functional equation:** ξ(s) = ξ(1 − s) for all s ∈ ℂ.
-
----
-
-## Gamma Function and Reflection Notation
-
-| Symbol | Definition |
-|---|---|
-| `Γ(s)` | The gamma function, the standard analytic continuation of the factorial |
-| `Γ(s) Γ(1−s) = π / sin(πs)` | The reflection formula for Γ |
-| `B(x,y)` | Beta function: B(x,y) = Γ(x)Γ(y)/Γ(x+y), used if needed |
-
----
-
-## Spectral Operators
-
-*The following notation is reserved for the spectral-coherence construction.
-Precise definitions are given in `manuscript/spectral-framework.tex` and
-`manuscript/definitions.tex`.*
-
-| Symbol | Intended Role | Status |
+| Symbol | Meaning | Manuscript alignment |
 |---|---|---|
-| `H` | The proposed spectral operator associated with ζ | Placeholder — definition in progress |
-| `𝒟(H)` | Domain of the operator H | Placeholder |
-| `σ(H)` | Spectrum of H | Placeholder |
-| `σ_p(H)` | Point spectrum (eigenvalues) of H | Placeholder |
-| `⟨ · , · ⟩` | Inner product on the relevant Hilbert/Banach space | Placeholder — space to be defined |
-| `‖ · ‖` | Norm on the relevant space | Placeholder |
-| `T_s` | Spectral evaluation operator at s | Placeholder |
-| `Φ(s)` | Coherence functional evaluated at s | Placeholder — may coincide with ξ or be a derived object |
+| `s = \sigma + it` | Complex variable decomposition (`\sigma, t \in \mathbb{R}`) | Standard analytic-number-theory convention |
+| `\RePart(s)`, `\ImPart(s)` | Real and imaginary parts of `s` | Uses manuscript macros (`\RePart`, `\ImPart`) |
+| `\mathbb{C}`, `\mathbb{R}`, `\mathbb{N}` | Complex numbers, real numbers, positive integers | Standard |
+| `\zeta(s)` | Riemann zeta function (Dirichlet series for `\Re(s)>1`, meromorphic continuation elsewhere) | Standard |
+| `\Gamma(s)` | Gamma function | Standard |
+| `\xi(s)` | Completed zeta function `\xi(s)=\tfrac12 s(s-1)\pi^{-s/2}\Gamma(s/2)\zeta(s)` | Defined in `definitions.tex` |
+| `\sigma(s)=1-s` | Reflection involution | Defined in `definitions.tex` |
+| Critical strip | `\{s\in\mathbb{C}:0<\RePart(s)<1\}` | Defined in `definitions.tex` |
+| Critical line | `\{s\in\mathbb{C}:\RePart(s)=\tfrac12\}` | Defined in `definitions.tex` |
+
+Note: This file does not re-prove standard facts (e.g., functional equation symmetry). It only records notation.
 
 ---
 
-## Coherence and Resonance Language
+## 2) Reserved notation for the proposed spectral/coherence framework
 
-The following informal terms are used in the motivating sections and appendices.
-They are *not* formal mathematical objects until given precise definitions in the manuscript.
+These symbols are part of the manuscript program but are not yet fully formalized.
+Use them only with explicit status qualifiers.
 
-| Term | Informal Meaning | Formal Analog (if defined) |
+| Symbol | Intended role | Current status |
 |---|---|---|
-| Balance point | A value of s where the spectral object achieves a prescribed equilibrium condition | Balance criterion (see definitions.tex) |
-| Cancellation state | A configuration where contributions from symmetric pairs cancel | To be formalized |
-| Spectral coherence | The property of the operator H relevant to zero placement | Definition in spectral-framework.tex |
-| Resonance | Informal: a state of constructive or destructive self-reinforcement | To be formalized |
-| Balance axis | The critical line Re(s) = 1/2, viewed as the axis of the reflection symmetry | Definition 1 in definitions.tex |
+| `H` | Proposed spectral object associated with the balance program | **[Placeholder — unresolved formal definition]** |
+| `\Phi(s)` | Proposed balance/coherence functional | **[Placeholder — unresolved formal definition]** |
+| “balanced point” | A point `s` satisfying the manuscript’s balance criterion | **[Placeholder — criterion not yet fully specified]** |
+
+Cross-reference guidance:
+- `H` and balanced-point language are introduced as placeholders in `manuscript/definitions.tex`.
+- Formalization tasks for `H` and `\Phi` are listed in `manuscript/spectral-framework.tex`.
+
+Control note:
+- Do **not** treat `H`, `\Phi`, or “balanced point” as settled objects until their domain/codomain, well-posedness, and logical role are proved.
 
 ---
 
-## Quaternionic or Lifted Variables
+## 3) Exploratory / not committed notation
 
-*If the manuscript employs a quaternionic extension or a lift of the complex variable s,
-the notation for those objects will be defined here.*
+The following notation is intentionally non-committal and should not be used in theorem-level claims unless promoted into the manuscript body with precise definitions.
 
-| Symbol | Intended Role | Status |
+| Symbol / term | Exploratory intent | Status |
 |---|---|---|
-| `q` | Quaternionic variable corresponding to the lifting of s ∈ ℂ into ℍ | Placeholder |
-| `q = a + bi + cj + dk` | Standard quaternion decomposition | Standard |
-| `𝒞_q` | Lifted critical surface in quaternionic space | Placeholder |
-| `π_ℂ` | Projection from quaternionic space back to ℂ | Placeholder |
+| Quaternionic lift symbols (e.g., `q`, lifted critical-surface notation) | Possible higher-dimensional reformulation ideas | **Exploratory only; not part of the core formal pipeline** |
+| “resonance” terminology | Heuristic intuition for cancellation/balance behavior | **Heuristic vocabulary only** |
+| Additional operator-theoretic notation not explicitly defined in core sections | Candidate scaffolding for future formalization | **Use only with explicit placeholder marking** |
 
-*Note: The use of quaternionic variables is currently exploratory. If the construction
-does not require them, this section will be removed.*
+Manuscript posture:
+- Higher-dimensional/quaternionic language currently appears as exploratory discussion, not as a required core mechanism.
+- Reviewer-facing text should present this as optional intuition unless and until formal dependencies are added.
 
 ---
 
-## Proof Status Labels
+## 4) Placeholder discipline
 
-The manuscript uses the following labels to distinguish the epistemic status of statements:
+When a symbol is not fully defined, mark it visibly as one of:
+- **[Placeholder — definition required]**
+- **[Placeholder — proof obligation pending]**
+- **[Exploratory — not committed to core manuscript]**
 
-| Label | Meaning |
+Do not leave implicit placeholders.
+
+---
+
+## 5) Terminology status labels (audit control)
+
+Use the following labels consistently when describing statements.
+
+| Label | Use |
 |---|---|
-| **Theorem** | Proved rigorously within the manuscript |
-| **Proposition** | A result used in the argument; either proved here or cited from the literature |
-| **Lemma** | A technical auxiliary result, proved here |
-| **Conjecture** | Believed to be true; not yet proved |
-| **Heuristic** | An informal claim intended to motivate the formal development |
-| **Bridge (requires proof)** | A step that is identified as necessary but not yet established |
-| **Open** | Explicitly unresolved |
+| **Theorem** | Fully proved in the manuscript under stated hypotheses |
+| **Proposition** | Intermediate formal result, proved or cited with clear dependency |
+| **Lemma** | Auxiliary formal result, proved in context |
+| **Conjecture** | Explicitly unproved claim |
+| **Heuristic** | Informal motivation; not proof |
+| **Bridge (requires proof)** | Identified necessary step not yet established |
+| **Open** | Unresolved item tracked for audit |
+
+Audit rule:
+- Computational or numerical evidence may support intuition but does not replace a theorem-level proof.
+
+---
+
+## 6) De-scoped notation (removed from active control list)
+
+The following symbols are intentionally not active in this file unless they are reintroduced in core manuscript sections with precise roles:
+- Ad hoc placeholders for unrelated completed `L`-function symbols.
+- Extra operator symbols that are not used in `definitions.tex` or `spectral-framework.tex`.
+
+If reintroduced, add them with status and manuscript cross-reference in the relevant section above.
