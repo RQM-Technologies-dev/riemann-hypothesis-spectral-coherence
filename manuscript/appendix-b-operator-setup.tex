@@ -1,64 +1,150 @@
-This appendix collects technical background relevant to the proposed spectral
-construction. It is intended as a reference for readers less familiar with
-operator theory and spectral analysis.
+\section*{Appendix B: Operator-Setup Staging Notes (Provisional)}
+\addcontentsline{toc}{section}{Appendix B: Operator-Setup Staging Notes (Provisional)}
 
-\subsection{Basic Operator Theory}
+This appendix is a technical staging area for the operator layer referenced in
+\texttt{definitions.tex}, \texttt{spectral-framework.tex}, and
+\texttt{proof-architecture.tex}. It records the current best formalization
+attempt without claiming that a complete operator construction has been achieved.
 
-Let $\hs$ be a complex Hilbert space with inner product $\langle \cdot, \cdot \rangle$.
+\auditnote{Everything in this appendix is provisional unless explicitly linked
+to an established statement in the main text. In particular, it should be read
+as interface design for mathematical audit, not as a completed construction.}
 
+\subsection*{B.1 Intended ambient space}
+
+The manuscript-level symbol $H$ currently denotes a \emph{proposed spectral
+object} (Section~7, \texttt{spectral-framework.tex}), not yet a finalized
+single self-adjoint operator. A concrete construction path should specify:
+\begin{enumerate}
+  \item a complex Hilbert space $(\mathcal{H},\langle\cdot,\cdot\rangle)$,
+  \item a dense subspace $\mathcal{D}_0\subset\mathcal{H}$ used for initial
+  definition,
+  \item a linear action rule on $\mathcal{D}_0$,
+  \item a closure or extension procedure yielding the operative domain
+  $\mathcal{D}(H)$.
+\end{enumerate}
+
+A useful baseline is to keep two candidate ambient classes under review:
 \begin{itemize}
-  \item A \emph{linear operator} $T \colon \mathcal{D}(T) \to \hs$ is a linear
-        map defined on a dense subspace $\mathcal{D}(T) \subset \hs$.
-  \item $T$ is \emph{self-adjoint} if $\mathcal{D}(T) = \mathcal{D}(T^*)$ and
-        $T = T^*$.
-  \item The \emph{spectrum} of $T$, denoted $\sigma(T)$, is the set of $\lambda \in \C$
-        for which $T - \lambda I$ is not invertible (as a bounded operator from
-        $\hs$ to $\hs$).
-  \item A self-adjoint operator has real spectrum: $\sigma(T) \subset \R$.
+  \item \textbf{Mellin/Fourier class:} function spaces where multiplicative
+  structure and transforms tied to zeta-side expressions are naturally typed.
+  \item \textbf{Hardy-type class:} analytic-function spaces where reflection and
+  boundary-value symmetries may be easier to formulate.
 \end{itemize}
 
-\begin{remark}
-  Self-adjointness is a strictly stronger condition than symmetry ($T \subset T^*$).
-  Many operator constructions in spectral approaches to RH fail at the step of
-  establishing self-adjointness.
-\end{remark}
+\openbridge{The manuscript has not yet fixed a unique ambient space with full
+proof-level consequences for all later stages. Choosing one class requires
+re-checking every downstream hypothesis in Stages 2--6 of
+\texttt{proof-architecture.tex}.}
 
-\subsection{Spectral Theorem}
+\subsection*{B.2 Candidate domain requirements}
 
-For a self-adjoint operator $T$ on $\hs$, the spectral theorem guarantees the
-existence of a projection-valued measure $E$ such that
+Any finalized domain $\mathcal{D}(H)$ should be specified by verifiable
+conditions, not only by intention. The current minimum checklist is:
+\begin{enumerate}
+  \item \textbf{Density and typing:} $\mathcal{D}(H)$ is dense in
+  $\mathcal{H}$; $H\colon\mathcal{D}(H)\to\mathcal{H}$ is well-defined.
+  \item \textbf{Regularity/decay package:} explicit growth, decay, and
+  differentiability/integrability assumptions sufficient for every integral or
+  transform used later in the balance functional.
+  \item \textbf{Closure control:} a stated route to closability and an explicit
+  statement of whether the argument uses symmetry, essential self-adjointness,
+  or only weaker graph properties.
+  \item \textbf{Spectral meaning requirement:} a precise declaration of which
+  spectral statements are actually needed (e.g., resolvent bounds, spectral
+  measure statements, semigroup control), rather than a blanket requirement for
+  full spectral theorem machinery.
+\end{enumerate}
+
+\openbridge{At present, no complete theorem in the manuscript verifies this full
+checklist for a single candidate $H$. This gap is consistent with the open items
+in Section~10 (\texttt{limitations.tex}).}
+
+\subsection*{B.3 Symmetry-compatibility requirements}
+
+The operator layer must interface with the classical involutions fixed in
+\texttt{definitions.tex} and \texttt{symmetry-framework.tex}, notably
+\(s\mapsto 1-s\) and \(s\mapsto \bar s\). A candidate construction should
+include:
+\begin{enumerate}
+  \item an explicit reflection/conjugation action on $\mathcal{H}$ (or on a
+  related representation space),
+  \item a compatibility identity showing how $H$ transforms under these actions,
+  \item a domain-invariance statement (or a controlled defect term) under the
+  same symmetries,
+  \item a statement connecting this compatibility to the balance criterion used
+  in Section~7.
+\end{enumerate}
+
+\openbridge{No completed theorem currently proves that the proposed balance map
+is symmetry-compatible on a fully specified admissible class. This remains tied
+to placeholder lemmas in \texttt{lemmas.tex} (B2/B3 block).}
+
+\subsection*{B.4 Balance-functional interface requirements}
+
+Section~7 requires a functional $\Phi$ extracted from the operator layer. The
+interface should be written as explicit data:
 \[
-  T = \int_\R \lambda \, dE(\lambda).
+(\mathcal{H},\mathcal{D}(H),H;\ \mathcal{A},\Phi),
 \]
-Trace-class operators have a well-defined trace $\mathrm{tr}(T) = \int_\R \lambda \, d\mu_T(\lambda)$
-where $\mu_T$ is the spectral measure.
+where $\mathcal{A}\subseteq\C$ is the admissible class from
+\texttt{definitions.tex}. For auditability, the manuscript needs:
+\begin{enumerate}
+  \item \textbf{Definition-level typing:}
+  \(\Phi\colon\mathcal{A}\to\R\) or \(\Phi\colon\mathcal{A}\to\C\)
+  with the exact codomain fixed.
+  \item \textbf{Well-posedness theorem target:} a lemma proving finiteness and
+  determinacy of $\Phi(s)$ for all $s\in\mathcal{A}$ under explicit
+  assumptions.
+  \item \textbf{Stability target:} a perturbation statement identifying which
+  data deformations preserve admissibility and preserve/quantify changes in
+  $\Phi$.
+  \item \textbf{Zero-interface target:} a theorem-level rule connecting
+  ``balanced'' states (as defined via $\Phi$) to encoded zeta-side points,
+  including exclusion of spurious balanced states.
+\end{enumerate}
 
-\subsection{Trace Formulas}
+\openbridge{Items (2)--(4) are not yet proved in finalized form. They correspond
+exactly to unresolved dependencies stated in Sections~5 and~8.}
 
-The Selberg trace formula and related trace formulas express geometric or spectral
-data as a sum over eigenvalues. In approaches to RH via spectral theory, the goal
-is to construct an operator whose trace formula reproduces the explicit formula
-for $\zeta$ or its logarithmic derivative.
+\subsection*{B.5 Unresolved operator choices (explicitly open)}
 
-The explicit formula for $\zeta$ relates sums over primes to sums over zeros:
-\[
-  \sum_p \log p \cdot p^{-s} = -\frac{\zeta'(s)}{\zeta(s)} - (\text{explicit terms}).
-\]
-A spectral construction matching this would give the zeros as spectral data.
+The following choices remain open design decisions. None should be read as
+settled.
+\begin{enumerate}
+  \item \textbf{Single operator vs.\ operator family.} Whether the framework
+  should use one closed operator $H$ or a parameterized family
+  $\{H_\theta\}_{\theta\in\Theta}$ with a derived aggregate functional.
+  \item \textbf{Self-adjoint route vs.\ weaker route.} Whether later stages
+  truly require self-adjointness, or only symmetry plus additional coercive
+  estimates sufficient for the balance/exclusion arguments.
+  \item \textbf{Trace-formula dependence.} Whether the architecture relies on an
+  explicit trace identity, or only on local spectral/transform relations.
+  \item \textbf{Admissible-class geometry.} Whether
+  $\mathcal{A}\subset\C$ is best specified by analytic continuation,
+  transform-side decay, or mixed constraints. Different choices may alter the
+  burden of Target~A and Target~B.
+\end{enumerate}
 
-\todo{The relationship between the proposed operator $H$ and any explicit formula
-should be worked out explicitly when $H$ is fully defined.}
+\placeholder{Resolution of these choices should be recorded in the main sections
+(Definitions, Spectral Framework, Proof Architecture, Limitations) and then
+back-propagated here as a versioned operator specification.}
 
-\subsection{Functional Analysis Prerequisites}
+\subsection*{B.6 Audit-use guidance}
 
-The following concepts may be needed in the construction of $H$:
-
+Advanced readers can use this appendix as a checklist when reviewing operator
+claims in the manuscript:
 \begin{itemize}
-  \item Hardy spaces $H^2(\C^+)$ on the upper half-plane.
-  \item Paley--Wiener theory relating Fourier transform support to analytic continuation.
-  \item The theory of Krein--Feller operators or Schrödinger operators on intervals.
-  \item Mellin transforms and their relationship to $\zeta$.
+  \item Is every operator claim explicitly tagged as established theorem,
+  provisional requirement, or open bridge?
+  \item Are admissibility and balance statements stated with full hypothesis
+  packages and domain/codomain typing?
+  \item Do symmetry-compatibility statements identify the precise action on
+  operator data, not only on complex-plane points?
+  \item Is each claimed implication traceable to a lemma/theorem target in
+  \texttt{proof-architecture.tex} and \texttt{lemmas.tex}?
 \end{itemize}
 
-\todo{As the construction progresses, the specific functional-analytic tools needed
-will be identified and their prerequisites will be stated here.}
+\auditnote{Until the operator choices in B.5 are resolved and proved, this
+appendix should be interpreted as a concrete map of obligations, not as a
+completed operator model.}
