@@ -1,166 +1,160 @@
-# Known Gaps
+This page exists to make mathematical scrutiny easier.
 
-**This page exists to make mathematical scrutiny easier.**
+# Known Gaps (Audit-Facing)
 
-This file is a candid audit of the current state of the argument. Every item
-listed here is an unresolved step that prevents the manuscript from constituting
-a rigorous proof. This list is maintained honestly and updated as the work
-progresses.
+This register lists the most vulnerable bridges in the proposed proof framework.
+It is written for reviewers who want a fast map of what is not yet proved.
 
-If you find a gap that is not listed here, please open an issue using the
-[Mathematical Gap template](../.github/ISSUE_TEMPLATE/mathematical-gap.md).
-
----
-
-## Gap 1: Definition of the Spectral Object
-
-**Location:** `manuscript/spectral-framework.tex`, `manuscript/definitions.tex`
-
-**Description:** The spectral coherence operator $H$ is not yet fully defined.
-The manuscript describes the intended properties of $H$ — its symmetry under
-reflection, its proposed relationship to ζ — but does not provide a complete
-construction. The Hilbert or Banach space, the domain of $H$, and the explicit
-action of $H$ on that space are all unspecified.
-
-**Why it matters:** Without a precise definition of $H$, none of the subsequent
-claims about its properties can be stated, let alone proved. This is a foundational
-gap that blocks the entire argument.
-
-**Current response:** The construction is in progress. Candidate approaches include
-Hardy space operators, Mellin transform convolutions, and operators related to the
-Hilbert–Pólya conjecture.
-
-**Status:** ⛔ Open (foundational)
+Conventions used below:
+- **Status labels:** Open / Partial / Blocked.
+- **Resolution criterion:** what would count as a mathematically adequate closure of the gap.
+- **Evidence rule:** numerical checks or analogy can support direction, but do not close a proof gap.
 
 ---
 
-## Gap 2: Proof That Zeros of ζ Correspond Exactly to Balance Points
+## 1) Exact definition of the spectral object
 
-**Location:** `manuscript/spectral-framework.tex`, `manuscript/lemmas.tex`
-(Conjecture 2 / Lemma on balance well-posedness)
+**Gap:** The argument depends on a spectral object (operator/system) often denoted by \(H\), but a complete construction is not yet fixed.
 
-**Description:** The manuscript proposes that nontrivial zeros of ζ(s) correspond
-exactly to balance points of the operator H — states where the coherence functional
-Φ(s) vanishes. This correspondence is asserted but not proved.
+**Why it matters:**
+- Without a precise object, later statements (symmetry, spectrum, balance criterion, correspondence with zeros) are not formal claims.
+- Domain choices, operator closure, and functional setting can change the truth value of downstream statements.
 
-**Why it matters:** If the correspondence is wrong, the entire framework fails. If
-it is only approximate, the argument does not establish RH. If it can only be
-established for some zeros, it is insufficient.
+**Current status:** **Open (foundational).** Candidate constructions are discussed, but no single fully specified object has been adopted and verified.
 
-**Current response:** The correspondence is the central analytical claim. It requires
-an explicit relationship between the spectral properties of H and the function ζ.
-This relationship must be derived, not assumed.
-
-**Status:** ⛔ Open (critical)
+**What would count as resolution:**
+- A full definition of the ambient space, domain, operator action, and regularity assumptions.
+- Proof that the object is well-defined (e.g., densely defined/closed where required).
+- A lemma map showing which later claims depend on which operator properties.
 
 ---
 
-## Gap 3: Proof of Uniqueness of the Balance Axis
+## 2) Exact correspondence between cancellation criterion and zeta zeros
 
-**Location:** `manuscript/critical-line-argument.tex`, `manuscript/lemmas.tex`
-(Lemma: Off-Line Asymmetry)
+**Gap:** The framework attempts to show that a cancellation/balance criterion is equivalent to the nontrivial zero condition for \(\zeta(s)\), but exact equivalence is not yet proved.
 
-**Description:** The central proposed result is that the balance criterion is
-satisfiable only on Re(s) = 1/2. No proof of this claim is currently available.
-The argument is supported by geometric intuition and the reflection symmetry, but
-neither constitutes a proof.
+**Why it matters:**
+- If the criterion is only approximate, the framework does not prove RH.
+- If the criterion is one-way only, it leaves false positives or misses zeros.
+- If the criterion is defined using zeros, circularity can invalidate the claim.
 
-**Why it matters:** This is the core gap. Even if Gaps 1 and 2 are resolved, the
-framework does not prove RH without this step.
+**Current status:** **Open (critical).** The correspondence is a central intended theorem, not yet established.
 
-**Current response:** The proposed strategy is to show that simultaneous balance
-at s and σ(s) = 1−s is impossible when Re(s) ≠ 1/2, using the structure of H.
-This requires H to be defined first.
-
-**Status:** ⛔ Open (central)
-
----
-
-## Gap 4: Handling of All Off-Critical-Line Possibilities
-
-**Location:** `manuscript/critical-line-argument.tex`, `manuscript/limitations.tex`
-
-**Description:** Any proof of RH must rule out all off-line zeros, including those
-at large imaginary parts and those near the boundaries of the critical strip. The
-current framework does not address these cases individually.
-
-**Why it matters:** A uniform argument would cover all cases simultaneously.
-However, if the argument fails for large |Im(s)| or for zeros near Re(s) = 0 or
-Re(s) = 1, separate treatment is needed.
-
-**Current response:** The proposed argument is intended to be uniform (applying
-to all s in the critical strip), but this uniformity has not been verified.
-
-**Status:** ⛔ Open (completeness)
+**What would count as resolution:**
+- A non-circular definition of the cancellation criterion independent of zero locations.
+- A two-direction theorem with explicit hypotheses:
+  1. zero \(\Rightarrow\) cancellation,
+  2. cancellation \(\Rightarrow\) zero.
+- Proof that the theorem applies on the whole critical strip where needed.
 
 ---
 
-## Gap 5: Dependence on Analogy Versus Theorem
+## 3) Uniqueness of the balance axis
 
-**Location:** Multiple sections, especially `manuscript/appendix-a-intuition.tex`
-and `manuscript/proof-architecture.tex`
+**Gap:** The argument attempts to show that exact balance is possible only on \(\Re(s)=1/2\), but uniqueness of that axis is not proved.
 
-**Description:** Several steps in the proof architecture are supported by geometric
-analogies (balance scales, standing waves, resonance) rather than mathematical
-arguments. These analogies motivate the framework but cannot substitute for proofs.
+**Why it matters:**
+- RH requires excluding any valid balance mechanism off the critical line.
+- Symmetry alone does not force all zeros onto a symmetry axis.
 
-**Why it matters:** A proof that relies on analogy at any step is not a proof.
-Every use of informal language in the manuscript must eventually be replaced by a
-precise definition or proved statement.
+**Current status:** **Open (central bridge).** Motivating geometry exists; a theorem-level uniqueness argument does not.
 
-**Current response:** The use of informal language is intentional in the motivation
-sections and appendices. The formal sections use `\gap{}` markers to flag each
-point where an informal claim has not yet been formalized.
-
-**Status:** 🔶 Ongoing (tracked by `\gap{}` markers in the LaTeX source)
+**What would count as resolution:**
+- A theorem stating precise assumptions under which the balance set is exactly \(\Re(s)=1/2\).
+- A proof that no alternative axis/curve can satisfy the same criterion.
+- Clear dependency on previously proved structural properties of the spectral object.
 
 ---
 
-## Gap 6: Relationship to Existing Spectral Constructions
+## 4) Exclusion of off-critical-line zeros
 
-**Location:** `manuscript/discussion.tex`
+**Gap:** The framework does not yet provide a complete proof excluding all off-line zeros in the critical strip.
 
-**Description:** The relationship between the proposed operator H and prior
-constructions (Hilbert–Pólya, Connes's adelic approach, Berry–Keating) is not
-clarified. It is possible that the proposed framework duplicates a known approach
-or is incompatible with it.
+**Why it matters:**
+- RH is an exclusion statement over all nontrivial zeros.
+- A local or asymptotic argument that leaves edge regimes untreated is insufficient.
 
-**Why it matters:** If H turns out to be equivalent to a known construction that
-is already understood to be insufficient, the framework fails. If H is genuinely
-new, this must be established.
+**Current status:** **Open (completeness).** The intended strategy appears uniform, but this has not been proved.
 
-**Current response:** The relationship is described as an open question in the
-discussion section. Clarification requires H to be fully defined.
-
-**Status:** ⛔ Open
+**What would count as resolution:**
+- A global contradiction or global structural theorem that covers every \(s\) with \(0<\Re(s)<1\), \(\Re(s)\neq 1/2\).
+- Explicit treatment of parameter ranges where hidden assumptions often occur (large imaginary part, boundary-near behavior).
+- A proof that does not rely on unproved regularity assumptions.
 
 ---
 
-## Gap 7: Symmetry of the Balance Criterion
+## 5) Dependence on analogy versus theorem
 
-**Location:** `manuscript/lemmas.tex` (Lemma: Balance Is Symmetric Under Reflection)
+**Gap:** Parts of the framework are motivated by geometric/physical analogy (balance, resonance, coherence) that have not yet been fully translated into formal theorems.
 
-**Description:** The proof architecture requires that the balance criterion be
-symmetric under s ↔ 1−s. This has not been proved; it is asserted as a property
-that H should have, but the proof depends on the definition of H.
+**Why it matters:**
+- Analogy can guide definitions but cannot certify truth.
+- Reviewers need to separate motivational language from proved implications.
 
-**Why it matters:** If the balance criterion is not symmetric, the argument that
-off-line zeros come in pairs — and hence must be ruled out as pairs — does not apply.
+**Current status:** **Partial.** The manuscript marks open steps, but several key transitions from intuition to theorem remain unresolved.
 
-**Status:** ⛔ Open (depends on Gap 1)
+**What would count as resolution:**
+- For each analogy-backed step, replace with explicit definitions and theorem statements.
+- Keep intuition sections clearly labeled as heuristic.
+- Remove dependence of core logical steps on heuristic interpretation.
 
 ---
 
-## Summary Table
+## 6) Operator-theoretic gaps
 
-| Gap | Description | Status |
-|-----|-------------|--------|
-| 1 | Definition of H | ⛔ Open (foundational) |
-| 2 | Zero–balance correspondence | ⛔ Open (critical) |
-| 3 | Uniqueness of balance axis | ⛔ Open (central) |
-| 4 | All off-line cases handled | ⛔ Open (completeness) |
-| 5 | Analogy vs theorem | 🔶 Ongoing |
-| 6 | Relationship to prior work | ⛔ Open |
-| 7 | Symmetry of balance criterion | ⛔ Open (depends on 1) |
+**Gap:** Key operator-theoretic properties needed by the argument are not yet established in full (e.g., symmetry/self-adjointness conditions, domain invariance, spectral meaning of the criterion).
 
-*Last updated: 2026-03-26*
+**Why it matters:**
+- Spectral conclusions are only as strong as the operator foundations.
+- Small domain or closability errors can invalidate purported spectral correspondences.
+
+**Current status:** **Open (technical core).** Requirements are recognized, but proofs are not complete.
+
+**What would count as resolution:**
+- Proof-level statements for all required operator properties used later.
+- Verification that each property is invoked only where hypotheses are met.
+- A dependency table linking each RH-relevant claim to specific operator lemmas.
+
+---
+
+## 7) Analytic gaps (complex analysis and global control)
+
+**Gap:** Several analytic bridges remain underjustified, including steps requiring contour control, growth bounds, interchange of limits/integrals, or uniformity claims.
+
+**Why it matters:**
+- RH arguments often fail at precisely these global analytic steps.
+- Unjustified exchanges or hidden regularity assumptions can create false proofs.
+
+**Current status:** **Open (high risk).** Some intended pathways are sketched, but full analytic verification is pending.
+
+**What would count as resolution:**
+- Explicit hypotheses for every analytic transformation.
+- Proofs of convergence/uniformity where used.
+- Independent checking that no step smuggles in the target conclusion.
+
+---
+
+## At-a-glance risk board
+
+| Gap | Why it matters (short) | Status | Resolution signal |
+|---|---|---|---|
+| Exact spectral object | Foundational definitions missing | Open | Full operator construction + well-posedness proofs |
+| Cancellation \(\Leftrightarrow\) zeros | Central equivalence claim | Open | Two-direction non-circular theorem |
+| Unique balance axis | Needed to isolate \(\Re(s)=1/2\) | Open | Uniqueness theorem under explicit hypotheses |
+| Off-line exclusion | RH requires global exclusion | Open | Global theorem for entire strip |
+| Analogy vs theorem | Heuristics cannot close proof | Partial | Formal replacement of heuristic dependencies |
+| Operator-theoretic core | Spectral claims depend on it | Open | Domain/symmetry/spectral lemmas proved |
+| Analytic control | Common failure point in RH attempts | Open | Verified convergence/uniformity and contour steps |
+
+---
+
+## Reviewer use
+
+If you are auditing the manuscript, this file is intended to answer three questions quickly:
+1. **Where is the argument most vulnerable?** (sections above)
+2. **Is vulnerability acknowledged explicitly?** (status fields)
+3. **What exact milestone would close each gap?** (resolution criteria)
+
+If you identify an additional unresolved bridge, add it here with the same four fields: **gap, why it matters, current status, resolution criterion**.
+
+*Last updated: 2026-03-26.*
