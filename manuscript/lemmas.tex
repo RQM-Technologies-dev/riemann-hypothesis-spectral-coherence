@@ -13,56 +13,67 @@ If $\rho$ is a nontrivial zero of $\zeta$, then $\overline{\rho}$ is also a nont
 \noindent\emph{Status: standard.} This follows from Schwarz reflection for $\xi$ (equivalently $\xi(\bar s)=\overline{\xi(s)}$); see \cite{Edwards1974,Titchmarsh1986}.
 
 \subsection*{B. Draft lemma targets (manuscript-specific; open unless noted)}
+\noindent\emph{Reviewer map.} Part B is ordered as a dependency stack: \textbf{(B1) admissibility foundation} $\rightarrow$ \textbf{(B2) symmetry compatibility} $\rightarrow$ \textbf{(B3) zeta correspondence} $\rightarrow$ \textbf{(B4) off-line exclusion transfer}, with \textbf{(B5)} supplying operator/analytic control used across earlier blocks. Every item below remains an explicit open placeholder.
 
-\subsubsection*{B1. Admissibility / well-posedness targets}
+\subsubsection*{B1. Foundation: admissibility and well-posedness}
 
 \begin{lemma}[Admissibility implies a well-defined balance functional \textnormal{(OPEN TARGET; placeholder)}]
 \placeholder{Establishes: under explicit admissibility hypotheses on the proposed coherence object, the balance functional is well-defined (domain specified; finite-valued; measurable/continuous in the declared topology). Depends on: final operator-level construction in Section~7 and a non-circular admissibility criterion from Section~2. Why it matters: without well-posedness, later reflection and exclusion statements are not mathematically meaningful.}
 \end{lemma}
+\noindent\emph{Feeds into:} B2 symmetry compatibility, B3 correspondence construction, and B5 analytic-control statements.
 
 \begin{lemma}[Stability of balance under approved perturbation class \textnormal{(OPEN TARGET; placeholder)}]
 \placeholder{Establishes: small perturbations in the manuscript's allowed class do not destroy admissibility or the definition of balance. Depends on: the precise perturbation class and norm/topology choices (currently provisional). Why it matters: supports reproducibility of any subsequent inference and prevents dependence on an unstable encoding.}
 \end{lemma}
+\noindent\emph{Feeds into:} robustness assumptions used implicitly in B2--B4 and any Section~8 reduction that varies admissible representatives.
 
-\subsubsection*{B2. Reflection-compatibility targets}
+\subsubsection*{B2. Symmetry compatibility layer (reflection/conjugation)}
 
 \begin{lemma}[Reflection compatibility of the balance criterion \textnormal{(OPEN TARGET; placeholder)}]
 \placeholder{Establishes: for admissible data, balance evaluated at $s$ matches balance evaluated at $1-s$ in the precise form required by the reduction architecture. Depends on: B1 well-posedness targets plus the exact map implementing reflection on the spectral side. Why it matters: this is the manuscript-specific bridge from classical zero symmetry to the proposed balance mechanism.}
 \end{lemma}
+\noindent\emph{Feeds into:} B4 quartet-level transfer and symmetry-preserving exclusion logic in Section~8.
 
 \begin{lemma}[Conjugation compatibility of the balance criterion \textnormal{(OPEN TARGET; placeholder)}]
 \placeholder{Establishes: balance is compatible with $s\mapsto \bar s$ in the same function class used by the argument. Depends on: B1 well-posedness targets and the real-structure assumptions used in Section~6. Why it matters: needed to keep the manuscript's symmetry reductions internally consistent when passing between reflected/conjugate points.}
 \end{lemma}
+\noindent\emph{Feeds into:} B4 quartet-level transfer and any argument that pairs reflection with conjugation on candidate points.
 
-\subsubsection*{B3. Zero--balance correspondence targets}
+\subsubsection*{B3. Bridge layer: zero--balance correspondence}
 
 \begin{lemma}[From balanced spectral data to zeta-side candidate points \textnormal{(OPEN TARGET; placeholder)}]
 \placeholder{Establishes: an explicit correspondence map sending balanced spectral configurations to candidate critical-strip points, with hypotheses and codomain clearly stated. Depends on: finalized definitions in Section~2 and spectral setup in Section~7. Why it matters: without this bridge, balance statements cannot be interpreted as statements about zeta zeros.}
 \end{lemma}
+\noindent\emph{Feeds into:} B3 soundness and B4 off-line exclusion, where candidate points must carry zeta-side meaning.
 
 \begin{lemma}[Soundness of correspondence at the lemma level \textnormal{(OPEN TARGET; placeholder)}]
 \placeholder{Establishes: if the correspondence outputs a point $s_0$, then the claimed zeta-side property attached to $s_0$ is justified under stated assumptions. Depends on: the preceding correspondence construction and any analytic continuation/regularity inputs invoked there. Why it matters: prevents logical gaps where a constructed point is used as if it already satisfied a proved zeta property.}
 \end{lemma}
+\noindent\emph{Feeds into:} B4 off-line exclusion as the point where correspondence claims become admissible premises for contradiction/exclusion.
 
-\subsubsection*{B4. Balance-axis uniqueness and off-line exclusion targets}
+\subsubsection*{B4. Exclusion layer: balance-axis uniqueness and off-line elimination}
 
 \begin{lemma}[No admissible off-line balance states \textnormal{(OPEN BRIDGE; placeholder)}]
 \placeholder{Establishes: for $0<\RePart(s)<1$ with $\RePart(s)\neq \tfrac12$, the manuscript's balance criterion cannot hold (or yields a contradiction) under explicit assumptions. Depends on: B1--B3 targets and a non-heuristic coercive/positivity/monotonic ingredient still to be supplied. Why it matters: this is the central exclusion step needed to rule out off-line zeros within the proposed framework.}
 \end{lemma}
+\noindent\emph{Feeds into:} quartet-level exclusion transfer and the manuscript's global reduction claim.
 
 \begin{lemma}[Quartet-level exclusion transfer \textnormal{(OPEN TARGET; placeholder)}]
 \placeholder{Establishes: once one off-line point is excluded by the manuscript criterion, the associated reflection/conjugation quartet is excluded in the exact sense required by Section~8. Depends on: classical symmetry lemmas from part A and the off-line exclusion lemma above. Why it matters: converts pointwise exclusion into the symmetry-compatible exclusion statement used in the global reduction.}
 \end{lemma}
+\noindent\emph{Feeds into:} final symmetry-consistent exclusion statement used by the Section~8 architecture.
 
-\subsubsection*{B5. Operator-theoretic and analytic-control support targets}
+\subsubsection*{B5. Cross-cutting support: operator closure and analytic control}
 
 \begin{lemma}[Operator-theoretic closure package for the coherence object \textnormal{(OPEN TARGET; placeholder)}]
 \placeholder{Establishes: all operator hypotheses used later (domain invariance, required symmetry/intertwining relation, and any closure/self-adjointness-type property explicitly invoked) are proved in the same functional setting. Depends on: finalized construction of $H$ from Section~7. Why it matters: prevents hidden operator assumptions in correspondence and exclusion claims.}
 \end{lemma}
+\noindent\emph{Feeds into:} B1 admissibility formulation, B2 symmetry maps, and B3 correspondence soundness.
 
 \begin{lemma}[Analytic-control package for global strip arguments \textnormal{(OPEN TARGET; placeholder)}]
 \placeholder{Establishes: every contour/growth/interchange step used by the balance functional and strip-wide exclusion argument is justified under explicit hypotheses with stated uniformity ranges. Depends on: admissibility well-posedness plus finalized analytic side conditions. Why it matters: closes common failure points where local arguments do not extend to full-strip claims.}
 \end{lemma}
+\noindent\emph{Feeds into:} B3 soundness and B4 off-line exclusion where global strip control is required.
 
 \subsection*{C. Audit note on current status}
 
