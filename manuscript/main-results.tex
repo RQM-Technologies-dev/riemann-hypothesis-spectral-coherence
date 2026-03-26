@@ -22,7 +22,7 @@ If $\rho$ is a nontrivial zero of $\zeta$, then $1-\rho$ and $\overline{\rho}$ a
 Target statement (conditional): once the manuscript definitions of $H$ and the balance criterion are finalized and their regularity assumptions are stated, one aims to prove that nontrivial zeros in the critical strip correspond exactly to balanced points.
 \end{drafttheorem}
 
-\begin{drafttheorem}[Target B: uniqueness of balance locus]
+\begin{drafttheorem}[Target B: critical-line localization and no-alternative-locus target]
 \label{thm:target-uniqueness}
 \placeholder{Theorem target under construction; proof not yet provided.}
 Target statement (conditional; theorem target only): let $\mathcal{A}$ be the admissible class and let
@@ -30,11 +30,22 @@ Target statement (conditional; theorem target only): let $\mathcal{A}$ be the ad
 \mathcal{B}:=\{s\in\mathcal{A}:\Phi_H(s)=0\}
 \]
 denote the balanced set under a finalized $H/\Phi_H$ package.
-Under an explicit hypothesis set $\mathcal{H}_B$ (operator symmetry/intertwining, admissibility stability, and analytic-control assumptions), one aims to prove:
+Under an explicit hypothesis set $\mathcal{H}_B$ (admissibility synchronization, symmetry compatibility, and analytic-control/rigidity ingredients), one aims to prove:
 \begin{enumerate}
-  \item \textbf{Local uniqueness-of-balance axis:} every balanced point in the local regime covered by $\mathcal{H}_B$ satisfies $\RePart(s)=\tfrac12$.
-  \item \textbf{Global extension requirement:} the local conclusion extends from the local regime to all $s\in\mathcal{A}$ with $0<\RePart(s)<1$.
-  \item \textbf{No alternative balance locus:} no other line/curve/submanifold in the admissible strip carries exact balance under the same hypotheses.
+  \item \textbf{Local critical-line uniqueness target:} every balanced point in the local regime $\mathcal{R}_{\mathrm{loc}}\subseteq\mathcal{A}$ covered by $\mathcal{H}_B$ satisfies $\RePart(s)=\tfrac12$.
+  \item \textbf{Global no-alternative-locus target:} in the full admissible strip class
+  \[
+  \mathcal{A}_{\mathrm{strip}}:=\{s\in\mathcal{A}:0<\RePart(s)<1\},
+  \]
+  every balanced point satisfies $\RePart(s)=\tfrac12$.
+  Equivalently, the theorem target excludes all off-line balance-supporting loci in $\mathcal{A}_{\mathrm{strip}}$, including:
+  \begin{enumerate}
+    \item alternative vertical lines $\RePart(s)=\sigma_0\neq\tfrac12$;
+    \item non-vertical curves or higher-dimensional submanifolds carrying $\Phi_H=0$;
+    \item disconnected off-line balanced components;
+    \item regime-specific off-line loci that may appear only outside $\mathcal{R}_{\mathrm{loc}}$ unless globally excluded.
+  \end{enumerate}
+  \item \textbf{Contradiction compatibility target:} any assumed off-line balanced point $s_\ast\in\mathcal{A}_{\mathrm{strip}}$ with $\RePart(s_\ast)\neq\tfrac12$ must contradict at least one ingredient of the same synchronized hypothesis package used for localization and global exclusion.
 \end{enumerate}
 Equivalent formulation target:
 \[
@@ -43,14 +54,25 @@ Equivalent formulation target:
 This manuscript version does not prove the above statement.
 \end{drafttheorem}
 
-\begin{remark}[What Target B must exclude]
+\begin{remark}[What a no-alternative-locus theorem target must assume]
 Target~B requires more than reflection symmetry.
 Symmetry can imply pairings such as $s\leftrightarrow 1-s$ without ruling out off-line balanced pairs.
-Therefore a valid proof target must exclude:
+Therefore a valid proof target must state hypotheses strong enough to exclude alternative loci.
+At minimum, one must specify:
 \begin{enumerate}
-  \item regime-restricted arguments that only treat perturbative neighborhoods,
-  \item arguments that establish axis-symmetry of $\mathcal{B}$ but not axis-uniqueness,
-  \item proofs that require assumptions not inherited by the correspondence class from Target~A.
+  \item \textbf{Admissibility synchronization:} the same admissible class for Target~A, local Target~B, and Stage~6 exclusion transfer.
+  \item \textbf{Symmetry compatibility:} reflection/conjugation transport preserves admissibility and theorem hypotheses.
+  \item \textbf{Global control ingredient(s):} explicit coercivity, positivity, rigidity, monotonicity, or equivalent structure ruling out off-line exact balance.
+  \item \textbf{Analytic-control closure:} assumptions preventing hidden off-line branches created by loss of compactness, boundary singular behavior, or regime changes outside local uniqueness.
+\end{enumerate}
+\end{remark}
+
+\begin{remark}[Failure patterns that remain insufficient for Target~B]
+The following argument forms are insufficient on their own:
+\begin{enumerate}
+  \item regime-restricted proofs that only treat perturbative neighborhoods,
+  \item axis-symmetry statements for $\mathcal{B}$ without axis-uniqueness,
+  \item exclusion arguments whose hypotheses are not inherited by the correspondence class from Target~A.
 \end{enumerate}
 \end{remark}
 
