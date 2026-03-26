@@ -1,41 +1,38 @@
-## Pull Request Summary
+## Summary
 
-<!-- Describe the changes in this pull request. Be specific. -->
+<!-- Briefly describe what changed and why. -->
 
-## Type of Change
+## Relevant file(s)
 
-- [ ] Manuscript update (mathematical content)
-- [ ] Documentation update
-- [ ] Code / notebook update
-- [ ] Bug fix (broken link, LaTeX error, etc.)
-- [ ] Notation or terminology change
-- [ ] New figure or diagram
-- [ ] Other (describe):
+- File path(s):
 
-## Mathematical Content Changes
+## Change type
 
-<!-- If this PR modifies any mathematical claims, definitions, lemmas, or proof steps, describe them here. -->
+- [ ] Manuscript mathematics
+- [ ] Documentation
+- [ ] Notation / definitions
+- [ ] Tooling / build / CI
+- [ ] Bug fix
+- [ ] Other:
 
-**Changed / Added claims:**
+## Mathematical review notes
 
-**Affected sections:**
+<!-- Complete this section when mathematical content changes. Use "N/A" otherwise. -->
 
-**Does this change resolve a known gap?**
-- [ ] Yes — references issue #
-- [ ] No
+- Exact claim(s) changed:
+- Assumptions used:
+- Dependency impact (local or foundational):
+- Open bridge introduced/resolved (if any):
+- Related issue(s):
+
+## Evidence
+
+<!-- Proof sketch, formal derivation reference, computation, or test output. -->
 
 ## Checklist
 
-- [ ] Manuscript compiles without errors (`pdflatex manuscript/main.tex`)
-- [ ] No new undefined notation introduced without a definition
-- [ ] Changes to `known-gaps.md`, `objections-and-responses.md`, or `review-log.md` are consistent with the mathematical changes
-- [ ] Any claim labeled as a theorem is actually proved (or clearly marked as a conjecture/heuristic)
-- [ ] The PR does not introduce sensational language or overclaiming
-
-## Related Issues
-
-<!-- Reference any related issues using #number. -->
-
-## Additional Notes
-
-<!-- Any other context for reviewers. -->
+- [ ] Claims are stated conservatively; no overstatement of certainty.
+- [ ] Heuristic motivation is not presented as formal proof.
+- [ ] New definitions/notation are explicit before use.
+- [ ] Unresolved bridges are labeled explicitly.
+- [ ] Relevant notes/issues were updated where needed.

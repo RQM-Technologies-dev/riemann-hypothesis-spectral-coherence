@@ -1,32 +1,37 @@
 ---
 name: Notation Clarification
-about: Request clarification on notation, terminology, or conventions used in the manuscript or documentation
+about: Request clarification for symbols, terms, or conventions
 title: "[NOTATION] "
 labels: notation
 assignees: ''
 ---
 
-## Symbol or Term in Question
+## Relevant file(s)
 
-<!-- State the symbol, term, or phrase that needs clarification. -->
+- File path(s):
+- Section / definition / equation:
+- Line(s), if known:
 
-**Symbol / Term:**
+## Exact claim being challenged
 
-**Location (file, section, page, or line):**
+<!-- If ambiguity affects a specific statement, quote it. Otherwise write "N/A". -->
 
-## What Is Unclear
+## Notation or term needing clarification
 
-<!-- Describe precisely what is ambiguous, undefined, or potentially conflicting. -->
+- Symbol / term:
+- Current interpretation:
+- What is unclear or conflicting:
 
-## Suggested Clarification or Convention
+## Why this matters
 
-<!-- Optional: Suggest what the intended meaning might be, or propose a clearer notation. -->
+<!-- Explain impact on reading, proof validity, or reproducibility. -->
 
-## Conflict With Existing Convention
+## Scope of impact
 
-<!-- Optional: If this notation conflicts with standard usage in the literature, note that here. -->
+- [ ] Local (isolated notation issue)
+- [ ] Foundational (propagates across major claims)
+- [ ] Unclear
 
----
+## Suggested correction (if any)
 
-> All notation issues will be reflected in `docs/notation.md` and, where relevant,
-> in the manuscript's definitions section.
+<!-- Optional: proposed definition, notation change, or convention. -->

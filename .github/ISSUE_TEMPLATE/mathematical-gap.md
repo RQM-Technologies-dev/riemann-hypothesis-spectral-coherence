@@ -1,35 +1,35 @@
 ---
 name: Mathematical Gap
-about: Identify a step in the argument that is missing, unjustified, or logically incomplete
+about: Report a missing, unjustified, or logically incomplete step in the argument
 title: "[GAP] "
 labels: mathematical-gap
 assignees: ''
 ---
 
-## Location in the Manuscript
+## Relevant file(s)
 
-<!-- Identify the section, theorem, lemma, or step where the gap occurs. -->
+- File path(s):
+- Section / theorem / lemma / equation:
+- Line(s), if known:
 
-- **File / Section:**
-- **Line or environment (if known):**
+## Exact claim being challenged
 
-## Description of the Gap
+<!-- Quote the exact claim or step as written. -->
 
-<!-- Describe precisely what is missing or unjustified. Be as specific as possible. -->
+## Why this matters
 
-## Why This Matters
+<!-- Explain impact on correctness, dependency chain, or scope. -->
 
-<!-- Explain whether this gap is fatal to the argument, locally fixable, or requires restructuring. -->
+## Scope of impact
 
-## Suggested Resolution or Direction
+- [ ] Local (can likely be repaired without changing core architecture)
+- [ ] Foundational (affects central argument or main dependency chain)
+- [ ] Unclear
 
-<!-- Optional: Suggest how the gap might be addressed, or point to relevant literature. -->
+## Suggested correction (if any)
 
-## Supporting References
+<!-- Optional: proposed fix, alternate lemma, or reference. -->
 
-<!-- Optional: Cite any papers, theorems, or counterexamples that are relevant. -->
+## Evidence or references (optional)
 
----
-
-> **Note:** Gap reports are the most valuable form of feedback for this repository.
-> All reports will be logged in `notes/known-gaps.md` and addressed in `notes/objections-and-responses.md`.
+<!-- Optional: counterexample sketch, citation, or related theorem. -->

@@ -1,36 +1,45 @@
 ---
 name: Bug Report
-about: Report a technical issue with the repository (broken links, build failures, code errors, etc.)
+about: Report a repository or tooling issue (build, links, scripts, rendering)
 title: "[BUG] "
 labels: bug
 assignees: ''
 ---
 
-## Description
+## Relevant file(s)
 
-<!-- A clear and concise description of the bug. -->
+- File path(s):
+- Command / workflow / page affected:
 
-## Steps to Reproduce
+## Exact claim being challenged
+
+<!-- For non-mathematical bugs write "N/A". If a rendered claim is wrong due to tooling, quote it. -->
+
+## Why this matters
+
+<!-- Explain impact on auditability, reproducibility, or review workflow. -->
+
+## Scope of impact
+
+- [ ] Local (single file/tool path)
+- [ ] Foundational (blocks core review or reproducibility)
+- [ ] Unclear
+
+## Steps to reproduce
 
 1. 
 2. 
 3. 
 
-## Expected Behavior
+## Expected behavior
 
-<!-- What you expected to happen. -->
+## Actual behavior
 
-## Actual Behavior
+## Suggested correction (if any)
 
-<!-- What actually happened. Include error messages, screenshots, or logs if relevant. -->
+<!-- Optional: likely root cause or patch direction. -->
 
-## Environment
+## Environment (optional)
 
-- OS: 
-- LaTeX distribution (if applicable): 
-- Python version (if applicable): 
-- Browser (if applicable): 
-
-## Additional Context
-
-<!-- Any other context that may be relevant. -->
+- OS:
+- Toolchain / version(s):

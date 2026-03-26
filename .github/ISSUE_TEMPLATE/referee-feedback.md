@@ -1,46 +1,43 @@
 ---
 name: Referee Feedback
-about: Structured review comments for mathematical referees or expert reviewers
+about: Structured referee-style review for mathematical audit
 title: "[REVIEW] "
 labels: referee-feedback
 assignees: ''
 ---
 
-## Reviewer Background (Optional)
+## Relevant file(s)
 
-<!-- Brief self-description to help contextualize the feedback (e.g., specialist in analytic number theory, operator algebras, etc.). No personal identification required. -->
+- File path(s):
+- Section(s) reviewed:
 
-## Overall Assessment
+## Exact claim being challenged
 
-<!-- Your overall impression of the argument's current state. Is the central claim clear? Is the structure sound? -->
+<!-- Quote the main claim, bridge, or inference under critique. -->
 
-- [ ] The central claim is clearly stated
-- [ ] The proof architecture is well-organized
-- [ ] The notation is consistent and well-defined
-- [ ] The known gaps are honestly acknowledged
-- [ ] The argument, if completed, would constitute a valid proof
+## Why this matters
 
-## Specific Comments
+<!-- Explain significance for soundness, dependency structure, or manuscript clarity. -->
 
-<!-- List specific comments below. Number them for easy reference. -->
+## Scope of impact
+
+- [ ] Local
+- [ ] Foundational
+- [ ] Mixed / unclear
+
+## Referee comments
+
+<!-- Numbered, concrete comments preferred. -->
 
 1. 
 2. 
 3. 
 
-## Most Critical Issue
+## Suggested correction (if any)
 
-<!-- What is the single most important thing that must be resolved for this work to be taken seriously? -->
+<!-- Optional: revision path, missing hypotheses, alternate references, or reduction strategy. -->
 
-## Minor Issues
+## Optional context
 
-<!-- Notation errors, typos, unclear phrasing, or organizational suggestions. -->
-
-## References the Authors May Have Missed
-
-<!-- Optional: Cite relevant prior work that should be acknowledged or engaged with. -->
-
----
-
-> Referee feedback is greatly appreciated. All substantive comments will be logged in
-> `notes/review-log.md` and addressed in `notes/objections-and-responses.md`.
+- Domain background (optional):
+- Related literature (optional):
