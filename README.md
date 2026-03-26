@@ -1,157 +1,100 @@
 # Riemann Hypothesis via Spectral Coherence
 
-**A repository for a proposed spectral-coherence approach to the critical line**
+**Proposed proof framework and audit materials for a spectral-coherence approach to the critical line.**
 
-> **Disclaimer:** This repository presents a proposed proof framework and supporting materials
-> for mathematical review. It should be read as a research program under active refinement
-> unless and until the argument is independently verified.
+> [!IMPORTANT]
+> **Disclaimer (read first):** This repository is a **proposed proof framework under review**. It is provided as material for mathematical audit and should not be treated as an established proof unless independently verified.
 
----
+## What this repository contains
 
-## Summary
+This repository is organized for skeptical, technical review.
 
-The central idea developed here is that the nontrivial zeros of the Riemann zeta function
-can be interpreted as balance points in a reflection-symmetric spectral structure. Under the
-proposed framework, the critical line Re(s) = 1/2 appears as the unique symmetry and balance
-axis — the only locus at which the relevant spectral objects can achieve the cancellation
-state corresponding to a zero.
+- `manuscript/`: Primary formal record (LaTeX source), including definitions, claims, proof architecture, and limitations.
+- `docs/`: Reviewer-oriented navigation documents (claim map, notation, roadmap, and audience-specific overviews).
+- `notes/`: Research-state tracking (known gaps, open questions, objections, and review log).
+- `code/`: Supporting computational experiments and visualizations; these are evidence aids, not substitutes for proof.
+- `media/`: Figures and diagrams used by the manuscript and documentation.
 
-This is a proposed proof framework, not a completed proof. The materials in this repository
-are organized to support mathematical audit, critique, formalization, and revision.
+The argument attempts to show that the critical line arises as the unique balance axis in a reflection-symmetric spectral framework. The materials separate formal statements, heuristic motivation, and unresolved bridges where possible.
 
----
+## Fastest path for reviewers
 
-## What This Repo Contains
+If you have one minute to orient and 30–60 minutes for first-pass audit, start here:
 
-| Directory / File | Contents |
-|---|---|
-| `manuscript/` | LaTeX source for the formal manuscript |
-| `docs/` | Readable documentation: claim map, notation, overview, roadmap, FAQ |
-| `notes/` | Informal working notes: known gaps, open questions, objections |
-| `code/` | Supporting Python code and Jupyter notebooks for visualization |
-| `media/` | Figures and diagrams |
-| `.github/` | Issue templates and CI workflows |
+1. [`docs/claim-map.md`](docs/claim-map.md) — dependency-level map of major claims and what still requires justification.
+2. [`manuscript/main.tex`](manuscript/main.tex) — primary manuscript source and formal claim context.
+3. [`notes/known-gaps.md`](notes/known-gaps.md) — explicit list of unresolved bridges and vulnerability points.
 
----
+Suggested first-pass workflow:
 
-## Fastest Path for Reviewers
+- Read the claim map to identify the highest-dependency steps.
+- Check each corresponding statement in `manuscript/` for hypotheses, scope, and dependency clarity.
+- Cross-check unresolved steps against `notes/known-gaps.md` to confirm that open bridges remain visible.
 
-If you are a mathematician who wants to assess this work efficiently:
+## Repository structure
 
-1. **[docs/claim-map.md](docs/claim-map.md)** — concise map of the argument structure and
-   what would be required to make it rigorous.
-2. **[manuscript/main.tex](manuscript/main.tex)** — the formal manuscript source (compile
-   with LaTeX, or see the CI-generated PDF artifact).
-3. **[notes/known-gaps.md](notes/known-gaps.md)** — a candid list of unresolved steps and
-   vulnerable points in the argument.
-
----
-
-## Repository Structure
-
-```
-/
-├─ README.md
-├─ LICENSE
-├─ CITATION.cff
-├─ .gitignore
-├─ .github/
-│  ├─ ISSUE_TEMPLATE/
-│  │  ├─ bug-report.md
-│  │  ├─ mathematical-gap.md
-│  │  ├─ notation-clarification.md
-│  │  └─ referee-feedback.md
-│  ├─ pull_request_template.md
-│  └─ workflows/
-│     ├─ build-latex.yml
-│     └─ link-check.yml
-├─ docs/
-│  ├─ index.md
-│  ├─ claim-map.md
-│  ├─ overview-for-mathematicians.md
-│  ├─ overview-general-audience.md
-│  ├─ notation.md
-│  ├─ roadmap.md
-│  ├─ faq.md
-│  └─ bibliography.md
-├─ manuscript/
-│  ├─ main.tex
-│  ├─ abstract.tex
-│  ├─ introduction.tex
-│  ├─ definitions.tex
-│  ├─ main-results.tex
-│  ├─ proof-architecture.tex
-│  ├─ lemmas.tex
-│  ├─ symmetry-framework.tex
-│  ├─ spectral-framework.tex
-│  ├─ critical-line-argument.tex
-│  ├─ discussion.tex
-│  ├─ limitations.tex
-│  ├─ appendix-a-intuition.tex
-│  ├─ appendix-b-operator-setup.tex
-│  ├─ appendix-c-computational-notes.tex
-│  ├─ references.bib
-│  └─ figures/
-├─ notes/
-│  ├─ review-log.md
-│  ├─ open-questions.md
-│  ├─ objections-and-responses.md
-│  └─ known-gaps.md
-├─ code/
-│  ├─ README.md
-│  ├─ notebooks/
-│  │  ├─ spectral-visualization.ipynb
-│  │  └─ critical-line-geometry.ipynb
-│  └─ src/
-│     └─ placeholder.py
-└─ media/
-   ├─ figures/
-   └─ diagrams/
+```text
+.
+├── README.md
+├── CITATION.cff
+├── docs/
+│   ├── claim-map.md
+│   ├── index.md
+│   ├── notation.md
+│   ├── overview-for-mathematicians.md
+│   ├── overview-general-audience.md
+│   ├── roadmap.md
+│   └── ...
+├── manuscript/
+│   ├── main.tex
+│   ├── definitions.tex
+│   ├── main-results.tex
+│   ├── limitations.tex
+│   └── ...
+├── notes/
+│   ├── known-gaps.md
+│   ├── open-questions.md
+│   ├── objections-and-responses.md
+│   └── review-log.md
+├── code/
+└── media/
 ```
 
----
+## Current status
 
-## Current Status
+- [x] Repository organized as materials for mathematical audit.
+- [x] Core manuscript structure and supporting reviewer documents are present.
+- [x] Known gaps are tracked explicitly in `notes/known-gaps.md`.
+- [ ] Key bridges remain to be converted from heuristic or partial arguments into fully formal proofs.
+- [ ] External expert review is still needed before any claim of independent verification.
+- [ ] Archival and publication steps remain contingent on review outcomes.
 
-- [x] Conceptual framework assembled
-- [x] Repository structure and documentation scaffolded
-- [ ] Manuscript draft in progress
-- [ ] Formal operator construction under development
-- [ ] Formalization still under review
-- [ ] External mathematical feedback invited
+## How to give mathematical feedback
 
----
+Focused mathematical criticism is welcome.
 
-## How to Give Mathematical Feedback
+- Use GitHub issues and select the most relevant template in `.github/ISSUE_TEMPLATE/`.
+- For a specific gap, include:
+  - exact file/section and claim identifier,
+  - whether the issue is definitional, logical dependency, hidden assumption, or invalid inference,
+  - whether the concern is formal, heuristic, or computational.
+- If possible, propose a minimal correction path (revised lemma, narrowed claim, or explicit added assumption).
 
-Mathematical feedback is welcome and encouraged. Please use the GitHub issue tracker with the
-appropriate template:
+High-value feedback targets:
 
-- **Mathematical gap** — use the [Mathematical Gap template](.github/ISSUE_TEMPLATE/mathematical-gap.md)
-  to identify steps in the argument that are not rigorous or are not justified.
-- **Notation clarification** — use the [Notation Clarification template](.github/ISSUE_TEMPLATE/notation-clarification.md)
-  for undefined, ambiguous, or conflicting notation.
-- **Referee feedback** — use the [Referee Feedback template](.github/ISSUE_TEMPLATE/referee-feedback.md)
-  for structured review comments.
+- implicit assumptions,
+- nontrivial reduction steps,
+- equivalence claims requiring proof,
+- places where computational evidence may be over-interpreted.
 
-All feedback will be logged in `notes/review-log.md` and addressed in `notes/objections-and-responses.md`.
+## Citation / archival plan
 
----
+- `CITATION.cff` provides machine-readable citation metadata for this repository.
+- Versioned archival snapshots are intended for DOI registration (e.g., Zenodo) once milestones are reached.
+- Any preprint or submission-stage release should reflect the then-current manuscript state and explicitly preserve unresolved bridges.
 
-## Citation / Archival Plan
-
-A `CITATION.cff` file is included for machine-readable citation metadata. The planned
-archival sequence is:
-
-1. Stable public repository (current stage)
-2. Zenodo DOI assignment for version snapshots
-3. arXiv preprint submission once the manuscript reaches a reviewable state
-4. Journal submission following external expert review
-
-See [docs/roadmap.md](docs/roadmap.md) for the full publication strategy.
-
----
+Until independent verification exists, please cite this project as a **manuscript under review / proposed proof framework**.
 
 ## License
 
-This repository is released under the [MIT License](LICENSE).
+Released under the [MIT License](LICENSE).
