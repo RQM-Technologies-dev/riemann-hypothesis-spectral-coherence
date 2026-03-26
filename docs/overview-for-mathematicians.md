@@ -1,135 +1,125 @@
 # Overview for Mathematicians
 
-*A technically oriented summary of the proposed framework.*
+*Technical overview of the proposed proof framework.*
 
 ---
 
-## Motivation
+## Scope and Status
 
-The Riemann Hypothesis (RH) asserts that all nontrivial zeros of the Riemann
-zeta function ζ(s) lie on the critical line Re(s) = 1/2. Extensive numerical
-evidence supports this, and the hypothesis has profound implications for the
-distribution of prime numbers. Despite over 160 years of effort, no proof is
-known.
+This document summarizes the current mathematical architecture of the repository for trained readers. It is not a proof announcement. The manuscript remains a **proposed proof framework** under review, with explicit unresolved bridges.
 
-This repository develops a proposed proof framework, not a finalized proof.
-The goal is to isolate and formalize a mechanism that, if made rigorous, would
-force nontrivial zeros onto the critical line. The approach is grounded in the
-observation that the functional equation
-
-```
-ξ(s) = ξ(1 − s)
-```
-
-defines a precise reflection symmetry whose axis is Re(s) = 1/2, and in a
-proposed interpretation of zeros as balance points in a spectral structure
-associated with this symmetry.
-
-The manuscript is organized to make assumptions, proof gaps, and unverified
-steps explicit. Outside scrutiny is invited.
+The objective is to make it straightforward to audit:
+- what is standard background from the literature,
+- what this framework proposes as new structure,
+- which implications are conjectural,
+- and which operator-theoretic and analytic steps remain open.
 
 ---
 
-## Heuristic Picture
+## Background Constraint from Classical Theory
 
-The completed zeta function ξ(s) is symmetric under s ↔ 1−s. In the critical
-strip 0 < Re(s) < 1, this symmetry maps each point to its mirror across the
-line Re(s) = 1/2.
+Let
+\[
+\xi(s)=\tfrac12 s(s-1)\pi^{-s/2}\Gamma(s/2)\zeta(s),
+\]
+so that \(\xi(s)=\xi(1-s)\). This functional equation fixes the vertical line
+\(\Re(s)=\tfrac12\) as the reflection axis for the involution
+\(\sigma(s)=1-s\).
 
-The heuristic motivation is as follows: if ζ(s) = 0 for some s in the critical
-strip, then ζ(1−s̄) = 0 also follows from the functional equation (combined
-with the reflection principle ζ(s̄) = conjugate(ζ(s))). The zeros therefore
-come in quadruples symmetric about Re(s) = 1/2 and the real axis — unless they
-lie on these axes.
+This symmetry alone does **not** imply RH. It yields zero symmetry
+\(s\mapsto 1-s\) (and with conjugation, the standard quadruple structure), but it does not exclude pairs off the axis. Any RH argument must therefore add a mechanism that rules out off-axis symmetric pairs.
 
-The question is whether the zeros are *forced* onto Re(s) = 1/2 by some
-additional constraint. The proposed framework claims that such a constraint
-exists: zeros can only occur where a certain spectral balance condition is
-satisfied, and this condition can only be satisfied on the critical line.
-
-This is the heuristic picture. Converting it into a theorem requires:
-
-1. A precise definition of the spectral balance condition.
-2. A proof that zeros of ζ correspond exactly to satisfaction of this condition.
-3. A proof that the condition is satisfiable only on Re(s) = 1/2.
-
-None of these steps are trivial. Steps 2 and 3 are the primary open gaps.
+The proposed framework attempts to supply such a mechanism through a spectral-balance criterion.
 
 ---
 
-## Formal Claims
+## Heuristic Picture (Motivation Only)
 
-The manuscript attempts to state the following formally:
+The heuristic idea is that nontrivial zeros correspond to cancellation points in a reflection-symmetric spectral structure:
 
-**Proposed Theorem (not yet proved):** Let H be the spectral operator defined
-in [manuscript/spectral-framework.tex](../manuscript/spectral-framework.tex).
-Then s is a nontrivial zero of ζ if and only if s is a balance point of H, and
-balance points of H lie only on Re(s) = 1/2.
+1. Associate to the symmetry \(s\leftrightarrow 1-s\) an operator-level structure \(H\) and a coherence/balance functional \(\Phi(s)\).
+2. Interpret \(\Phi(s)=0\) as exact spectral balance.
+3. View \(\Re(s)=\tfrac12\) as the natural candidate balance axis because it is the fixed-point locus of \(\sigma\).
+4. Expect (heuristically) that exact balance away from the fixed locus is unstable or incompatible with the structure of \(H\).
 
-**Current status of each component:**
-
-| Claim | Status |
-|-------|--------|
-| Definition of H | Partially drafted; not yet fully rigorous |
-| ζ-zero ⟺ balance point | Conjectured; not proved |
-| Balance points ⊆ {Re(s)=1/2} | The central open gap |
-
-The manuscript separates these claims into individual theorem environments,
-clearly marked with their current status (theorem, proposition, conjecture,
-or heuristic). See [manuscript/main-results.tex](../manuscript/main-results.tex).
+This picture is motivational only. It does not constitute proof. In particular, geometric or physical language (interference, resonance, equilibrium) is treated in this project as intuition unless converted into operator-theoretic statements.
 
 ---
 
-## Conjectural Bridges Still Needing Proof
+## Formal Claims Currently in the Manuscript
 
-The following are explicitly acknowledged as requiring further work:
+The manuscript separates established background from proposed results.
 
-1. **Operator construction:** The spectral object H must be defined as a
-   genuine mathematical operator on a function space, with a clear domain,
-   codomain, and spectral theory. Informal descriptions in terms of
-   "resonance" or "coherence" do not constitute a definition.
+### Established background (cited)
+- Functional equation for \(\xi\).
+- Symmetry of nontrivial zeros under \(s\mapsto 1-s\) and \(s\mapsto \bar s\).
 
-2. **Correspondence theorem:** The equivalence between zeros of ζ and
-   balance points of H must be established by calculation, not by analogy.
-   This is the most technically demanding step.
+### Proposed results (open)
+- **Zero–balance correspondence (conjectural):** nontrivial zeros in the critical strip are exactly the points satisfying a balance criterion derived from \(H\).
+- **Uniqueness of the balance axis (conjectural):** the balance criterion is satisfiable only on \(\Re(s)=\tfrac12\).
+- **Main implication:** if both statements above are proved rigorously, RH follows.
 
-3. **Uniqueness of the balance axis:** It must be proved — not merely argued
-   by symmetry — that Re(s) = 1/2 is the *only* locus where balance points
-   can occur. This requires understanding the behavior of H off the critical
-   line.
-
-4. **Exclusion of pathological cases:** Any proof strategy must account for
-   the possibility of zeros clustering near the critical line without lying
-   on it, or for exceptional behavior at large imaginary parts.
-
-5. **Independence from analogy:** The argument must not depend on the
-   informal analogy between spectral balance and zero placement. Every step
-   must be traceable to a definition or a proved lemma.
-
-A complete list of known gaps is maintained in [notes/known-gaps.md](../notes/known-gaps.md).
+So the logical shape is clear, but the central implications remain unproved.
 
 ---
 
-## Related Prior Work
+## Why the Critical Line Is Treated as the Proposed Balance Axis
 
-The spectral approach to RH is not new. Relevant prior directions include:
+The framework treats \(\Re(s)=\tfrac12\) as the proposed balance axis for structural reasons, not numerology:
 
-- **Hilbert–Pólya conjecture:** Suggests that the imaginary parts of the
-  nontrivial zeros are eigenvalues of a self-adjoint operator. If such an
-  operator exists, RH would follow from the reality of its spectrum.
-- **Montgomery–Odlyzko law:** Zeros of ζ appear to follow GUE statistics,
-  consistent with a random matrix / quantum chaos interpretation.
-- **Berry–Keating operator:** Proposes a specific (non-self-adjoint) operator
-  whose classical limit relates to the prime-counting function.
-- **Connes's approach:** Uses noncommutative geometry and adelic spaces to
-  construct a spectral realization of the zeros.
+1. **Fixed-point geometry of the involution.** The involution \(\sigma(s)=1-s\) has fixed set exactly \(\Re(s)=\tfrac12\).
+2. **Compatibility requirement for a symmetric balance law.** If balance is required to respect \(\sigma\), any off-axis candidate \(s\) is paired with \(1-s\), so one must explain simultaneous balance at two distinct reflected points.
+3. **Target contradiction strategy.** The manuscript attempts to show that this simultaneous off-axis balance is impossible once \(H\) and \(\Phi\) are fully specified.
 
-The present manuscript proposes a different (and currently less developed)
-approach grounded in reflection symmetry and coherence balance. Its relationship
-to the above programs is discussed in
-[manuscript/discussion.tex](../manuscript/discussion.tex).
+At present, item (3) is not established. Thus the axis privilege is a proposed theorem target, not a theorem.
 
 ---
 
-*See [docs/notation.md](notation.md) for the full notation reference, and
-[docs/bibliography.md](bibliography.md) for citations to prior work.*
+## Conjectural Bridges Requiring Rigorous Justification
+
+The current bottlenecks are explicit and substantial.
+
+1. **Construction of the operator \(H\).**
+   - Required: explicit function space, domain, action, closedness/densely-defined properties as appropriate, and a usable spectral framework.
+   - Current status: only a partially drafted specification.
+
+2. **Definition and well-posedness of the balance/coherence functional \(\Phi\).**
+   - Required: precise formula, regularity properties, and proof that the definition is mathematically coherent on its intended domain.
+   - Current status: not fully specified.
+
+3. **Proof of zero–balance correspondence.**
+   - Required: bi-implication \(\zeta(s)=0 \iff \Phi(s)=0\) in the critical strip, with all hypotheses explicit.
+   - Current status: conjectural.
+
+4. **Proof of off-axis impossibility.**
+   - Required: a rigorous lemma excluding simultaneous balance at \(s\) and \(1-s\) when \(\Re(s)\neq\tfrac12\).
+   - Current status: central open bridge.
+
+5. **Uniformity across the strip.**
+   - Required: an argument that controls all off-line possibilities, including large \(|\Im(s)|\), not only local or heuristic regimes.
+   - Current status: open.
+
+6. **Analogy-to-theorem conversion.**
+   - Required: replacement of each heuristic step by explicit definitions and proved lemmas/propositions.
+   - Current status: ongoing and incomplete.
+
+These are not cosmetic gaps; they are mathematically decisive.
+
+---
+
+## Relationship to Existing Spectral Programs
+
+The project is adjacent to, but not identical with, classical spectral programs (Hilbert–Pólya, Berry–Keating-type constructions, Connes-style frameworks). The manuscript currently treats this relationship as unresolved until \(H\) is concretely defined.
+
+Accordingly, the present claim is modest: the framework suggests a reflection-symmetric balance route to RH, but has not yet supplied the operator-theoretic and analytic proofs needed to convert that route into a theorem.
+
+---
+
+## Reading Guide for Audit
+
+For efficient technical review:
+- Start with the claim status and dependency structure in `manuscript/main-results.tex` and `manuscript/proof-architecture.tex`.
+- Then inspect the proposed operator/coherence setup in `manuscript/spectral-framework.tex` and definitions in `manuscript/definitions.tex`.
+- Compare the critical-line exclusion strategy in `manuscript/critical-line-argument.tex` with the explicit gap register in `notes/known-gaps.md`.
+
+The framework is intended to be falsifiable at each bridge: if any required bridge fails, the RH implication does not go through.
