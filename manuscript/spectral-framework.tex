@@ -40,6 +40,14 @@ Each assumption must be tagged as either proved in-manuscript or imported as an 
 A lemma-level dependency map from operator properties to later claims (especially Stages 3--6 in \texttt{proof-architecture.tex}).
 No RH-relevant step should rely on an unlisted implicit property of $H$.
 
+\subsection*{How to read M1--M5: requirement classes}
+For audit, the $H$-layer requirements split into two roles.
+\begin{itemize}
+  \item \textbf{Structural interface requirements:} (M1)--(M3). These fix object type, operator action, and symmetry-compatibility form.
+  \item \textbf{Regularity/control requirements:} (M4)--(M5). These control analytic legitimacy and ensure every downstream use is explicitly tracked.
+\end{itemize}
+This split is not cosmetic: Stages 2--3 in \texttt{proof-architecture.tex} require both classes to be complete before Target A/B bridges can be promoted beyond placeholders.
+
 \subsection*{Minimal required structure for the coherence functional $\Phi$}
 Once a candidate $H$-layer is fixed, $\Phi$ must be introduced as a derived object with explicit dependence.
 
@@ -75,6 +83,48 @@ This interface should separate:
   \item the converse direction to be proved,
   \item side conditions preventing spurious balanced points.
 \end{enumerate}
+
+\subsection*{How to read P1--P5: requirement classes}
+For the coherence functional, the same two-way split is used.
+\begin{itemize}
+  \item \textbf{Structural interface requirements:} (P1), (P2), and the transformation law in (P4). These determine what $\Phi_H$ is, where it is evaluated, and how symmetry acts on it.
+  \item \textbf{Regularity/control requirements:} (P3) and the side-condition component of (P5). These prevent undefined values, unstable inference, and spurious balance points.
+\end{itemize}
+Under this organization, correspondence and exclusion arguments may use only the declared structure/control items, with no hidden assumptions.
+
+\subsection*{Dependency use map to later stages and lemma targets}
+The interface above is designed to feed specific downstream bridges.
+
+\paragraph{(i) Inputs that directly feed Target A (Stage 4).}
+\begin{itemize}
+  \item \textbf{From $H$:} (M3) for reflection-compatible transport; (M4) for any limit/interchange operations used in the correspondence map; (M5) to keep directional claims (forward/converse) explicitly separated.
+  \item \textbf{From $\Phi$:} (P1)--(P3) to define a non-circular balance predicate on an admissible class; (P5) to state the bidirectional theorem target and spurious-point controls.
+  \item \textbf{Primary lemma targets in \texttt{lemmas.tex}:} B1 well-posedness targets, B2 reflection/conjugation compatibility targets, and B3 zero--balance correspondence targets.
+\end{itemize}
+
+\paragraph{(ii) Inputs that directly feed Target B (Stage 5).}
+\begin{itemize}
+  \item \textbf{From $H$:} (M3)--(M4), providing the symmetry and coercive/control ingredients used to force localization to $\RePart(s)=\tfrac12$.
+  \item \textbf{From $\Phi$:} (P3)--(P5), especially the side-condition discipline needed to distinguish genuine balance points from artefacts.
+  \item \textbf{Primary lemma targets in \texttt{lemmas.tex}:} B4 off-line exclusion target, with dependencies on B1--B3 as already recorded there.
+\end{itemize}
+
+\paragraph{(iii) Inputs that directly feed Stage 6 off-line exclusion (global).}
+\begin{itemize}
+  \item \textbf{From $H$:} (M4)--(M5), to justify strip-wide control statements and to document exactly which operator properties are invoked globally.
+  \item \textbf{From $\Phi$:} (P3)--(P5), where global exclusion needs both well-posedness and explicit side-condition closure across the admissible strip.
+  \item \textbf{Primary lemma targets in \texttt{lemmas.tex}:} B4 quartet-compatible exclusion transfer and B5 operator/analytic-control support targets.
+\end{itemize}
+
+\paragraph{(iv) Stage alignment summary.}
+\begin{itemize}
+  \item \textbf{Stage 2 (\texttt{proof-architecture.tex}):} anchored by (M1)--(M4), with B5 operator-closure support.
+  \item \textbf{Stage 3:} anchored by (P1)--(P4), with B1 admissibility/well-posedness support.
+  \item \textbf{Stage 4 / Target A:} uses (M3)--(M5) and (P1)--(P5), with B2--B3 bridges.
+  \item \textbf{Stage 5 / Target B:} uses (M3)--(M5) and (P3)--(P5), with B4 bridge.
+  \item \textbf{Stage 6:} uses (M4)--(M5) and (P3)--(P5), with B4--B5 global-control bridges.
+\end{itemize}
+These alignments specify dependency direction only. They do not upgrade any open bridge to proved status.
 
 \subsection*{Available structure vs. required open structure}
 \paragraph{Currently available structure (documented).}
