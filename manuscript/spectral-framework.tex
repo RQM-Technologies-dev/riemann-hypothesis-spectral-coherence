@@ -86,12 +86,14 @@ This interface should separate:
 
 \paragraph{Required but not yet proved structure (open bridges).}
 \begin{itemize}
-  \item A single finalized construction satisfying (M1)--(M5).
-  \item A fully non-circular, well-posed definition of $\Phi$ satisfying (P1)--(P4).
-  \item Theorem-level zero--balance correspondence (Target A in the architecture).
-  \item Theorem-level critical-line uniqueness/exclusion consequences (Target B plus global exclusion package).
+  \item \textbf{Exact spectral object.} A single finalized construction satisfying (M1)--(M5).
+  \item \textbf{Zero--balance correspondence.} A fully non-circular, theorem-level correspondence package (Target A) with both directions and explicit side-condition control.
+  \item \textbf{Uniqueness of the balance axis.} A theorem-level localization result (Target B) proving that admissible balanced points lie only on $\RePart(s)=\tfrac12$.
+  \item \textbf{Exclusion of off-critical-line zeros.} A full-strip exclusion package that upgrades local arguments to the entire admissible critical strip.
+  \item \textbf{Operator-theoretic gaps.} Proof-level closure of domain, symmetry/intertwining, and spectral-legitimacy requirements used by the correspondence and exclusion steps.
+  \item \textbf{Analytic-control gaps.} Proof-level closure of growth, convergence, and interchange-of-limits requirements used by $\Phi$ and downstream reduction steps.
 \end{itemize}
-\openbridge{Until these bridges are proved under synchronized hypotheses, references to ``balanced points'' or ``coherence zeros'' remain conditional framework language.}
+\openbridge{Until these six bridges are proved under synchronized hypotheses, references to ``balanced points'' or ``coherence zeros'' remain conditional framework language.}
 
 \subsection*{Why this layer is necessary for the RH reduction}
 The final reduction step in \texttt{proof-architecture.tex} is conditional on intermediate bridges that are operator- and functional-level statements.

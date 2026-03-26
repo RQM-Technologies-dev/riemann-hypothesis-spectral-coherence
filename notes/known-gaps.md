@@ -10,6 +10,14 @@ Conventions used below:
 - **Resolution criterion:** what would count as a mathematically adequate closure of the gap.
 - **Evidence rule:** numerical checks or analogy can support direction, but do not close a proof gap.
 
+Core bridge names synchronized with manuscript text:
+1. exact spectral object
+2. zero--balance correspondence
+3. uniqueness of the balance axis
+4. exclusion of off-critical-line zeros
+5. operator-theoretic gaps
+6. analytic-control gaps
+
 ---
 
 ## 1) Exact definition of the spectral object
@@ -29,7 +37,7 @@ Conventions used below:
 
 ---
 
-## 2) Exact correspondence between cancellation criterion and zeta zeros
+## 2) Zero--balance correspondence
 
 **Gap:** The framework attempts to show that a cancellation/balance criterion is equivalent to the nontrivial zero condition for \(\zeta(s)\), but exact equivalence is not yet proved.
 
@@ -83,7 +91,7 @@ Conventions used below:
 
 ---
 
-## 5) Dependence on analogy versus theorem
+## 5) Dependence on analogy versus theorem (cross-cutting)
 
 **Gap:** Parts of the framework are motivated by geometric/physical analogy (balance, resonance, coherence) that have not yet been fully translated into formal theorems.
 
@@ -91,7 +99,7 @@ Conventions used below:
 - Analogy can guide definitions but cannot certify truth.
 - Reviewers need to separate motivational language from proved implications.
 
-**Current status:** **Partial.** The manuscript marks open steps, but several key transitions from intuition to theorem remain unresolved.
+**Current status:** **Partial.** The manuscript marks open steps, but several key transitions from intuition to theorem remain unresolved. This item is cross-cutting and does not replace any of the six core bridges listed above.
 
 **What would count as resolution:**
 - For each analogy-backed step, replace with explicit definitions and theorem statements.
@@ -117,7 +125,7 @@ Conventions used below:
 
 ---
 
-## 7) Analytic gaps (complex analysis and global control)
+## 7) Analytic-control gaps
 
 **Gap:** Several analytic bridges remain underjustified, including steps requiring contour control, growth bounds, interchange of limits/integrals, or uniformity claims.
 
@@ -139,12 +147,12 @@ Conventions used below:
 | Gap | Why it matters (short) | Status | Resolution signal |
 |---|---|---|---|
 | Exact spectral object | Foundational definitions missing | Open | Full operator construction + well-posedness proofs |
-| Cancellation \(\Leftrightarrow\) zeros | Central equivalence claim | Open | Two-direction non-circular theorem |
+| Zero--balance correspondence | Central equivalence claim | Open | Two-direction non-circular theorem |
 | Unique balance axis | Needed to isolate \(\Re(s)=1/2\) | Open | Uniqueness theorem under explicit hypotheses |
 | Off-line exclusion | RH requires global exclusion | Open | Global theorem for entire strip |
 | Analogy vs theorem | Heuristics cannot close proof | Partial | Formal replacement of heuristic dependencies |
 | Operator-theoretic core | Spectral claims depend on it | Open | Domain/symmetry/spectral lemmas proved |
-| Analytic control | Common failure point in RH attempts | Open | Verified convergence/uniformity and contour steps |
+| Analytic-control gaps | Common failure point in RH attempts | Open | Verified convergence/uniformity and contour steps |
 
 ---
 
