@@ -24,14 +24,13 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Check links
+      - name: Check links (file-relative paths)
         uses: lycheeverse/lychee-action@v2
         with:
           args: >
             --verbose
             --no-progress
             --exclude-mail
-            --base .
             --max-retries 2
             --retry-wait-time 2
             '**/*.md'
