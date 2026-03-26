@@ -1,30 +1,55 @@
-This section fixes baseline notation and records proposed objects with explicit status labels.
+This section fixes baseline notation and separates classical definitions from manuscript-specific provisional objects.
+
+\subsection*{Classical definitions (standard)}
 
 \begin{definition}[Completed zeta function]
 \[
 \xi(s) := \tfrac12 s(s-1)\pi^{-s/2}\Gamma(s/2)\zeta(s).
 \]
-We use the standard symmetry $\xi(s)=\xi(1-s)$.
+We use the standard functional-equation symmetry $\xi(s)=\xi(1-s)$.
 \end{definition}
 
 \begin{definition}[Critical strip and critical line]
-The critical strip is $\{s\in\C:0<\RePart(s)<1\}$. The critical line is $\{s\in\C:\RePart(s)=\tfrac12\}$.
+The critical strip is
+\[
+\{s\in\C:0<\RePart(s)<1\},
+\]
+and the critical line is
+\[
+\{s\in\C:\RePart(s)=\tfrac12\}.
+\]
 \end{definition}
 
 \begin{definition}[Reflection involution]
-Let $\sigma:\C\to\C$ be $\sigma(s)=1-s$. The fixed-point set of $\sigma$ is the critical line.
+Let $\sigma:\C\to\C$ be $\sigma(s)=1-s$. This map is an involution, and its fixed-point set is the critical line.
 \end{definition}
 
-\begin{definition}[Proposed coherence object \textnormal{(placeholder)}]
-\placeholder{A precise operator model, function space, and domain are still required.}
-We denote by $H$ the proposed spectral object intended to encode a balance condition associated with nontrivial zeros.
+\subsection*{Manuscript-specific provisional definitions}
+
+\begin{definition}[Proposed coherence object $H$ \textnormal{(provisional definition; placeholder object)}]
+\placeholder{A full operator-level construction is still required: ambient space, domain, action, and well-posedness properties.}
+The symbol $H$ denotes a proposed spectral object used by the manuscript as a formalization target for the coherence program.
+At the current stage, $H$ is reserved notation, not yet a fully constructed theorem-level object.
 \end{definition}
 
-\begin{definition}[Balance criterion \textnormal{(placeholder)}]
-\placeholder{Provide a complete formula in terms of spectral data of $H$.}
-A point $s$ is called balanced when the specified criterion holds.
+\begin{definition}[Admissible point and admissible class \textnormal{(provisional definition; formalization target)}]
+\placeholder{A non-circular admissibility criterion independent of zero locations must be supplied.}
+An \emph{admissible point} is a complex number $s\in\C$ for which all ingredients required to evaluate the manuscript's proposed balance/coherence functional are defined and finite.
+An \emph{admissible class} is a specified subset $\mathcal{A}\subseteq\C$ of admissible points on which the balance criterion is intended to be analyzed.
 \end{definition}
 
-\begin{remark}
-The two placeholder definitions above are unresolved bridges. They must be completed before any draft theorem target can be promoted to a theorem.
+\begin{definition}[Balanced point \textnormal{(conditional/provisional)}]
+\placeholder{A complete balance criterion must be provided explicitly in terms of the finalized spectral data.}
+Fix a finalized choice of the coherence object $H$ and a finalized admissible class $\mathcal{A}$.
+A point $s\in\mathcal{A}$ is called \emph{balanced} if it satisfies the manuscript's eventual balance criterion for that finalized data.
+Until that criterion is fully specified and proved well-posed, ``balanced'' remains conditional terminology.
+\end{definition}
+
+\begin{remark}[Status boundary for theorem-level use]
+The three definitions above in this subsection are provisional. They mark unresolved bridges recorded in the audit notes: exact construction of $H$, exact formulation of the balance criterion, and proof-level control of admissibility assumptions.
+No theorem-level claim may rely on these terms without first supplying those formal components.
+\end{remark}
+
+\begin{remark}[Traceability requirement]
+When the provisional objects are upgraded, each promoted definition should include: (i) explicit hypotheses, (ii) well-posedness statement, and (iii) dependency links to the lemmas/theorems that justify subsequent use.
 \end{remark}
