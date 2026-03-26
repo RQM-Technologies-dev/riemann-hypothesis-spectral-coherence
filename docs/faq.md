@@ -1,111 +1,89 @@
 # Frequently Asked Questions
 
-*Calm, honest answers to common questions about this repository and its claims.*
+*Calm, audit-oriented answers about the current manuscript state.*
 
 ---
 
 ## "Are you claiming that the Riemann Hypothesis is solved?"
 
-No. This repository presents a **proposed proof framework** — a structured attempt
-to develop an argument that, if made fully rigorous, would constitute a proof of
-the Riemann Hypothesis. That argument is not complete. Several key steps remain
-unproved, and they are documented candidly in [notes/known-gaps.md](../notes/known-gaps.md).
+No. This repository presents a **proposed proof framework** and **manuscript under review**.
+It is not presented as an established proof.
 
-The appropriate language is: *proposed proof*, *proof framework*, *spectral-coherence
-approach*, or *manuscript under review*. The words "solved," "final proof," or
-"complete proof" do not appear in this repository because they are not accurate.
-
----
-
-## "What is new here?"
-
-The proposed contribution is a specific interpretation of the functional equation's
-reflection symmetry as a *balance mechanism* operating on a spectral object
-associated with the Riemann zeta function. The manuscript attempts to formalize
-the claim that zeros of ζ correspond exactly to balance states of this spectral
-object, and that such balance states are only achievable on the critical line
-Re(s) = 1/2.
-
-Whether this constitutes a genuinely new approach, an extension of known ideas,
-or an inadvertent reformulation of something already in the literature is itself
-a question the authors cannot answer unilaterally. External mathematical review
-is needed for that assessment.
+The central unresolved bridges are tracked in [notes/known-gaps.md](../notes/known-gaps.md),
+including the zero/balance correspondence and the off-line exclusion step.
 
 ---
 
 ## "Is this a proof or a framework?"
 
-It is a **framework**. The manuscript assembles a conceptual architecture — a
-set of definitions, claimed correspondences, and a proof strategy — that would,
-if fully justified, constitute a proof. The framework is not yet a proof because
-several of the steps within it are not yet proved.
+It is a **framework**.
 
-The distinction is important. A framework can be correct in its overall strategy
-while containing gaps that prevent it from functioning as a proof. Conversely,
-a framework can seem compelling while containing fundamental errors. External
-scrutiny is the only reliable way to distinguish these cases.
+- A **proof framework** organizes definitions, claimed correspondences, and a strategy.
+- A **proof** requires all key steps to be established with complete hypotheses and dependencies.
+
+This repository is currently in the first category.
+
+---
+
+## "What is the core claim map in one paragraph?"
+
+The framework starts from the functional-equation symmetry of the completed zeta
+function and attempts to add a spectral/coherence balance criterion. The intended
+endpoint is: nontrivial zeros correspond to balance states, and balance is possible
+only on \(\Re(s)=\tfrac12\). In the current state, this endpoint is proposed rather
+than proved; see [docs/claim-map.md](./claim-map.md) for dependency-level status.
 
 ---
 
 ## "What role do spectral coherence and symmetry play?"
 
-The functional equation of the Riemann zeta function,
+The formal input is the symmetry
+\[
+\xi(s)=\xi(1-s),
+\]
+with symmetry axis \(\Re(s)=\tfrac12\).
 
-```
-ξ(s) = ξ(1 − s),
-```
+In this repository, “spectral coherence” names an attempted balance/cancellation
+criterion on an associated spectral object. The unresolved step is proving that
+this criterion is both equivalent to \(\zeta(s)=0\) and unique to the critical line.
 
-establishes a precise reflection symmetry of the completed zeta function ξ(s).
-The critical line Re(s) = 1/2 is the axis of this symmetry.
-
-The proposed framework treats zeros of ζ as *balance points* in a spectral
-object that inherits this symmetry. The *coherence* condition is an informal
-name for the balance or cancellation criterion that a zero must satisfy.
-
-The claim is that this criterion can only be satisfied on Re(s) = 1/2. Whether
-that claim is correct, and whether it can be proved from the definitions, is
-the central open question.
-
-*Symmetry alone does not force zeros to the critical line.* Many functions with
-the same symmetry do not have all their zeros on the symmetry axis. The argument
-requires showing that ζ (or more precisely, the associated spectral object)
-has an additional property that makes off-line zeros impossible.
+Symmetry by itself is not enough to force RH; the framework must prove an additional
+exclusion theorem.
 
 ---
 
-## "What would count as genuine verification?"
+## "How does this relate to Hilbert–Pólya-type programs?"
 
-A genuine verification of this work would require an independent mathematician
-to:
+Conservatively: it is adjacent in spirit, not claimed as a replacement.
 
-1. Accept the definitions of the spectral object and the balance criterion as
-   mathematically well-posed.
-2. Verify that the claimed correspondence between zeros of ζ and balance states
-   is correct (either by checking the proof given in the manuscript, or by
-   providing an independent proof).
-3. Verify that balance states can only occur on Re(s) = 1/2 (either by checking
-   the argument, or independently).
-4. Confirm that no logical gap or hidden assumption has been introduced.
-
-This is the standard of proof in mathematics. No amount of numerical evidence,
-visual intuition, or informal argument is a substitute for this.
+Like Hilbert–Pólya-type thinking, the framework seeks a spectral structure whose
+properties constrain zero locations. The present manuscript does **not** claim a
+completed Hilbert–Pólya realization. It proposes a related spectral-coherence route
+that still requires substantial proof work.
 
 ---
 
-## "Why make this public before it's proved?"
+## "What would count as verification?"
 
-Open development serves several purposes:
+At minimum, independent mathematical review would need to confirm:
 
-- **Accountability:** Making the gaps explicit publicly prevents accidental
-  overclaiming.
-- **Feedback:** Expert reviewers can identify errors or gaps more quickly than
-  the authors can alone.
-- **Transparency:** The development history is preserved and auditable.
-- **Precedent:** In an area where false claims are common, honest open development
-  is itself valuable.
+1. The spectral object and balance criterion are fully and non-circularly defined.
+2. The zero \(\Leftrightarrow\) balance correspondence is proved under explicit hypotheses.
+3. Off-critical-line solutions are excluded across the full critical strip.
+4. No hidden assumptions or dependency gaps remain in the argument chain.
 
-The repository is not being presented as a finished proof. It is being presented
-as a structured research program in progress.
+Computations and visualizations can support intuition, but they do not replace proof.
+
+---
+
+## "Why publish materials before proof completion?"
+
+Because the repository is organized as **materials for mathematical audit**:
+- open gaps are visible,
+- assumptions are easier to challenge,
+- and revisions can be tracked transparently.
+
+This is intended to support scrutiny, not to signal completion.
 
 ---
 
