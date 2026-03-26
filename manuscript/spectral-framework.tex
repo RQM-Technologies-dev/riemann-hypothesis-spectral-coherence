@@ -1,17 +1,109 @@
-This section specifies the intended spectral component and its current status.
+This section defines a minimal formal interface for the manuscript's proposed operator/coherence layer.
+It does not claim that the layer is complete.
+Its role is to make explicit which properties must be supplied before downstream RH-reduction claims can be treated as theorem-level statements.
 
-\subsection*{Current formal status}
-\placeholder{The operator-level construction is not yet complete.}
-The framework introduces a spectral object $H$ and a balance functional $\Phi(s)$ intended to mediate between symmetry data and zero locations.
+\subsection*{Current formal status and scope}
+\placeholder{A finalized operator-level construction has not yet been fixed.}
+The symbols $H$ and $\Phi$ are currently part of the manuscript's formalization agenda:
+\begin{itemize}
+  \item $H$ denotes a proposed spectral object (operator/system) intended to encode the manuscript's symmetry/coherence mechanism.
+  \item $\Phi$ denotes a proposed balance/coherence functional extracted from the finalized $H$-layer.
+\end{itemize}
+At present, these are not yet complete theorem-level objects in the sense required for Stages 2--3 of the proof architecture.
 
-\subsection*{Required formalization tasks}
+\subsection*{Minimal required structure for the $H$-layer}
+The manuscript does not need every possible operator-theoretic feature.
+It does need the following \emph{minimal interface} to keep later arguments well-typed and auditable.
+
+\paragraph{(M1) Ambient space and typing data.}
+A specified complex topological vector space (typically a Hilbert or Banach model) $\mathcal{X}$, together with clear codomain conventions for all derived maps.
+Every use of $H$ must state its typing context explicitly.
+
+\paragraph{(M2) Domain and well-defined action.}
+A dense or otherwise explicitly justified domain $\mathcal{D}(H)\subseteq\mathcal{X}$ (as required by the chosen model), and a map
+\[
+H:\mathcal{D}(H)\to\mathcal{X}
+\]
+with proof that this action is well defined under stated hypotheses.
+If closure/closability is needed by subsequent lemmas, that requirement must be stated and proved where used.
+
+\paragraph{(M3) Symmetry-compatibility package.}
+A precise compatibility statement linking the operator layer to the reflection involution $\sigma(s)=1-s$ from \texttt{definitions.tex}.
+This may be invariance, covariance, intertwining, or another concrete relation, but it must be explicit and non-heuristic.
+Informal symmetry pictures are admissible only as motivation, not as substitute for this package.
+
+\paragraph{(M4) Regularity and control assumptions.}
+The exact regularity required for downstream arguments: continuity/measurability/analytic dependence, growth bounds, and any interchange-of-limits conditions needed to define derived functionals.
+Each assumption must be tagged as either proved in-manuscript or imported as an explicit hypothesis.
+
+\paragraph{(M5) Dependency traceability.}
+A lemma-level dependency map from operator properties to later claims (especially Stages 3--6 in \texttt{proof-architecture.tex}).
+No RH-relevant step should rely on an unlisted implicit property of $H$.
+
+\subsection*{Minimal required structure for the coherence functional $\Phi$}
+Once a candidate $H$-layer is fixed, $\Phi$ must be introduced as a derived object with explicit dependence.
+
+\paragraph{(P1) Definition from finalized inputs.}
+A formula or construction rule
+\[
+\Phi = \Phi_H\quad\text{(or }\Phi(s)=\Phi_H(s)\text{)}
+\]
+whose inputs are only previously defined data.
+The definition must be non-circular and must not presuppose the zero set of $\zeta$.
+
+\paragraph{(P2) Domain of evaluation (admissible class).}
+A specified admissible class $\mathcal{A}\subseteq\C$ consistent with \texttt{definitions.tex}, including all side conditions needed for finiteness and well-posedness.
+If $\Phi$ is only partially defined, the excluded region must be explicit.
+
+\paragraph{(P3) Well-posedness statement.}
+For $s\in\mathcal{A}$, proof that $\Phi_H(s)$ exists and is finite, plus the exact continuity/regularity properties later used in correspondence and uniqueness steps.
+Computational checks may support plausibility but do not satisfy this requirement.
+
+\paragraph{(P4) Symmetry behavior of $\Phi$.}
+A formal statement of how $\Phi$ transforms under $s\mapsto1-s$ (invariance, sign change, conjugation relation, etc.), derived from the stated $H$-properties.
+This is required for any reflection-based cancellation argument.
+
+\paragraph{(P5) Bridge interface to zero claims.}
+A precise theorem target describing what must be shown about
+\[
+\Phi_H(s)=0
+\]
+and how that condition maps to encoded zeta-zero statements.
+This interface should separate:
 \begin{enumerate}
-  \item Define the ambient function space and operator domain for $H$.
-  \item Prove the reflection-compatibility property for $H$.
-  \item Define $\Phi$ unambiguously and prove its analytical well-posedness.
-  \item Prove the exact logical link between $\Phi(s)=0$ and $\zeta(s)=0$.
+  \item the forward direction to be proved,
+  \item the converse direction to be proved,
+  \item side conditions preventing spurious balanced points.
 \end{enumerate}
 
+\subsection*{Available structure vs. required open structure}
+\paragraph{Currently available structure (documented).}
+\begin{itemize}
+  \item Classical objects and symmetry notation (including $\xi$, critical strip/line, and $\sigma$) are fixed in \texttt{definitions.tex}.
+  \item The proof program and stage-level dependency chain are fixed in \texttt{proof-architecture.tex}.
+  \item Gap categories and closure criteria are explicitly listed in \texttt{known-gaps.md}.
+\end{itemize}
+
+\paragraph{Required but not yet proved structure (open bridges).}
+\begin{itemize}
+  \item A single finalized construction satisfying (M1)--(M5).
+  \item A fully non-circular, well-posed definition of $\Phi$ satisfying (P1)--(P4).
+  \item Theorem-level zero--balance correspondence (Target A in the architecture).
+  \item Theorem-level critical-line uniqueness/exclusion consequences (Target B plus global exclusion package).
+\end{itemize}
+\openbridge{Until these bridges are proved under synchronized hypotheses, references to ``balanced points'' or ``coherence zeros'' remain conditional framework language.}
+
+\subsection*{Why this layer is necessary for the RH reduction}
+The final reduction step in \texttt{proof-architecture.tex} is conditional on intermediate bridges that are operator- and functional-level statements.
+Without a rigorous $H$/$\Phi$ layer:
+\begin{enumerate}
+  \item the balance condition is not a theorem-level predicate on a defined domain,
+  \item the correspondence with zeta zeros cannot be stated non-circularly,
+  \item the uniqueness/exclusion arguments have no formal object to which estimates apply.
+\end{enumerate}
+Therefore this layer is not optional technical decoration; it is a prerequisite interface for Targets A/B and for any valid RH reduction claim inside the manuscript's framework.
+
 \begin{heuristic}
-A cancellation picture may motivate the construction, but it is only heuristic guidance until converted into formal lemmas.
+Geometric or cancellation intuition can guide candidate constructions of $H$ and $\Phi$.
+However, such intuition remains heuristic until converted into explicit definitions, hypotheses, and proved lemmas matching the minimal interface above.
 \end{heuristic}
