@@ -1,39 +1,62 @@
 cff-version: 1.2.0
 message: >
-  If you reference or build upon this work, please cite it using the metadata below.
-  Note that this is a proposed proof framework under active review; please cite accordingly.
+  If you reference or build upon this repository, please cite it using the
+  metadata below. This project is a proposed proof framework and manuscript
+  under review; please cite it accordingly.
 title: "Riemann Hypothesis via Spectral Coherence"
 abstract: >
-  A proposed spectral-coherence framework for the Riemann Hypothesis, organized for
-  mathematical audit, formalization, and review. The manuscript develops a proposed
-  proof linking the functional symmetry of the Riemann zeta function to a
-  spectral-coherence interpretation of the critical line Re(s) = 1/2.
+  Repository containing manuscript materials, documentation, and support code
+  for a proposed spectral-coherence framework related to the Riemann
+  Hypothesis. The materials are organized for mathematical audit and mark
+  unresolved bridges explicitly.
+type: software
 authors:
   - name: "RQM Technologies"
-    # Replace with individual author details when ready for public attribution:
+    # Replace with individual author details when public attribution is finalized:
     # family-names: "Surname"
     # given-names: "Given"
     # orcid: "https://orcid.org/0000-0000-0000-0000"
     # affiliation: "Institution"
-version: "0.1.0-draft"
-date-released: 2026-03-26
-url: "https://github.com/RQM-Technologies-dev/riemann-hypothesis-spectral-coherence"
-repository-code: "https://github.com/RQM-Technologies-dev/riemann-hypothesis-spectral-coherence"
-license: MIT
 keywords:
   - riemann-hypothesis
   - zeta-function
   - analytic-number-theory
   - spectral-theory
-  - mathematical-physics
-  - quaternionic-geometry
-  - research
-  - preprint
-type: software
-# When an arXiv identifier is assigned, add:
+  - manuscript-under-review
+  - mathematical-audit
+license: MIT
+version: "0.1.0-draft"
+date-released: 2026-03-26
+repository-code: "https://github.com/RQM-Technologies-dev/riemann-hypothesis-spectral-coherence"
+url: "https://github.com/RQM-Technologies-dev/riemann-hypothesis-spectral-coherence"
+
+# --- Future archival identifiers (add when assigned; do not invent) ---
+# doi: "10.5281/zenodo.XXXXXXX"
+# identifiers:
+#   - type: doi
+#     value: "10.5281/zenodo.XXXXXXX"
+#     description: "Archived repository release on Zenodo"
+#   - type: other
+#     value: "arXiv:XXXX.XXXXX"
+#     description: "Associated manuscript preprint"
+
+# --- Preferred manuscript citation (enable once manuscript metadata is stable) ---
 # preferred-citation:
 #   type: article
-#   title: "Riemann Hypothesis via Spectral Coherence: A Proposed Framework"
-#   authors: [...]
+#   title: "Riemann Hypothesis via Spectral Coherence: [Manuscript Title]"
+#   authors:
+#     - family-names: "Surname"
+#       given-names: "Given"
+#       # orcid: "https://orcid.org/0000-0000-0000-0000"
+#   journal: "arXiv"
 #   year: 2026
+#   # volume: ""
+#   # issue: ""
+#   # start: ""
+#   # end: ""
+#   # doi: ""
+#   # identifiers:
+#   #   - type: other
+#   #     value: "arXiv:XXXX.XXXXX"
 #   url: "https://arxiv.org/abs/XXXX.XXXXX"
+#   note: "Manuscript under review; repository contains supporting audit materials"
