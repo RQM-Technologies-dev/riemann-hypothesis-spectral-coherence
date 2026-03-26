@@ -24,6 +24,19 @@ Only statements supported by complete definitions, hypotheses, and logically val
   Without such a proof, uniqueness of the critical line remains open within this framework.
 \end{enumerate}
 
+\subsection*{Analytic-control failure mode (explicit Stage-6 risk)}
+The analytic-control burden is an open bridge, not a generic caution.
+For the local-to-global transfer and full-strip exclusion steps, failure of any one of the following would invalidate the Stage~6 route even if local Target~B were available:
+\begin{enumerate}
+  \item missing strip-wide growth bounds in boundary-near or large-parameter sectors;
+  \item non-uniform convergence in representations used to transport local estimates;
+  \item unjustified interchange operations (limit/integral, derivative/integral, summation/integration, contour deformation);
+  \item continuation/compactness failure that blocks extension from $\mathcal{R}_{\mathrm{loc}}$ to $\mathcal{A}_{\mathrm{strip}}$;
+  \item hidden off-line branch emergence for $\mathcal{B}=\{s\in\mathcal{A}_{\mathrm{strip}}:\Phi_H(s)=0\}$ outside locally controlled regimes;
+  \item incompatibility between local estimates and strip-wide admissibility hypotheses.
+\end{enumerate}
+Accordingly, Stage~6 requires an explicit analytic-control theorem package (AC1--AC6 in \texttt{spectral-framework.tex} and \texttt{lemmas.tex}), with each item either proved or declared as a synchronized assumption. Until that package is discharged, no theorem-level full-strip exclusion claim is available in this manuscript.
+
 \subsection*{Interpretation of intermediate evidence}
 Computational checks, model examples, and heuristic consistency tests are useful for stress-testing definitions and detecting contradictions, but they are not substitutes for proof.
 They may justify further investigation; they do not discharge formal obligations.

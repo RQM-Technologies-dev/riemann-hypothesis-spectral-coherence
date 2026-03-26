@@ -3,7 +3,7 @@ We record the logical dependency chain as a proof program for audit.  This secti
 \subsection*{Program-level dependency graph}
 \begin{enumerate}
     \item Formal setup and admissible objects
-    \item Operator construction and analytic control
+    \item Operator construction and operator-side regularity
     \item Balance functional well-posedness
     \item Zero--balance correspondence (Target A)
     \item Critical-line uniqueness of balanced points (Target B)
@@ -21,15 +21,15 @@ A fixed formal context in which all subsequent operators and functionals are wel
 \textbf{Current status.}
 \textbf{Established} as framework definitions (subject to local clarification edits as notation evolves).
 
-\subsection*{Stage 2: Operator construction and analytic control}
+\subsection*{Stage 2: Operator construction and operator-side regularity}
 \textbf{Required inputs.}
-Stage 1 definitions, plus a concrete operator construction rule and hypotheses needed for boundedness/closability/spectral meaning (as appropriate to the chosen operator model).
+Stage 1 definitions, plus a concrete operator construction rule and hypotheses needed for boundedness/closability/spectral meaning (as appropriate to the chosen operator model). At this stage, analytic-control obligations are recorded but not discharged; they are deferred to Stage~6 as a separate theorem package.
 
 \textbf{Intended output.}
-A mathematically controlled operator layer: existence of the constructed operator(s), admissible action on $H$, and a traceable list of analytic properties actually used later.
+A mathematically controlled operator layer: existence of the constructed operator(s), admissible action on $H$, and a traceable list of operator properties actually used later.
 
 \textbf{Current status.}
-\textbf{Partial}.  Core construction ideas are present, but several control statements remain assumption-level and require formal proofs under explicit hypotheses.
+\textbf{Partial}.  Core construction ideas are present, but several operator-regularity statements remain assumption-level and require formal proofs under explicit hypotheses.
 
 \subsection*{Stage 3: Balance functional well-posedness}
 \textbf{Required inputs.}
@@ -84,11 +84,12 @@ Stage~6 also isolates a distinct \emph{no-alternative-locus theorem target} for 
 \]
 namely that no connected component of $\mathcal{B}$ is off the critical line.
 This target is stronger than local uniqueness and must explicitly exclude alternative vertical lines, off-line curves/submanifolds, disconnected off-line components, and regime-specific off-line loci outside the local regime.
+Stage~6 also isolates an \emph{analytic-control support package} as a separate open bridge. In audit form, this package must provide: (AC1) strip-wide growth/defect bounds; (AC2) uniform convergence on transfer-relevant sectors; (AC3) justified interchange operations; (AC4) continuation/extension control across regimes; (AC5) no-hidden-branch control for $\mathcal{B}$; and (AC6) compatibility of local estimates with strip-wide admissibility. These AC items are theorem targets only in the present manuscript.
 
 \textbf{Intended output.}
 A global theorem-level exclusion mechanism distinct from Stage 5:
 \begin{enumerate}
-  \item theorem-level transfer bridge from Stage-5 local uniqueness on $\mathcal{R}_{\mathrm{loc}}$ to full-strip control on $\mathcal{A}_{\mathrm{strip}}$,
+  \item theorem-level transfer bridge from Stage-5 local uniqueness on $\mathcal{R}_{\mathrm{loc}}$ to full-strip control on $\mathcal{A}_{\mathrm{strip}}$, supported by an explicit analytic-control package (AC1--AC6),
   \item theorem-level no-alternative-locus statement for $\mathcal{B}$ on the full admissible strip,
   \item full-strip exclusion of admissible off-line balanced configurations,
   \item symmetry-compatible transfer (reflection/conjugation) without weakening hypotheses,
@@ -97,7 +98,7 @@ A global theorem-level exclusion mechanism distinct from Stage 5:
 
 \textbf{Current status.}
 \textbf{Open}.  A mechanism template is now explicit, but no model-specific exclusion theorem is proved.
-\openbridge{Requires a proved local-to-global transfer theorem target for $\mathcal{B}$ (or equivalent closure bridge), proof-quality global control including boundary-near and large-parameter regimes, and an explicit contradiction theorem from admissible off-line balance under one synchronized hypothesis package; computational checks may guide conjecture but do not substitute for the exclusion proof.}
+\openbridge{Requires a proved local-to-global transfer theorem target for $\mathcal{B}$ (or equivalent closure bridge), a proved analytic-control package AC1--AC6 (growth, uniformity, interchange legitimacy, continuation/compactness control, no-hidden-branch closure, and strip-admissibility compatibility), proof-quality global control including boundary-near and large-parameter regimes, and an explicit contradiction theorem from admissible off-line balance under one synchronized hypothesis package; computational checks may guide conjecture but do not substitute for the exclusion proof.}
 
 \subsection*{Stage 7: Final RH reduction inside the framework}
 \textbf{Required inputs.}

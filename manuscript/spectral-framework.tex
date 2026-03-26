@@ -32,8 +32,8 @@ A precise compatibility statement linking the operator layer to the reflection i
 This may be invariance, covariance, intertwining, or another concrete relation, but it must be explicit and non-heuristic.
 Informal symmetry pictures are admissible only as motivation, not as substitute for this package.
 
-\paragraph{(M4) Regularity and control assumptions.}
-The exact regularity required for downstream arguments: continuity/measurability/analytic dependence, growth bounds, and any interchange-of-limits conditions needed to define derived functionals.
+\paragraph{(M4) Operator-regularity assumptions (structural side).}
+The exact regularity required for operator statements: continuity/measurability/analytic dependence of operator-valued maps, domain persistence, and closure/graph conditions needed for later operator lemmas.
 Each assumption must be tagged as either proved in-manuscript or imported as an explicit hypothesis.
 
 \paragraph{(M5) Dependency traceability.}
@@ -44,7 +44,7 @@ No RH-relevant step should rely on an unlisted implicit property of $H$.
 For audit, the $H$-layer requirements split into two roles.
 \begin{itemize}
   \item \textbf{Structural interface requirements:} (M1)--(M3). These fix object type, operator action, and symmetry-compatibility form.
-  \item \textbf{Regularity/control requirements:} (M4)--(M5). These control analytic legitimacy and ensure every downstream use is explicitly tracked.
+  \item \textbf{Operator-regularity/trace requirements:} (M4)--(M5). These ensure the operator layer is usable without hidden domain or closure assumptions.
 \end{itemize}
 This split is not cosmetic: Stages 2--3 in \texttt{proof-architecture.tex} require both classes to be complete before Target A/B bridges can be promoted beyond placeholders.
 
@@ -92,6 +92,41 @@ For the coherence functional, the same two-way split is used.
 \end{itemize}
 Under this organization, correspondence and exclusion arguments may use only the declared structure/control items, with no hidden assumptions.
 
+
+\subsection*{Analytic-control theorem package (AC) for transfer and exclusion}
+The manuscript separates operator closure from analytic control.
+Operator closure concerns the existence and symmetry typing of $H$ and $\Phi_H$.
+Analytic control concerns whether local estimates can be transported across $\mathcal{A}_{\mathrm{strip}}$ without losing admissibility or creating hidden balance branches.
+
+The required analytic package is recorded as open theorem targets, not as proved results.
+Let $\mathcal{A}_{\mathrm{strip}}:=\{s\in\mathcal{A}:0<\RePart(s)<1\}$ and $\mathcal{B}:=\{s\in\mathcal{A}_{\mathrm{strip}}:\Phi_H(s)=0\}$.
+
+\paragraph{(AC1) Strip-wide growth and defect bounds.}
+A theorem-level bound class controlling the quantities used in Stage~6 contradiction arguments, uniform across boundary-near and large-parameter sectors.
+This includes explicit constants/rates and a statement of where each bound is valid.
+
+\paragraph{(AC2) Uniform convergence and regime compatibility.}
+If $\Phi_H$ or auxiliary objects are defined by limits/series/integrals, one needs convergence claims that are uniform on the subsets used for local-to-global continuation.
+Pointwise convergence alone is insufficient for transfer.
+
+\paragraph{(AC3) Interchange legitimacy.}
+Every interchange used by the argument (limit--integral, derivative--integral, summation--integration, contour deformation) must be justified under explicit hypotheses, with the admissible class stated.
+
+\paragraph{(AC4) Continuation/extension control.}
+A continuation principle must show that estimates proved in $\mathcal{R}_{\mathrm{loc}}$ extend to the declared global sectors of $\mathcal{A}_{\mathrm{strip}}$ with no loss of hypothesis synchronization.
+If compactness/normal-family arguments are used, the required precompactness or closure inputs must be stated.
+
+\paragraph{(AC5) No-hidden-branch control for $\mathcal{B}$.}
+A theorem target must exclude emergence of off-line components of $\mathcal{B}$ outside the local regime due solely to analytic degeneration, loss of uniformity, or boundary escape.
+This is the analytic side of the no-alternative-locus burden.
+
+\paragraph{(AC6) Local-estimate compatibility with strip admissibility.}
+The local coercive/rigidity/positivity estimates used for Target~B must be shown compatible with the full-strip admissibility constraints (not just with a narrower local model).
+
+\paragraph{Status note.}
+(AC1)--(AC6) are open analytic bridges in the current manuscript version.
+They define the analytic-control burden required for Stage~6 closure but are not claimed proved here.
+
 \subsection*{Dependency use map to later stages and lemma targets}
 The interface above is designed to feed specific downstream bridges.
 
@@ -123,7 +158,7 @@ The interface above is designed to feed specific downstream bridges.
   \item \textbf{Stage 3:} anchored by (P1)--(P4), with B1 admissibility/well-posedness support.
   \item \textbf{Stage 4 / Target A:} uses (M3)--(M5) and (P1)--(P5), with B2--B3 bridges.
   \item \textbf{Stage 5 / Target B:} uses (M3)--(M5) and (P3)--(P5), with B4 local uniqueness bridge.
-  \item \textbf{Stage 6:} uses (M4)--(M5) and (P3)--(P5), with B4 global-extension/full-strip exclusion bridges and B5 control bridges.
+  \item \textbf{Stage 6:} uses operator trace inputs (M4)--(M5), functional controls (P3)--(P5), and analytic package (AC1)--(AC6), with B4 global-extension/full-strip exclusion bridges and B5 control bridges.
 \end{itemize}
 These alignments specify dependency direction only. They do not upgrade any open bridge to proved status.
 

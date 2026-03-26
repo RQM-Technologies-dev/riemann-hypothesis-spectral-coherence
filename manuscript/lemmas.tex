@@ -120,10 +120,35 @@ If $\rho$ is a nontrivial zero of $\zeta$, then $\overline{\rho}$ is also a nont
 \end{lemma}
 \noindent\emph{Feeds into:} B1 admissibility formulation, B2 symmetry maps, and B3 correspondence soundness.
 
-\begin{lemma}[Analytic-control package for global strip arguments \textnormal{(OPEN TARGET; placeholder)}]
-\placeholder{Establishes: every contour/growth/interchange step used by the balance functional and strip-wide exclusion argument is justified under explicit hypotheses with stated uniformity ranges. Depends on: admissibility well-posedness plus finalized analytic side conditions. Why it matters: closes common failure points where local arguments do not extend to full-strip claims.}
+\begin{lemma}[AC1: Strip-wide growth and defect bounds \textnormal{(OPEN TARGET; placeholder)}]
+\placeholder{Establishes: quantitative growth/defect bounds used by Stage~6 contradiction steps are valid uniformly on the declared strip sectors (including boundary-near and large-parameter regimes). Depends on: B1 well-posedness and finalized analytic side conditions. Why it matters: without strip-wide bounds, local uniqueness cannot control off-line behavior globally.}
 \end{lemma}
-\noindent\emph{Feeds into:} B3 soundness and B4 off-line exclusion where global strip control is required.
+\noindent\emph{Feeds into:} B4 uniform continuation/compactness control, no-hidden-branch control, and contradiction-route closure.
+
+\begin{lemma}[AC2: Uniform convergence and regime-compatibility control \textnormal{(OPEN TARGET; placeholder)}]
+\placeholder{Establishes: any sequence/series/integral representation used for $\Phi_H$ converges with the uniformity required by local-to-global continuation on the declared admissible sectors. Depends on: B1 admissibility and AC1 bounds. Why it matters: pointwise convergence is insufficient for Stage~6 transfer arguments.}
+\end{lemma}
+\noindent\emph{Feeds into:} B3 correspondence soundness and B4 global extension.
+
+\begin{lemma}[AC3: Interchange-of-operations legitimacy \textnormal{(OPEN TARGET; placeholder)}]
+\placeholder{Establishes: every interchange used in the argument (limit/integral, derivative/integral, summation/integration, contour deformation) is valid under explicit hypotheses on the same admissible class. Depends on: AC1--AC2 and finalized representation formulas. Why it matters: unjustified interchanges are a direct failure mode for strip-wide exclusion claims.}
+\end{lemma}
+\noindent\emph{Feeds into:} B3 soundness and B4 contradiction-form exclusion.
+
+\begin{lemma}[AC4: Continuation/extension control across strip regimes \textnormal{(OPEN TARGET; placeholder)}]
+\placeholder{Establishes: local estimates in $\mathcal{R}_{\mathrm{loc}}$ extend to all sectors required in $\mathcal{A}_{\mathrm{strip}}$ with explicit continuation/compactness hypotheses and no loss of admissibility. Depends on: AC1--AC3 and B4 local balance-axis uniqueness. Why it matters: this is the analytic core of the local-to-global transfer burden.}
+\end{lemma}
+\noindent\emph{Feeds into:} B4 global extension of local uniqueness and no-alternative-locus target.
+
+\begin{lemma}[AC5: No-hidden-branch analytic closure for $\mathcal{B}$ \textnormal{(OPEN TARGET; placeholder)}]
+\placeholder{Establishes: under the declared analytic package, no off-line connected component of $\mathcal{B}$ can appear outside the local regime due to boundary escape, loss of compactness, or regime switching. Depends on: AC1--AC4 and B2 symmetry compatibility. Why it matters: prevents global branch creation that would evade local uniqueness.}
+\end{lemma}
+\noindent\emph{Feeds into:} B4 no-new-off-line-branch emergence, no-alternative-locus principle, and full-strip exclusion.
+
+\begin{lemma}[AC6: Compatibility of local estimates with strip-wide admissibility \textnormal{(OPEN TARGET; placeholder)}]
+\placeholder{Establishes: the same hypotheses used by local Target~B estimates remain valid for every admissible point used by Stage~6 transfer and contradiction arguments. Depends on: B1 admissibility stability, AC1--AC5, and the finalized admissible-class definition. Why it matters: prevents hidden hypothesis mismatch between local uniqueness and global exclusion.}
+\end{lemma}
+\noindent\emph{Feeds into:} B4 transfer theorem target, contradiction-route admissibility package, and full-strip no-off-line-balance target.
 
 \subsection*{C. Audit note on current status}
 

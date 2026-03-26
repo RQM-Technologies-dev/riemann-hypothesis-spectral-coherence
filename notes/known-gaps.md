@@ -132,7 +132,7 @@ Core bridge names synchronized with manuscript text:
 
 ## 7) Analytic-control gaps
 
-**Gap:** Several analytic bridges remain underjustified, including steps requiring contour control, growth bounds, interchange of limits/integrals, or uniformity claims.
+**Gap:** The Stage-6 analytic-control support package remains unproved. In current manuscript notation this package includes AC1--AC6: strip-wide growth/defect bounds, uniform convergence by regime, interchange legitimacy, continuation/extension control, no-hidden-branch closure for $\mathcal{B}$, and compatibility of local estimates with strip-wide admissibility.
 
 **Why it matters:**
 - RH arguments often fail at precisely these global analytic steps.
@@ -141,8 +141,11 @@ Core bridge names synchronized with manuscript text:
 **Current status:** **Open (high risk).** Some intended pathways are sketched, but full analytic verification is pending.
 
 **What would count as resolution:**
-- Explicit hypotheses for every analytic transformation.
-- Proofs of convergence/uniformity where used.
+- A theorem-level AC1--AC6 package, with each item either proved or explicitly imported as a hypothesis in one synchronized Stage-6 assumption set.
+- Explicit hypotheses for every analytic transformation used in transfer/exclusion, including sector-by-sector validity ranges and constants where required.
+- Proofs of convergence and uniformity strong enough for local-to-global transfer (not only pointwise statements).
+- Proof-level justification of every interchange step (limit/integral, derivative/integral, summation/integration, contour deformation).
+- A no-hidden-branch closure argument excluding off-line components of $\mathcal{B}$ that could appear only outside $\mathcal{R}_{\mathrm{loc}}$.
 - Independent checking that no step smuggles in the target conclusion.
 
 ---
