@@ -25,6 +25,55 @@ For audit clarity, the manuscript treats two logically distinct obligations.
 The second item is not a restatement of the first.
 It is an extension/closure problem requiring additional uniform control.
 
+\subsection*{No-alternative-locus principle for the balanced set \texorpdfstring{$\mathcal{B}$}{B} (theorem target)}
+This subsection isolates a distinct Stage~6 theorem target.
+It does not assert a proved theorem.
+
+\paragraph{Balanced-set notation and target form.}
+Let
+\[
+\mathcal{B}:=\{s\in\mathcal{A}_{\mathrm{strip}}:\Phi_H(s)=0\},\qquad
+\mathcal{A}_{\mathrm{strip}}:=\{s\in\mathcal{A}:0<\RePart(s)<1\}.
+\]
+The no-alternative-locus target is:
+\begin{quote}
+Under one synchronized hypothesis package $\mathcal{H}_{\mathrm{NAL}}$, every connected component of $\mathcal{B}$ is contained in $\RePart(s)=\tfrac12$.
+\end{quote}
+Equivalent set form:
+\[
+\mathcal{B}\subseteq \{s\in\mathcal{A}_{\mathrm{strip}}:\RePart(s)=\tfrac12\}.
+\]
+
+\paragraph{What this target must rule out explicitly.}
+For theorem-level closure, $\mathcal{H}_{\mathrm{NAL}}$ must exclude each of the following possibilities:
+\begin{enumerate}
+  \item an alternative vertical balance line $\RePart(s)=\sigma_0\neq\tfrac12$;
+  \item a curve/submanifold of off-line balanced points in $\mathcal{A}_{\mathrm{strip}}$;
+  \item disconnected off-line components of $\mathcal{B}$;
+  \item regime-specific off-line loci that appear only outside the local uniqueness regime $\mathcal{R}_{\mathrm{loc}}$.
+\end{enumerate}
+
+\paragraph{Hypothesis classes required by the target (model not yet fixed).}
+Without choosing a finalized operator realization, the theorem target requires explicit hypotheses of the following kinds:
+\begin{enumerate}
+  \item admissibility synchronization across Target~A, local Target~B, and Stage~6 transfer;
+  \item symmetry compatibility under $s\mapsto 1-s$ and $s\mapsto\bar s$ on the same admissible class;
+  \item one or more global rigidity/coercivity/positivity/transfer ingredients;
+  \item analytic-control assumptions that prevent hidden off-line branches from boundary or large-parameter regimes.
+\end{enumerate}
+This manuscript version records these as open obligations, not established facts.
+
+\paragraph{Relation to the contradiction route.}
+The contradiction route (assume an off-line balanced $s_\ast$ and derive incompatibility) is a \emph{method} candidate.
+The no-alternative-locus principle is the \emph{theorem target} that method is meant to establish.
+These are related but not identical statements:
+\begin{enumerate}
+  \item \textbf{Local uniqueness (Stage 5):} excludes off-line balance only in $\mathcal{R}_{\mathrm{loc}}$.
+  \item \textbf{No-alternative-locus target (Stage 6):} excludes every off-line component in the full admissible strip.
+  \item \textbf{Contradiction route template:} provides a candidate proof path from an assumed off-line point to failure of a synchronized Stage~6 ingredient.
+\end{enumerate}
+Keeping these separate avoids conflating a local statement, a global theorem target, and a prospective proof mechanism.
+
 \subsection*{Why symmetry alone is insufficient}
 Classical symmetries give transport rules ($s\mapsto1-s$, $s\mapsto\bar s$).
 They do not by themselves imply that the only balance-supporting locus is $\RePart(s)=\tfrac12$.
