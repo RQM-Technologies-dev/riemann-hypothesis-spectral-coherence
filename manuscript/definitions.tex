@@ -1,90 +1,30 @@
-We collect here the principal definitions used in the manuscript. All definitions
-are stated with their current level of precision; items marked \todo{} require
-further development.
+This section fixes baseline notation and records proposed objects with explicit status labels.
 
-\subsection*{Classical Objects}
-
-\begin{definition}[Riemann Zeta Function]
-  \label{def:zeta}
-  For $\Re(s) > 1$, the Riemann zeta function is defined by the Dirichlet series
-  \[
-    \zeta(s) = \sum_{n=1}^{\infty} \frac{1}{n^s}.
-  \]
-  By analytic continuation, $\zeta$ extends to a meromorphic function on $\C$ with
-  a simple pole at $s = 1$ and no other singularities.
+\begin{definition}[Completed zeta function]
+\[
+\xi(s) := \tfrac12 s(s-1)\pi^{-s/2}\Gamma(s/2)\zeta(s).
+\]
+We use the standard symmetry $\xi(s)=\xi(1-s)$.
 \end{definition}
 
-\begin{definition}[Completed Zeta Function]
-  \label{def:xi}
-  The completed (or $\xi$) zeta function is defined by
-  \[
-    \xi(s) = \frac{1}{2}s(s-1)\pi^{-s/2}\Gamma\!\left(\tfrac{s}{2}\right)\zeta(s).
-  \]
-  The function $\xi$ is entire, bounded on vertical strips, and satisfies the
-  functional equation $\xi(s) = \xi(1-s)$ for all $s \in \C$.
+\begin{definition}[Critical strip and critical line]
+The critical strip is $\{s\in\C:0<\RePart(s)<1\}$. The critical line is $\{s\in\C:\RePart(s)=\tfrac12\}$.
 \end{definition}
 
-\begin{definition}[Critical Strip and Critical Line]
-  \label{def:criticalline}
-  The \emph{critical strip} is the region $\{s \in \C : 0 < \Re(s) < 1\}$.
-  The \emph{critical line} is the set $\{s \in \C : \Re(s) = \tfrac{1}{2}\}$.
-  A \emph{nontrivial zero} of $\zeta$ is a zero lying in the critical strip.
+\begin{definition}[Reflection involution]
+Let $\sigma:\C\to\C$ be $\sigma(s)=1-s$. The fixed-point set of $\sigma$ is the critical line.
 \end{definition}
 
-\begin{definition}[Reflection Symmetry]
-  \label{def:reflection}
-  The map $\sigma \colon s \mapsto 1 - s$ is an involution of $\C$ fixing the
-  critical line pointwise. By the functional equation, $\xi(\sigma(s)) = \xi(s)$
-  for all $s$. Combined with the conjugate symmetry $\zeta(\bar{s}) = \overline{\zeta(s)}$,
-  the nontrivial zeros of $\zeta$ are symmetric under both $s \mapsto 1-s$ and
-  $s \mapsto \bar{s}$.
+\begin{definition}[Proposed coherence object \textnormal{(placeholder)}]
+\placeholder{A precise operator model, function space, and domain are still required.}
+We denote by $H$ the proposed spectral object intended to encode a balance condition associated with nontrivial zeros.
 \end{definition}
 
-\subsection*{Proposed Spectral Objects}
-
-The following definitions are currently under development. They are stated as
-placeholders with the intended properties; the precise construction is given
-in \S4 (Spectral Framework).
-
-\begin{definition}[Balance Axis]
-  \label{def:balanceaxis}
-  The \emph{balance axis} is the critical line $\Re(s) = \tfrac{1}{2}$, viewed as
-  the fixed-point locus of the reflection $\sigma \colon s \mapsto 1 - s$ and as
-  the proposed unique locus where the balance criterion (Definition~\ref{def:balance})
-  can be satisfied.
+\begin{definition}[Balance criterion \textnormal{(placeholder)}]
+\placeholder{Provide a complete formula in terms of spectral data of $H$.}
+A point $s$ is called balanced when the specified criterion holds.
 \end{definition}
 
-\begin{definition}[Spectral Coherence Operator]
-  \label{def:H}
-  \todo{To be completed in \S4.}
-  The \emph{spectral coherence operator} $H$ is a \gap{precise Hilbert/Banach space
-  and domain to be specified} linear operator whose spectrum is proposed to encode
-  the nontrivial zeros of $\zeta$. The operator is constructed to be symmetric under
-  the reflection $\sigma$, so that $H$ and $H \circ \sigma$ are unitarily equivalent.
-\end{definition}
-
-\begin{definition}[Balance Criterion]
-  \label{def:balance}
-  \todo{To be completed in \S4.}
-  A point $s \in \C$ is said to satisfy the \emph{balance criterion} with respect
-  to the operator $H$ if \gap{the precise cancellation condition, stated in terms
-  of the inner product or spectral measure of $H$, is satisfied at $s$}. The
-  balance criterion is proposed to be equivalent to $\zeta(s) = 0$.
-\end{definition}
-
-\begin{definition}[Spectral Coherence]
-  \label{def:coherence}
-  \todo{To be completed in \S4.}
-  The \emph{spectral coherence} of the operator $H$ at a point $s$ is a quantity
-  $\Phi(s)$ defined by \gap{definition to be given}. The proposed claim is that
-  $\Phi(s) = 0$ if and only if $s$ is a nontrivial zero of $\zeta$.
-\end{definition}
-
-\begin{definition}[Quaternionic Critical Surface]
-  \label{def:quat}
-  \todo{Include only if the quaternionic extension is adopted.}
-  If the argument employs a lift of the complex variable $s$ to the quaternions
-  $\H$, the \emph{quaternionic critical surface} $\mathcal{C}_q$ is defined as
-  \gap{the image of the critical line under the lifting map $\pi_\C^{-1}$, with
-  properties to be specified}.
-\end{definition}
+\begin{remark}
+The two placeholder definitions above are unresolved bridges. They must be completed before any draft theorem target can be promoted to a theorem.
+\end{remark}

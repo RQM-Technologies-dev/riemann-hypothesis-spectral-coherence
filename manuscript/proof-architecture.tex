@@ -1,90 +1,19 @@
-The proof of the Riemann Hypothesis, if achievable via the present framework, would
-proceed through the following five steps. The logical dependencies between steps
-are described after the outline. Steps that are not currently proved are marked
-explicitly.
+We record the dependency structure as a proof program.
 
-\subsection*{Step 1: Establish the Symmetry Framework}
+\subsection*{Stage 1: Formal setup}
+Define $H$ and the balance criterion with full domain/codomain and regularity hypotheses.
 
-\textbf{Goal:} Show that the functional equation $\xi(s) = \xi(1-s)$ implies that
-the critical line $\Re(s) = \tfrac{1}{2}$ is the unique axis of a well-defined
-reflection symmetry in the critical strip.
+\subsection*{Stage 2: Correspondence bridge}
+Prove Target A (\cref{thm:target-correspondence}).
+\openbridge{Requires explicit relation between the balance condition and the zero set of $\zeta$.}
 
-\textbf{Status:} \emph{Complete from the literature.} See
-Proposition~\ref{prop:functional-equation} and the development in \S3.
+\subsection*{Stage 3: Critical-line bridge}
+Prove Target B (\cref{thm:target-uniqueness}).
+\openbridge{Requires a rigorous exclusion argument for off-line balanced points.}
 
-\textbf{Key output:} The reflection $\sigma \colon s \mapsto 1-s$ is an involution
-with fixed-point locus $\Re(s) = \tfrac{1}{2}$. The zero set of $\zeta$ is closed
-under $\sigma$.
+\subsection*{Stage 4: Final reduction}
+Combine Stages 2 and 3 to derive RH within the framework.
 
-\subsection*{Step 2: Define the Spectral/Coherence Object}
-
-\textbf{Goal:} Construct the spectral coherence operator $H$ (Definition~\ref{def:H})
-as a mathematically well-defined linear operator on a specified Hilbert or Banach space,
-symmetric under $\sigma$.
-
-\textbf{Status:} \gap{In progress. The operator $H$ is not yet fully defined.
-This step is a prerequisite for all subsequent steps and must be completed before
-the argument can proceed.}
-
-\textbf{Key output:} A precise mathematical object $H$ with a well-defined domain,
-codomain, spectrum, and symmetry property $H \sim H \circ \sigma$ (unitary equivalence).
-
-\subsection*{Step 3: Correspondence Between Zeros and Balance Points}
-
-\textbf{Goal:} Prove Conjecture~\ref{conj:correspondence}: the nontrivial zeros of
-$\zeta$ in the critical strip are exactly the balance points of $H$.
-
-\textbf{Status:} \gap{Open. This requires both Step~2 to be complete and a rigorous
-calculation or argument relating the spectral properties of $H$ to the zeros of $\zeta$.
-This is the most analytically demanding step.}
-
-\textbf{Key output:} A theorem of the form:
-\[
-  \zeta(s) = 0 \iff s \text{ satisfies the balance criterion for } H.
-\]
-
-\subsection*{Step 4: Prove That Only the Critical Line Supports Balance}
-
-\textbf{Goal:} Prove Conjecture~\ref{conj:uniqueness}: the balance criterion is
-satisfiable only at points $s$ with $\Re(s) = \tfrac{1}{2}$.
-
-\textbf{Status:} \gap{Open. This is the central open gap in the argument. The
-proposed mechanism is that the reflection symmetry of $H$ combined with the
-structure of the balance criterion forces balance states to the fixed-point locus
-$\Re(s) = \tfrac{1}{2}$. This must be proved, not merely argued by analogy.}
-
-\textbf{Key output:} A theorem of the form:
-\[
-  s \text{ satisfies the balance criterion} \implies \Re(s) = \tfrac{1}{2}.
-\]
-
-\subsection*{Step 5: Derive the Impossibility of Off-Line Zeros}
-
-\textbf{Goal:} Combine Steps~3 and~4 to conclude that there are no nontrivial
-zeros of $\zeta$ off the critical line, completing the proof of RH.
-
-\textbf{Status:} \emph{Contingent on Steps~2–4.} If Steps~3 and~4 are proved,
-Step~5 is a direct logical consequence:
-\begin{align*}
-  \zeta(s) = 0
-  &\implies s \text{ satisfies the balance criterion}
-    &&\text{(Step 3)} \\
-  &\implies \Re(s) = \tfrac{1}{2}.
-    &&\text{(Step 4)}
-\end{align*}
-
-\subsection*{Logical Dependencies}
-
-\begin{center}
-\begin{tabular}{ccccc}
-  Step 1 & $\to$ & Step 2 & $\to$ & Step 3 \\
-         &       & Step 2 & $\to$ & Step 4 \\
-         &       & Step 3, Step 4 & $\to$ & Step 5
-\end{tabular}
-\end{center}
-
-Steps~1 is established. Step~2 is the foundational construction task. Steps~3
-and~4 are the core proof obligations. Step~5 is the logical conclusion.
-
-The critical bottleneck is Step~4. Even if Step~3 is established, the framework
-does not prove RH unless Step~4 — uniqueness of the balance axis — is also proved.
+\begin{remark}
+At present, Stages 2 and 3 remain open. This section is an architecture map, not a proof.
+\end{remark}

@@ -1,27 +1,22 @@
-\documentclass[12pt, a4paper]{article}
+\documentclass[11pt]{article}
 
-% ===== Encoding and fonts =====
-\usepackage[utf8]{inputenc}
+% Core typography and layout
 \usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
 \usepackage{lmodern}
 \usepackage{microtype}
+\usepackage[margin=1in]{geometry}
 
-% ===== Mathematics =====
-\usepackage{amsmath}
-\usepackage{amssymb}
-\usepackage{amsthm}
-\usepackage{mathtools}
-\usepackage{thmtools}
+% Core mathematics
+\usepackage{amsmath,amssymb,amsthm,mathtools}
 
-% ===== Geometry =====
-\usepackage[
-  top=2.5cm,
-  bottom=2.5cm,
-  left=3cm,
-  right=3cm
-]{geometry}
+% Tables and links
+\usepackage{booktabs}
+\usepackage{xcolor}
+\usepackage[hidelinks]{hyperref}
+\usepackage[nameinlink,noabbrev]{cleveref}
 
-% ===== References and links =====
+% Bibliography
 \usepackage[
   backend=biber,
   style=alphabetic,
@@ -30,83 +25,36 @@
 ]{biblatex}
 \addbibresource{references.bib}
 
-\usepackage[
-  colorlinks=true,
-  linkcolor=blue!60!black,
-  citecolor=green!50!black,
-  urlcolor=blue!60!black
-]{hyperref}
-\usepackage{cleveref}
+% Theorem environments (journal-friendly baseline)
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{drafttheorem}[theorem]{Draft Theorem Target}
 
-% ===== Theorem environments =====
-\declaretheoremstyle[
-  headfont=\bfseries,
-  notefont=\normalfont,
-  bodyfont=\itshape,
-  headpunct={.},
-  postheadspace=0.5em
-]{thmstyle}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{heuristic}[theorem]{Heuristic}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{example}[theorem]{Example}
 
-\declaretheoremstyle[
-  headfont=\bfseries,
-  notefont=\normalfont,
-  bodyfont=\normalfont,
-  headpunct={.},
-  postheadspace=0.5em
-]{defstyle}
+% Draft status macros
+\newcommand{\placeholder}[1]{\textcolor{blue!60!black}{\textbf{[Placeholder: #1]}}}
+\newcommand{\openbridge}[1]{\textcolor{red!70!black}{\textbf{[Open bridge: #1]}}}
+\newcommand{\auditnote}[1]{\textcolor{orange!70!black}{\textbf{[Audit note: #1]}}}
 
-\declaretheorem[style=thmstyle, name=Theorem,     numberwithin=section]{theorem}
-\declaretheorem[style=thmstyle, name=Lemma,       sibling=theorem]{lemma}
-\declaretheorem[style=thmstyle, name=Proposition, sibling=theorem]{proposition}
-\declaretheorem[style=thmstyle, name=Corollary,   sibling=theorem]{corollary}
-\declaretheorem[style=defstyle, name=Definition,  sibling=theorem]{definition}
-\declaretheorem[style=defstyle, name=Remark,      sibling=theorem]{remark}
-\declaretheorem[style=defstyle, name=Example,     sibling=theorem]{example}
-\declaretheorem[style=defstyle, name=Conjecture,  sibling=theorem]{conjecture}
-\declaretheorem[style=defstyle, name=Heuristic,   sibling=theorem]{heuristic}
-
-% ===== Colors and notes =====
-\usepackage{xcolor}
-\usepackage{booktabs}
-\newcommand{\gap}[1]{%
-  \textcolor{red!70!black}{\textbf{[Bridge requiring proof:} #1\textbf{]}}%
-}
-\newcommand{\todo}[1]{%
-  \textcolor{orange!80!black}{\textbf{[TODO:} #1\textbf{]}}%
-}
-\newcommand{\openq}[1]{%
-  \textcolor{blue!70!black}{\textbf{[Open:} #1\textbf{]}}%
-}
-
-% ===== Operators and notation =====
+% Basic notation
 \newcommand{\C}{\mathbb{C}}
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\N}{\mathbb{N}}
-\newcommand{\Z}{\mathbb{Z}}
-\renewcommand{\H}{\mathbb{H}}
-\renewcommand{\Re}{\operatorname{Re}}
-\renewcommand{\Im}{\operatorname{Im}}
-\newcommand{\cl}{\mathcal{L}}
-\newcommand{\hs}{\mathcal{H}}
+\newcommand{\RePart}{\operatorname{Re}}
+\newcommand{\ImPart}{\operatorname{Im}}
 
-% ===== Title metadata =====
-\title{%
-  \textbf{Riemann Hypothesis via Spectral Coherence}\\[0.5em]
-  \large A Proposed Framework Linking Reflection Symmetry\\
-  to the Critical Line
-}
-
-\author{%
-  \textit{[Author name(s) to be added]}\\[0.3em]
-  \small\textit{[Institution / affiliation]}\\
-  \small\textit{[Contact address]}
-}
-
-\date{%
-  Version 0.1.0-draft\\
-  \today\\[0.5em]
-  \small\textit{Manuscript under active development and review.}
-}
+\title{A Spectral-Coherence Program for the Riemann Hypothesis\\\large Manuscript Skeleton for Mathematical Audit}
+\author{Author Name(s) Placeholder}
+\date{\today}
 
 \begin{document}
 
@@ -116,22 +64,25 @@
 \input{abstract}
 \end{abstract}
 
-\vspace{1em}
-\noindent\textbf{Disclaimer.}
-This manuscript presents a proposed proof framework and is offered for mathematical
-review, critique, and formalization. It does not claim to be a complete proof of
-the Riemann Hypothesis. All steps that have not been rigorously established are
-explicitly marked.
+\noindent\textbf{Status statement.} This document is a proposed proof framework and manuscript under review. It separates formal claims, heuristic guidance, and unresolved bridges requiring proof.
 
 \tableofcontents
 \newpage
 
-% ===== Main sections =====
 \section{Introduction}
 \input{introduction}
 
 \section{Definitions and Notation}
 \input{definitions}
+
+\section{Main Results (Draft Targets and Established Inputs)}
+\input{main-results}
+
+\section{Proof Architecture}
+\input{proof-architecture}
+
+\section{Auxiliary Lemmas and Dependency Placeholders}
+\input{lemmas}
 
 \section{Symmetry Framework}
 \input{symmetry-framework}
@@ -139,37 +90,15 @@ explicitly marked.
 \section{Spectral Framework}
 \input{spectral-framework}
 
-\section{Lemmas}
-\input{lemmas}
-
-\section{Main Results}
-\input{main-results}
-
-\section{Proof Architecture}
-\input{proof-architecture}
-
-\section{The Critical Line Argument}
+\section{Critical-Line Argument}
 \input{critical-line-argument}
 
-\section{Discussion and Related Work}
+\section{Discussion}
 \input{discussion}
 
-\section{Limitations and Open Problems}
+\section{Limitations and Open Bridges}
 \input{limitations}
 
-% ===== Appendices =====
-\appendix
-
-\section{Intuition and Motivation}
-\input{appendix-a-intuition}
-
-\section{Operator Setup and Technical Background}
-\input{appendix-b-operator-setup}
-
-\section{Computational Notes}
-\input{appendix-c-computational-notes}
-
-% ===== References =====
-\printbibliography[heading=bibintoc, title={References}]
+\printbibliography[heading=bibintoc,title={References}]
 
 \end{document}

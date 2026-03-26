@@ -1,115 +1,20 @@
-This section is essential. It records, candidly and precisely, the limitations
-of the current manuscript and the steps that have not yet been rigorously established.
-Readers should treat this section as the most important part of the manuscript
-for the purpose of mathematical audit.
+This section is a required control section for mathematical audit.
 
-\subsection{Geometric Language Is Not a Proof}
+\subsection*{Current limitations}
+\begin{enumerate}
+  \item The spectral object $H$ is not yet fully specified.
+  \item The zero--balance correspondence is not proved.
+  \item The off-line exclusion step is not proved.
+\end{enumerate}
 
-The framework uses geometric and physical language throughout: ``balance axis,''
-``cancellation state,'' ``spectral coherence,'' ``reflection,'' ``destructive
-interference.'' This language is useful for communicating intuitions and for
-organizing the structure of the argument. It is not, by itself, a mathematical
-proof.
+\subsection*{Interpretation policy}
+Until the open bridges are resolved, this manuscript should be read as a proposed proof framework and not as a completed proof.
 
-In particular:
+\subsection*{Drafting rule}
+When adding technical material, explicitly classify each new statement as one of:
 \begin{itemize}
-  \item A geometric picture of zeros ``balancing'' on the critical line is not an
-        argument that zeros cannot exist elsewhere.
-  \item An analogy between spectral cancellation and a standing wave does not
-        establish any property of $\zeta$ or of the proposed operator $H$.
-  \item The intuition that symmetry ``forces'' balance points to the symmetry axis
-        is a claim that must be proved, not a fact that follows from the symmetry alone.
+  \item established input,
+  \item draft theorem target,
+  \item conjecture,
+  \item heuristic.
 \end{itemize}
-
-Every informal statement in this manuscript must ultimately be replaced by a precise
-definition or a proved theorem before the argument can be accepted as a proof.
-
-\subsection{The Operator Construction Must Be Made Rigorous}
-
-The spectral coherence operator $H$ (Definition~\ref{def:H}) is not yet fully
-defined. The manuscript describes the intended properties of $H$ — its symmetry,
-its proposed spectral relationship to $\zeta$, its balance criterion — but does
-not provide a complete mathematical construction.
-
-Until $H$ is defined as a genuine operator on a specified Hilbert or Banach space,
-with a domain, a clear spectral theory, and proved properties, the argument
-cannot proceed past the motivational stage. This is the most urgent open task.
-
-\subsection{The Correspondence Between Balance and Zeros Must Be Proved}
-
-Even if $H$ is fully defined, it must be proved — not assumed — that the nontrivial
-zeros of $\zeta$ correspond exactly to the balance points of $H$
-(Conjecture~\ref{conj:correspondence}). This correspondence is the analytical
-engine of the argument.
-
-The proof of this correspondence is likely to require:
-\begin{itemize}
-  \item An explicit relationship between the spectral measure or resolvent of $H$
-        and the function $\xi$ or $\zeta$.
-  \item A calculation showing that the balance criterion characterizes the zero
-        set of $\zeta$ in the critical strip.
-  \item Verification that the correspondence is not merely approximate or
-        asymptotic.
-\end{itemize}
-
-\subsection{Uniqueness of the Balance Axis Must Be Proved}
-
-The claim that the balance criterion is satisfiable only on $\Re(s) = \tfrac{1}{2}$
-(Conjecture~\ref{conj:uniqueness}) is the central proposed contribution of the
-framework. It is also the primary open gap.
-
-This claim cannot be established by symmetry alone (see \S3). It requires a
-positive argument showing that the balance condition fails for all $s$ with
-$\Re(s) \ne \tfrac{1}{2}$. The current manuscript does not contain such an argument;
-it contains only the motivation and the proposed logical structure.
-
-\subsection{All Off-Critical-Line Possibilities Must Be Handled}
-
-A proof of RH must rule out all off-line zeros, not just ``generic'' or
-``typical'' ones. This includes:
-\begin{itemize}
-  \item Zeros at large $|\Im(s)|$, where asymptotic methods may be needed.
-  \item Zeros near the edges of the critical strip (near $\Re(s) = 0$ or $\Re(s) = 1$),
-        where boundary behavior may differ.
-  \item Any exceptional or pathological configurations that the framework might not
-        address uniformly.
-\end{itemize}
-
-The proposed framework does not currently address these cases individually. A
-complete argument must either treat all cases uniformly or provide separate
-arguments for each exceptional class.
-
-\subsection{Dependence on Analogy Must Be Eliminated}
-
-As noted above, several steps in the current argument rely on analogies (between
-balance and standing waves, between spectral coherence and interference, etc.).
-These analogies are heuristically valuable but mathematically insufficient.
-
-A completed proof must contain no steps that rest solely on analogy. Every
-logical inference must follow from a definition or a previously proved lemma.
-Gaps where analogy currently substitutes for proof are identified in the proof
-architecture (\S7) and in the notes file \texttt{notes/known-gaps.md}.
-
-\subsection{Summary of Open Items}
-
-For convenience, the principal open items are listed here:
-
-\begin{center}
-\begin{tabular}{lll}
-  \toprule
-  Item & Description & Status \\
-  \midrule
-  Definition of $H$ & Spectral operator fully specified & Open \\
-  Lemma~\ref{lem:op-symmetry} & $H$ symmetric under $\sigma$ & Open \\
-  Lemma~\ref{lem:balance-well-posed} & Balance criterion well-posed & Open \\
-  Lemma~\ref{lem:balance-symmetric} & Balance symmetric under $\sigma$ & Open \\
-  Conjecture~\ref{conj:correspondence} & Zeros $\leftrightarrow$ balance points & Open \\
-  Conjecture~\ref{conj:uniqueness} & Balance only on critical line & Open \\
-  Lemma~\ref{lem:offlineasymmetry} & Off-line balance impossible & Open \\
-  \bottomrule
-\end{tabular}
-\end{center}
-
-All open items are treated as research obligations, not as details to be filled
-in later. The manuscript will not claim to constitute a proof of RH until every
-item in this table is resolved.
