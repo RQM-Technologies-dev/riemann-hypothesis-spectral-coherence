@@ -31,9 +31,9 @@ jobs:
             --verbose
             --no-progress
             --exclude-mail
-            --exclude '^https://arxiv\.org'
-            --exclude '^https://doi\.org'
-            --exclude '^https://zenodo\.org'
+            --base .
+            --max-retries 2
+            --retry-wait-time 2
             '**/*.md'
           fail: true
         env:
