@@ -31,6 +31,50 @@ They do not by themselves imply that the only balance-supporting locus is $\RePa
 An argument can preserve symmetry and still allow paired off-line candidates.
 Hence the framework requires a separate exclusion mechanism beyond symmetry compatibility.
 
+\subsection*{Candidate exclusion mechanism template (audit-level theorem scaffold)}
+This subsection records a \emph{template} for the missing Stage~6 ingredient.
+It is not a proof claim.
+Its purpose is to specify what theorem shape would be required to rule out admissible off-line balanced points.
+
+\paragraph{Template input package $\mathcal{E}$.}
+A candidate exclusion theorem would need, at minimum, a synchronized hypothesis package containing:
+\begin{enumerate}
+  \item a well-posed balance functional $\Phi_H$ on the full admissible strip class $\mathcal{A}_{\mathrm{strip}}$;
+  \item a local Target~B statement on a declared regime $\mathcal{R}_{\mathrm{loc}}\subseteq\mathcal{A}_{\mathrm{strip}}$;
+  \item one or more \emph{global control ingredients} (model-dependent), such as coercivity, positivity, monotonicity, rigidity, or another explicit structural inequality;
+  \item a transfer principle extending the relevant control from $\mathcal{R}_{\mathrm{loc}}$ to the full strip regime required by the reduction;
+  \item symmetry-compatibility assumptions sufficient to move between reflected/conjugate candidates without changing theorem hypotheses.
+\end{enumerate}
+
+\paragraph{Template theorem target (not yet proved).}
+A mechanism of the required type would support a theorem with the following form:
+\begin{quote}
+Under $\mathcal{E}$, no $s\in\mathcal{A}_{\mathrm{strip}}$ with $0<\RePart(s)<1$ and $\RePart(s)\neq\tfrac12$ can satisfy $\Phi_H(s)=0$.
+\end{quote}
+Equivalent contradiction form: assuming an admissible off-line balanced point exists forces violation of at least one ingredient in $\mathcal{E}$ (for example the coercive/positive/rigidity control or the transfer hypothesis).
+
+\paragraph{Structural mechanism classes (abstract, model-dependent).}
+Without fixing a finalized operator model, the manuscript currently treats the following as plausible \emph{classes} of exclusion mechanisms:
+\begin{enumerate}
+  \item \textbf{Coercive gap mechanism:} prove a quantitative lower bound for an off-line defect functional that is strictly positive away from $\RePart(s)=\tfrac12$ and incompatible with balance.
+  \item \textbf{Positivity/monotonicity mechanism:} identify a strip-parameterized quantity whose sign or monotone drift prevents return to exact balance off the axis.
+  \item \textbf{Rigidity mechanism:} show that equality in a key estimate can occur only on the critical line, so off-line balance violates the equality conditions.
+  \item \textbf{Reflection-incompatibility mechanism:} combine transport symmetries with an admissibility constraint so that an off-line balanced candidate and its reflected partner cannot simultaneously satisfy the same admissible balance law.
+  \item \textbf{Local-to-global closure mechanism:} prove that any off-line balanced candidate would have to enter a locally excluded regime, yielding contradiction with Target~B localization.
+\end{enumerate}
+These are mechanism templates only.
+Any accepted version must be converted into explicit lemmas with hypotheses and dependency tracing.
+
+\paragraph{Open proof obligations tied to this template.}
+To promote this template to theorem-level closure, the manuscript still needs:
+\begin{enumerate}
+  \item a finalized statement of the chosen global control ingredient(s);
+  \item proof that those ingredients are valid on the declared admissible strip class;
+  \item a proved transfer theorem from local control to global strip control;
+  \item a contradiction theorem excluding every admissible off-line balanced point under one common hypothesis package.
+\end{enumerate}
+These obligations are part of the open bridges listed in \texttt{lemmas.tex} and \texttt{notes/known-gaps.md}.
+
 \subsection*{Reduction proof skeleton (conditional)}
 The deduction itself is short once the above inputs are available.
 Let $\rho$ be a nontrivial zero.

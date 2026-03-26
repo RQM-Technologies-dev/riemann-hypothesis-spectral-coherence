@@ -85,10 +85,10 @@ Core bridge names synchronized with manuscript text:
 - RH is an exclusion statement over all nontrivial zeros.
 - A local or asymptotic argument that leaves edge regimes untreated is insufficient.
 
-**Current status:** **Open (completeness).** The intended strategy appears uniform, but this has not been proved.
+**Current status:** **Open (completeness).** A candidate exclusion-mechanism template is now stated in the manuscript, but no theorem-level instantiation has been proved.
 
 **What would count as resolution:**
-- A global contradiction or global structural theorem that covers every \(s\) with \(0<\Re(s)<1\), \(\Re(s)\neq 1/2\), under one synchronized hypothesis package.
+- A global contradiction or global structural theorem that covers every \(s\) with \(0<\Re(s)<1\), \(\Re(s)\neq 1/2\), under one synchronized hypothesis package, with the mechanism class stated explicitly (e.g., coercive gap, positivity/monotonicity, rigidity, or reflection-incompatibility).
 - An explicit local-to-global transfer theorem (or equivalent closure argument) from the Stage-5 regime to full-strip applicability.
 - Explicit treatment of parameter ranges where hidden assumptions often occur (large imaginary part, boundary-near behavior).
 - A proof that does not rely on unproved regularity assumptions.
