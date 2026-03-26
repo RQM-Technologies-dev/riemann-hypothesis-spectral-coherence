@@ -1,168 +1,130 @@
 # Objections and Responses
 
-*A structured record of mathematical objections to the proposed framework
-and the current responses to each.*
+This document records substantial mathematical objections to the proposed proof framework and the current state of responses.
 
-This file is updated as objections are raised (via GitHub issues or private
-correspondence) and as responses are developed. Objections that expose genuine
-gaps are also recorded in `notes/known-gaps.md`.
+Purpose:
+- Keep objections visible.
+- Distinguish what is clarified from what still requires proof.
+- Support external mathematical audit and revision.
 
----
+Status vocabulary used in this file:
+- `open`
+- `partially addressed`
+- `needs formal proof`
+- `resolved`
 
-## Template for New Entries
+## Entry format
 
-| Field | Content |
-|---|---|
-| **Objection** | State the objection precisely. |
-| **Why it matters** | Explain the mathematical significance. |
-| **Current response** | The best available response. Be honest if no good response exists. |
-| **Status** | Open / Partially addressed / Resolved / Added to known-gaps |
-
----
-
-## O1: "This sounds heuristic rather than rigorous."
-
-**Objection:** The framework uses language like "balance," "resonance," "coherence,"
-and "spectral cancellation" without providing precise mathematical definitions for
-these terms. The argument appears to rest on geometric intuition rather than proof.
-
-**Why it matters:** In mathematics, intuitive arguments are not proofs. A proof
-must trace every logical step back to definitions and axioms. If the key concepts
-are not defined, the argument cannot be verified or falsified.
-
-**Current response:** This objection is correct and is the primary limitation of
-the current version of the manuscript. The formal sections use `\gap{}` markers
-to indicate exactly where informal language substitutes for a proved statement.
-The construction of the operator H and the balance criterion as precise mathematical
-objects is the immediate priority.
-
-The informal language in the motivation sections and appendices is intentional —
-it is there to communicate intuitions — but it is clearly labeled as such.
-
-**Status:** 🔶 Partially addressed. The limitation is acknowledged; the resolution
-requires completing the operator construction (Gap 1 in `notes/known-gaps.md`).
+Each entry uses the same four fields:
+1. **Objection**
+2. **Why it matters**
+3. **Current response**
+4. **Status**
 
 ---
 
-## O2: "Why is symmetry enough to force the zeros onto the critical line?"
+## O1 — “This sounds heuristic rather than rigorous.”
 
-**Objection:** The functional equation $\xi(s) = \xi(1-s)$ gives ζ a reflection
-symmetry, but symmetry alone does not force zeros to the symmetry axis. Many
-entire functions with similar symmetries have zeros off their symmetry axis.
+**Objection**  
+The framework uses terms such as “balance,” “resonance,” and “spectral coherence” in ways that are not yet fully formalized in the manuscript.
 
-**Why it matters:** This objection identifies a logical gap in the symmetry argument.
-If symmetry were sufficient, RH would have been proved long ago by elementary means.
+**Why it matters**  
+A mathematical proof requires precise definitions and explicit logical dependencies. Heuristic language can guide construction, but it does not establish a theorem.
 
-**Current response:** This objection is correct, and the manuscript acknowledges
-it explicitly in the symmetry framework section. Symmetry alone is not sufficient.
-The proposed framework attempts to combine symmetry with an additional balance
-condition — the coherence criterion — to rule out off-line zeros.
+**Current response**  
+This objection is valid. The manuscript uses explicit gap markers to separate intuition from formal claims and to indicate unresolved bridges. The current priority is to formalize the operator construction and associated balance criterion so that the claims can be checked line by line.
 
-The question is whether the balance condition can be made precise and whether it
-genuinely has the claimed property. This is the content of Gaps 2 and 3 in
-`notes/known-gaps.md`.
-
-**Status:** ⛔ Open. The response correctly identifies the additional ingredient
-needed, but that ingredient (the balance condition) is not yet rigorously defined.
+**Status**  
+`needs formal proof`
 
 ---
 
-## O3: "Where is the exact operator?"
+## O2 — “Why is symmetry enough to force the zeros?”
 
-**Objection:** The spectral coherence operator H is mentioned but not defined.
-Without a precise definition — including the function space, the domain, and the
-explicit action of H — the "spectral" aspects of the argument are vacuous.
+**Objection**  
+The functional equation provides reflection symmetry, but symmetry alone does not generally force zeros onto the symmetry axis.
 
-**Why it matters:** Every claim about the properties of H (its symmetry, its
-spectral relationship to ζ, its balance criterion) is contingent on H being a
-well-defined mathematical object. Without a definition, these claims have no
-mathematical content.
+**Why it matters**  
+If the argument depends only on symmetry, then the claimed mechanism is insufficient. A distinct, rigorously stated ingredient is needed.
 
-**Current response:** This objection is entirely correct and corresponds to
-Gap 1 in `notes/known-gaps.md`. The definition of H is the most urgent open
-task. Candidate approaches are being explored (Hardy space operators, Mellin
-convolutions, connections to the Hilbert–Pólya program), but none has been
-selected and formalized.
+**Current response**  
+The framework does not treat symmetry as sufficient by itself. It attempts to pair symmetry with an additional coherence/balance mechanism. At present, this mechanism is not fully formalized, so the objection remains materially active.
 
-**Status:** ⛔ Open (foundational).
+**Status**  
+`open`
 
 ---
 
-## O4: "How is this different from a metaphor?"
+## O3 — “Where is the exact operator?”
 
-**Objection:** The language of "balance," "spectral coherence," and "resonance"
-is metaphorical. Without precise definitions, these terms describe the intuition
-behind the framework but do not add mathematical content. A collection of
-metaphors is not a proof program.
+**Objection**  
+The proposed spectral operator is discussed conceptually, but a complete specification (space, domain, action, and analytic properties used later) is not yet fixed in a final form.
 
-**Why it matters:** In mathematics, the transition from metaphor to theorem
-requires precise definitions and logical deductions. If the framework cannot
-make this transition, it is not a mathematical argument.
+**Why it matters**  
+Without an explicit operator, spectral claims cannot be tested for correctness, and downstream equivalence claims cannot be audited.
 
-**Current response:** The objection is well-posed. The manuscript distinguishes
-between:
-- Motivation sections and appendices, which use metaphorical language deliberately
-  and are labeled as such.
-- Formal sections, which use `\gap{}` markers wherever a metaphor needs to be
-  replaced by a definition or proof.
+**Current response**  
+This is a foundational objection. Candidate operator constructions are under comparison, but no version is yet accepted as the formal base object for the full chain of claims.
 
-The transition from metaphor to theorem is the work to be done. The manuscript
-does not claim to have completed this transition.
-
-**Status:** 🔶 Partially addressed. The distinction between informal and formal
-sections is maintained, but the formal sections themselves contain many gaps.
+**Status**  
+`open`
 
 ---
 
-## O5: "What prevents hidden assumptions?"
+## O4 — “How is this different from metaphor?”
 
-**Objection:** Arguments of this type often contain hidden assumptions — claims
-that are used without being stated, or definitions that secretly embed the
-conclusion. How can a reader verify that the proposed framework is free of such
-assumptions?
+**Objection**  
+Terms like “coherence” and “resonance” may function as analogies unless they are converted into formal definitions with verifiable consequences.
 
-**Why it matters:** A proof that contains circular reasoning or hidden assumptions
-is not valid, even if the argument appears coherent. Hidden assumptions are
-particularly dangerous when an argument uses geometric or physical intuition.
+**Why it matters**  
+A framework can be insightful yet mathematically incomplete if analogical language is not translated into theorem-grade statements.
 
-**Current response:** The best safeguard against hidden assumptions is the
-explicit statement of every assumption and the honest identification of every
-unproved step. The manuscript attempts to do this via:
-- `\gap{}` markers for unproved claims.
-- `\todo{}` markers for incomplete definitions.
-- The `notes/known-gaps.md` register.
-- The limitations section (§10 of the manuscript).
+**Current response**  
+The manuscript attempts to separate motivation from formal content. That separation is useful, but it does not by itself complete the proof pathway. The transition from analogical language to formal lemmas is still in progress.
 
-Additionally, since the operator H is not yet defined, the possibility of circular
-definition — where H is defined using a property that presupposes the conclusion —
-must be guarded against when H is constructed.
-
-**Status:** 🔶 Ongoing. Structural safeguards are in place; completeness of the
-safeguards depends on the operator construction being honest and non-circular.
+**Status**  
+`partially addressed`
 
 ---
 
-## O6: "Is the balance criterion genuinely equivalent to the zero condition, or just a restatement?"
+## O5 — “What prevents hidden assumptions?”
 
-**Objection:** If the "balance criterion" is defined as "Φ(s) = 0, where Φ is a
-function defined to vanish at the zeros of ζ," then Conjecture 2 (the zero–balance
-correspondence) is circular. The criterion must be defined independently of the
-zeros of ζ.
+**Objection**  
+Complex arguments can hide assumptions in definitions, implicit regularity requirements, or circular dependencies.
 
-**Why it matters:** Circular definitions are not mathematical content. A proof of
-RH cannot define the balance criterion in terms of ζ zeros and then claim to
-"prove" that ζ zeros coincide with balance points.
+**Why it matters**  
+An argument can fail even when each local step appears plausible, if unstated assumptions are doing essential work.
 
-**Current response:** This objection is correct and important. The balance criterion
-must be defined independently — as a spectral or analytic property of the operator H
-that makes no reference to the zeros of ζ. The proof of equivalence would then be
-a genuine theorem. The manuscript is designed to maintain this separation, but the
-correctness of the separation can only be verified once H and Φ are fully defined.
+**Current response**  
+The current safeguards are explicit assumptions, gap tracking, and a maintained list of unresolved dependencies. These safeguards improve auditability, but they cannot rule out hidden assumptions until the operator-level formalization is complete and independently checked.
 
-**Status:** ⛔ Open. The concern is valid; verification requires the operator
-construction to be complete and non-circular.
+**Status**  
+`partially addressed`
 
 ---
 
-*This file was last updated: 2026-03-26.*
-*For additional objections, open an issue using the [Mathematical Gap template](../.github/ISSUE_TEMPLATE/mathematical-gap.md) or [Referee Feedback template](../.github/ISSUE_TEMPLATE/referee-feedback.md).*
+## O6 — “Is the balance criterion independent, or a restatement of zeros?”
+
+**Objection**  
+If the balance criterion is defined so that it vanishes exactly where zeta vanishes, then the correspondence claim becomes circular.
+
+**Why it matters**  
+A circular criterion cannot support a proof. Independence of definitions is required before any equivalence theorem has content.
+
+**Current response**  
+The intended framework requires an independently defined criterion, followed by a proof of correspondence. This independence requirement is acknowledged, but not yet established in a complete formal treatment.
+
+**Status**  
+`needs formal proof`
+
+---
+
+## Review workflow notes
+
+When adding or updating entries:
+- Record the strongest known version of the objection.
+- Keep current responses descriptive rather than defensive.
+- Update status only when a concrete manuscript change justifies it.
+- When an entry changes to `resolved`, include a pointer to the exact manuscript section or note where the resolution is documented.
+
+*Last updated: 2026-03-26.*
