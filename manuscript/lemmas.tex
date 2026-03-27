@@ -91,6 +91,22 @@ Reason: without a theorem-level uniform no-drift statement, local Target~B contr
 This priority label is a strategy designation only and does not upgrade proof status.
 
 \subsubsection*{B4a. Support stack for the first contradiction-style Stage~6 subtheorem}
+
+\paragraph{Three-step first-control chain for $\Delta_{\mathrm{nd}}$ (audit skeleton; all OPEN).}
+Before transport-form conclusions, B4 now isolates an explicit three-step chain:
+\[
+\text{Step 1 (initialization): }\cref{lem:b4-delta-initialization-seed}
+\Longrightarrow
+\text{Step 2 (structural propagation): }\cref{lem:b4-delta-structural-nonincrease}
+\Longrightarrow
+\text{Step 3 (first control target): }\cref{lem:b4-first-delta-control}.
+\]
+This is a proof-planning skeleton only.
+It does not claim that any step is proved.
+Its purpose is to make the first executable derivation pattern explicit for audit:
+seed-anchor zero defect, then synchronized non-increase along admissible extension, then classwise zero-defect control on $\mathfrak{C}_{\mathrm{tr}}^{\mathrm{ctr}}$ once seed-extension coverage is proved.
+
+
 \paragraph{Contradiction-ready grouping for \cref{thm:stage6-first-subtarget-admissibility}.}
 The first subtheorem in \texttt{critical-line-argument.tex} is now stated in contradiction-ready form.
 Accordingly, the immediate B4 support lemmas are grouped by burden type:
@@ -120,7 +136,7 @@ C_1\preceq C_2\Longrightarrow
 \]
 Intended interpretation for the no-drift route (not a proof claim): this monotonicity would supply the structural bridge from local-anchor defect initialization to classwise defect control on $\mathfrak{C}_{\mathrm{tr}}^{\mathrm{ctr}}$, which is then reformulated as endpoint-usable no-drift transport.
 \end{lemma}
-\noindent\emph{Feeds into:} companion initialization target \cref{lem:b4-delta-initialization-seed}, then \cref{lem:b4-first-delta-control}, then \cref{lem:stage6-first-concrete-no-drift}/\cref{lem:b4-admissibility-stability-transfer}, then \cref{thm:stage6-neutralizing-transport-uniformity}.
+\noindent\emph{Feeds into:} the three-step first-control chain (with \cref{lem:b4-delta-initialization-seed} as Step 1), then \cref{lem:b4-first-delta-control}, then \cref{lem:stage6-first-concrete-no-drift}/\cref{lem:b4-admissibility-stability-transfer}, then \cref{thm:stage6-neutralizing-transport-uniformity}.
 
 \begin{lemma}[Seed-anchor initialization target for \texorpdfstring{$\Delta_{\mathrm{nd}}$}{Delta\_nd} \textnormal{(OPEN BRIDGE; base-case companion to \cref{lem:b4-delta-structural-nonincrease})}]
 \label{lem:b4-delta-initialization-seed}
@@ -131,7 +147,7 @@ Intended interpretation for the no-drift route (not a proof claim): this monoton
 \]
 Companion use with \cref{lem:b4-delta-structural-nonincrease}: if each contradiction-relevant transfer object in $\mathfrak{C}_{\mathrm{tr}}^{\mathrm{ctr}}$ is a synchronized extension of some seed $C_a^{\mathrm{seed}}$, then classwise vanishing of $\Delta_{\mathrm{nd}}$ follows in the exact form targeted by \cref{lem:b4-first-delta-control}. This lemma is an initialization target only, not a proof that the canonical seed class or extension coverage is finalized.}
 \end{lemma}
-\noindent\emph{Feeds into:} together with \cref{lem:b4-delta-structural-nonincrease}, the first control target \cref{lem:b4-first-delta-control}; then \cref{lem:stage6-first-concrete-no-drift}/\cref{lem:b4-admissibility-stability-transfer}.
+\noindent\emph{Feeds into:} Step 1 of the three-step first-control chain; paired with \cref{lem:b4-delta-structural-nonincrease} (Step 2), it targets \cref{lem:b4-first-delta-control} (Step 3), then \cref{lem:stage6-first-concrete-no-drift}/\cref{lem:b4-admissibility-stability-transfer}.
 
 \begin{lemma}[First control lemma target for the provisional defect functional \texorpdfstring{$\Delta_{\mathrm{nd}}$}{Delta\_nd} \textnormal{(OPEN BRIDGE; primary analytic entry point)}]
 \label{lem:b4-first-delta-control}

@@ -542,6 +542,46 @@ then
 hence $\Delta_{\mathrm{nd}}(C;\Theta_{\mathrm{S5}},\delta)=0$.
 This is exactly the target shape of \cref{lem:b4-first-delta-control}.
 
+
+
+\subsection*{Compact proof skeleton for the first control step: initialization $+$ structural non-increase}
+This subsection records the first explicit derivation pattern the manuscript intends to execute.
+It is a proof skeleton under audit, not a completed proof.
+No claim is made here that \cref{lem:b4-delta-initialization-seed}, \cref{lem:b4-delta-structural-nonincrease}, or seed-extension coverage is proved.
+
+\paragraph{Input statements (all open targets).}
+\begin{enumerate}
+  \item \textbf{Initialization input:} \cref{lem:b4-delta-initialization-seed} provides a seed-anchor class with
+  \(\Delta_{\mathrm{nd}}(C_a^{\mathrm{seed}};\Theta_{\mathrm{S5}},\delta)=0\) at each local anchor $a\in\mathcal{R}_{\mathrm{loc}}$.
+  \item \textbf{Structural input:} \cref{lem:b4-delta-structural-nonincrease} targets
+  \(C_1\preceq C_2\Rightarrow \Delta_{\mathrm{nd}}(C_2;\Theta_{\mathrm{S5}},\delta)\le\Delta_{\mathrm{nd}}(C_1;\Theta_{\mathrm{S5}},\delta)\)
+  for synchronized transport extension in $\mathfrak{C}_{\mathrm{tr}}$ under $\mathcal{H}_{\mathrm{S6}}^{\min}$.
+\end{enumerate}
+
+\paragraph{Skeleton derivation toward \cref{lem:b4-first-delta-control} (target form).}
+Fix $C\in\mathfrak{C}_{\mathrm{tr}}^{\mathrm{ctr}}$.
+Assume synchronized seed-extension coverage for contradiction-relevant objects, so $C_a^{\mathrm{seed}}\preceq C$ for some anchor $a\in\mathcal{R}_{\mathrm{loc}}$.
+Then the intended deduction is:
+\[
+\Delta_{\mathrm{nd}}(C;\Theta_{\mathrm{S5}},\delta)
+\le
+\Delta_{\mathrm{nd}}(C_a^{\mathrm{seed}};\Theta_{\mathrm{S5}},\delta)
+=0,
+\]
+therefore
+\[
+\Delta_{\mathrm{nd}}(C;\Theta_{\mathrm{S5}},\delta)=0.
+\]
+Since $C\in\mathfrak{C}_{\mathrm{tr}}^{\mathrm{ctr}}$ was arbitrary, this is exactly the intended statement form of
+\cref{lem:b4-first-delta-control}.
+
+\paragraph{Boundary with downstream statements.}
+This skeleton only targets the first control lemma.
+A separate open bridge is still required to convert this classwise defect control into transport-form hypothesis persistence
+(\cref{lem:stage6-first-concrete-no-drift}/\cref{lem:b4-admissibility-stability-transfer}),
+followed by the neutralizing theorem target \cref{thm:stage6-neutralizing-transport-uniformity} and later no-alternative-locus/master-exclusion targets.
+
+
 \paragraph{Open items even with this initialization available.}
 Even if the initialization statement were proved, the manuscript would still require: (i) proof of the structural non-increase property itself, (ii) proof of the seed-extension coverage statement for $\mathfrak{C}_{\mathrm{tr}}^{\mathrm{ctr}}$, (iii) promotion from defect control to transport-form tuple persistence in \cref{lem:stage6-first-concrete-no-drift}/\cref{lem:b4-admissibility-stability-transfer}, and (iv) downstream neutralizing/no-alternative-locus/master-exclusion closures.
 

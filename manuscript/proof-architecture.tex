@@ -126,9 +126,9 @@ For dependency clarity, the intended theorem flow is:
 \[
 \underbrace{\text{first concrete analytic quantity }\Delta_{\mathrm{nd}}(C;\Theta_{\mathrm{S5}},\delta):=\sup_{u\in U(C)}d_{\Theta}^{(C)}(u)}_{\text{provisional no-drift defect functional (open)}}
 \Longrightarrow
-\underbrace{\text{primary structural-property lemma target \cref{lem:b4-delta-structural-nonincrease}}}_{\text{non-increase of }\Delta_{\mathrm{nd}}\text{ under synchronized extension (open)}}
-\Longrightarrow
 \underbrace{\text{initialization target \cref{lem:b4-delta-initialization-seed}}}_{\text{seed-anchor zero-defect base case on }\mathcal{R}_{\mathrm{loc}}\text{ (open)}}
+\Longrightarrow
+\underbrace{\text{primary structural-property lemma target \cref{lem:b4-delta-structural-nonincrease}}}_{\text{non-increase of }\Delta_{\mathrm{nd}}\text{ under synchronized extension (open)}}
 \Longrightarrow
 \underbrace{\text{first control lemma target }\cref{lem:b4-first-delta-control}\text{ for }\Delta_{\mathrm{nd}}}_{\text{precise classwise control statement on }\mathfrak{C}_{\mathrm{tr}}^{\mathrm{ctr}}\text{ (open)}}
 \Longrightarrow
@@ -143,6 +143,31 @@ It is downstream of the contradiction-ready target \cref{thm:stage6-first-subtar
 \underbrace{\text{resumed preferred Stage~6 route: no-new-off-line-branch}\ \Rightarrow\ \text{no-alternative-locus}\ \Rightarrow\ \text{master exclusion}}_{\text{still-open downstream obligations}}.
 \]
 The middle implication is an independent theorem target, not an automatic corollary of Stage~5.
+
+
+\paragraph{First executable Stage~6 proof pattern (initialization $+$ non-increase $\Rightarrow$ first control; outline only).}
+For audit-facing proof planning, the first intended derivation pattern is now fixed as:
+\begin{enumerate}
+  \item \textbf{Seed step (initialization target).} Choose a local anchor $a\in\mathcal{R}_{\mathrm{loc}}$ and its declared seed object $C_a^{\mathrm{seed}}\in\mathfrak{C}_{\mathrm{tr}}^{\mathrm{ctr}}$. Use \cref{lem:b4-delta-initialization-seed} to target
+  \[
+  \Delta_{\mathrm{nd}}(C_a^{\mathrm{seed}};\Theta_{\mathrm{S5}},\delta)=0.
+  \]
+  \item \textbf{Propagation step (structural non-increase target).} For any contradiction-relevant $C\in\mathfrak{C}_{\mathrm{tr}}^{\mathrm{ctr}}$ covered by synchronized seed-extension, apply \cref{lem:b4-delta-structural-nonincrease} along
+  \(C_a^{\mathrm{seed}}\preceq C\) to target
+  \[
+  \Delta_{\mathrm{nd}}(C;\Theta_{\mathrm{S5}},\delta)
+  \le
+  \Delta_{\mathrm{nd}}(C_a^{\mathrm{seed}};\Theta_{\mathrm{S5}},\delta).
+  \]
+  \item \textbf{First control conclusion target.} Combine the two displays to obtain the classwise target
+  \(
+  \Delta_{\mathrm{nd}}(C;\Theta_{\mathrm{S5}},\delta)=0
+  \)
+  on $\mathfrak{C}_{\mathrm{tr}}^{\mathrm{ctr}}$, i.e. the target shape of \cref{lem:b4-first-delta-control}.
+\end{enumerate}
+This is an outline of intended derivation structure only.
+It is not a completed derivation and does not assert proof of initialization, structural non-increase, or seed-extension coverage.
+
 
 \paragraph{Primary structural-property lemma under audit for \texorpdfstring{$\Delta_{\mathrm{nd}}$}{Delta\_nd} control (status: open target).}
 Inside the Stage~6 chain above, the manuscript now prioritizes one provisional lemma target,
@@ -172,9 +197,9 @@ It does not assert theorem-level dominance beyond the current route under audit.
 \paragraph{Lemma stack attached to the first Stage~6 draft theorem target (all open).}
 The initial proving attempt is explicitly scoped to the following stack in \texttt{lemmas.tex}:
 \[
-\cref{lem:b4-delta-structural-nonincrease}
-\Rightarrow
 \cref{lem:b4-delta-initialization-seed}
+\Rightarrow
+\cref{lem:b4-delta-structural-nonincrease}
 \Rightarrow
 \cref{lem:b4-first-delta-control}
 \Rightarrow
