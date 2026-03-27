@@ -190,12 +190,12 @@ This theorem target is the explicit bridge between local Target~B control and fu
 It is not established in the current manuscript version.
 \end{drafttheorem}
 
-\subsection*{First executable Stage~6 theorem target under audit: admissibility-stability transfer}
-The manuscript now fixes one \emph{first proving target} inside Stage~6 as a draft theorem with explicit scope.
+\subsection*{First executable Stage~6 theorem target under audit: contradiction-ready admissibility-stability transfer}
+The manuscript now fixes one \emph{first proving target} inside Stage~6 in contradiction-ready form.
 This is the first theorem-sized burden to discharge under the preferred route.
 It is not proved in this manuscript version.
 
-\begin{drafttheorem}[Draft first Stage~6 subtheorem target: admissibility-stability transfer on continuation classes]
+\begin{drafttheorem}[Draft first Stage~6 subtheorem target (contradiction form): admissibility-stability transfer exclusion]
 \label{thm:stage6-first-subtarget-admissibility}
 \placeholder{Draft theorem target under construction; proof not yet provided.}
 Assume the synchronized minimum package $\mathcal{H}_{\mathrm{S6}}^{\min}$, and write
@@ -205,18 +205,42 @@ Assume the synchronized minimum package $\mathcal{H}_{\mathrm{S6}}^{\min}$, and 
 \mathcal{R}_{\mathrm{loc}}\subseteq\mathcal{A}_{\mathrm{strip}}.
 \]
 Let $\mathfrak{C}_{\mathrm{tr}}$ denote the class of continuation objects (paths/chains/families, according to the eventual model) used to transport Stage-5 local control from $\mathcal{R}_{\mathrm{loc}}$ into $\mathcal{A}_{\mathrm{strip}}$.
-The draft target is:
+The contradiction-ready draft target is:
 \begin{enumerate}
-  \item \textbf{Hypothesis transport statement.}
-  For every $s\in\mathcal{A}_{\mathrm{strip}}$ relevant to Stage~6 transfer, there exists $C\in\mathfrak{C}_{\mathrm{tr}}$ joining a local anchor in $\mathcal{R}_{\mathrm{loc}}$ to $s$ such that all admissibility/well-posedness assumptions used by local Target~B remain valid along $C$.
-  \item \textbf{No hypothesis-loss conclusion.}
-  Along every such $C$, Stage-5 local hypotheses are not weakened when interpreted on strip-wide points, so the same theorem predicates used locally remain meaningful at the transfer endpoint.
+  \item \textbf{Ambient class and synchronized assumptions.}
+  The theorem is read only on $\mathcal{A}_{\mathrm{strip}}$ and only under the same package $\mathcal{H}_{\mathrm{S6}}^{\min}$ used by the master target, with no hypothesis switching between local, transfer, and contradiction steps.
+  \item \textbf{Contradiction assumption (off-line balanced candidate).}
+  Assume there exists
+  \[
+  s_\ast\in\mathcal{B}\cap\mathcal{A}_{\mathrm{strip}},\qquad \RePart(s_\ast)\neq\tfrac12,
+  \]
+  such that $s_\ast$ is transfer-reachable from $\mathcal{R}_{\mathrm{loc}}$ through some $C_\ast\in\mathfrak{C}_{\mathrm{tr}}$.
+  \item \textbf{Balance and transport assumptions used by the contradiction setup.}
+  Assume $\Phi_H(s_\ast)=0$ and assume the Stage-5 local hypothesis tuple is transported along $C_\ast$ without loss (admissibility, well-posedness, symmetry compatibility, and the regularity clauses of $\mathcal{H}_{\mathrm{S6}}^{\min}$ that local uniqueness requires).
+  \item \textbf{Intermediate support burden (open bridge to be proved).}
+  Prove that the previous transport assumption is theorem-usable: every transfer path $C\in\mathfrak{C}_{\mathrm{tr}}$ from a local anchor to a transfer-relevant strip point preserves exactly the Stage-5 hypothesis tuple, with no drift between local and endpoint predicates.
+  \item \textbf{Target contradiction conclusion.}
+  Under the same $\mathcal{H}_{\mathrm{S6}}^{\min}$, the assumptions in items (2)--(4) force incompatibility with Stage-5 local uniqueness once transported to $s_\ast$.
+  Therefore no such transfer-reachable off-line balanced point can exist.
 \end{enumerate}
-Equivalently in audit shorthand: local Target~B assumptions are stable under the continuation classes used to access $\mathcal{A}_{\mathrm{strip}}$.
+Equivalent exclusion form for this first subtarget:
+\[
+\mathcal{B}_{\mathrm{tr}}\cap\{s\in\mathcal{A}_{\mathrm{strip}}:\RePart(s)\neq\tfrac12\}=\varnothing,
+\]
+where
+\[
+\mathcal{B}_{\mathrm{tr}}:=\{s\in\mathcal{B}: \text{$s$ is reachable from $\mathcal{R}_{\mathrm{loc}}$ by some }C\in\mathfrak{C}_{\mathrm{tr}}\}.
+\]
+This is the first executable exclusion target only for the transfer-reachable class $\mathcal{B}_{\mathrm{tr}}$.
+It is not yet the full Stage~6 endpoint on all of $\mathcal{B}$.
+\paragraph{Status and scope boundary.}
+The theorem above is a sharpened contradiction target under audit.
+It is not a proved theorem.
+It does not assume a finalized operator realization beyond the declared OP/AC interface inside $\mathcal{H}_{\mathrm{S6}}^{\min}$.
 \paragraph{Relation to the master Stage~6 target.}
 \cref{thm:stage6-first-subtarget-admissibility} is not the Stage~6 endpoint.
 It is the first dependency in the preferred chain toward \cref{thm:stage6-master-exclusion-target}.
-Without it, the transfer implication
+Without this contradiction-ready transfer exclusion target, the transfer implication
 \[
 \Big(\forall s\in\mathcal{B}\cap\mathcal{R}_{\mathrm{loc}},\ \RePart(s)=\tfrac12\Big)\Longrightarrow
 \Big(\forall s\in\mathcal{B}\cap\mathcal{A}_{\mathrm{strip}},\ \RePart(s)=\tfrac12\Big)
@@ -225,22 +249,22 @@ is not theorem-usable, because the local hypotheses may fail to persist away fro
 \end{drafttheorem}
 
 \paragraph{Proof skeleton for \cref{thm:stage6-first-subtarget-admissibility} (outline only; open).}
-This is a work plan, not a proof.
-The current skeleton is:
+This is a schematic work plan, not a proof.
+The contradiction-form skeleton is:
 \begin{enumerate}
-  \item \textbf{Define transfer objects and invariants.}
-  Specify $\mathfrak{C}_{\mathrm{tr}}$ and the exact local hypothesis tuple to be transported.
-  \item \textbf{Prove admissibility persistence along $\mathfrak{C}_{\mathrm{tr}}$.}
-  Show admissibility and balance-function well-posedness do not break along continuation classes (analytic-control entry point).
-  \item \textbf{Prove symmetry-compatible transport.}
-  Show reflection/conjugation transport does not exit the synchronized hypothesis package (operator-theoretic and symmetry entry point).
-  \item \textbf{Exclude transfer-induced hypothesis drift.}
-  Prove that the transported endpoint hypotheses are exactly those required by Stage-5 local uniqueness statements.
-  \item \textbf{Record the residual burden after this subtheorem.}
-  Remaining Stage~6 obligations are still-open: uniform continuation/compactness closure, no-new-off-line-branch control, no-alternative-locus principle, and full-strip exclusion.
+  \item \textbf{Fix contradiction data.}
+  Assume $s_\ast\in\mathcal{B}_{\mathrm{tr}}$ with $\RePart(s_\ast)\neq\tfrac12$ under $\mathcal{H}_{\mathrm{S6}}^{\min}$.
+  \item \textbf{Transport the local hypothesis tuple.}
+  Use admissibility-stability along $C_\ast\in\mathfrak{C}_{\mathrm{tr}}$ to carry the exact Stage-5 assumptions from a local anchor to $s_\ast$.
+  \item \textbf{Invoke local uniqueness at transported endpoint.}
+  Apply the transported Stage-5 predicate set to obtain the local-uniqueness consequence at $s_\ast$.
+  \item \textbf{Derive explicit incompatibility.}
+  Contrast the transported uniqueness consequence with $\RePart(s_\ast)\neq\tfrac12$ to obtain contradiction.
+  \item \textbf{Conclude transfer-reachable off-line exclusion.}
+  Deduce the exclusion statement for $\mathcal{B}_{\mathrm{tr}}$ and record remaining Stage~6 burdens.
 \end{enumerate}
-The first three steps are where AC1--AC6 and OP7--OP8 support is expected to enter.
-The last two steps are deferred consequences and are not claimed here.
+The transport and symmetry steps above are where AC1--AC6 and OP7--OP8 support is expected to enter.
+The no-new-off-line-branch and no-alternative-locus burdens remain subsequent open targets and are not discharged here.
 
 \paragraph{Three-way separation (local result, transfer bridge, global conclusion).}
 To avoid conflation of proof burdens:

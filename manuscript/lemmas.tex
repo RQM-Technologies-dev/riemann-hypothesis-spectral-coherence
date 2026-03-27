@@ -90,9 +90,19 @@ The first proving target inside the preferred Stage~6 route is the admissibility
 Reason: without this lemma, local Target~B control on $\mathcal{R}_{\mathrm{loc}}$ is not synchronized with strip-wide statements on $\mathcal{A}_{\mathrm{strip}}$, so subsequent transfer/no-alternative-locus claims are not yet theorem-usable.
 This priority label is a strategy designation only and does not upgrade proof status.
 
+\paragraph{Contradiction-ready grouping for the first Stage~6 subtheorem target.}
+The first subtheorem \cref{thm:stage6-first-subtarget-admissibility} in \texttt{critical-line-argument.tex} is now stated in contradiction form.
+Accordingly, the supporting B4 lemmas are grouped by burden type:
+\begin{enumerate}
+  \item \textbf{Contradiction assumption package:} admissible off-line balanced $s_\ast\in\mathcal{A}_{\mathrm{strip}}$ with $\RePart(s_\ast)\neq\tfrac12$, interpreted under one synchronized package $\mathcal{H}_{\mathrm{S6}}^{\min}$.
+  \item \textbf{Intermediate support burden:} transport of the exact Stage-5 hypothesis tuple along continuation classes from $\mathcal{R}_{\mathrm{loc}}$ to transfer-reachable strip points.
+  \item \textbf{Contradiction conclusion target:} no transfer-reachable off-line balanced point is compatible with the same synchronized package.
+\end{enumerate}
+This grouping is an audit map only; it does not claim any lemma below is proved.
+
 \begin{lemma}[Admissibility-stability transfer lemma (current primary Stage~6 first proving target) \textnormal{(OPEN BRIDGE; placeholder)}]
 \label{lem:b4-admissibility-stability-transfer}
-\placeholder{Establishes: admissibility hypotheses used in the local Stage-5 regime remain valid along the continuation classes needed to reach every point of $\mathcal{A}_{\mathrm{strip}}$. Depends on: B1 admissibility well-posedness and B5 operator/analytic control package. Why it matters: without stability, local uniqueness may not even be formulable in global regimes.}
+\placeholder{Establishes: for each transfer-reachable endpoint $s\in\mathcal{A}_{\mathrm{strip}}$, there exists $C\in\mathfrak{C}_{\mathrm{tr}}$ from a local anchor in $\mathcal{R}_{\mathrm{loc}}$ to $s$ such that admissibility hypotheses used in Stage-5 local uniqueness remain valid all along $C$ and at the endpoint with no hypothesis drift. Depends on: B1 admissibility well-posedness and B5 operator/analytic control package. Why it matters: this is the intermediate support burden in the contradiction setup; without it, local uniqueness cannot be transported to an assumed off-line candidate.}
 \end{lemma}
 \noindent\emph{Feeds into:} global extension of local uniqueness and no-alternative-locus exclusion for $\mathcal{B}$.
 
@@ -110,7 +120,7 @@ This priority label is a strategy designation only and does not upgrade proof st
 
 \begin{lemma}[Global extension of local uniqueness \textnormal{(OPEN BRIDGE; placeholder)}]
 \label{lem:b4-global-extension}
-\placeholder{Establishes: a theorem-level local-to-global transfer principle under a synchronized package $\mathcal{H}_{\mathrm{tr}}$: Stage-5 uniqueness on $\mathcal{R}_{\mathrm{loc}}$ extends to all of $\mathcal{A}_{\mathrm{strip}}$. Formal target shape:
+\placeholder{Establishes: a theorem-level local-to-global transfer principle under a synchronized package $\mathcal{H}_{\mathrm{tr}}$: Stage-5 uniqueness on $\mathcal{R}_{\mathrm{loc}}$ extends to all of $\mathcal{A}_{\mathrm{strip}}$. In contradiction form, any transfer-reachable off-line balanced candidate contradicts the transported Stage-5 uniqueness clause under one synchronized package. Formal target shape:
 \[
 \Big(\forall s\in\mathcal{B}\cap\mathcal{R}_{\mathrm{loc}},\ \RePart(s)=\tfrac12\Big)\Rightarrow
 \Big(\forall s\in\mathcal{B}\cap\mathcal{A}_{\mathrm{strip}},\ \RePart(s)=\tfrac12\Big).
@@ -123,10 +133,11 @@ Must include admissibility stability, compatibility of local estimates with the 
 The first executable draft theorem target is \cref{thm:stage6-first-subtarget-admissibility} in \texttt{critical-line-argument.tex}.
 Within B4, its proof burden is grouped as:
 \begin{enumerate}
-  \item \textbf{Core entry lemma:} \cref{lem:b4-admissibility-stability-transfer}.
+  \item \textbf{Contradiction assumption bookkeeping:} the off-line balanced assumption package described in \cref{thm:stage6-first-subtarget-admissibility} and aligned with the placeholder contradiction-route admissibility lemma below.
+  \item \textbf{Core intermediate-support lemma:} \cref{lem:b4-admissibility-stability-transfer}.
   \item \textbf{Analytic-control support:} \cref{lem:b4-uniform-continuation} plus AC1--AC6 items in B5.
   \item \textbf{Operator/symmetry support:} OP7--OP8 with invoked OP1--OP6 prerequisites, together with B2 symmetry compatibility.
-  \item \textbf{Immediate downstream consequence target:} \cref{lem:b4-global-extension}.
+  \item \textbf{Immediate contradiction conclusion target:} transfer-reachable off-line exclusion, recorded as part of \cref{lem:b4-global-extension}.
   \item \textbf{Still-open after the first target:} \cref{lem:b4-no-new-offline-branch}, no-alternative-locus principle, and full-strip exclusion endpoint.
 \end{enumerate}
 This ledger is organizational only.
