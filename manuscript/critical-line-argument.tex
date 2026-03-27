@@ -454,39 +454,70 @@ That neutralizing target is still not the master Stage~6 endpoint \cref{thm:stag
 $\Delta_{\mathrm{nd}}$ is introduced as a strategic audit object for proof work.
 Its adequacy and any vanishing/boundedness property remain open and conditional in the present manuscript version.
 
-\subsection*{Best current candidate reason that \texorpdfstring{$\Delta_{\mathrm{nd}}$}{Delta\_nd} may be controllable (audit hypothesis)}
-The manuscript now records one \emph{single best candidate reason} for attempting control of
+\subsection*{Best current candidate structural property for \texorpdfstring{$\Delta_{\mathrm{nd}}$}{Delta\_nd} control (audit hypothesis)}
+The manuscript now records one \emph{single best candidate structural property} that would make the first control target on
 \[
 \Delta_{\mathrm{nd}}(C;\Theta_{\mathrm{S5}},\delta)
 \]
 under the present architecture.
-Status: \textbf{open strategic reason under audit}, not a proved support theorem.
+Status: \textbf{open proof-planning hypothesis under audit}, not a proved property.
 
-\paragraph{Candidate reason (current best, not sufficient).}
-The current best candidate reason is a \emph{synchronized no-accumulation mechanism}:
-if transfer is restricted to the admissible class $\mathfrak{C}_{\mathrm{tr}}$ with one fixed package $\mathcal{H}_{\mathrm{S6}}^{\min}$, then clause-defect increments are expected to satisfy uniform analytic control along transfer positions, while operator-side symmetry/admissibility transport prevents type loss.
-In that setting, drift cannot accumulate independently of the Stage-5 tuple and the endpoint defect should remain tied to controlled local-anchor data.
+\paragraph{Candidate structural property (current best, not proved).}
+\textbf{Non-increase under synchronized transport extension.}
+Write $C_1\preceq C_2$ when $C_2$ is obtained from $C_1$ by admissible synchronized extension inside $\mathfrak{C}_{\mathrm{tr}}$ under the same package $\mathcal{H}_{\mathrm{S6}}^{\min}$ (same clause tuple $\Theta_{\mathrm{S5}}$, same gauge family type, no predicate switching).
+The candidate property is:
+\[
+C_1\preceq C_2\Longrightarrow
+\Delta_{\mathrm{nd}}(C_2;\Theta_{\mathrm{S5}},\delta)
+\le
+\Delta_{\mathrm{nd}}(C_1;\Theta_{\mathrm{S5}},\delta).
+\]
+Equivalent composition-style wording (for composable synchronized segments $C_2\circ C_1$):
+\[
+\Delta_{\mathrm{nd}}(C_2\circ C_1;\Theta_{\mathrm{S5}},\delta)
+\le
+\Delta_{\mathrm{nd}}(C_1;\Theta_{\mathrm{S5}},\delta).
+\]
+No claim is made that this property is already true, or that it is the final correct structure.
 
-\paragraph{What this reason depends on.}
+\paragraph{What this property would depend on.}
 \begin{enumerate}
   \item \textbf{Analytic dependence:} AC-side continuation/uniformity/no-hidden-branch control on $\mathcal{A}_{\mathrm{strip}}$ (in current notation AC1--AC6), so that clause-defect gauges $\delta_j^{(C)}$ do not develop uncontrolled spikes along $U(C)$.
   \item \textbf{Operator-supporting dependence:} OP-side admissibility/symmetry transport stability (OP7--OP8 with invoked OP1--OP6), so the transported predicates remain the same predicates at endpoints.
   \item \textbf{Synchronized hypothesis dependence:} one package $\mathcal{H}_{\mathrm{S6}}^{\min}$ for local anchors, transfer paths, and contradiction endpoints, with no hypothesis switching.
 \end{enumerate}
 
-\paragraph{Why this is currently the best candidate reason.}
+\paragraph{Why this is currently the best candidate.}
 At this manuscript stage, no alternative reason is comparably aligned with the already fixed objects
 \[
 H,\ \Phi_H,\ \mathcal{A},\ \mathcal{A}_{\mathrm{strip}},\ \mathcal{B},\ \mathcal{R}_{\mathrm{loc}},\ \mathcal{H}_{\mathrm{S6}}^{\min},\ \mathfrak{C}_{\mathrm{tr}}.
 \]
-The synchronized no-accumulation mechanism is therefore prioritized because it directly targets the identified highest-risk step (no-drift transport), fits the current transfer-class formulation, and feeds the next theorem targets without requiring a finalized operator model.
+The non-increase candidate is therefore prioritized because it directly targets the identified highest-risk step (no-drift transport), fits the current transfer-class formulation, and feeds the next theorem targets without requiring a finalized operator model.
 This is a prioritization claim for proof planning under audit, not a sufficiency claim.
+
+\paragraph{How this would support \cref{lem:stage6-first-concrete-no-drift}.}
+The support logic would be:
+\begin{enumerate}
+  \item establish a base anchor condition (defect zero at the local start configuration);
+  \item iterate non-increase along each synchronized extension step in $\mathfrak{C}_{\mathrm{tr}}^{\mathrm{ctr}}$;
+  \item conclude classwise vanishing of $\Delta_{\mathrm{nd}}$ on contradiction-relevant transfer objects, yielding the statement targeted in \cref{lem:b4-first-delta-control} and then in \cref{lem:stage6-first-concrete-no-drift}.
+\end{enumerate}
+This is a plausibility path only, not a proof.
+
+\paragraph{What remains open even if this property were obtained.}
+Even with this structural property, the manuscript would still need:
+\begin{enumerate}
+  \item theorem-level verification that the property holds for the finalized transfer/gauge realization;
+  \item the transport reformulation bridge to endpoint-usable tuple persistence (\cref{lem:stage6-first-concrete-no-drift}/\cref{lem:b4-admissibility-stability-transfer});
+  \item the neutralizing theorem target \cref{thm:stage6-neutralizing-transport-uniformity};
+  \item downstream no-new-off-line-branch, no-alternative-locus, and master Stage~6 exclusion closure.
+\end{enumerate}
 
 \paragraph{Four-way distinction (to prevent burden conflation).}
 \begin{enumerate}
   \item \textbf{Quantity:} $\Delta_{\mathrm{nd}}$ is the provisional analytic defect quantity.
   \item \textbf{First control lemma target:} \cref{lem:stage6-first-concrete-no-drift} aims to prove classwise vanishing on the contradiction-relevant transfer subclass.
-  \item \textbf{Reason for expected controllability:} the synchronized no-accumulation mechanism above (strategic, open).
+  \item \textbf{Candidate structural property making first control believable:} non-increase of $\Delta_{\mathrm{nd}}$ under synchronized transport extension (strategic, open).
   \item \textbf{Later theorem targets fed by that control:} first \cref{thm:stage6-neutralizing-transport-uniformity}, then downstream Stage~6 no-alternative-locus and master exclusion targets.
 \end{enumerate}
 
