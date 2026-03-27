@@ -120,7 +120,18 @@ C_1\preceq C_2\Longrightarrow
 \]
 Intended interpretation for the no-drift route (not a proof claim): this monotonicity would supply the structural bridge from local-anchor defect initialization to classwise defect control on $\mathfrak{C}_{\mathrm{tr}}^{\mathrm{ctr}}$, which is then reformulated as endpoint-usable no-drift transport.
 \end{lemma}
-\noindent\emph{Feeds into:} \cref{lem:b4-first-delta-control}, then \cref{lem:stage6-first-concrete-no-drift}/\cref{lem:b4-admissibility-stability-transfer}, then \cref{thm:stage6-neutralizing-transport-uniformity}.
+\noindent\emph{Feeds into:} companion initialization target \cref{lem:b4-delta-initialization-seed}, then \cref{lem:b4-first-delta-control}, then \cref{lem:stage6-first-concrete-no-drift}/\cref{lem:b4-admissibility-stability-transfer}, then \cref{thm:stage6-neutralizing-transport-uniformity}.
+
+\begin{lemma}[Seed-anchor initialization target for \texorpdfstring{$\Delta_{\mathrm{nd}}$}{Delta\_nd} \textnormal{(OPEN BRIDGE; base-case companion to \cref{lem:b4-delta-structural-nonincrease})}]
+\label{lem:b4-delta-initialization-seed}
+\placeholder{Initialization theorem target under construction; proof not provided in this manuscript version. Under one synchronized package $\mathcal{H}_{\mathrm{S6}}^{\min}$, for each local anchor $a\in\mathcal{R}_{\mathrm{loc}}$ there is a declared seed transfer object $C_a^{\mathrm{seed}}\in\mathfrak{C}_{\mathrm{tr}}^{\mathrm{ctr}}$ with seed position set $U(C_a^{\mathrm{seed}})=\{a\}$ and clausewise anchor vanishing $\delta_j^{(C_a^{\mathrm{seed}})}(a)=0$ for all $j=1,\dots,m$. Equivalently,
+\[
+\Delta_{\mathrm{nd}}(C_a^{\mathrm{seed}};\Theta_{\mathrm{S5}},\delta)=0
+\quad\text{for each }a\in\mathcal{R}_{\mathrm{loc}}.
+\]
+Companion use with \cref{lem:b4-delta-structural-nonincrease}: if each contradiction-relevant transfer object in $\mathfrak{C}_{\mathrm{tr}}^{\mathrm{ctr}}$ is a synchronized extension of some seed $C_a^{\mathrm{seed}}$, then classwise vanishing of $\Delta_{\mathrm{nd}}$ follows in the exact form targeted by \cref{lem:b4-first-delta-control}. This lemma is an initialization target only, not a proof that the canonical seed class or extension coverage is finalized.}
+\end{lemma}
+\noindent\emph{Feeds into:} together with \cref{lem:b4-delta-structural-nonincrease}, the first control target \cref{lem:b4-first-delta-control}; then \cref{lem:stage6-first-concrete-no-drift}/\cref{lem:b4-admissibility-stability-transfer}.
 
 \begin{lemma}[First control lemma target for the provisional defect functional \texorpdfstring{$\Delta_{\mathrm{nd}}$}{Delta\_nd} \textnormal{(OPEN BRIDGE; primary analytic entry point)}]
 \label{lem:b4-first-delta-control}
@@ -134,7 +145,7 @@ one has
 \forall C\in\mathfrak{C}_{\mathrm{tr}}^{\mathrm{ctr}},\qquad
 \Delta_{\mathrm{nd}}(C;\Theta_{\mathrm{S5}},\delta)=0.
 \]
-Interpretation target: exact classwise no-drift on the contradiction-relevant transfer subclass. Current primary structural support target is \cref{lem:b4-delta-structural-nonincrease} plus a base-anchor zero-defect initialization, both open. Depends on: B1 admissibility well-posedness, OP7--OP8 (with invoked OP1--OP6 where used), and AC1--AC6 continuation/interchange/uniformity controls. Why it matters: this is the first theorem-style control target on a concrete analytic quantity before transport conclusions are rephrased as endpoint hypothesis persistence.}
+Interpretation target: exact classwise no-drift on the contradiction-relevant transfer subclass. Current immediate support targets are the structural non-increase lemma \cref{lem:b4-delta-structural-nonincrease} and the seed-anchor initialization lemma \cref{lem:b4-delta-initialization-seed}, together with synchronized seed-extension coverage on $\mathfrak{C}_{\mathrm{tr}}^{\mathrm{ctr}}$; all are open. Depends on: B1 admissibility well-posedness, OP7--OP8 (with invoked OP1--OP6 where used), and AC1--AC6 continuation/interchange/uniformity controls. Why it matters: this is the first theorem-style control target on a concrete analytic quantity before transport conclusions are rephrased as endpoint hypothesis persistence.}
 \end{lemma}
 \noindent\emph{Feeds into:} \cref{lem:stage6-first-concrete-no-drift} and its ledger-aligned form \cref{lem:b4-admissibility-stability-transfer}, then \cref{lem:b4-neutralizing-transport-uniformity}.
 

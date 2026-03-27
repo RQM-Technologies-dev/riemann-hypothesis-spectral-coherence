@@ -507,6 +507,44 @@ The support logic would be:
 \end{enumerate}
 This is a plausibility path only, not a proof.
 
+\subsection*{Best current initialization statement for $\Delta_{\mathrm{nd}}$ (base-anchor candidate; open)}
+To make the support logic above executable as a lemma program, the manuscript now records one single preferred base-case statement.
+Status: open initialization target under audit.
+It is not proved.
+It is not claimed final.
+
+\paragraph{Candidate initialization statement (current best; not proved).}
+For each local anchor $a\in\mathcal{R}_{\mathrm{loc}}$, there is a declared canonical seed transfer object
+\[
+C_{a}^{\mathrm{seed}}\in\mathfrak{C}_{\mathrm{tr}}^{\mathrm{ctr}},
+\]
+with seed position set $U(C_{a}^{\mathrm{seed}})=\{a\}$ and no clause loss at the anchor,
+\[
+\forall j\in\{1,\dots,m\},\qquad
+\delta_j^{(C_{a}^{\mathrm{seed}})}(a)=0.
+\]
+Equivalently,
+\[
+\Delta_{\mathrm{nd}}(C_{a}^{\mathrm{seed}};\Theta_{\mathrm{S5}},\delta)=0
+\quad\text{for every local anchor }a\in\mathcal{R}_{\mathrm{loc}}.
+\]
+Interpretation: exact preservation of the Stage-5 tuple on canonical seed transfer objects at local anchors.
+
+\paragraph{How this combines with the structural non-increase lemma.}
+If \cref{lem:b4-delta-structural-nonincrease} holds and each contradiction-relevant
+$C\in\mathfrak{C}_{\mathrm{tr}}^{\mathrm{ctr}}$ is obtainable by synchronized extension from some seed $C_{a}^{\mathrm{seed}}$,
+then
+\[
+\Delta_{\mathrm{nd}}(C;\Theta_{\mathrm{S5}},\delta)
+\le
+\Delta_{\mathrm{nd}}(C_{a}^{\mathrm{seed}};\Theta_{\mathrm{S5}},\delta)=0,
+\]
+hence $\Delta_{\mathrm{nd}}(C;\Theta_{\mathrm{S5}},\delta)=0$.
+This is exactly the target shape of \cref{lem:b4-first-delta-control}.
+
+\paragraph{Open items even with this initialization available.}
+Even if the initialization statement were proved, the manuscript would still require: (i) proof of the structural non-increase property itself, (ii) proof of the seed-extension coverage statement for $\mathfrak{C}_{\mathrm{tr}}^{\mathrm{ctr}}$, (iii) promotion from defect control to transport-form tuple persistence in \cref{lem:stage6-first-concrete-no-drift}/\cref{lem:b4-admissibility-stability-transfer}, and (iv) downstream neutralizing/no-alternative-locus/master-exclusion closures.
+
 \paragraph{What remains open even if this property were obtained.}
 Even with this structural property, the manuscript would still need:
 \begin{enumerate}

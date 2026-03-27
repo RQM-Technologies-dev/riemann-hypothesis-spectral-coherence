@@ -128,6 +128,8 @@ For dependency clarity, the intended theorem flow is:
 \Longrightarrow
 \underbrace{\text{primary structural-property lemma target \cref{lem:b4-delta-structural-nonincrease}}}_{\text{non-increase of }\Delta_{\mathrm{nd}}\text{ under synchronized extension (open)}}
 \Longrightarrow
+\underbrace{\text{initialization target \cref{lem:b4-delta-initialization-seed}}}_{\text{seed-anchor zero-defect base case on }\mathcal{R}_{\mathrm{loc}}\text{ (open)}}
+\Longrightarrow
 \underbrace{\text{first control lemma target }\cref{lem:b4-first-delta-control}\text{ for }\Delta_{\mathrm{nd}}}_{\text{precise classwise control statement on }\mathfrak{C}_{\mathrm{tr}}^{\mathrm{ctr}}\text{ (open)}}
 \Longrightarrow
 \underbrace{\text{no-drift lemma target \cref{lem:stage6-first-concrete-no-drift}/\cref{lem:b4-admissibility-stability-transfer}}}_{\text{transport-form persistence of the Stage-5 tuple (open)}}
@@ -152,7 +154,7 @@ C_1\preceq C_2\Longrightarrow
 \le
 \Delta_{\mathrm{nd}}(C_1;\Theta_{\mathrm{S5}},\delta).
 \]
-This target is prioritized because it directly supports the first control target (classwise vanishing on $\mathfrak{C}_{\mathrm{tr}}^{\mathrm{ctr}}$) once a base-anchor zero-defect step is supplied, and it matches the current OP/AC interface without selecting a finalized operator realization.
+This target is prioritized because it directly supports the first control target (classwise vanishing on $\mathfrak{C}_{\mathrm{tr}}^{\mathrm{ctr}}$) once paired with the seed-anchor initialization target \cref{lem:b4-delta-initialization-seed} and seed-extension coverage, and it matches the current OP/AC interface without selecting a finalized operator realization.
 It is not proved, not claimed final, and not claimed sufficient by itself.
 
 \paragraph{Dependency orientation for the current first Stage~6 proving attempt.}
@@ -171,6 +173,8 @@ It does not assert theorem-level dominance beyond the current route under audit.
 The initial proving attempt is explicitly scoped to the following stack in \texttt{lemmas.tex}:
 \[
 \cref{lem:b4-delta-structural-nonincrease}
+\Rightarrow
+\cref{lem:b4-delta-initialization-seed}
 \Rightarrow
 \cref{lem:b4-first-delta-control}
 \Rightarrow
