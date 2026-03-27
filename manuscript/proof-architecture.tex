@@ -130,7 +130,7 @@ For dependency clarity, the intended theorem flow is:
 \Longrightarrow
 \underbrace{\text{first concrete analytic quantity }\Delta_{\mathrm{nd}}(C;\Theta_{\mathrm{S5}},\delta):=\sup_{u\in U(C)}d_{\Theta}^{(C)}(u)}_{\text{provisional no-drift defect functional (open)}}
 \Longrightarrow
-\underbrace{\text{best current candidate reason for controllability: synchronized no-accumulation on }\mathfrak{C}_{\mathrm{tr}}}_{\text{analytic-dominant, operator-supported strategic rationale (open)}}
+\underbrace{\text{best current candidate structural property: non-increase of }\Delta_{\mathrm{nd}}\text{ under synchronized transport}}_{\text{open proof-planning hypothesis making first control believable}}
 \Longrightarrow
 \underbrace{\text{first control lemma target }\cref{lem:b4-first-delta-control}\text{ for }\Delta_{\mathrm{nd}}}_{\text{precise classwise control statement on }\mathfrak{C}_{\mathrm{tr}}^{\mathrm{ctr}}\text{ (open)}}
 \Longrightarrow
@@ -142,11 +142,17 @@ For dependency clarity, the intended theorem flow is:
 \]
 The middle implication is an independent theorem target, not an automatic corollary of Stage~5.
 
-\paragraph{Best current candidate reason for \texorpdfstring{$\Delta_{\mathrm{nd}}$}{Delta\_nd} controllability (status: strategic, open).}
-Inside the Stage~6 chain above, the manuscript now records one prioritized rationale:
-under one synchronized package $\mathcal{H}_{\mathrm{S6}}^{\min}$ and one admissible transfer class $\mathfrak{C}_{\mathrm{tr}}$, analytic continuation/uniformity control is expected to prevent accumulation of clause-defect increments along $U(C)$, while OP-side admissibility/symmetry transport keeps endpoint predicates identical to local predicates.
-This is the best current candidate reason because it is the only reason currently aligned with the existing Stage-6 objects and theorem targets (\cref{lem:b4-first-delta-control,lem:stage6-first-concrete-no-drift,thm:stage6-neutralizing-transport-uniformity}) without requiring a finalized operator realization.
-It is not a proof and not a sufficiency statement.
+\paragraph{Best current candidate structural property for \texorpdfstring{$\Delta_{\mathrm{nd}}$}{Delta\_nd} control (status: proof-planning hypothesis, open).}
+Inside the Stage~6 chain above, the manuscript now prioritizes one structural property candidate:
+non-increase of $\Delta_{\mathrm{nd}}$ under synchronized transport extension under one package $\mathcal{H}_{\mathrm{S6}}^{\min}$,
+\[
+C_1\preceq C_2\Longrightarrow
+\Delta_{\mathrm{nd}}(C_2;\Theta_{\mathrm{S5}},\delta)
+\le
+\Delta_{\mathrm{nd}}(C_1;\Theta_{\mathrm{S5}},\delta).
+\]
+This is the best current candidate because it directly supports the first control target (classwise vanishing on $\mathfrak{C}_{\mathrm{tr}}^{\mathrm{ctr}}$) once a base-anchor zero-defect step is supplied, and it matches the current OP/AC interface without selecting a finalized operator realization.
+It is not a proof, not a sufficiency statement, and remains under audit.
 
 \paragraph{Dependency orientation for the current first Stage~6 proving attempt.}
 To sharpen technical focus, the manuscript classifies the current neutralizing step as
