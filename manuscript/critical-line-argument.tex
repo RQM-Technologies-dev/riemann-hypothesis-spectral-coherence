@@ -360,6 +360,35 @@ Open theorem target (candidate repair only).
 No proof is supplied here.
 \end{drafttheorem}
 
+\subsection*{First concrete lemma target toward the neutralizing theorem (single next move; open)}
+To move from architecture-level planning to an executable first proof step, the manuscript fixes one concrete lemma target as the immediate predecessor to \cref{thm:stage6-neutralizing-transport-uniformity}.
+This is a statement target only.
+No proof is claimed.
+
+\begin{drafttheorem}[First concrete Stage~6 lemma target: uniform no-drift transport of the Stage-5 tuple]
+\label{lem:stage6-first-concrete-no-drift}
+\placeholder{Draft lemma target under construction; proof not yet provided.}
+Let
+\[
+\mathcal{A}_{\mathrm{strip}}:=\{s\in\mathcal{A}:0<\RePart(s)<1\},\qquad
+\mathcal{R}_{\mathrm{loc}}\subseteq\mathcal{A}_{\mathrm{strip}},
+\]
+and work under one synchronized package $\mathcal{H}_{\mathrm{S6}}^{\min}$ with transfer class $\mathfrak{C}_{\mathrm{tr}}$.
+Write $\Theta_{\mathrm{S5}}$ for the full Stage-5 hypothesis tuple used in local uniqueness.
+The first concrete lemma target is:
+\begin{quote}
+For every transfer object $C\in\mathfrak{C}_{\mathrm{tr}}$ connecting a local anchor in $\mathcal{R}_{\mathrm{loc}}$ to an endpoint in $\mathcal{A}_{\mathrm{strip}}$, the tuple $\Theta_{\mathrm{S5}}$ persists at every transfer position and at the endpoint with one uniform control profile valid across the transfer class used by the contradiction step.
+\end{quote}
+Equivalently, this lemma target excludes hypothesis drift (admissibility, regularity, or symmetry loss) along the transfer class relevant to the first contradiction attempt.
+
+\paragraph{Feeds into relation.}
+This lemma is strictly downstream of the first contradiction target \cref{thm:stage6-first-subtarget-admissibility} and its highest-risk no-drift step, and strictly upstream of the neutralizing theorem target \cref{thm:stage6-neutralizing-transport-uniformity}.
+It does not replace that neutralizing theorem; it is the first concrete proving move toward it.
+
+\paragraph{Status label.}
+Open lemma target (not proved).
+\end{drafttheorem}
+
 \subsection*{Technical character classification of the current neutralizing result (audit judgment)}
 This subsection classifies \cref{thm:stage6-neutralizing-transport-uniformity} for proof-planning clarity.
 The classification is an audit judgment about current dependency structure.

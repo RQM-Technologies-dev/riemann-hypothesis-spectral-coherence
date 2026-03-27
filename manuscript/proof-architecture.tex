@@ -106,7 +106,7 @@ Stage~6 is now centered on one explicit endpoint: the master exclusion theorem t
 All Stage~6 sub-burdens are organized as obligations that discharge this single theorem target.
 Stage~6 now names a single first subtheorem proving target inside this preferred route:
 \begin{quote}
-\textbf{First Stage~6 draft theorem target (open; contradiction form):} \cref{thm:stage6-first-subtarget-admissibility}, which assumes an admissible transfer-reachable off-line balanced candidate $s_\ast\in\mathcal{B}\cap\mathcal{A}_{\mathrm{strip}}$ with $\RePart(s_\ast)\neq\tfrac12$ under $\mathcal{H}_{\mathrm{S6}}^{\min}$ and targets contradiction via admissibility-stability transport of the Stage-5 hypothesis tuple along continuation classes.
+\textbf{First Stage~6 draft theorem target (open; contradiction form):} \cref{thm:stage6-first-subtarget-admissibility}, which assumes an admissible transfer-reachable off-line balanced candidate $s_\ast\in\mathcal{B}\cap\mathcal{A}_{\mathrm{strip}}$ with $\RePart(s_\ast)\neq\tfrac12$ under $\mathcal{H}_{\mathrm{S6}}^{\min}$ and targets contradiction via no-drift transport of the Stage-5 hypothesis tuple along continuation classes.
 \end{quote}
 This target is selected as the first entry point because it is the earliest dependency required before global transfer and no-alternative-locus statements are theorem-usable.
 The designation is strategic and audit-oriented; it is not a proof claim.
@@ -126,15 +126,15 @@ For dependency clarity, the intended theorem flow is:
 \[
 \underbrace{\text{Stage-5 local uniqueness on }\mathcal{R}_{\mathrm{loc}}}_{\text{local Target B control}}
 \Longrightarrow
-\underbrace{\text{contradiction-ready transfer exclusion target in \cref{thm:stage6-first-subtarget-admissibility}}}_{\text{current first proving target (open)}}
+\underbrace{\text{contradiction-ready transfer exclusion target in \cref{thm:stage6-first-subtarget-admissibility}}}_{\text{current first contradiction target (open)}}
 \Longrightarrow
-\underbrace{\text{no-drift transport step in the contradiction proof}}_{\text{current highest-risk step (open)}}
+\underbrace{\text{highest-risk no-drift transport step}}_{\text{open typing risk in the contradiction proof}}
 \Longrightarrow
-\underbrace{\text{candidate neutralizing result \cref{thm:stage6-neutralizing-transport-uniformity}}}_{\text{best current repair target (open)}}
+\underbrace{\text{first concrete lemma target \cref{lem:b4-admissibility-stability-transfer}}}_{\text{uniform no-drift Stage-5 tuple transport (open)}}
 \Longrightarrow
-\underbrace{\text{no-alternative-locus closure for }\mathcal{B}}_{\text{preferred global mechanism target}}
+\underbrace{\text{neutralizing theorem target \cref{thm:stage6-neutralizing-transport-uniformity}}}_{\text{open contradiction enabler}}
 \Longrightarrow
-\underbrace{\text{full-strip off-line exclusion on }\mathcal{A}_{\mathrm{strip}}}_{\text{global conclusion}}.
+\underbrace{\text{resumed preferred Stage~6 route: no-new-off-line-branch}\ \Rightarrow\ \text{no-alternative-locus}\ \Rightarrow\ \text{master exclusion}}_{\text{still-open downstream obligations}}.
 \]
 The middle implication is an independent theorem target, not an automatic corollary of Stage~5.
 
@@ -165,14 +165,13 @@ This separation is enforced for audit clarity and theorem-status discipline.
 
 
 \paragraph{Single highest-risk dependency inside the first contradiction setup.}
-Within the first contradiction-style Stage~6 target, the present highest-risk dependency is the transport bridge
-$\cref{lem:b4-admissibility-stability-transfer}$.
+Within the first contradiction-style Stage~6 target, the present highest-risk dependency is the no-drift transport step, and the first concrete lemma target addressing that step is $\cref{lem:b4-admissibility-stability-transfer}$.
 This bridge is where the argument must show that hypotheses proved/assumed locally on $\mathcal{R}_{\mathrm{loc}}$ remain valid at transfer-reachable endpoints in $\mathcal{A}_{\mathrm{strip}}$ under the same package $\mathcal{H}_{\mathrm{S6}}^{\min}$.
 If this bridge fails or remains underjustified, the contradiction step is not yet well-typed: Stage-5 uniqueness is invoked at the endpoint without a theorem-level no-drift transfer justification.
 Accordingly, this bridge is the first proof-critical audit checkpoint in the Stage~6 dependency chain.
-The manuscript now names one best candidate neutralizing result for this checkpoint:
+The manuscript now names one best candidate neutralizing theorem target for this checkpoint:
 \cref{thm:stage6-neutralizing-transport-uniformity} in \texttt{critical-line-argument.tex}.
-That target is explicitly open.
+That target is explicitly open and is downstream of the first concrete lemma $\cref{lem:b4-admissibility-stability-transfer}$.
 It is intended to repair only this no-drift contradiction-typing failure point, after which the route resumes with no-new-off-line-branch and no-alternative-locus burdens toward the master Stage~6 theorem.
 
 \textbf{Intended output.}
