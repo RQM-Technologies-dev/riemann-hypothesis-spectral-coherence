@@ -63,7 +63,7 @@ This is recorded as an open theorem target for audit.
 It does not establish that those assumptions are jointly sufficient for a proof.
 It does not assert that any package item is already proved.
 Any later sufficiency claim would require a separate theorem-level argument that discharges every dependency without hypothesis drift.
-The manuscript now also names a first Stage~6 subtheorem target (admissibility-stability transfer) as the preferred entry point for proof development.
+The manuscript now also names a first Stage~6 subtheorem target and, within it, one single best first technical move: the concrete lemma target of uniform no-drift transport of the Stage-5 hypothesis tuple along $\mathfrak{C}_{\mathrm{tr}}$.
 This target is now stated as the draft theorem \cref{thm:stage6-first-subtarget-admissibility} in explicit contradiction-ready form, together with a separate proof-skeleton outline.
 Both the theorem and the skeleton are explicitly open and conditional.
 The contradiction-ready formatting is intended to make a line-by-line proof attempt executable for audit; it is not evidence of completion.
@@ -91,7 +91,7 @@ If this step is underjustified, the contradiction can call local uniqueness at a
 \paragraph{Neutralization criterion.}
 To neutralize this risk, the manuscript needs a theorem-level transport invariance result with explicit dependency control:
 for each relevant transfer object, admissibility, regularity, symmetry-compatibility, and well-posedness clauses used by Stage~5 are preserved without hidden hypothesis switching.
-In current notation this is the B4a transport bridge, with explicit OP7--OP8 and AC1--AC6 support under one synchronized package.
+In current notation this is the B4a first-concrete bridge (\cref{lem:b4-admissibility-stability-transfer}), with explicit OP7--OP8 and AC1--AC6 support under one synchronized package.
 Until this bridge is proved, the first Stage~6 contradiction attempt remains open.
 
 \paragraph{Current best candidate repair target (explicitly open).}
@@ -101,6 +101,7 @@ This target is a theorem-level contradiction-enablement bridge under $\mathcal{H
 it aims to show that every transfer-reachable endpoint inherits the exact Stage-5 hypothesis tuple with no predicate drift along $\mathfrak{C}_{\mathrm{tr}}$.
 Status remains open.
 This is a repair target, not a proved fix.
+Likewise, the first concrete lemma is a current proving-move designation, not an established result.
 
 \paragraph{Technical-character classification (audit judgment; not a theorem claim).}
 Current manuscript reading classifies this neutralizing target as \emph{genuinely mixed}, with \emph{analytic dominant burden} and \emph{operator-theoretic supporting burden}.
