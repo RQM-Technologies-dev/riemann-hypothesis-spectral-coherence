@@ -90,13 +90,14 @@ The first proving target inside the preferred Stage~6 route is the admissibility
 Reason: without this lemma, local Target~B control on $\mathcal{R}_{\mathrm{loc}}$ is not synchronized with strip-wide statements on $\mathcal{A}_{\mathrm{strip}}$, so subsequent transfer/no-alternative-locus claims are not yet theorem-usable.
 This priority label is a strategy designation only and does not upgrade proof status.
 
-\paragraph{Contradiction-ready grouping for the first Stage~6 subtheorem target.}
-The first subtheorem \cref{thm:stage6-first-subtarget-admissibility} in \texttt{critical-line-argument.tex} is now stated in contradiction form.
-Accordingly, the supporting B4 lemmas are grouped by burden type:
+\subsubsection*{B4a. Support stack for the first contradiction-style Stage~6 subtheorem}
+\paragraph{Contradiction-ready grouping for \cref{thm:stage6-first-subtarget-admissibility}.}
+The first subtheorem in \texttt{critical-line-argument.tex} is now stated in contradiction-ready form.
+Accordingly, the immediate B4 support lemmas are grouped by burden type:
 \begin{enumerate}
-  \item \textbf{Contradiction assumption package:} admissible off-line balanced $s_\ast\in\mathcal{A}_{\mathrm{strip}}$ with $\RePart(s_\ast)\neq\tfrac12$, interpreted under one synchronized package $\mathcal{H}_{\mathrm{S6}}^{\min}$.
-  \item \textbf{Intermediate support burden:} transport of the exact Stage-5 hypothesis tuple along continuation classes from $\mathcal{R}_{\mathrm{loc}}$ to transfer-reachable strip points.
-  \item \textbf{Contradiction conclusion target:} no transfer-reachable off-line balanced point is compatible with the same synchronized package.
+  \item \textbf{Contradiction-assumption bookkeeping burden:} keep the off-line balanced premise theorem-typed on $\mathcal{A}_{\mathrm{strip}}$ under one synchronized package $\mathcal{H}_{\mathrm{S6}}^{\min}$.
+  \item \textbf{Intermediate transport-support burden:} prove Stage-5 hypothesis-tuple persistence along continuation classes from $\mathcal{R}_{\mathrm{loc}}$ to transfer-reachable strip points.
+  \item \textbf{First contradiction conclusion burden:} derive transfer-reachable off-line exclusion under the same synchronized package.
 \end{enumerate}
 This grouping is an audit map only; it does not claim any lemma below is proved.
 
@@ -118,9 +119,9 @@ This grouping is an audit map only; it does not claim any lemma below is proved.
 \end{lemma}
 \noindent\emph{Feeds into:} no-alternative-locus principle and full-strip no-off-line-balance theorem target.
 
-\begin{lemma}[Global extension of local uniqueness \textnormal{(OPEN BRIDGE; placeholder)}]
+\begin{lemma}[Transfer-reachable contradiction conclusion lemma target \textnormal{(OPEN BRIDGE; placeholder)}]
 \label{lem:b4-global-extension}
-\placeholder{Establishes: a theorem-level local-to-global transfer principle under a synchronized package $\mathcal{H}_{\mathrm{tr}}$: Stage-5 uniqueness on $\mathcal{R}_{\mathrm{loc}}$ extends to all of $\mathcal{A}_{\mathrm{strip}}$. In contradiction form, any transfer-reachable off-line balanced candidate contradicts the transported Stage-5 uniqueness clause under one synchronized package. Formal target shape:
+\placeholder{Establishes: the immediate contradiction conclusion targeted by \cref{thm:stage6-first-subtarget-admissibility}: under synchronized transfer hypotheses, any transfer-reachable off-line balanced candidate contradicts the transported Stage-5 uniqueness clause under one synchronized package. In extended form, this feeds a theorem-level local-to-global transfer principle under $\mathcal{H}_{\mathrm{tr}}$. Formal target shape:
 \[
 \Big(\forall s\in\mathcal{B}\cap\mathcal{R}_{\mathrm{loc}},\ \RePart(s)=\tfrac12\Big)\Rightarrow
 \Big(\forall s\in\mathcal{B}\cap\mathcal{A}_{\mathrm{strip}},\ \RePart(s)=\tfrac12\Big).

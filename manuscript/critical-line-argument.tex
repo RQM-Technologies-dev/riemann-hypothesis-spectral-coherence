@@ -204,24 +204,30 @@ Assume the synchronized minimum package $\mathcal{H}_{\mathrm{S6}}^{\min}$, and 
 \mathcal{B}:=\{s\in\mathcal{A}_{\mathrm{strip}}:\Phi_H(s)=0\},\qquad
 \mathcal{R}_{\mathrm{loc}}\subseteq\mathcal{A}_{\mathrm{strip}}.
 \]
-Let $\mathfrak{C}_{\mathrm{tr}}$ denote the class of continuation objects (paths/chains/families, according to the eventual model) used to transport Stage-5 local control from $\mathcal{R}_{\mathrm{loc}}$ into $\mathcal{A}_{\mathrm{strip}}$.
-The contradiction-ready draft target is:
+Let $\mathfrak{C}_{\mathrm{tr}}$ denote the transfer class (paths/chains/families, according to the eventual model) used to transport Stage-5 local hypotheses from $\mathcal{R}_{\mathrm{loc}}$ into $\mathcal{A}_{\mathrm{strip}}$.
+
+\paragraph{Contradiction-ready theorem target (statement form only).}
+The first Stage~6 proving attempt is to establish the following implication under one fixed hypothesis package, with no hypothesis switching.
 \begin{enumerate}
-  \item \textbf{Ambient class and synchronized assumptions.}
-  The theorem is read only on $\mathcal{A}_{\mathrm{strip}}$ and only under the same package $\mathcal{H}_{\mathrm{S6}}^{\min}$ used by the master target, with no hypothesis switching between local, transfer, and contradiction steps.
-  \item \textbf{Contradiction assumption (off-line balanced candidate).}
-  Assume there exists
+  \item \textbf{Ambient regime and synchronized package.}
+  Work only in $\mathcal{A}_{\mathrm{strip}}$ under the single package $\mathcal{H}_{\mathrm{S6}}^{\min}$, using the same admissibility and balance predicates in local, transfer, and contradiction steps.
+
+  \item \textbf{Contradiction assumption package.}
+  Assume there exists a transfer-reachable endpoint $s_\ast\in\mathcal{A}_{\mathrm{strip}}$ such that
   \[
-  s_\ast\in\mathcal{B}\cap\mathcal{A}_{\mathrm{strip}},\qquad \RePart(s_\ast)\neq\tfrac12,
+  s_\ast\in\mathcal{B},\qquad \RePart(s_\ast)\neq\tfrac12,
   \]
-  such that $s_\ast$ is transfer-reachable from $\mathcal{R}_{\mathrm{loc}}$ through some $C_\ast\in\mathfrak{C}_{\mathrm{tr}}$.
-  \item \textbf{Balance and transport assumptions used by the contradiction setup.}
-  Assume $\Phi_H(s_\ast)=0$ and assume the Stage-5 local hypothesis tuple is transported along $C_\ast$ without loss (admissibility, well-posedness, symmetry compatibility, and the regularity clauses of $\mathcal{H}_{\mathrm{S6}}^{\min}$ that local uniqueness requires).
-  \item \textbf{Intermediate support burden (open bridge to be proved).}
-  Prove that the previous transport assumption is theorem-usable: every transfer path $C\in\mathfrak{C}_{\mathrm{tr}}$ from a local anchor to a transfer-relevant strip point preserves exactly the Stage-5 hypothesis tuple, with no drift between local and endpoint predicates.
-  \item \textbf{Target contradiction conclusion.}
-  Under the same $\mathcal{H}_{\mathrm{S6}}^{\min}$, the assumptions in items (2)--(4) force incompatibility with Stage-5 local uniqueness once transported to $s_\ast$.
-  Therefore no such transfer-reachable off-line balanced point can exist.
+  and there exists $C_\ast\in\mathfrak{C}_{\mathrm{tr}}$ joining a local anchor point in $\mathcal{R}_{\mathrm{loc}}$ to $s_\ast$.
+
+  \item \textbf{Balance and transport assumptions attached to the contradiction premise.}
+  Assume $\Phi_H(s_\ast)=0$ and assume that along $C_\ast$ the exact Stage-5 local hypothesis tuple used for local uniqueness is transported without loss (admissibility clauses, well-posedness clauses, symmetry-compatibility clauses, and regularity clauses required by that local uniqueness statement).
+
+  \item \textbf{Intermediate support burden (explicit open bridge).}
+  Prove, as a separate lemma-level bridge, that the transport assertion in item~(3) is theorem-usable for every transfer-reachable endpoint: continuation along each relevant $C\in\mathfrak{C}_{\mathrm{tr}}$ preserves the same Stage-5 hypothesis tuple with no drift between local and endpoint predicates.
+
+  \item \textbf{Target contradiction conclusion for this first subtheorem.}
+  Under items~(1)--(4), derive incompatibility with the transported Stage-5 local uniqueness clause at $s_\ast$.
+  Equivalently, conclude that no transfer-reachable off-line balanced point exists under $\mathcal{H}_{\mathrm{S6}}^{\min}$.
 \end{enumerate}
 Equivalent exclusion form for this first subtarget:
 \[
@@ -234,7 +240,7 @@ where
 This is the first executable exclusion target only for the transfer-reachable class $\mathcal{B}_{\mathrm{tr}}$.
 It is not yet the full Stage~6 endpoint on all of $\mathcal{B}$.
 \paragraph{Status and scope boundary.}
-The theorem above is a sharpened contradiction target under audit.
+The theorem above is a sharpened contradiction-ready target under audit.
 It is not a proved theorem.
 It does not assume a finalized operator realization beyond the declared OP/AC interface inside $\mathcal{H}_{\mathrm{S6}}^{\min}$.
 \paragraph{Relation to the master Stage~6 target.}
@@ -250,18 +256,22 @@ is not theorem-usable, because the local hypotheses may fail to persist away fro
 
 \paragraph{Proof skeleton for \cref{thm:stage6-first-subtarget-admissibility} (outline only; open).}
 This is a schematic work plan, not a proof.
-The contradiction-form skeleton is:
+To keep contradiction bookkeeping explicit, the outline is split into premise/support/conclusion blocks:
 \begin{enumerate}
-  \item \textbf{Fix contradiction data.}
-  Assume $s_\ast\in\mathcal{B}_{\mathrm{tr}}$ with $\RePart(s_\ast)\neq\tfrac12$ under $\mathcal{H}_{\mathrm{S6}}^{\min}$.
-  \item \textbf{Transport the local hypothesis tuple.}
-  Use admissibility-stability along $C_\ast\in\mathfrak{C}_{\mathrm{tr}}$ to carry the exact Stage-5 assumptions from a local anchor to $s_\ast$.
-  \item \textbf{Invoke local uniqueness at transported endpoint.}
-  Apply the transported Stage-5 predicate set to obtain the local-uniqueness consequence at $s_\ast$.
-  \item \textbf{Derive explicit incompatibility.}
-  Contrast the transported uniqueness consequence with $\RePart(s_\ast)\neq\tfrac12$ to obtain contradiction.
-  \item \textbf{Conclude transfer-reachable off-line exclusion.}
-  Deduce the exclusion statement for $\mathcal{B}_{\mathrm{tr}}$ and record remaining Stage~6 burdens.
+  \item \textbf{Premise block (contradiction assumption).}
+  Fix $s_\ast\in\mathcal{B}_{\mathrm{tr}}\cap\mathcal{A}_{\mathrm{strip}}$ with $\RePart(s_\ast)\neq\tfrac12$ under $\mathcal{H}_{\mathrm{S6}}^{\min}$, together with a transfer object $C_\ast\in\mathfrak{C}_{\mathrm{tr}}$ from a local anchor to $s_\ast$.
+  \item \textbf{Support block (open transport bridge).}
+  Invoke the admissibility-stability transfer bridge to transport the exact Stage-5 local hypothesis tuple along $C_\ast$ to the endpoint $s_\ast$ with no hypothesis drift.
+  \item \textbf{Conclusion block (local uniqueness at endpoint).}
+  Apply the transported Stage-5 uniqueness clause at $s_\ast$.
+  \item \textbf{Contradiction extraction.}
+  Compare the endpoint uniqueness consequence with $\RePart(s_\ast)\neq\tfrac12$ to produce explicit incompatibility.
+  \item \textbf{First-subtarget exclusion conclusion.}
+  Deduce
+  \[
+  \mathcal{B}_{\mathrm{tr}}\cap\{s\in\mathcal{A}_{\mathrm{strip}}:\RePart(s)\neq\tfrac12\}=\varnothing,
+  \]
+  and record remaining Stage~6 burdens (no-new-off-line-branch and no-alternative-locus) as still open.
 \end{enumerate}
 The transport and symmetry steps above are where AC1--AC6 and OP7--OP8 support is expected to enter.
 The no-new-off-line-branch and no-alternative-locus burdens remain subsequent open targets and are not discharged here.
