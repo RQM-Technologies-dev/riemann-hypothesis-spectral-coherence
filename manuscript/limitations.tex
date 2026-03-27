@@ -5,24 +5,31 @@ The manuscript is a proposed proof framework.
 Only theorem-level statements with explicit hypotheses count as proved content.
 Heuristic and computational evidence remain supporting context.
 
+\subsection*{Canonical mathematical core (and its status)}
+The current main text commits to one canonical pair of open targets:
+\begin{enumerate}
+  \item the canonical balance predicate $\Phi_H(s)=0$ on the declared admissible strip class;
+  \item the canonical exclusion statement
+  \(
+  \mathcal{B}\subseteq\{s\in\mathcal{A}_{\mathrm{strip}}:\RePart(s)=\tfrac12\}
+  \).
+\end{enumerate}
+Neither target is proved in the current manuscript version.
+
 \subsection*{Main open theorem burdens}
-The simplified proof spine leaves two central open targets:
+The simplified proof spine leaves two central open theorem targets:
 \begin{enumerate}
   \item \textbf{Target A (zero--balance correspondence).}
-  A full theorem is still required to show exact correspondence between nontrivial zeros and balanced points.
+  A full theorem is still required to show exact correspondence between nontrivial zeros and points satisfying $\Phi_H(s)=0$.
 
   \item \textbf{Target B (critical-line exclusion for balanced points).}
-  A full theorem is still required to show
-  \(
-  \mathcal{B}\subseteq\{s:\RePart(s)=\tfrac12\}
-  \)
-  on the declared admissible strip class.
+  A full theorem is still required to prove the canonical subset statement for $\mathcal{B}$ on the declared admissible strip class.
 \end{enumerate}
 
 \subsection*{Technical dependencies remain open}
 Although no longer expanded in the main spine, the following technical burdens remain unresolved and must eventually be discharged in supporting materials:
 \begin{enumerate}
-  \item operator-theoretic well-posedness and compatibility needed by the balance construction;
+  \item operator-theoretic well-posedness and compatibility needed by the construction of $\Phi_H$;
   \item analytic-control and continuation estimates needed to prevent hidden off-line balance branches;
   \item synchronization of assumptions across local arguments and strip-wide conclusions.
 \end{enumerate}

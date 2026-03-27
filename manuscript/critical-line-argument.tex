@@ -1,8 +1,8 @@
-This section records only the critical-line exclusion target used in the main spine.
-Detailed Stage~6 mechanism design (transfer templates, defect quantities, repair chains, and fallback routes) is moved to technical notes so that the main manuscript remains readable for audit.
+This section records only the canonical critical-line exclusion target used in the main spine.
+Detailed Stage~6 mechanism design (transfer templates, defect quantities, repair chains, and route comparison) is moved to technical notes so that the main manuscript remains readable for audit.
 
-\subsection*{Critical-line exclusion target (main theorem target)}
-\begin{drafttheorem}[Target B: exclusion of admissible off-line balance]
+\subsection*{Canonical exclusion target (main theorem target)}
+\begin{drafttheorem}[Target B: canonical exclusion of off-line balance]
 \label{thm:stage6-master-exclusion-target}
 \placeholder{Theorem target under construction; proof not yet provided.}
 Let
@@ -11,16 +11,17 @@ Let
 \qquad
 \mathcal{B}:=\{s\in\mathcal{A}_{\mathrm{strip}}:\Phi_H(s)=0\}.
 \]
-Under one explicit synchronized hypothesis package $\mathcal{H}_{\mathrm{excl}}$, the argument attempts to prove
+Under one explicit synchronized hypothesis package $\mathcal{H}_{\mathrm{excl}}$, the argument attempts to prove the single main-text exclusion statement
 \[
-\forall s\in\mathcal{B},\qquad \RePart(s)=\tfrac12.
-\]
-Equivalent set form:
-\[
-\mathcal{B}\cap\{s\in\mathcal{A}_{\mathrm{strip}}:\RePart(s)\neq\tfrac12\}=\varnothing.
+\mathcal{B}\subseteq\{s\in\mathcal{A}_{\mathrm{strip}}:\RePart(s)=\tfrac12\}.
 \]
 This theorem target is open in the current manuscript version.
 \end{drafttheorem}
+
+\begin{remark}[Main-text statement policy]
+Set-theoretic complements, quantified forms, and contradiction-style restatements of Target~B are treated as supporting formulations.
+They are intentionally omitted from this section to keep one canonical exclusion target in view.
+\end{remark}
 
 \subsection*{How this section interfaces with the RH reduction}
 \begin{proposition}[Use of the exclusion target in the proof spine]
@@ -29,6 +30,6 @@ If \cref{thm:target-correspondence} and \cref{thm:stage6-master-exclusion-target
 
 \begin{remark}[Audit boundary]
 This section states the endpoint needed from the critical-line argument.
-It does not claim that transfer-to-global closure, no-alternative-locus closure, or any specific contradiction mechanism has been proved.
+It does not claim that transfer-to-global closure or any specific contradiction mechanism has been proved.
 Those remain open technical burdens documented outside the main proof spine.
 \end{remark}

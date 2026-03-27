@@ -2,14 +2,14 @@ This section defines a minimal formal interface for the manuscript's proposed op
 It does not claim that the layer is complete.
 Its role is to make explicit which properties must be supplied before downstream RH-reduction claims can be treated as theorem-level statements.
 
-\subsection*{Current formal status and scope}
+\subsection*{Current formal status and canonical choice}
 \placeholder{A finalized operator-level construction has not yet been fixed.}
-The symbols $H$ and $\Phi$ are currently part of the manuscript's formalization agenda:
-\begin{itemize}
-  \item $H$ denotes a proposed spectral object (operator/system) intended to encode the manuscript's symmetry/coherence mechanism.
-  \item $\Phi$ denotes a proposed balance/coherence functional extracted from the finalized $H$-layer.
-\end{itemize}
-At present, these are not yet complete theorem-level objects in the sense required for Stages 2--3 of the proof architecture.
+The manuscript now fixes one canonical predicate for the main text:
+\[
+\text{Bal}_H(s)\iff \Phi_H(s)=0 \quad (s\in\mathcal{A}),
+\]
+where $H$ is the proposed spectral object and $\Phi_H$ is the balance functional derived from that object.
+At present, $H$ and $\Phi_H$ are formalization targets rather than complete theorem-level objects.
 
 \subsection*{Minimal required structure for the $H$-layer}
 The manuscript does not need every possible operator-theoretic feature.
@@ -29,91 +29,35 @@ If closure/closability is needed by subsequent lemmas, that requirement must be 
 
 \paragraph{(M3) Symmetry-compatibility package.}
 A precise compatibility statement linking the operator layer to the reflection involution $\sigma(s)=1-s$ from \texttt{definitions.tex}.
-This may be invariance, covariance, intertwining, or another concrete relation, but it must be explicit and non-heuristic.
+This must be explicit and non-heuristic.
 Informal symmetry pictures are admissible only as motivation, not as substitute for this package.
 
 \paragraph{(M4) Operator-regularity assumptions (structural side).}
-The exact regularity required for operator statements: continuity/measurability/analytic dependence of operator-valued maps, domain persistence, and closure/graph conditions needed for later operator lemmas.
+The exact regularity required for operator statements: continuity/measurability/analytic dependence of operator-valued maps, domain persistence, and closure/graph conditions needed for later lemmas.
 Each assumption must be tagged as either proved in-manuscript or imported as an explicit hypothesis.
 
 \paragraph{(M5) Dependency traceability.}
-A lemma-level dependency map from operator properties to later claims (especially Stages 3--6 in \texttt{proof-architecture.tex}).
+A lemma-level dependency map from operator properties to later claims (especially Targets~A and~B).
 No RH-relevant step should rely on an unlisted implicit property of $H$.
 
-\subsection*{How to read M1--M5: requirement classes}
-For audit, the $H$-layer requirements split into two roles.
-\begin{itemize}
-  \item \textbf{Structural interface requirements:} (M1)--(M3). These fix object type, operator action, and symmetry-compatibility form.
-  \item \textbf{Operator-regularity/trace requirements:} (M4)--(M5). These ensure the operator layer is usable without hidden domain or closure assumptions.
-\end{itemize}
-This split is not cosmetic: Stages 2--3 in \texttt{proof-architecture.tex} require both classes to be complete before Target A/B bridges can be promoted beyond placeholders.
-
-\subsection*{Operator-theoretic support package (OP) for balance, transfer, and exclusion}
-To keep the manuscript audit-first, we isolate a theorem package for operator-side obligations.
-This package is \emph{not} claimed proved.
-It records the operator statements that would have to be available before Target~A, Target~B, and Stage~6 exclusion can close.
-
-Let $\mathcal{X}$ denote the ambient space, let $H$ denote the chosen operator object, and let $\mathcal{D}(H)\subseteq\mathcal{X}$ denote its working domain.
-Write $\mathcal{A}$ for the admissible parameter class and $\mathcal{A}_{\mathrm{strip}}:=\{s\in\mathcal{A}:0<\RePart(s)<1\}$.
-
-\paragraph{(OP1) Ambient-space and dense-domain theorem target.}
-Specify $\mathcal{X}$ and $\mathcal{D}(H)$ with proof-level typing and density/closure assumptions exactly matching later lemmas.
-If the model uses multiple graph/topology choices, all later statements must identify which one is active.
-
-\paragraph{(OP2) Well-defined action and closability/closure target.}
-Prove that $H:\mathcal{D}(H)\to\mathcal{X}$ is well defined and that the closure properties invoked later (closable/closed/graph-closed) actually hold in the declared setting.
-No later argument may cite a closure property not established here or explicitly assumed.
-
-\paragraph{(OP3) Domain invariance under symmetry transport target.}
-For each symmetry action used downstream (reflection transport, conjugation transport, or model-specific realization), prove that the induced action preserves the domain class required by the corresponding lemma.
-This includes invariance of any auxiliary operator domains used to define $\Phi_H$.
-
-\paragraph{(OP4) Intertwining/covariance theorem target.}
-State and prove the exact operator identity used to transfer symmetry to the balance law (invariance, covariance, or intertwining relation).
-The theorem must be written at operator level, not only at heuristic or symbolic level.
-
-\paragraph{(OP5) Spectral-legitimacy target for invoked spectral statements.}
-Whenever the manuscript uses spectral language (resolvent, spectral projection, functional calculus, mode decomposition, or equivalent), prove that these constructions are legitimate for the chosen $H$ model under the same hypotheses.
-If a weaker spectral notion is used, it must be stated explicitly.
-
-\paragraph{(OP6) Compatibility target between operator layer and balance functional.}
-Prove that the definition of $\Phi_H$ uses only admissible operator-side objects and that every operator transform used to build/evaluate $\Phi_H$ preserves well-posedness on the declared admissible class.
-
-\paragraph{(OP7) Operator-side stability of admissibility target.}
-For transformations used in Target~B and Stage~6 (continuation classes, symmetry transports, deformation/flow steps, or equivalent), prove that admissibility hypotheses remain valid after transformation.
-This is the operator-side counterpart of analytic transfer control.
-
-\paragraph{(OP8) Dependency-locked usage target.}
-Provide a theorem/lemma map showing where each operator property (OP1)--(OP7) is used in Targets~A/B and Stage~6.
-No step in correspondence or exclusion should rely on undeclared operator facts.
-
-\paragraph{Status note.}
-(OP1)--(OP8) are open theorem targets in the present manuscript version.
-They define the operator-theoretic support burden.
-They do not assert that a finalized operator model has been selected or verified.
-
-\subsection*{Minimal required structure for the coherence functional $\Phi$}
-Once a candidate $H$-layer is fixed, $\Phi$ must be introduced as a derived object with explicit dependence.
+\subsection*{Minimal required structure for the canonical functional \texorpdfstring{$\Phi_H$}{Phi_H}}
+Once a candidate $H$-layer is fixed, the manuscript uses one canonical functional $\Phi_H$ with explicit dependence on that layer.
 
 \paragraph{(P1) Definition from finalized inputs.}
-A formula or construction rule
-\[
-\Phi = \Phi_H\quad\text{(or }\Phi(s)=\Phi_H(s)\text{)}
-\]
-whose inputs are only previously defined data.
-The definition must be non-circular and must not presuppose the zero set of $\zeta$.
+A non-circular definition rule for $\Phi_H(s)$ using only previously defined data.
+The definition must not presuppose the zero set of $\zeta$.
 
 \paragraph{(P2) Domain of evaluation (admissible class).}
 A specified admissible class $\mathcal{A}\subseteq\C$ consistent with \texttt{definitions.tex}, including all side conditions needed for finiteness and well-posedness.
-If $\Phi$ is only partially defined, the excluded region must be explicit.
+If $\Phi_H$ is only partially defined, the excluded region must be explicit.
 
 \paragraph{(P3) Well-posedness statement.}
-For $s\in\mathcal{A}$, proof that $\Phi_H(s)$ exists and is finite, plus the exact continuity/regularity properties later used in correspondence and uniqueness steps.
+For $s\in\mathcal{A}$, proof that $\Phi_H(s)$ exists and is finite, plus the exact continuity/regularity properties later used in correspondence and exclusion steps.
 Computational checks may support plausibility but do not satisfy this requirement.
 
-\paragraph{(P4) Symmetry behavior of $\Phi$.}
-A formal statement of how $\Phi$ transforms under $s\mapsto1-s$ (invariance, sign change, conjugation relation, etc.), derived from the stated $H$-properties.
-This is required for any reflection-based cancellation argument.
+\paragraph{(P4) Symmetry behavior of \texorpdfstring{$\Phi_H$}{Phi_H}.}
+A formal statement of how $\Phi_H$ transforms under $s\mapsto1-s$, derived from stated $H$-properties.
+This is required for reflection-based arguments.
 
 \paragraph{(P5) Bridge interface to zero claims.}
 A precise theorem target describing what must be shown about
@@ -128,171 +72,43 @@ This interface should separate:
   \item side conditions preventing spurious balanced points.
 \end{enumerate}
 
-\subsection*{How to read P1--P5: requirement classes}
-For the coherence functional, the same two-way split is used.
-\begin{itemize}
-  \item \textbf{Structural interface requirements:} (P1), (P2), and the transformation law in (P4). These determine what $\Phi_H$ is, where it is evaluated, and how symmetry acts on it.
-  \item \textbf{Regularity/control requirements:} (P3) and the side-condition component of (P5). These prevent undefined values, unstable inference, and spurious balance points.
-\end{itemize}
-Under this organization, correspondence and exclusion arguments may use only the declared structure/control items, with no hidden assumptions.
+\subsection*{Canonical exclusion target supported by this interface}
+Let
+\[
+\mathcal{A}_{\mathrm{strip}}:=\{s\in\mathcal{A}:0<\RePart(s)<1\},
+\qquad
+\mathcal{B}:=\{s\in\mathcal{A}_{\mathrm{strip}}:\Phi_H(s)=0\}.
+\]
+The main-text exclusion burden is the single subset statement
+\[
+\mathcal{B}\subseteq\{s\in\mathcal{A}_{\mathrm{strip}}:\RePart(s)=\tfrac12\}.
+\]
+This section supports that statement by listing operator and analytic prerequisites.
+It does not claim those prerequisites are proved.
 
+\subsection*{Open support packages (dependency statements, not proved results)}
+\paragraph{Operator-side package (OP).}
+The following remain open theorem targets: well-defined operator action and closure properties, symmetry-compatible transport on relevant domains, legitimacy of any invoked spectral constructions, compatibility of operator transforms with evaluation of $\Phi_H$, and dependency-locked usage across Targets~A/B.
 
-\subsection*{Analytic-control theorem package (AC) for transfer and exclusion}
-The manuscript separates operator closure from analytic control.
-Operator closure concerns the existence and symmetry typing of $H$ and $\Phi_H$.
-Analytic control concerns whether local estimates can be transported across $\mathcal{A}_{\mathrm{strip}}$ without losing admissibility or creating hidden balance branches.
-
-The required analytic package is recorded as open theorem targets, not as proved results.
-Let $\mathcal{A}_{\mathrm{strip}}:=\{s\in\mathcal{A}:0<\RePart(s)<1\}$ and $\mathcal{B}:=\{s\in\mathcal{A}_{\mathrm{strip}}:\Phi_H(s)=0\}$.
-
-\paragraph{(AC1) Strip-wide growth and defect bounds.}
-A theorem-level bound class controlling the quantities used in Stage~6 contradiction arguments, uniform across boundary-near and large-parameter sectors.
-This includes explicit constants/rates and a statement of where each bound is valid.
-
-\paragraph{(AC2) Uniform convergence and regime compatibility.}
-If $\Phi_H$ or auxiliary objects are defined by limits/series/integrals, one needs convergence claims that are uniform on the subsets used for local-to-global continuation.
-Pointwise convergence alone is insufficient for transfer.
-
-\paragraph{(AC3) Interchange legitimacy.}
-Every interchange used by the argument (limit--integral, derivative--integral, summation--integration, contour deformation) must be justified under explicit hypotheses, with the admissible class stated.
-
-\paragraph{(AC4) Continuation/extension control.}
-A continuation principle must show that estimates proved in $\mathcal{R}_{\mathrm{loc}}$ extend to the declared global sectors of $\mathcal{A}_{\mathrm{strip}}$ with no loss of hypothesis synchronization.
-If compactness/normal-family arguments are used, the required precompactness or closure inputs must be stated.
-
-\paragraph{(AC5) No-hidden-branch control for $\mathcal{B}$.}
-A theorem target must exclude emergence of off-line components of $\mathcal{B}$ outside the local regime due solely to analytic degeneration, loss of uniformity, or boundary escape.
-This is the analytic side of the no-alternative-locus burden.
-
-\paragraph{(AC6) Local-estimate compatibility with strip admissibility.}
-The local coercive/rigidity/positivity estimates used for Target~B must be shown compatible with the full-strip admissibility constraints (not just with a narrower local model).
+\paragraph{Analytic-control package (AC).}
+The following remain open theorem targets: strip-wide bound control, uniform convergence where transfer is used, legitimacy of limit/interchange operations, continuation control from local to strip-wide regimes, and exclusion of hidden off-line branches of $\mathcal{B}$ caused by analytic degeneration.
 
 \paragraph{Status note.}
-(AC1)--(AC6) are open analytic bridges in the current manuscript version.
-They define the analytic-control burden required for Stage~6 closure but are not claimed proved here.
-
-\subsection*{Separation of burden classes used by the manuscript}
-The proof program uses five distinct burden classes.
-\begin{enumerate}
-  \item \textbf{Structural operator requirements:} OP1--OP4.
-  \item \textbf{Analytic-control requirements:} AC1--AC6.
-  \item \textbf{Target~A correspondence requirements:} P1--P5 plus OP4--OP6 and AC2--AC3 where interchanges/limits are used.
-  \item \textbf{Target~B uniqueness requirements:} OP3--OP7 plus P3--P5 and local control ingredients from \texttt{lemmas.tex}.
-  \item \textbf{Stage~6 transfer/exclusion requirements:} OP7--OP8 together with AC1--AC6, no-alternative-locus closure, and contradiction-route synchronization.
-\end{enumerate}
-This classification is a dependency statement only.
-It does not promote any open bridge to theorem status.
-
-\subsection*{Burden orientation for the current neutralizing target (classification view)}
-For the currently designated neutralizing result
-(\cref{thm:stage6-neutralizing-transport-uniformity} in \texttt{critical-line-argument.tex}),
-the manuscript records the following audit-oriented burden orientation:
-\begin{enumerate}
-  \item \textbf{Neutralizing result status:} open theorem target; not proved.
-  \item \textbf{Technical character:} genuinely mixed (requires OP and AC packages together).
-  \item \textbf{Dominant burden in the current first attempt:} analytic-control burden (AC1--AC6), especially continuation/compactness/uniformity and no-drift transfer control across $\mathcal{A}_{\mathrm{strip}}$.
-  \item \textbf{Supporting burden:} operator-theoretic stability burden (OP7--OP8 with invoked OP1--OP6), ensuring admissibility/symmetry transport remains theorem-typed under the same package.
-  \item \textbf{Best current candidate structural property for controllability of $\Delta_{\mathrm{nd}}$:} non-increase under synchronized transport extension on $\mathfrak{C}_{\mathrm{tr}}$,
-  \[
-  C_1\preceq C_2\Longrightarrow
-  \Delta_{\mathrm{nd}}(C_2;\Theta_{\mathrm{S5}},\delta)
-  \le
-  \Delta_{\mathrm{nd}}(C_1;\Theta_{\mathrm{S5}},\delta).
-  \]
-  In audit terms: AC-side uniformity/continuation control is expected to support the non-increase claim, and OP-side stability is expected to prevent type-changing drift at endpoints.
-  This is a proof-planning hypothesis under review, not a proved support theorem and not a sufficiency claim.
-  \item \textbf{Best current companion initialization statement (base-case planning target):} seed-anchor exact preservation, recorded as \cref{lem:b4-delta-initialization-seed}: for each local anchor $a\in\mathcal{R}_{\mathrm{loc}}$, a canonical seed transfer object $C_a^{\mathrm{seed}}$ has clausewise zero defect, hence $\Delta_{\mathrm{nd}}(C_a^{\mathrm{seed}};\Theta_{\mathrm{S5}},\delta)=0$. This is an open base-case target under audit, not a proved fact and not a finalized model commitment.
-\end{enumerate}
-This is an audit reading of current dependencies.
-It is not a theorem that analytic items dominate in every possible model.
-
-
-\subsection*{Interface tie-in to the minimum synchronized Stage~6 package}
-The preferred Stage~6 route in \texttt{critical-line-argument.tex} is now written relative to a minimum synchronized package $\mathcal{H}_{\mathrm{S6}}^{\min}$.
-From the operator/coherence interface perspective, this means:
-\begin{enumerate}
-  \item \textbf{Minimum operator-side inputs for formulation:} OP7--OP8, together with whichever parts of OP1--OP6 are required to make OP7--OP8 well-typed in the chosen model.
-  \item \textbf{Minimum coherence-functional inputs for formulation:} P2--P4 and the non-circular side-condition discipline in P5, on the same admissible strip class used by Stage~6.
-  \item \textbf{Minimum analytic inputs for formulation:} AC1--AC6 as declared theorem-level assumptions for transfer and no-hidden-branch control.
-\end{enumerate}
-This is a dependency alignment statement only.
-It does not assert that OP/AC items are proved.
-It does not assert that $\mathcal{H}_{\mathrm{S6}}^{\min}$ is sufficient to prove exclusion.
-
-\paragraph{Structural minimum versus stronger support hypotheses.}
-For audit clarity, the manuscript separates:
-\begin{itemize}
-  \item \textbf{Minimum structural formulation requirements:} the OP/P/AC items above needed so the preferred transfer $\to$ no-alternative-locus route can be stated as a precise theorem target.
-  \item \textbf{Stronger optional support requirements:} model-specific coercive/positivity/rigidity estimates that may be used to prove the target once formulated.
-\end{itemize}
-The second class is not part of the minimum statement package unless explicitly promoted into theorem hypotheses in a later revision.
-
-\subsection*{Dependency use map to later stages and lemma targets}
-The interface above is designed to feed specific downstream bridges.
-
-\paragraph{(i) Inputs that directly feed Target A (Stage 4).}
-\begin{itemize}
-  \item \textbf{From $H$:} (M3) for reflection-compatible transport; (M4) for any limit/interchange operations used in the correspondence map; (M5) to keep directional claims (forward/converse) explicitly separated.
-  \item \textbf{From $\Phi$:} (P1)--(P3) to define a non-circular balance predicate on an admissible class; (P5) to state the bidirectional theorem target and spurious-point controls.
-  \item \textbf{Primary lemma targets in \texttt{lemmas.tex}:} B1 well-posedness targets, B2 reflection/conjugation compatibility targets, and B3 zero--balance correspondence targets.
-\end{itemize}
-
-\paragraph{(ii) Inputs that directly feed Target B (Stage 5).}
-\begin{itemize}
-  \item \textbf{From $H$:} (M3)--(M4), providing the symmetry and local coercive/control ingredients used to force localization to $\RePart(s)=\tfrac12$ in a declared regime.
-  \item \textbf{From $\Phi$:} (P3)--(P5), especially side-condition discipline needed to distinguish genuine balance points from artefacts and to define the local regime precisely.
-  \item \textbf{Primary lemma targets in \texttt{lemmas.tex}:} B4 local balance-axis uniqueness target (not yet global exclusion), with dependencies on B1--B3.
-\end{itemize}
-
-\paragraph{(iii) Inputs that directly feed Stage 6 off-line exclusion (global).}
-\begin{itemize}
-  \item \textbf{From $H$:} (M4)--(M5), to justify extension from local regimes to strip-wide control and to document exactly which operator properties are invoked globally.
-  \item \textbf{From $\Phi$:} (P3)--(P5), where global exclusion needs both well-posedness and explicit side-condition closure across the entire admissible strip.
-  \item \textbf{Preferred Stage-6 route requirement (explicit):} a theorem-level local-to-global transfer principle carrying Stage-5 uniqueness from $\mathcal{R}_{\mathrm{loc}}$ to $\mathcal{A}_{\mathrm{strip}}$, followed by no-alternative-locus closure for $\mathcal{B}$; this route is prioritized in the current manuscript as the leading path to full-strip exclusion.
-  \item \textbf{Role assignment for mechanism classes:} coercive/positivity/rigidity controls are treated as supporting sub-mechanisms for the preferred transfer/no-alternative-locus route; reflection-incompatibility and direct contradiction-only closure are retained as secondary fallback routes.
-  \item \textbf{Primary lemma targets in \texttt{lemmas.tex}:} B4 admissibility-stability transfer, uniform continuation/compactness control, no-new-off-line-branch emergence, global-extension target, no-alternative-locus target for $\mathcal{B}$, and full-strip no-off-line-balance target, with contradiction-route closure and quartet-compatible transfer as secondary completion paths, plus B5 operator/analytic-control support.
-\end{itemize}
-
-\paragraph{(iv) Stage alignment summary.}
-\begin{itemize}
-  \item \textbf{Stage 2 (\texttt{proof-architecture.tex}):} anchored by (M1)--(M4), with B5 operator-closure support.
-  \item \textbf{Stage 3:} anchored by (P1)--(P4), with B1 admissibility/well-posedness support.
-  \item \textbf{Stage 4 / Target A:} uses (M3)--(M5) and (P1)--(P5), with B2--B3 bridges.
-  \item \textbf{Stage 5 / Target B:} uses (M3)--(M5) and (P3)--(P5), with B4 local uniqueness bridge.
-  \item \textbf{Stage 6:} uses operator trace inputs (M4)--(M5), functional controls (P3)--(P5), and analytic package (AC1)--(AC6), with B4 global-extension/full-strip exclusion bridges and B5 control bridges.
-\end{itemize}
-These alignments specify dependency direction only. They do not upgrade any open bridge to proved status.
-
-\subsection*{Available structure vs. required open structure}
-\paragraph{Currently available structure (documented).}
-\begin{itemize}
-  \item Classical objects and symmetry notation (including $\xi$, critical strip/line, and $\sigma$) are fixed in \texttt{definitions.tex}.
-  \item The proof program and stage-level dependency chain are fixed in \texttt{proof-architecture.tex}.
-  \item Gap categories and closure criteria are explicitly listed in \texttt{known-gaps.md}.
-\end{itemize}
-
-\paragraph{Required but not yet proved structure (open bridges).}
-\begin{itemize}
-  \item \textbf{Exact spectral object.} A single finalized construction satisfying (M1)--(M5).
-  \item \textbf{Zero--balance correspondence.} A fully non-circular, theorem-level correspondence package (Target A) with both directions and explicit side-condition control.
-  \item \textbf{Uniqueness of the balance axis.} A theorem-level localization result (Target B) proving that admissible balanced points lie only on $\RePart(s)=\tfrac12$.
-  \item \textbf{Exclusion of off-critical-line zeros.} A full-strip exclusion package that upgrades local arguments to the entire admissible critical strip.
-  \item \textbf{Operator-theoretic gaps.} Proof-level closure of domain, symmetry/intertwining, and spectral-legitimacy requirements used by the correspondence and exclusion steps.
-  \item \textbf{Analytic-control gaps.} Proof-level closure of growth, convergence, and interchange-of-limits requirements used by $\Phi$ and downstream reduction steps.
-\end{itemize}
-\openbridge{Until these six bridges are proved under synchronized hypotheses, references to ``balanced points'' or ``coherence zeros'' remain conditional framework language.}
+OP and AC are recorded as open bridge classes for audit.
+They specify proof burden only.
+They do not provide a proof of Target~A or Target~B.
 
 \subsection*{Why this layer is necessary for the RH reduction}
-The final reduction step in \texttt{proof-architecture.tex} is conditional on intermediate bridges that are operator- and functional-level statements.
-Without a rigorous $H$/$\Phi$ layer:
+The conditional reduction step in \texttt{main-results.tex} depends on theorem-level statements about $H$ and $\Phi_H$.
+Without a rigorous $H$/$\Phi_H$ layer:
 \begin{enumerate}
-  \item the balance condition is not a theorem-level predicate on a defined domain,
-  \item the correspondence with zeta zeros cannot be stated non-circularly,
-  \item the uniqueness/exclusion arguments have no formal object to which estimates apply.
+  \item the predicate $\Phi_H(s)=0$ is not a theorem-level condition on a defined domain,
+  \item the correspondence target cannot be stated non-circularly,
+  \item the canonical exclusion target has no formal object to which estimates apply.
 \end{enumerate}
-Therefore this layer is not optional technical decoration; it is a prerequisite interface for Targets A/B and for any valid RH reduction claim inside the manuscript's framework.
+Therefore this layer is a prerequisite interface for the manuscript's proposed RH reduction route.
 
 \begin{heuristic}
-Geometric or cancellation intuition can guide candidate constructions of $H$ and $\Phi$.
-However, such intuition remains heuristic until converted into explicit definitions, hypotheses, and proved lemmas matching the minimal interface above.
+Geometric or cancellation intuition can guide candidate constructions of $H$ and $\Phi_H$.
+However, such intuition remains heuristic until converted into explicit definitions, hypotheses, and proved lemmas matching the interface above.
 \end{heuristic}

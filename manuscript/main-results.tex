@@ -17,15 +17,16 @@ satisfies $\xi(s)=\xi(1-s)$; see \cite{Riemann1859,Edwards1974,Titchmarsh1986}.
 If $\rho$ is a nontrivial zero of $\zeta$, then $1-\rho$ and $\overline{\rho}$ are also nontrivial zeros; see \cite{Edwards1974,Titchmarsh1986}.
 \end{proposition}
 
-\subsection*{Step 1: Balance predicate}
-Fix an admissible class $\mathcal{A}$ and a balance functional $\Phi_H:\mathcal{A}\to\mathbb{C}$.
-Define the balanced set in the strip by
+\subsection*{Step 1: Canonical balance predicate}
+Fix an admissible class $\mathcal{A}$ and the canonical balance functional $\Phi_H:\mathcal{A}\to\mathbb{C}$.
+Define
 \[
-\mathcal{B}:=\{s\in\mathcal{A}_{\mathrm{strip}}:\Phi_H(s)=0\},
+\mathcal{A}_{\mathrm{strip}}:=\{s\in\mathcal{A}:0<\RePart(s)<1\},
 \qquad
-\mathcal{A}_{\mathrm{strip}}:=\{s\in\mathcal{A}:0<\RePart(s)<1\}.
+\mathcal{B}:=\{s\in\mathcal{A}_{\mathrm{strip}}:\Phi_H(s)=0\}.
 \]
-The theorem targets below are always interpreted under one explicit synchronized hypothesis package, to be stated in full where those targets are eventually proved.
+In the main text, ``balanced'' means exactly $\Phi_H(s)=0$ on $\mathcal{A}_{\mathrm{strip}}$.
+The theorem targets below are interpreted under one explicit synchronized hypothesis package, to be stated in full where those targets are eventually proved.
 
 \subsection*{Step 2: Zero--balance correspondence target}
 \begin{drafttheorem}[Target A: zero--balance correspondence]
@@ -40,20 +41,21 @@ Under a fully specified admissibility and well-posedness package, the framework 
 This target is open in the current manuscript version.
 \end{drafttheorem}
 
-\subsection*{Step 3: Critical-line exclusion target}
-\begin{drafttheorem}[Target B: exclusion of off-line balanced points]
+\subsection*{Step 3: Canonical critical-line exclusion target}
+\begin{drafttheorem}[Target B: canonical exclusion statement]
 \label{thm:target-uniqueness}
 \placeholder{Theorem target under construction; proof not yet provided.}
-Under a synchronized hypothesis package compatible with Target~A, the framework attempts to prove:
+Under a synchronized hypothesis package compatible with Target~A, the framework attempts to prove the canonical exclusion statement
 \[
-\forall s\in\mathcal{B},\qquad \RePart(s)=\tfrac12.
-\]
-Equivalently,
-\[
-\mathcal{B}\cap\{s\in\mathcal{A}_{\mathrm{strip}}:\RePart(s)\neq\tfrac12\}=\varnothing.
+\mathcal{B}\subseteq\{s\in\mathcal{A}_{\mathrm{strip}}:\RePart(s)=\tfrac12\}.
 \]
 This target is open in the current manuscript version.
 \end{drafttheorem}
+
+\begin{remark}[Formulation policy]
+The main text uses only the subset formulation above for Target~B.
+Equivalent logical reformulations are treated as secondary and are omitted from the core proof spine.
+\end{remark}
 
 \subsection*{Step 4: RH reduction}
 \begin{proposition}[Conditional RH reduction inside the framework]
