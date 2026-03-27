@@ -377,7 +377,11 @@ and work under one synchronized package $\mathcal{H}_{\mathrm{S6}}^{\min}$ with 
 Write $\Theta_{\mathrm{S5}}$ for the full Stage-5 hypothesis tuple used in local uniqueness.
 The first concrete lemma target is:
 \begin{quote}
-For every transfer object $C\in\mathfrak{C}_{\mathrm{tr}}$ connecting a local anchor in $\mathcal{R}_{\mathrm{loc}}$ to an endpoint in $\mathcal{A}_{\mathrm{strip}}$, the tuple $\Theta_{\mathrm{S5}}$ persists at every transfer position and at the endpoint with one uniform control profile valid across the transfer class used by the contradiction step.
+For every approved transfer object $C\in\mathfrak{C}_{\mathrm{tr}}$ connecting a local anchor in $\mathcal{R}_{\mathrm{loc}}$ to an endpoint in $\mathcal{A}_{\mathrm{strip}}$, the no-drift defect functional
+\[
+\Delta_{\mathrm{nd}}(C;\Theta_{\mathrm{S5}},\delta)
+\]
+vanishes. Equivalently, every clause in the Stage-5 tuple $\Theta_{\mathrm{S5}}$ remains valid at every transfer position in $C$, with no admissibility/regularity/symmetry loss along the contradiction-relevant transfer class.
 \end{quote}
 Equivalently, this lemma target excludes hypothesis drift (admissibility, regularity, or symmetry loss) along the transfer class relevant to the first contradiction attempt.
 
@@ -389,37 +393,56 @@ It does not replace that neutralizing theorem; it is the first concrete proving 
 Open lemma target (not proved).
 \end{drafttheorem}
 
-\subsection*{First candidate analytic defect quantity for \cref{lem:stage6-first-concrete-no-drift} (formulation target only)}
-To make \cref{lem:stage6-first-concrete-no-drift} mathematically executable, the manuscript now fixes one first analytic object to control:
-\[
-\Delta_{\mathrm{nd}}(C):=\sup_{u\in C}\,d_{\Theta}(u).
-\]
-Here $C\in\mathfrak{C}_{\mathrm{tr}}$ is a transfer object, and $d_{\Theta}(u)$ is a nonnegative \emph{tuple-defect gauge} for the Stage-5 hypothesis tuple
-\[
-\Theta_{\mathrm{S5}}=(\theta_1,\dots,\theta_m).
-\]
-The gauge is defined abstractly at statement level by clausewise defects
-\(\delta_j(u)\ge 0\) with
-\[
- d_{\Theta}(u):=\max_{1\le j\le m}\delta_j(u),
-\]
-where $\delta_j(u)=0$ means clause $\theta_j$ is satisfied at $u$ under the same synchronized package $\mathcal{H}_{\mathrm{S6}}^{\min}$.
-No finalized operator realization is assumed in this definition; it is an interface-level defect quantity.
+\subsection*{Provisional no-drift defect functional for \cref{lem:stage6-first-concrete-no-drift} (formulation target only)}
+To make \cref{lem:stage6-first-concrete-no-drift} mathematically executable, the manuscript now fixes one provisional analytic object to control.
+This is a \emph{planning definition under audit}, not a finalized model choice.
 
-\paragraph{What data \texorpdfstring{$\Delta_{\mathrm{nd}}$}{Delta\_nd} depends on.}
-The quantity depends on: (i) the transfer class element $C\in\mathfrak{C}_{\mathrm{tr}}$, (ii) the synchronized Stage-5 tuple $\Theta_{\mathrm{S5}}$ transported from $\mathcal{R}_{\mathrm{loc}}$, and (iii) the defect gauges $\delta_j$ supplied by the OP/AC interface under $\mathcal{H}_{\mathrm{S6}}^{\min}$.
-
-\paragraph{Intended use property.}
-The useful theorem-level property is
+\paragraph{Input data (provisional interface).}
+Work under one synchronized package $\mathcal{H}_{\mathrm{S6}}^{\min}$.
+For each transfer object $C\in\mathfrak{C}_{\mathrm{tr}}$, let $U(C)\subseteq\mathcal{A}_{\mathrm{strip}}$ denote its transfer-position set (including its local anchor and endpoint).
+Let
 \[
-\Delta_{\mathrm{nd}}(C)=0\quad\text{for every transfer object used in the contradiction step},
+\Theta_{\mathrm{S5}}=(\theta_1,\dots,\theta_m)
 \]
-or, in weaker staged form, a uniform bound $\Delta_{\mathrm{nd}}(C)\le \varepsilon$ followed by a separate closure lemma that upgrades $\varepsilon\to 0$ under the same hypotheses.
-Either form is currently open.
+be the Stage-5 hypothesis tuple.
+For each clause $\theta_j$, let
+\[
+\delta_j^{(C)}:U(C)\to[0,\infty]
+\]
+be a clause-defect gauge interpreted as ``loss of clause $\theta_j$ at position $u$'' under the same package $\mathcal{H}_{\mathrm{S6}}^{\min}$, with $\delta_j^{(C)}(u)=0$ meaning no detected loss of clause $\theta_j$ at $u$.
+
+\paragraph{Provisional definition.}
+Define the pointwise tuple-defect gauge on $U(C)$ by
+\[
+d_{\Theta}^{(C)}(u):=\max_{1\le j\le m}\delta_j^{(C)}(u),
+\]
+and define the no-drift defect functional by
+\[
+\Delta_{\mathrm{nd}}(C;\Theta_{\mathrm{S5}},\delta):=
+\sup_{u\in U(C)} d_{\Theta}^{(C)}(u)\in[0,\infty].
+\]
+No finalized operator realization is assumed here; this remains an OP/AC interface-level object.
+
+\paragraph{Interpretation of values (intended semantics only).}
+\begin{itemize}
+  \item $\Delta_{\mathrm{nd}}(C)=0$: exact no-drift along $C$ for all Stage-5 clauses (the contradiction-ready ideal target).
+  \item $0<\Delta_{\mathrm{nd}}(C)\le \varepsilon$: quantitatively small clause loss, potentially usable only with an additional closure lemma.
+  \item $\Delta_{\mathrm{nd}}(C)\le M$ uniformly on a transfer subclass: bounded instability control, weaker than no-drift.
+  \item $\Delta_{\mathrm{nd}}(C)=\infty$: uncontrolled transport; contradiction use is not theorem-typed.
+\end{itemize}
+These interpretations are provisional and can be revised when a finalized operator model is fixed.
+
+\paragraph{First precise lemma-style control target (open).}
+The first control target is the classwise vanishing statement
+\[
+\forall\,C\in\mathfrak{C}_{\mathrm{tr}}^{\mathrm{ctr}}\subseteq\mathfrak{C}_{\mathrm{tr}},\qquad
+\Delta_{\mathrm{nd}}(C;\Theta_{\mathrm{S5}},\delta)=0,
+\]
+where $\mathfrak{C}_{\mathrm{tr}}^{\mathrm{ctr}}$ denotes the contradiction-relevant transfer subclass specified in \cref{lem:stage6-first-concrete-no-drift}.
+This target is open and conditional; no proof is claimed in the current manuscript.
 
 \paragraph{How this feeds into \cref{lem:stage6-first-concrete-no-drift}.}
-The lemma \cref{lem:stage6-first-concrete-no-drift} is the assertion that the relevant class satisfies vanishing no-drift defect:
-\(\Delta_{\mathrm{nd}}(C)=0\) uniformly in $C$.
+The lemma \cref{lem:stage6-first-concrete-no-drift} is precisely the theorem-target assertion that this classwise vanishing property holds on $\mathfrak{C}_{\mathrm{tr}}^{\mathrm{ctr}}$.
 Thus the quantity is the analytic object; the lemma is the claim controlling it.
 
 \paragraph{Separation from downstream theorem targets.}
