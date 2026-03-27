@@ -190,6 +190,58 @@ This theorem target is the explicit bridge between local Target~B control and fu
 It is not established in the current manuscript version.
 \end{drafttheorem}
 
+\subsection*{First executable Stage~6 theorem target under audit: admissibility-stability transfer}
+The manuscript now fixes one \emph{first proving target} inside Stage~6 as a draft theorem with explicit scope.
+This is the first theorem-sized burden to discharge under the preferred route.
+It is not proved in this manuscript version.
+
+\begin{drafttheorem}[Draft first Stage~6 subtheorem target: admissibility-stability transfer on continuation classes]
+\label{thm:stage6-first-subtarget-admissibility}
+\placeholder{Draft theorem target under construction; proof not yet provided.}
+Assume the synchronized minimum package $\mathcal{H}_{\mathrm{S6}}^{\min}$, and write
+\[
+\mathcal{A}_{\mathrm{strip}}:=\{s\in\mathcal{A}:0<\RePart(s)<1\},\qquad
+\mathcal{B}:=\{s\in\mathcal{A}_{\mathrm{strip}}:\Phi_H(s)=0\},\qquad
+\mathcal{R}_{\mathrm{loc}}\subseteq\mathcal{A}_{\mathrm{strip}}.
+\]
+Let $\mathfrak{C}_{\mathrm{tr}}$ denote the class of continuation objects (paths/chains/families, according to the eventual model) used to transport Stage-5 local control from $\mathcal{R}_{\mathrm{loc}}$ into $\mathcal{A}_{\mathrm{strip}}$.
+The draft target is:
+\begin{enumerate}
+  \item \textbf{Hypothesis transport statement.}
+  For every $s\in\mathcal{A}_{\mathrm{strip}}$ relevant to Stage~6 transfer, there exists $C\in\mathfrak{C}_{\mathrm{tr}}$ joining a local anchor in $\mathcal{R}_{\mathrm{loc}}$ to $s$ such that all admissibility/well-posedness assumptions used by local Target~B remain valid along $C$.
+  \item \textbf{No hypothesis-loss conclusion.}
+  Along every such $C$, Stage-5 local hypotheses are not weakened when interpreted on strip-wide points, so the same theorem predicates used locally remain meaningful at the transfer endpoint.
+\end{enumerate}
+Equivalently in audit shorthand: local Target~B assumptions are stable under the continuation classes used to access $\mathcal{A}_{\mathrm{strip}}$.
+\paragraph{Relation to the master Stage~6 target.}
+\cref{thm:stage6-first-subtarget-admissibility} is not the Stage~6 endpoint.
+It is the first dependency in the preferred chain toward \cref{thm:stage6-master-exclusion-target}.
+Without it, the transfer implication
+\[
+\Big(\forall s\in\mathcal{B}\cap\mathcal{R}_{\mathrm{loc}},\ \RePart(s)=\tfrac12\Big)\Longrightarrow
+\Big(\forall s\in\mathcal{B}\cap\mathcal{A}_{\mathrm{strip}},\ \RePart(s)=\tfrac12\Big)
+\]
+is not theorem-usable, because the local hypotheses may fail to persist away from $\mathcal{R}_{\mathrm{loc}}$.
+\end{drafttheorem}
+
+\paragraph{Proof skeleton for \cref{thm:stage6-first-subtarget-admissibility} (outline only; open).}
+This is a work plan, not a proof.
+The current skeleton is:
+\begin{enumerate}
+  \item \textbf{Define transfer objects and invariants.}
+  Specify $\mathfrak{C}_{\mathrm{tr}}$ and the exact local hypothesis tuple to be transported.
+  \item \textbf{Prove admissibility persistence along $\mathfrak{C}_{\mathrm{tr}}$.}
+  Show admissibility and balance-function well-posedness do not break along continuation classes (analytic-control entry point).
+  \item \textbf{Prove symmetry-compatible transport.}
+  Show reflection/conjugation transport does not exit the synchronized hypothesis package (operator-theoretic and symmetry entry point).
+  \item \textbf{Exclude transfer-induced hypothesis drift.}
+  Prove that the transported endpoint hypotheses are exactly those required by Stage-5 local uniqueness statements.
+  \item \textbf{Record the residual burden after this subtheorem.}
+  Remaining Stage~6 obligations are still-open: uniform continuation/compactness closure, no-new-off-line-branch control, no-alternative-locus principle, and full-strip exclusion.
+\end{enumerate}
+The first three steps are where AC1--AC6 and OP7--OP8 support is expected to enter.
+The last two steps are deferred consequences and are not claimed here.
+
 \paragraph{Three-way separation (local result, transfer bridge, global conclusion).}
 To avoid conflation of proof burdens:
 \begin{enumerate}

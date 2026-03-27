@@ -106,7 +106,7 @@ Stage~6 is now centered on one explicit endpoint: the master exclusion theorem t
 All Stage~6 sub-burdens are organized as obligations that discharge this single theorem target.
 Stage~6 now names a single first subtheorem proving target inside this preferred route:
 \begin{quote}
-\textbf{First Stage~6 subtheorem target (open):} admissibility-stability transfer from $\mathcal{R}_{\mathrm{loc}}$ to $\mathcal{A}_{\mathrm{strip}}$ under the same synchronized hypothesis package.
+\textbf{First Stage~6 draft theorem target (open):} \cref{thm:stage6-first-subtarget-admissibility}, the admissibility-stability transfer target on continuation classes from $\mathcal{R}_{\mathrm{loc}}$ to $\mathcal{A}_{\mathrm{strip}}$ under $\mathcal{H}_{\mathrm{S6}}^{\min}$.
 \end{quote}
 This target is selected as the first entry point because it is the earliest dependency required before global transfer and no-alternative-locus statements are theorem-usable.
 The designation is strategic and audit-oriented; it is not a proof claim.
@@ -114,13 +114,26 @@ For dependency clarity, the intended theorem flow is:
 \[
 \underbrace{\text{Stage-5 local uniqueness on }\mathcal{R}_{\mathrm{loc}}}_{\text{local Target B control}}
 \Longrightarrow
-\underbrace{\text{Stage-6 admissibility-stability transfer for }\mathcal{B}}_{\text{current first proving target (open)}}
+\underbrace{\text{\cref{thm:stage6-first-subtarget-admissibility}}}_{\text{current first proving target (open)}}
 \Longrightarrow
 \underbrace{\text{no-alternative-locus closure for }\mathcal{B}}_{\text{preferred global mechanism target}}
 \Longrightarrow
 \underbrace{\text{full-strip off-line exclusion on }\mathcal{A}_{\mathrm{strip}}}_{\text{global conclusion}}.
 \]
 The middle implication is an independent theorem target, not an automatic corollary of Stage~5.
+
+\paragraph{Lemma stack attached to the first Stage~6 draft theorem target (all open).}
+The initial proving attempt is explicitly scoped to the following stack in \texttt{lemmas.tex}:
+\[
+\cref{lem:b4-admissibility-stability-transfer}
+\Rightarrow
+\cref{lem:b4-uniform-continuation}
+\Rightarrow
+\cref{lem:b4-global-extension},
+\]
+with operator-side support from OP7--OP8 (and invoked OP1--OP6) and analytic-control support from AC1--AC6.
+The no-new-off-line-branch and no-alternative-locus burdens are subsequent Stage~6 obligations, not part of the first subtheorem itself.
+This separation is enforced for audit clarity and theorem-status discipline.
 
 \textbf{Intended output.}
 A global theorem-level exclusion mechanism distinct from Stage 5, culminating in the master theorem target \cref{thm:stage6-master-exclusion-target}:
