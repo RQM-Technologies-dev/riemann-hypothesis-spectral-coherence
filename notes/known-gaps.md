@@ -5,6 +5,9 @@ This page exists to make mathematical scrutiny easier.
 This register lists the most vulnerable bridges in the proposed proof framework.
 It is written for reviewers who want a fast map of what is not yet proved.
 
+
+Editorial status note (2026-03-27): the prior long OP/AC lemma catalog was removed from the main manuscript flow and replaced with compressed dependency statements. This is a presentation simplification only; the burdens in Sections 6 and 7 remain fully open.
+
 Conventions used below:
 - **Status labels:** Open / Partial / Blocked.
 - **Resolution criterion:** what would count as a mathematically adequate closure of the gap.

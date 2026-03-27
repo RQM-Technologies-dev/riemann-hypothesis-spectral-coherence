@@ -13,14 +13,14 @@ If $\rho$ is a nontrivial zero of $\zeta$, then $\overline{\rho}$ is also a nont
 \noindent\emph{Status: standard.} This follows from Schwarz reflection for $\xi$ (equivalently $\xi(\bar s)=\overline{\xi(s)}$); see \cite{Edwards1974,Titchmarsh1986}.
 
 \subsection*{B. Draft lemma targets (manuscript-specific; open unless noted)}
-\noindent\emph{Reviewer map.} Part B is ordered as a dependency stack: \textbf{(B1) admissibility foundation} $\rightarrow$ \textbf{(B2) symmetry compatibility} $\rightarrow$ \textbf{(B3) zeta correspondence} $\rightarrow$ \textbf{(B4) preferred off-line exclusion route via transfer $\to$ no-alternative-locus}, with \textbf{(B5)} supplying operator/analytic control used across earlier blocks. Every item below remains an explicit open placeholder.
+\noindent\emph{Reviewer map.} Part B is ordered as a dependency stack: \textbf{(B1) admissibility foundation} $\rightarrow$ \textbf{(B2) symmetry compatibility} $\rightarrow$ \textbf{(B3) zeta correspondence} $\rightarrow$ \textbf{(B4) preferred off-line exclusion route via transfer $\to$ no-alternative-locus}. Cross-cutting operator/analytic burden remains open and is tracked in \texttt{manuscript/spectral-framework.tex} and \texttt{notes/known-gaps.md}. Every item below remains an explicit open placeholder.
 
 \subsubsection*{B1. Foundation: admissibility and well-posedness}
 
 \begin{lemma}[Admissibility implies a well-defined balance functional \textnormal{(OPEN TARGET; placeholder)}]
 \placeholder{Establishes: under explicit admissibility hypotheses on the proposed coherence object, the balance functional is well-defined (domain specified; finite-valued; measurable/continuous in the declared topology). Depends on: final operator-level construction in Section~7 and a non-circular admissibility criterion from Section~2. Why it matters: without well-posedness, later reflection and exclusion statements are not mathematically meaningful.}
 \end{lemma}
-\noindent\emph{Feeds into:} B2 symmetry compatibility, B3 correspondence construction, and B5 analytic-control statements.
+\noindent\emph{Feeds into:} B2 symmetry compatibility, B3 correspondence construction, and the cross-cutting operator/analytic burden tracked outside this lemma ledger.
 
 \begin{lemma}[Stability of balance under approved perturbation class \textnormal{(OPEN TARGET; placeholder)}]
 \placeholder{Establishes: small perturbations in the manuscript's allowed class do not destroy admissibility or the definition of balance. Depends on: the precise perturbation class and norm/topology choices (currently provisional). Why it matters: supports reproducibility of any subsequent inference and prevents dependence on an unstable encoding.}
@@ -59,19 +59,15 @@ If $\rho$ is a nontrivial zero of $\zeta$, then $\overline{\rho}$ is also a nont
 \noindent\emph{Feeds into:} the global exclusion-extension target below and Stage~5 in \texttt{proof-architecture.tex}.
 
 
-\paragraph{How B4/B5 discharge the minimum Stage~6 formulation package.}
-The minimum synchronized package $\mathcal{H}_{\mathrm{S6}}^{\min}$ from \texttt{critical-line-argument.tex} is decomposed in this ledger as follows (all open targets):
+\paragraph{How B1--B4 discharge the minimum Stage~6 formulation package.}
+The minimum synchronized package $\mathcal{H}_{\mathrm{S6}}^{\min}$ from \texttt{critical-line-argument.tex} is mapped here only at proof-program level (all open targets):
 \begin{itemize}
-  \item \textbf{S6-M1 (admissibility synchronization/stability):} B1 admissibility well-posedness plus the B4 admissibility-stability transfer lemma.
-  \item \textbf{S6-M2 (strip-wide balance well-posedness):} B1 admissibility implies well-defined balance, supported by OP6 and AC6 in B5.
-  \item \textbf{S6-M3 (symmetry compatibility without hypothesis loss):} B2 reflection/conjugation compatibility, supported by OP3/OP4 and OP7/OP8.
-  \item \textbf{S6-M4 (operator-side structural control actually used):} B5 OP7/OP8 with explicit dependence on OP1--OP6.
-  \item \textbf{S6-M5 (analytic control for transfer):} B5 AC1--AC6 and the B4 uniform continuation/compactness lemma.
-  \item \textbf{S6-M6 (no-hidden-branch/no-alternative-locus input):} B4 no-new-off-line-branch emergence, B4 no-hidden-branch analytic control, and B4 no-alternative-locus principle target.
-  \item \textbf{S6-M7 (contradiction compatibility):} B4 contradiction-route admissibility package and B4 off-line contradiction lemma target under one synchronized hypothesis set.
+  \item \textbf{S6-M1:} admissibility synchronization/stability (B1 plus transfer in B4).
+  \item \textbf{S6-M2/S6-M3:} strip-wide well-posedness and symmetry compatibility (B1--B2 under one synchronized package).
+  \item \textbf{S6-M4/S6-M5:} first control and no-drift transport chain in B4.
+  \item \textbf{S6-M6/S6-M7:} no-alternative-locus and contradiction compatibility endpoints in B4.
 \end{itemize}
-This map is a traceability aid for audit.
-It does not claim that any listed lemma is proved.
+Operator/analytic sub-burdens that support these items are still required, but are tracked outside this main lemma ledger to keep the Stage~6 chain readable.
 
 \paragraph{Preferred Stage-6 lemma stack for $\mathcal{B}$ (audit order; all OPEN).}
 To make the local-to-global burden explicit, B4 uses the following stack:
@@ -185,25 +181,25 @@ one has
 \forall C\in\mathfrak{C}_{\mathrm{tr}}^{\mathrm{ctr}},\qquad
 \Delta_{\mathrm{nd}}(C;\Theta_{\mathrm{S5}},\delta)=0.
 \]
-Interpretation target: exact classwise no-drift on the contradiction-relevant transfer subclass. Current immediate support targets are the structural non-increase lemma \cref{lem:b4-delta-structural-nonincrease}, the seed-anchor initialization lemma \cref{lem:b4-delta-initialization-seed}, and the explicit coverage bridge lemma target \cref{lem:b4-seed-extension-coverage-bridge}; all are open. In the current three-step derivation attempt, this coverage clause is the single most likely failure point, because it carries the universal quantifier transfer from seed-level initialization to classwise control. Depends on: B1 admissibility well-posedness, OP7--OP8 (with invoked OP1--OP6 where used), and AC1--AC6 continuation/interchange/uniformity controls. Why it matters: this is the first theorem-style control target on a concrete analytic quantity before transport conclusions are rephrased as endpoint hypothesis persistence.}
+Interpretation target: exact classwise no-drift on the contradiction-relevant transfer subclass. Current immediate support targets are the structural non-increase lemma \cref{lem:b4-delta-structural-nonincrease}, the seed-anchor initialization lemma \cref{lem:b4-delta-initialization-seed}, and the explicit coverage bridge lemma target \cref{lem:b4-seed-extension-coverage-bridge}; all are open. In the current three-step derivation attempt, this coverage clause is the single most likely failure point, because it carries the universal quantifier transfer from seed-level initialization to classwise control. Depends on: B1 admissibility well-posedness and a synchronized operator/analytic support package stated outside this ledger. Why it matters: this is the first theorem-style control target on a concrete analytic quantity before transport conclusions are rephrased as endpoint hypothesis persistence.}
 \end{lemma}
 \noindent\emph{Feeds into:} \cref{lem:stage6-first-concrete-no-drift} and its ledger-aligned form \cref{lem:b4-admissibility-stability-transfer}, then \cref{lem:b4-neutralizing-transport-uniformity}.
 
 \begin{lemma}[Uniform no-drift transport of the Stage-5 hypothesis tuple along $\mathfrak{C}_{\mathrm{tr}}$ \textnormal{(OPEN BRIDGE; first transport reformulation downstream of \cref{lem:b4-first-delta-control})}]
 \label{lem:b4-admissibility-stability-transfer}
-\placeholder{Transport-form restatement aligned with \cref{lem:stage6-first-concrete-no-drift} in \texttt{critical-line-argument.tex}: under $\mathcal{H}_{\mathrm{S6}}^{\min}$, if the first control statement \cref{lem:b4-first-delta-control} holds on $\mathfrak{C}_{\mathrm{tr}}^{\mathrm{ctr}}$, then every clause of $\Theta_{\mathrm{S5}}$ persists along each contradiction-relevant transfer object $C$ from a local anchor in $\mathcal{R}_{\mathrm{loc}}$ to an endpoint in $\mathcal{A}_{\mathrm{strip}}$, with no admissibility/regularity/symmetry predicate loss. Equivalently: classwise vanishing of $\Delta_{\mathrm{nd}}$ is promoted to endpoint-usable hypothesis persistence. Depends on: \cref{lem:b4-first-delta-control} plus the same OP/AC support interfaces needed to interpret transported clauses at endpoints. Why it matters: this is the first transport-usable theorem target extracted from the analytic defect control statement.}
+\placeholder{Transport-form restatement aligned with \cref{lem:stage6-first-concrete-no-drift} in \texttt{critical-line-argument.tex}: under $\mathcal{H}_{\mathrm{S6}}^{\min}$, if the first control statement \cref{lem:b4-first-delta-control} holds on $\mathfrak{C}_{\mathrm{tr}}^{\mathrm{ctr}}$, then every clause of $\Theta_{\mathrm{S5}}$ persists along each contradiction-relevant transfer object $C$ from a local anchor in $\mathcal{R}_{\mathrm{loc}}$ to an endpoint in $\mathcal{A}_{\mathrm{strip}}$, with no admissibility/regularity/symmetry predicate loss. Equivalently: classwise vanishing of $\Delta_{\mathrm{nd}}$ is promoted to endpoint-usable hypothesis persistence. Depends on: \cref{lem:b4-first-delta-control} plus the same synchronized operator/analytic support interfaces needed to interpret transported clauses at endpoints. Why it matters: this is the first transport-usable theorem target extracted from the analytic defect control statement.}
 \end{lemma}
 \noindent\emph{Feeds into:} the immediate neutralizing bridge \cref{lem:b4-neutralizing-transport-uniformity}; then the contradiction conclusion in \cref{thm:stage6-first-subtarget-admissibility}; then later global-extension/no-alternative-locus burdens.
 
 \begin{lemma}[Transport-uniformity contradiction-enablement lemma (best current neutralizing candidate downstream of the first Stage~6 target) \textnormal{(OPEN BRIDGE; theorem target placeholder)}]
 \label{lem:b4-neutralizing-transport-uniformity}
-\placeholder{Establishes: under $\mathcal{H}_{\mathrm{S6}}^{\min}$ plus an explicit no-drift transport clause, every transfer-reachable endpoint in $\mathcal{B}_{\mathrm{tr}}$ inherits the exact Stage-5 local hypothesis tuple in theorem-usable form, with no admissibility/regularity/symmetry predicate drift along $\mathfrak{C}_{\mathrm{tr}}$. Depends on: \cref{lem:b4-admissibility-stability-transfer}, OP7--OP8 with invoked OP1--OP6 prerequisites, and AC1--AC6 continuation/interchange/uniformity controls. Why it matters: this is the single best candidate result to neutralize the currently identified highest-risk failure point in the contradiction-style first Stage~6 attempt; it upgrades endpoint contradiction use from heuristic to theorem-typed.}
+\placeholder{Establishes: under $\mathcal{H}_{\mathrm{S6}}^{\min}$ plus an explicit no-drift transport clause, every transfer-reachable endpoint in $\mathcal{B}_{\mathrm{tr}}$ inherits the exact Stage-5 local hypothesis tuple in theorem-usable form, with no admissibility/regularity/symmetry predicate drift along $\mathfrak{C}_{\mathrm{tr}}$. Depends on: \cref{lem:b4-admissibility-stability-transfer} and the same synchronized operator/analytic support package used in the first-control chain. Why it matters: this is the single best candidate result to neutralize the currently identified highest-risk failure point in the contradiction-style first Stage~6 attempt; it upgrades endpoint contradiction use from heuristic to theorem-typed.}
 \end{lemma}
 \noindent\emph{Feeds into:} the contradiction conclusion in \cref{thm:stage6-first-subtarget-admissibility}, then \cref{lem:b4-global-extension} and the master Stage~6 exclusion route.
 
 \begin{lemma}[Uniform continuation/compactness control lemma \textnormal{(OPEN BRIDGE; placeholder)}]
 \label{lem:b4-uniform-continuation}
-\placeholder{Establishes: local estimates used for balance-axis uniqueness admit a continuation or compactness mechanism with explicit uniform bounds across boundary-near, non-perturbative, and large-parameter strip sectors. Depends on: local uniqueness target and B5 analytic-control package. Why it matters: this is the technical bridge preventing loss of control when extending from $\mathcal{R}_{\mathrm{loc}}$ to $\mathcal{A}_{\mathrm{strip}}$.}
+\placeholder{Establishes: local estimates used for balance-axis uniqueness admit a continuation or compactness mechanism with explicit uniform bounds across boundary-near, non-perturbative, and large-parameter strip sectors. Depends on: local uniqueness target and synchronized analytic-control assumptions tracked outside this ledger. Why it matters: this is the technical bridge preventing loss of control when extending from $\mathcal{R}_{\mathrm{loc}}$ to $\mathcal{A}_{\mathrm{strip}}$.}
 \end{lemma}
 \noindent\emph{Feeds into:} global extension theorem target and off-line contradiction arguments in Stage~6.
 
@@ -220,7 +216,7 @@ Interpretation target: exact classwise no-drift on the contradiction-relevant tr
 \Big(\forall s\in\mathcal{B}\cap\mathcal{R}_{\mathrm{loc}},\ \RePart(s)=\tfrac12\Big)\Rightarrow
 \Big(\forall s\in\mathcal{B}\cap\mathcal{A}_{\mathrm{strip}},\ \RePart(s)=\tfrac12\Big).
 \]
-Must include admissibility stability, compatibility of local estimates with the full admissible class, continuation/compactness uniformity, symmetry compatibility, and no-new-off-line-branch control. Depends on: local uniqueness target, admissibility-stability transfer, uniform continuation/compactness control, no-new-off-line-branch emergence, and B5 analytic-control package. Why it matters: this is the explicit closure bridge from local Target~B control to global off-line exclusion.}
+Must include admissibility stability, compatibility of local estimates with the full admissible class, continuation/compactness uniformity, symmetry compatibility, and no-new-off-line-branch control. Depends on: local uniqueness target, admissibility-stability transfer, uniform continuation/compactness control, no-new-off-line-branch emergence, and synchronized support assumptions on operator/analytic control. Why it matters: this is the explicit closure bridge from local Target~B control to global off-line exclusion.}
 \end{lemma}
 \noindent\emph{Feeds into:} full-strip off-line exclusion and Stage~6 global mechanism.
 
@@ -234,8 +230,8 @@ Within B4, its proof burden is grouped as:
   \item \textbf{Core first analytic control lemma (current best first technical move):} \cref{lem:b4-first-delta-control}, i.e. classwise vanishing target for $\Delta_{\mathrm{nd}}$ on $\mathfrak{C}_{\mathrm{tr}}^{\mathrm{ctr}}$.
   \item \textbf{Core first transport reformulation:} \cref{lem:b4-admissibility-stability-transfer}, converting that defect control into endpoint-usable no-drift persistence of the full Stage-5 tuple.
   \item \textbf{Primary downstream neutralizing target:} \cref{lem:b4-neutralizing-transport-uniformity}, which aggregates that first lemma into theorem-usable contradiction enabling at transfer-reachable endpoints.
-  \item \textbf{Analytic-control support:} \cref{lem:b4-uniform-continuation} plus AC1--AC6 items in B5.
-  \item \textbf{Operator/symmetry support:} OP7--OP8 with invoked OP1--OP6 prerequisites, together with B2 symmetry compatibility.
+  \item \textbf{Analytic-control support:} \cref{lem:b4-uniform-continuation} plus synchronized analytic assumptions recorded outside this ledger.
+  \item \textbf{Operator/symmetry support:} synchronized operator assumptions (tracked outside this ledger) together with B2 symmetry compatibility.
   \item \textbf{Immediate contradiction conclusion target:} transfer-reachable off-line exclusion, recorded as part of \cref{lem:b4-global-extension}.
   \item \textbf{Still-open after the neutralized first target:} \cref{lem:b4-no-new-offline-branch}, no-alternative-locus principle, and full-strip exclusion endpoint.
 \end{enumerate}
@@ -253,12 +249,12 @@ It does not claim any listed item is proved.
 \noindent\emph{Feeds into:} contradiction-form off-line exclusion and final full-strip no-off-line-balance theorem target.
 
 \begin{lemma}[No-hidden-branch analytic control for balance loci \textnormal{(OPEN BRIDGE; placeholder)}]
-\placeholder{Establishes: analytic-control hypotheses (regularity, compactness/continuation control, boundary-near and large-parameter estimates) prevent creation of hidden off-line branches of $\Phi_H=0$ outside the local regime. Depends on: B1 well-posedness and B5 analytic-control package. Why it matters: without this bridge, a local uniqueness theorem can coexist with off-line components that appear only in regimes not covered by local estimates.}
+\placeholder{Establishes: analytic-control hypotheses (regularity, compactness/continuation control, boundary-near and large-parameter estimates) prevent creation of hidden off-line branches of $\Phi_H=0$ outside the local regime. Depends on: B1 well-posedness and synchronized analytic-control assumptions tracked outside this ledger. Why it matters: without this bridge, a local uniqueness theorem can coexist with off-line components that appear only in regimes not covered by local estimates.}
 \end{lemma}
 \noindent\emph{Feeds into:} no-alternative-locus principle and global extension from local uniqueness.
 
 \begin{lemma}[Contradiction-route admissibility package for an off-line candidate \textnormal{(OPEN BRIDGE; placeholder)}]
-\placeholder{Establishes: if an off-line point $s_\ast$ is assumed balanced, then the assumption package is stated in a theorem-usable form: (i) $s_\ast\in\mathcal{A}_{\mathrm{strip}}$ with $0<\RePart(s_\ast)<1$ and $\RePart(s_\ast)\neq\tfrac12$, (ii) $\Phi_H(s_\ast)$ is well-defined and equals $0$, (iii) reflection/conjugation transports of $s_\ast$ remain admissible under the same hypotheses, and (iv) the regularity regime needed for global transfer is satisfied. Depends on: B1 well-posedness, B2 symmetry compatibility, and B5 analytic-control package. Why it matters: prevents hidden changes of assumptions between the contradiction premise and the Stage~6 mechanism.}
+\placeholder{Establishes: if an off-line point $s_\ast$ is assumed balanced, then the assumption package is stated in a theorem-usable form: (i) $s_\ast\in\mathcal{A}_{\mathrm{strip}}$ with $0<\RePart(s_\ast)<1$ and $\RePart(s_\ast)\neq\tfrac12$, (ii) $\Phi_H(s_\ast)$ is well-defined and equals $0$, (iii) reflection/conjugation transports of $s_\ast$ remain admissible under the same hypotheses, and (iv) the regularity regime needed for global transfer is satisfied. Depends on: B1 well-posedness, B2 symmetry compatibility, and synchronized analytic-control assumptions tracked outside this ledger. Why it matters: prevents hidden changes of assumptions between the contradiction premise and the Stage~6 mechanism.}
 \end{lemma}
 \noindent\emph{Feeds into:} off-line contradiction and quartet-transfer targets.
 
@@ -268,7 +264,7 @@ It does not claim any listed item is proved.
 \noindent\emph{Feeds into:} the full-strip no-off-line-balance theorem target below.
 
 \begin{lemma}[No admissible off-line balance states in the full strip \textnormal{(OPEN BRIDGE; placeholder)}]
-\placeholder{Establishes: for every $s\in\mathcal{A}$ with $0<\RePart(s)<1$ and $\RePart(s)\neq \tfrac12$, the manuscript balance criterion fails (or yields contradiction) under one synchronized hypothesis package. Depends on: local uniqueness, global extension, the off-line contradiction lemma target, B1--B3 compatibility, and B5 operator/analytic closure. Why it matters: this is the theorem-level exclusion statement needed before converting balance localization into zero exclusion.}
+\placeholder{Establishes: for every $s\in\mathcal{A}$ with $0<\RePart(s)<1$ and $\RePart(s)\neq \tfrac12$, the manuscript balance criterion fails (or yields contradiction) under one synchronized hypothesis package. Depends on: local uniqueness, global extension, the off-line contradiction lemma target, B1--B3 compatibility, and synchronized operator/analytic closure assumptions tracked outside this ledger. Why it matters: this is the theorem-level exclusion statement needed before converting balance localization into zero exclusion.}
 \end{lemma}
 \noindent\emph{Feeds into:} quartet-level exclusion transfer and the manuscript's global reduction claim.
 
@@ -278,7 +274,7 @@ It does not claim any listed item is proved.
 \Big(\forall s\in\mathcal{B}\cap\mathcal{R}_{\mathrm{loc}},\ \RePart(s)=\tfrac12\Big)\Rightarrow
 \Big(\forall s\in\mathcal{B}\cap\mathcal{A}_{\mathrm{strip}},\ \RePart(s)=\tfrac12\Big),
 \]
-equivalently in theorem-target form: (i) pointwise no admissible off-line balanced point exists in $\mathcal{A}_{\mathrm{strip}}$, (ii) set-theoretically $\mathcal{B}\cap\{s\in\mathcal{A}_{\mathrm{strip}}:\RePart(s)\neq\tfrac12\}=\varnothing$, (iii) component-wise no off-line connected component of $\mathcal{B}$ survives globally, and (iv) contradiction-style any assumed admissible off-line balanced point violates at least one clause of the same synchronized package. Depends on: local balance-axis uniqueness, admissibility-stability transfer, uniform continuation/compactness control, no-new-off-line-branch emergence, no-alternative-locus principle, OP7/OP8 with invoked OP1--OP6 prerequisites, and AC1--AC6 analytic control. Why it matters: this is the single theorem endpoint currently targeted by the Stage~6 program under audit; all Stage~6 sub-lemmas are discharge obligations for this one statement.}
+equivalently in theorem-target form: (i) pointwise no admissible off-line balanced point exists in $\mathcal{A}_{\mathrm{strip}}$, (ii) set-theoretically $\mathcal{B}\cap\{s\in\mathcal{A}_{\mathrm{strip}}:\RePart(s)\neq\tfrac12\}=\varnothing$, (iii) component-wise no off-line connected component of $\mathcal{B}$ survives globally, and (iv) contradiction-style any assumed admissible off-line balanced point violates at least one clause of the same synchronized package. Depends on: local balance-axis uniqueness, admissibility-stability transfer, uniform continuation/compactness control, no-new-off-line-branch emergence, no-alternative-locus principle, and one synchronized operator/analytic support package tracked outside this ledger. Why it matters: this is the single theorem endpoint currently targeted by the Stage~6 program under audit; all Stage~6 sub-lemmas are discharge obligations for this one statement.}
 \end{lemma}
 \noindent\emph{Feeds into:} the Stage~6 output in \texttt{proof-architecture.tex} and the conditional RH reduction pipeline in \texttt{main-results.tex}.
 
@@ -287,62 +283,11 @@ equivalently in theorem-target form: (i) pointwise no admissible off-line balanc
 \end{lemma}
 \noindent\emph{Feeds into:} final symmetry-consistent exclusion statement used by the Section~8 architecture.
 
-\subsubsection*{B5. Cross-cutting support: operator package (OP) and analytic package (AC)}
+\subsubsection*{B5. Cross-cutting support (compressed audit remark)}
 
-\begin{lemma}[OP1/OP2: Ambient-space, dense-domain, and closure-control package \textnormal{(OPEN TARGET; placeholder)}]
-\placeholder{Establishes: a finalized ambient space $\mathcal{X}$, operator domain $\mathcal{D}(H)$, and operator action $H:\mathcal{D}(H)\to\mathcal{X}$ with the exact density/closure/closability properties later invoked. Depends on: finalized construction of $H$ from Section~7. Why it matters: without typed domain and closure control, later spectral and balance claims may be ill-posed.}
-\end{lemma}
-\noindent\emph{Feeds into:} B1 admissibility well-posedness, B3 correspondence soundness, and all later operator-side transfer steps.
-
-\begin{lemma}[OP3/OP4: Symmetry-domain invariance and intertwining package \textnormal{(OPEN TARGET; placeholder)}]
-\placeholder{Establishes: reflection/conjugation (and any model-specific symmetry action) preserve the required operator and auxiliary domains, together with the precise intertwining/covariance identity used to transport symmetry to $\Phi_H$. Depends on: OP1/OP2 package and finalized symmetry realization. Why it matters: this is the operator-level bridge that supports B2 reflection/conjugation compatibility without hidden assumptions.}
-\end{lemma}
-\noindent\emph{Feeds into:} B2 symmetry compatibility, B4 quartet-transfer, and Stage~6 contradiction-route admissibility.
-
-\begin{lemma}[OP5: Spectral-legitimacy package for invoked spectral operations \textnormal{(OPEN TARGET; placeholder)}]
-\placeholder{Establishes: every spectral construction used by the manuscript (resolvent, projection, functional calculus, decomposition, or weaker declared substitute) is legitimate for the chosen $H$ under explicitly stated hypotheses. Depends on: OP1/OP2 and chosen operator model class. Why it matters: prevents informal spectral language from being treated as theorem-level input in Target~A or Stage~6.}
-\end{lemma}
-\noindent\emph{Feeds into:} B3 zero--balance correspondence and any exclusion mechanism that invokes spectral-side quantities.
-
-\begin{lemma}[OP6: Operator--balance compatibility package \textnormal{(OPEN TARGET; placeholder)}]
-\placeholder{Establishes: the definition and evaluation of $\Phi_H$ use only operator-side objects justified by OP1--OP5, with no circular dependence on the zero set and no illegal transform/interchange at the operator layer. Depends on: OP1--OP5 and B1 admissibility setup. Why it matters: this is required before $\Phi_H(s)=0$ can function as a theorem-level predicate in correspondence, uniqueness, or contradiction steps.}
-\end{lemma}
-\noindent\emph{Feeds into:} B1 well-posedness, B3 correspondence construction, and B4 off-line contradiction package.
-
-\begin{lemma}[OP7/OP8: Operator-side admissibility stability and dependency-locked usage \textnormal{(OPEN TARGET; placeholder)}]
-\placeholder{Establishes: operator-side transformations used in local-to-global transfer preserve admissibility hypotheses, and each operator hypothesis is explicitly linked to the lemma(s) that use it (dependency lock). Depends on: OP1--OP6 plus finalized transfer class. Why it matters: prevents hypothesis drift between local Target~B proofs and Stage~6 full-strip exclusion.}
-\end{lemma}
-\noindent\emph{Feeds into:} B4 admissibility-stability transfer, global extension of local uniqueness, no-alternative-locus target, and full-strip no-off-line-balance target.
-
-\begin{lemma}[AC1: Strip-wide growth and defect bounds \textnormal{(OPEN TARGET; placeholder)}]
-\placeholder{Establishes: quantitative growth/defect bounds used by Stage~6 contradiction steps are valid uniformly on the declared strip sectors (including boundary-near and large-parameter regimes). Depends on: B1 well-posedness and finalized analytic side conditions. Why it matters: without strip-wide bounds, local uniqueness cannot control off-line behavior globally.}
-\end{lemma}
-\noindent\emph{Feeds into:} B4 uniform continuation/compactness control, no-hidden-branch control, and contradiction-route closure.
-
-\begin{lemma}[AC2: Uniform convergence and regime-compatibility control \textnormal{(OPEN TARGET; placeholder)}]
-\placeholder{Establishes: any sequence/series/integral representation used for $\Phi_H$ converges with the uniformity required by local-to-global continuation on the declared admissible sectors. Depends on: B1 admissibility and AC1 bounds. Why it matters: pointwise convergence is insufficient for Stage~6 transfer arguments.}
-\end{lemma}
-\noindent\emph{Feeds into:} B3 correspondence soundness and B4 global extension.
-
-\begin{lemma}[AC3: Interchange-of-operations legitimacy \textnormal{(OPEN TARGET; placeholder)}]
-\placeholder{Establishes: every interchange used in the argument (limit/integral, derivative/integral, summation/integration, contour deformation) is valid under explicit hypotheses on the same admissible class. Depends on: AC1--AC2 and finalized representation formulas. Why it matters: unjustified interchanges are a direct failure mode for strip-wide exclusion claims.}
-\end{lemma}
-\noindent\emph{Feeds into:} B3 soundness and B4 contradiction-form exclusion.
-
-\begin{lemma}[AC4: Continuation/extension control across strip regimes \textnormal{(OPEN TARGET; placeholder)}]
-\placeholder{Establishes: local estimates in $\mathcal{R}_{\mathrm{loc}}$ extend to all sectors required in $\mathcal{A}_{\mathrm{strip}}$ with explicit continuation/compactness hypotheses and no loss of admissibility. Depends on: AC1--AC3 and B4 local balance-axis uniqueness. Why it matters: this is the analytic core of the local-to-global transfer burden.}
-\end{lemma}
-\noindent\emph{Feeds into:} B4 global extension of local uniqueness and no-alternative-locus target.
-
-\begin{lemma}[AC5: No-hidden-branch analytic closure for $\mathcal{B}$ \textnormal{(OPEN TARGET; placeholder)}]
-\placeholder{Establishes: under the declared analytic package, no off-line connected component of $\mathcal{B}$ can appear outside the local regime due to boundary escape, loss of compactness, or regime switching. Depends on: AC1--AC4 and B2 symmetry compatibility. Why it matters: prevents global branch creation that would evade local uniqueness.}
-\end{lemma}
-\noindent\emph{Feeds into:} B4 no-new-off-line-branch emergence, no-alternative-locus principle, and full-strip exclusion.
-
-\begin{lemma}[AC6: Compatibility of local estimates with strip-wide admissibility \textnormal{(OPEN TARGET; placeholder)}]
-\placeholder{Establishes: the same hypotheses used by local Target~B estimates remain valid for every admissible point used by Stage~6 transfer and contradiction arguments. Depends on: B1 admissibility stability, AC1--AC5, and the finalized admissible-class definition. Why it matters: prevents hidden hypothesis mismatch between local uniqueness and global exclusion.}
-\end{lemma}
-\noindent\emph{Feeds into:} B4 transfer theorem target, contradiction-route admissibility package, and full-strip no-off-line-balance target.
+\begin{remark}[Cross-cutting operator/analytic burden is retained but moved out of the main Stage~6 ledger]
+The Stage~6 chain in this manuscript still requires theorem-level operator and analytic support (well-posed operator realization, admissibility stability, continuation/interchange legality, and no-hidden-branch control). Those burdens are not removed mathematically; they are tracked in compact form in \texttt{manuscript/spectral-framework.tex} and in detailed audit form in \texttt{notes/known-gaps.md}, rather than as a long OP/AC lemma catalog inside the main B1--B4 flow.
+\end{remark}
 
 \subsection*{C. Audit note on current status}
 
