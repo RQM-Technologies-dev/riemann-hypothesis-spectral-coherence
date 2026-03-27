@@ -33,25 +33,50 @@ At the current stage, $H$ is reserved notation, not yet a fully constructed theo
 \end{definition}
 
 \begin{definition}[Admissible point and admissible class \textnormal{(provisional definition; formalization target)}]
-\placeholder{A non-circular admissibility criterion independent of zero locations must be supplied.}
-An \emph{admissible point} is a complex number $s\in\C$ for which all ingredients required to evaluate the canonical balance functional $\Phi_H$ are defined and finite.
-An \emph{admissible class} is a specified subset $\mathcal{A}\subseteq\C$ of admissible points on which $\Phi_H$ is analyzed.
+\placeholder{A full well-posedness theorem for the regularized trace below is still required.}
+Fix the proposed coherence object $H$.
+An \emph{admissible point} is a complex number $s\in\C$ such that both regularized resolvents
+\[
+(H-sI)^{-1}_{\mathrm{reg}},
+\qquad
+(H-(1-s)I)^{-1}_{\mathrm{reg}}
+\]
+exist in the chosen operator model and have finite regularized traces.
+The \emph{admissible class} is
+\[
+\mathcal{A}:=\left\{s\in\C:
+\Tr_{\mathrm{reg}}(H-sI)^{-1}\ \text{and}\ \Tr_{\mathrm{reg}}(H-(1-s)I)^{-1}\ \text{are both defined and finite}
+\right\}.
+\]
 \end{definition}
 
-\begin{definition}[Canonical balance predicate \texorpdfstring{$\Phi_H$}{Phi_H} \textnormal{(conditional/provisional)}]
-\placeholder{A complete operator-level formula for $\Phi_H$ and a proof of well-posedness on $\mathcal{A}$ are still required.}
-Fix a finalized coherence object $H$ and admissible class $\mathcal{A}$.
-The manuscript uses one canonical balance predicate in the main text:
+\begin{definition}[Canonical balance functional \texorpdfstring{$\Phi_H$}{Phi_H} \textnormal{(single main-text candidate; conditional/provisional)}]
+\placeholder{The regularization scheme and its theorem-level properties remain open proof obligations.}
+For $s\in\mathcal{A}$, define
+\[
+\Phi_H(s)
+:=
+\Tr_{\mathrm{reg}}(H-sI)^{-1}
+-
+\Tr_{\mathrm{reg}}(H-(1-s)I)^{-1}.
+\]
+Thus $\Phi_H:\mathcal{A}\to\C$ is the \emph{regularized resolvent reflection-defect functional} of $H$.
+The manuscript uses the single balance predicate
 \[
 \text{Bal}_H(s) \iff \Phi_H(s)=0 \qquad (s\in\mathcal{A}).
 \]
-Thus ``$s$ is balanced'' means exactly ``$\Phi_H(s)=0$'' on the declared admissible class.
-This is a theorem target, not an established theorem in the current manuscript version.
+Interpretation: $\Phi_H(s)=0$ encodes exact reflection balance of the regularized resolvent response at the pair $(s,1-s)$.
+This is the canonical main-text candidate for the balance object, and it remains a theorem target in the current manuscript version.
 \end{definition}
+
+\begin{remark}[Why this is the canonical candidate in the main flow]
+The functional above is used as the single main-text candidate because it directly measures the $s\leftrightarrow 1-s$ defect at operator level, which is the symmetry direction needed by the proof spine.
+No alternative balance functional is used in the core manuscript flow.
+\end{remark}
 
 \begin{remark}[Status boundary for theorem-level use]
 The definitions of $H$, admissibility, and $\Phi_H$ above are provisional.
-They mark unresolved bridges recorded in the audit notes: exact construction of $H$, exact definition of $\Phi_H$, and proof-level control of admissibility assumptions.
+Open bridges include: construction of the operator model, choice and invariance of regularization, existence/finite-value proofs on $\mathcal{A}$, and compatibility of this $\Phi_H$ with the zero-correspondence target.
 No theorem-level claim may rely on these terms without first supplying those formal components.
 \end{remark}
 

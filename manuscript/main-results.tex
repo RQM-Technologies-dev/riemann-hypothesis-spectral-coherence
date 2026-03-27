@@ -17,8 +17,24 @@ satisfies $\xi(s)=\xi(1-s)$; see \cite{Riemann1859,Edwards1974,Titchmarsh1986}.
 If $\rho$ is a nontrivial zero of $\zeta$, then $1-\rho$ and $\overline{\rho}$ are also nontrivial zeros; see \cite{Edwards1974,Titchmarsh1986}.
 \end{proposition}
 
-\subsection*{Step 1: Canonical balance predicate}
-Fix an admissible class $\mathcal{A}$ and the canonical balance functional $\Phi_H:\mathcal{A}\to\mathbb{C}$.
+\subsection*{Step 1: Canonical balance predicate (explicit main-text candidate)}
+Fix the proposed coherence object $H$ and the admissible class
+\[
+\mathcal{A}:=
+\left\{
+s\in\C:
+\Tr_{\mathrm{reg}}(H-sI)^{-1},\Tr_{\mathrm{reg}}(H-(1-s)I)^{-1}\ \text{exist and are finite}
+\right\}.
+\]
+Define
+\[
+\Phi_H(s):=
+\Tr_{\mathrm{reg}}(H-sI)^{-1}
+-
+\Tr_{\mathrm{reg}}(H-(1-s)I)^{-1}
+\qquad (s\in\mathcal{A}).
+\]
+This manuscript treats this explicit resolvent reflection-defect functional as the single canonical candidate in the main flow.
 Define
 \[
 \mathcal{A}_{\mathrm{strip}}:=\{s\in\mathcal{A}:0<\RePart(s)<1\},
@@ -36,7 +52,8 @@ Under a fully specified admissibility and well-posedness package, the framework 
 \[
 \rho\text{ is a nontrivial zero of }\zeta
 \quad\Longleftrightarrow\quad
-\rho\in\mathcal{B}.
+\rho\in\mathcal{B}
+\quad\text{where }\mathcal{B}\text{ is defined using the explicit }\Phi_H\text{ above}.
 \]
 This target is open in the current manuscript version.
 \end{drafttheorem}
@@ -49,6 +66,7 @@ Under a synchronized hypothesis package compatible with Target~A, the framework 
 \[
 \mathcal{B}\subseteq\{s\in\mathcal{A}_{\mathrm{strip}}:\RePart(s)=\tfrac12\}.
 \]
+Here $\mathcal{B}$ is the zero set of the explicit resolvent reflection-defect functional fixed in Step~1.
 This target is open in the current manuscript version.
 \end{drafttheorem}
 

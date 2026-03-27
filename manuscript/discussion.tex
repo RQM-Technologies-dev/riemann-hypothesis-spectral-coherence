@@ -3,7 +3,10 @@ It is not part of the formal proof itself.
 
 \paragraph{Purpose of the current revision.}
 The manuscript now presents one short proof spine in the main text:
-(1) define one canonical balance predicate $\Phi_H(s)=0$,
+(1) define one canonical balance predicate using
+\[
+\Phi_H(s)=\Tr_{\mathrm{reg}}(H-sI)^{-1}-\Tr_{\mathrm{reg}}(H-(1-s)I)^{-1},
+\]
 (2) state correspondence,
 (3) state one canonical exclusion target,
 (4) derive RH conditionally.
@@ -15,16 +18,17 @@ The argument attempts to show that if the canonical balance predicate is put in 
 \[
 \mathcal{B}\subseteq\{s\in\mathcal{A}_{\mathrm{strip}}:\RePart(s)=\tfrac12\}
 \]
-is proved, then RH follows.
+is proved for that explicit $\Phi_H$, then RH follows.
 The framework suggests a spectral-coherence route to those two targets, but those targets remain open in the current manuscript version.
 
 \paragraph{Why mathematical branching was reduced in the main flow.}
-Earlier drafts carried multiple near-equivalent predicates and exclusion formulations in parallel.
-Those variants are useful for technical experimentation, but they obscure claim traceability in the main proof narrative.
-In this revision, the main text keeps one canonical predicate and one canonical exclusion statement; alternatives are treated as supporting material only.
+Earlier drafts postponed the meaning of $\Phi_H$ or treated multiple near-equivalent interfaces in parallel.
+That obscured the main mathematical object.
+In this revision, the main text keeps one explicit candidate and one canonical exclusion statement; any alternates belong in supporting material only.
 
 \paragraph{Current mathematical status.}
 The manuscript remains a proposed proof framework under review.
+The chosen explicit $\Phi_H$ is still provisional and requires theorem-level validation.
 The RH deduction in the main text is conditional on open theorem targets.
 No claim of complete proof is made.
 

@@ -1,15 +1,26 @@
-This section defines a minimal formal interface for the manuscript's proposed operator/coherence layer.
-It does not claim that the layer is complete.
-Its role is to make explicit which properties must be supplied before downstream RH-reduction claims can be treated as theorem-level statements.
+This section fixes one canonical main-text answer to the question ``What is $\Phi_H(s)$?''
+It does not claim this choice is already validated.
+Its role is to state the exact object and list the theorem burdens required before RH-reduction claims become theorem-level statements.
 
-\subsection*{Current formal status and canonical choice}
-\placeholder{A finalized operator-level construction has not yet been fixed.}
-The manuscript now fixes one canonical predicate for the main text:
+\subsection*{Canonical main-text choice}
+\placeholder{The operator construction and regularization theorem package are not yet complete.}
+The manuscript fixes one functional in the main flow:
 \[
-\text{Bal}_H(s)\iff \Phi_H(s)=0 \quad (s\in\mathcal{A}),
+\Phi_H(s):=\Tr_{\mathrm{reg}}(H-sI)^{-1}-\Tr_{\mathrm{reg}}(H-(1-s)I)^{-1},
 \]
-where $H$ is the proposed spectral object and $\Phi_H$ is the balance functional derived from that object.
-At present, $H$ and $\Phi_H$ are formalization targets rather than complete theorem-level objects.
+defined on
+\[
+\mathcal{A}:=
+\left\{
+s\in\C:
+\Tr_{\mathrm{reg}}(H-sI)^{-1},\Tr_{\mathrm{reg}}(H-(1-s)I)^{-1}\ \text{exist and are finite}
+\right\}.
+\]
+The associated predicate is
+\[
+\text{Bal}_H(s)\iff \Phi_H(s)=0 \qquad (s\in\mathcal{A}).
+\]
+Interpretation: $\Phi_H(s)$ is the regularized resolvent reflection defect of $H$ at the pair $(s,1-s)$.
 
 \subsection*{Minimal required structure for the $H$-layer}
 The manuscript does not need every possible operator-theoretic feature.
@@ -40,32 +51,35 @@ Each assumption must be tagged as either proved in-manuscript or imported as an 
 A lemma-level dependency map from operator properties to later claims (especially Targets~A and~B).
 No RH-relevant step should rely on an unlisted implicit property of $H$.
 
-\subsection*{Minimal required structure for the canonical functional \texorpdfstring{$\Phi_H$}{Phi_H}}
-Once a candidate $H$-layer is fixed, the manuscript uses one canonical functional $\Phi_H$ with explicit dependence on that layer.
+\subsection*{Required theorem package for this explicit \texorpdfstring{$\Phi_H$}{Phi_H}}
+The definition above is explicit; the open work is to prove it is mathematically sound and suitable for Targets~A/B.
 
-\paragraph{(P1) Definition from finalized inputs.}
-A non-circular definition rule for $\Phi_H(s)$ using only previously defined data.
-The definition must not presuppose the zero set of $\zeta$.
+\paragraph{(P1) Non-circular construction.}
+The operator model and regularization map $\Tr_{\mathrm{reg}}$ must be defined without using the zero set of $\zeta$.
 
 \paragraph{(P2) Domain of evaluation (admissible class).}
-A specified admissible class $\mathcal{A}\subseteq\C$ consistent with \texttt{definitions.tex}, including all side conditions needed for finiteness and well-posedness.
-If $\Phi_H$ is only partially defined, the excluded region must be explicit.
+The declared set $\mathcal{A}$ must be proved nonempty and explicitly characterized.
+If singular points are removed, the exclusion mechanism must be stated.
 
-\paragraph{(P3) Well-posedness statement.}
-For $s\in\mathcal{A}$, proof that $\Phi_H(s)$ exists and is finite, plus the exact continuity/regularity properties later used in correspondence and exclusion steps.
-Computational checks may support plausibility but do not satisfy this requirement.
+\paragraph{(P3) Well-posedness and regularity.}
+For $s\in\mathcal{A}$, prove existence and finiteness of both regularized traces and of their difference.
+State the continuity/analytic properties of $s\mapsto\Phi_H(s)$ used later.
 
-\paragraph{(P4) Symmetry behavior of \texorpdfstring{$\Phi_H$}{Phi_H}.}
-A formal statement of how $\Phi_H$ transforms under $s\mapsto1-s$, derived from stated $H$-properties.
-This is required for reflection-based arguments.
+\paragraph{(P4) Reflection behavior.}
+The explicit formula gives
+\[
+\Phi_H(1-s)=-\Phi_H(s)
+\]
+whenever both sides are defined.
+A theorem-level proof must show that the admissible class is stable under $s\mapsto 1-s$ and that the regularization is compatible with this identity.
 
-\paragraph{(P5) Bridge interface to zero claims.}
-A precise theorem target describing what must be shown about
+\paragraph{(P5) Bridge to zero claims.}
+A precise theorem target must explain how
 \[
 \Phi_H(s)=0
 \]
-and how that condition maps to encoded zeta-zero statements.
-This interface should separate:
+for this explicit resolvent-defect functional maps to nontrivial zero information.
+The bridge should separate:
 \begin{enumerate}
   \item the forward direction to be proved,
   \item the converse direction to be proved,
@@ -88,25 +102,25 @@ It does not claim those prerequisites are proved.
 
 \subsection*{Open support packages (dependency statements, not proved results)}
 \paragraph{Operator-side package (OP).}
-The following remain open theorem targets: well-defined operator action and closure properties, symmetry-compatible transport on relevant domains, legitimacy of any invoked spectral constructions, compatibility of operator transforms with evaluation of $\Phi_H$, and dependency-locked usage across Targets~A/B.
+The following remain open theorem targets: well-defined operator action and closure properties, existence of the regularized resolvent traces, regularization invariance/consistency, and dependency-locked usage of these results across Targets~A/B.
 
 \paragraph{Analytic-control package (AC).}
-The following remain open theorem targets: strip-wide bound control, uniform convergence where transfer is used, legitimacy of limit/interchange operations, continuation control from local to strip-wide regimes, and exclusion of hidden off-line branches of $\mathcal{B}$ caused by analytic degeneration.
+The following remain open theorem targets: strip-wide bound control for the explicit $\Phi_H$, legitimacy of limit/interchange operations for regularized traces, continuation control from local to strip-wide regimes, and exclusion of hidden off-line branches of $\mathcal{B}$ caused by analytic degeneration.
 
 \paragraph{Status note.}
 OP and AC are recorded as open bridge classes for audit.
 They specify proof burden only.
 They do not provide a proof of Target~A or Target~B.
 
-\subsection*{Why this layer is necessary for the RH reduction}
-The conditional reduction step in \texttt{main-results.tex} depends on theorem-level statements about $H$ and $\Phi_H$.
-Without a rigorous $H$/$\Phi_H$ layer:
+\subsection*{Why this explicit choice is kept in the main flow}
+The conditional reduction step in \texttt{main-results.tex} depends on theorem-level statements about the specific functional above.
+Without a rigorous foundation for this explicit $\Phi_H$:
 \begin{enumerate}
-  \item the predicate $\Phi_H(s)=0$ is not a theorem-level condition on a defined domain,
-  \item the correspondence target cannot be stated non-circularly,
-  \item the canonical exclusion target has no formal object to which estimates apply.
+  \item $\Phi_H(s)=0$ is not yet a theorem-level condition on a proved domain,
+  \item the zero--balance correspondence target lacks a justified bridge,
+  \item the canonical exclusion target lacks a proved analytic object to control.
 \end{enumerate}
-Therefore this layer is a prerequisite interface for the manuscript's proposed RH reduction route.
+Therefore this explicit $\Phi_H$ choice is a prerequisite object for the manuscript's proposed RH reduction route.
 
 \begin{heuristic}
 Geometric or cancellation intuition can guide candidate constructions of $H$ and $\Phi_H$.

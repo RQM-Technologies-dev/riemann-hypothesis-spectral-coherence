@@ -8,7 +8,11 @@ Heuristic and computational evidence remain supporting context.
 \subsection*{Canonical mathematical core (and its status)}
 The current main text commits to one canonical pair of open targets:
 \begin{enumerate}
-  \item the canonical balance predicate $\Phi_H(s)=0$ on the declared admissible strip class;
+  \item the canonical balance predicate built from the explicit functional
+  \[
+  \Phi_H(s)=\Tr_{\mathrm{reg}}(H-sI)^{-1}-\Tr_{\mathrm{reg}}(H-(1-s)I)^{-1},
+  \]
+  on the declared admissible strip class;
   \item the canonical exclusion statement
   \(
   \mathcal{B}\subseteq\{s\in\mathcal{A}_{\mathrm{strip}}:\RePart(s)=\tfrac12\}
@@ -29,7 +33,7 @@ The simplified proof spine leaves two central open theorem targets:
 \subsection*{Technical dependencies remain open}
 Although no longer expanded in the main spine, the following technical burdens remain unresolved and must eventually be discharged in supporting materials:
 \begin{enumerate}
-  \item operator-theoretic well-posedness and compatibility needed by the construction of $\Phi_H$;
+  \item operator-theoretic well-posedness and compatibility needed to define the regularized resolvent traces in $\Phi_H$;
   \item analytic-control and continuation estimates needed to prevent hidden off-line balance branches;
   \item synchronization of assumptions across local arguments and strip-wide conclusions.
 \end{enumerate}
