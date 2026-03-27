@@ -128,6 +128,10 @@ For dependency clarity, the intended theorem flow is:
 \Longrightarrow
 \underbrace{\text{contradiction-ready transfer exclusion target in \cref{thm:stage6-first-subtarget-admissibility}}}_{\text{current first proving target (open)}}
 \Longrightarrow
+\underbrace{\text{no-drift transport step in the contradiction proof}}_{\text{current highest-risk step (open)}}
+\Longrightarrow
+\underbrace{\text{candidate neutralizing result \cref{thm:stage6-neutralizing-transport-uniformity}}}_{\text{best current repair target (open)}}
+\Longrightarrow
 \underbrace{\text{no-alternative-locus closure for }\mathcal{B}}_{\text{preferred global mechanism target}}
 \Longrightarrow
 \underbrace{\text{full-strip off-line exclusion on }\mathcal{A}_{\mathrm{strip}}}_{\text{global conclusion}}.
@@ -154,6 +158,10 @@ $\cref{lem:b4-admissibility-stability-transfer}$.
 This bridge is where the argument must show that hypotheses proved/assumed locally on $\mathcal{R}_{\mathrm{loc}}$ remain valid at transfer-reachable endpoints in $\mathcal{A}_{\mathrm{strip}}$ under the same package $\mathcal{H}_{\mathrm{S6}}^{\min}$.
 If this bridge fails or remains underjustified, the contradiction step is not yet well-typed: Stage-5 uniqueness is invoked at the endpoint without a theorem-level no-drift transfer justification.
 Accordingly, this bridge is the first proof-critical audit checkpoint in the Stage~6 dependency chain.
+The manuscript now names one best candidate neutralizing result for this checkpoint:
+\cref{thm:stage6-neutralizing-transport-uniformity} in \texttt{critical-line-argument.tex}.
+That target is explicitly open.
+It is intended to repair only this no-drift contradiction-typing failure point, after which the route resumes with no-new-off-line-branch and no-alternative-locus burdens toward the master Stage~6 theorem.
 
 \textbf{Intended output.}
 A global theorem-level exclusion mechanism distinct from Stage 5, culminating in the master theorem target \cref{thm:stage6-master-exclusion-target}:

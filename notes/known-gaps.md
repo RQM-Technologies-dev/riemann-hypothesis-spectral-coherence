@@ -161,7 +161,9 @@ This includes ambient-space/domain typing, closure/closability control, symmetry
 **Current Stage-6 first-subtheorem audit focus (single highest-risk step):**
 - The most likely failure point in the present contradiction-style first subtheorem is the no-drift transport bridge from local Stage-5 hypotheses on $\mathcal{R}_{\mathrm{loc}}$ to transfer-reachable endpoints in $\mathcal{A}_{\mathrm{strip}}$.
 - If this bridge is not theorem-level, the contradiction step can invoke local uniqueness at an endpoint without proving that the same hypothesis tuple still holds there under $\mathcal{H}_{\mathrm{S6}}^{\min}$.
-- Resolution requires a theorem-level transport invariance lemma (B4a) with explicit OP7--OP8 and AC1--AC6 dependency control under one synchronized package.
+- The current best candidate neutralizing result is the open theorem target `thm:stage6-neutralizing-transport-uniformity` (transport-uniformity contradiction enabler) in `manuscript/critical-line-argument.tex`.
+- Resolution of this highest-risk step requires that target (or an equivalent theorem) to prove no-drift transfer invariance with explicit OP7--OP8 and AC1--AC6 dependency control under one synchronized package.
+- Even if that repair target is proved, downstream burdens remain open: no-new-off-line-branch closure, no-alternative-locus closure for all of $\mathcal{B}$, and the master Stage-6 exclusion theorem.
 
 ---
 

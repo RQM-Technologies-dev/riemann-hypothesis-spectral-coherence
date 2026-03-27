@@ -311,6 +311,55 @@ for every transfer path/class element $C\in\mathfrak{C}_{\mathrm{tr}}$ from a lo
 In the current dependency map this means proving the B4a transport bridge with explicit OP7--OP8 and AC1--AC6 usage, under one fixed synchronized package.
 Until that bridge is proved, the first contradiction-style Stage~6 theorem remains open.
 
+\subsection*{Best candidate neutralizing result for the current Stage~6 highest-risk step}
+To make the next proof attempt executable, the manuscript now names one \emph{single best candidate repair target} for the no-drift transport failure point.
+This is a theorem target only.
+It is not proved in this manuscript version.
+
+\begin{drafttheorem}[Candidate neutralizing theorem target (Stage~6 transport-uniformity contradiction enabler)]
+\label{thm:stage6-neutralizing-transport-uniformity}
+\placeholder{Draft theorem target under construction; proof not yet provided.}
+Let
+\[
+\mathcal{A}_{\mathrm{strip}}:=\{s\in\mathcal{A}:0<\RePart(s)<1\},\qquad
+\mathcal{B}:=\{s\in\mathcal{A}_{\mathrm{strip}}:\Phi_H(s)=0\},\qquad
+\mathcal{R}_{\mathrm{loc}}\subseteq\mathcal{A}_{\mathrm{strip}}.
+\]
+Work under the same synchronized package $\mathcal{H}_{\mathrm{S6}}^{\min}$ used by
+\cref{thm:stage6-first-subtarget-admissibility}, and let
+$\mathfrak{C}_{\mathrm{tr}}$ denote the transfer class.
+The candidate neutralizing result is the following theorem target.
+\begin{enumerate}
+  \item \textbf{Hypothesis package required by this target.}
+  Use $\mathcal{H}_{\mathrm{S6}}^{\min}$ together with an explicit transport-uniformity clause
+  \[
+  \mathcal{T}_{\mathrm{nd}}
+  \]
+  that states (i) endpoint-admissibility persistence, (ii) no-loss regularity persistence, (iii) no-loss symmetry compatibility under reflection/conjugation transport, and (iv) quantitative continuation bounds sufficient to prevent predicate drift along every $C\in\mathfrak{C}_{\mathrm{tr}}$.
+  This clause is formulation-level and does not assume a finalized operator realization beyond the OP/AC interface already declared.
+
+  \item \textbf{Exact conclusion needed to neutralize the failure point.}
+  For every transfer-reachable endpoint $s\in\mathcal{A}_{\mathrm{strip}}$, if
+  $s\in\mathcal{B}_{\mathrm{tr}}$, then the full Stage-5 local hypothesis tuple holds at $s$ in the same theorem-usable form as at local anchors in $\mathcal{R}_{\mathrm{loc}}$.
+  Equivalently: there is no hypothesis drift between local and endpoint predicates along transfer paths.
+
+  \item \textbf{How this plugs into the current contradiction route.}
+  Under item~(2), any assumed off-line endpoint
+  \[
+  s_\ast\in\mathcal{B}_{\mathrm{tr}},\qquad \RePart(s_\ast)\neq\tfrac12,
+  \]
+  is eligible for direct use of the transported Stage-5 uniqueness clause.
+  Hence the contradiction step in \cref{thm:stage6-first-subtarget-admissibility} becomes theorem-typed rather than heuristic, and the first-subtarget exclusion conclusion becomes derivable in principle under the same package.
+
+  \item \textbf{What remains open even if this target is proved.}
+  This target would neutralize only the current highest-risk failure point.
+  It would not by itself prove: (i) no-new-off-line-branch exclusion outside transfer-reachable classes, (ii) the no-alternative-locus theorem target on all of $\mathcal{B}$, or (iii) the full master Stage~6 exclusion theorem on $\mathcal{A}_{\mathrm{strip}}$.
+\end{enumerate}
+\paragraph{Status label.}
+Open theorem target (candidate repair only).
+No proof is supplied here.
+\end{drafttheorem}
+
 \paragraph{Three-way separation (local result, transfer bridge, global conclusion).}
 To avoid conflation of proof burdens:
 \begin{enumerate}

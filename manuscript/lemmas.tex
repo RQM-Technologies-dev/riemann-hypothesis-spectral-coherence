@@ -105,7 +105,13 @@ This grouping is an audit map only; it does not claim any lemma below is proved.
 \label{lem:b4-admissibility-stability-transfer}
 \placeholder{Establishes: for each transfer-reachable endpoint $s\in\mathcal{A}_{\mathrm{strip}}$, there exists $C\in\mathfrak{C}_{\mathrm{tr}}$ from a local anchor in $\mathcal{R}_{\mathrm{loc}}$ to $s$ such that admissibility hypotheses used in Stage-5 local uniqueness remain valid all along $C$ and at the endpoint with no hypothesis drift. Depends on: B1 admissibility well-posedness and B5 operator/analytic control package. Why it matters: this is the intermediate support burden in the contradiction setup; without it, local uniqueness cannot be transported to an assumed off-line candidate.}
 \end{lemma}
-\noindent\emph{Feeds into:} global extension of local uniqueness and no-alternative-locus exclusion for $\mathcal{B}$.
+\noindent\emph{Feeds into:} the immediate neutralizing bridge \cref{lem:b4-neutralizing-transport-uniformity}, then global extension of local uniqueness and no-alternative-locus exclusion for $\mathcal{B}$.
+
+\begin{lemma}[Transport-uniformity contradiction-enablement lemma (best current neutralizing candidate downstream of the first Stage~6 target) \textnormal{(OPEN BRIDGE; theorem target placeholder)}]
+\label{lem:b4-neutralizing-transport-uniformity}
+\placeholder{Establishes: under $\mathcal{H}_{\mathrm{S6}}^{\min}$ plus an explicit no-drift transport clause, every transfer-reachable endpoint in $\mathcal{B}_{\mathrm{tr}}$ inherits the exact Stage-5 local hypothesis tuple in theorem-usable form, with no admissibility/regularity/symmetry predicate drift along $\mathfrak{C}_{\mathrm{tr}}$. Depends on: \cref{lem:b4-admissibility-stability-transfer}, OP7--OP8 with invoked OP1--OP6 prerequisites, and AC1--AC6 continuation/interchange/uniformity controls. Why it matters: this is the single best candidate result to neutralize the currently identified highest-risk failure point in the contradiction-style first Stage~6 attempt; it upgrades endpoint contradiction use from heuristic to theorem-typed.}
+\end{lemma}
+\noindent\emph{Feeds into:} the contradiction conclusion in \cref{thm:stage6-first-subtarget-admissibility}, then \cref{lem:b4-global-extension} and the master Stage~6 exclusion route.
 
 \begin{lemma}[Uniform continuation/compactness control lemma \textnormal{(OPEN BRIDGE; placeholder)}]
 \label{lem:b4-uniform-continuation}
@@ -136,10 +142,11 @@ Within B4, its proof burden is grouped as:
 \begin{enumerate}
   \item \textbf{Contradiction assumption bookkeeping:} the off-line balanced assumption package described in \cref{thm:stage6-first-subtarget-admissibility} and aligned with the placeholder contradiction-route admissibility lemma below.
   \item \textbf{Core intermediate-support lemma:} \cref{lem:b4-admissibility-stability-transfer}.
+  \item \textbf{Primary downstream neutralizing target:} \cref{lem:b4-neutralizing-transport-uniformity} (the designated repair candidate for the no-drift failure point).
   \item \textbf{Analytic-control support:} \cref{lem:b4-uniform-continuation} plus AC1--AC6 items in B5.
   \item \textbf{Operator/symmetry support:} OP7--OP8 with invoked OP1--OP6 prerequisites, together with B2 symmetry compatibility.
   \item \textbf{Immediate contradiction conclusion target:} transfer-reachable off-line exclusion, recorded as part of \cref{lem:b4-global-extension}.
-  \item \textbf{Still-open after the first target:} \cref{lem:b4-no-new-offline-branch}, no-alternative-locus principle, and full-strip exclusion endpoint.
+  \item \textbf{Still-open after the neutralized first target:} \cref{lem:b4-no-new-offline-branch}, no-alternative-locus principle, and full-strip exclusion endpoint.
 \end{enumerate}
 This ledger is organizational only.
 It does not claim any listed item is proved.
