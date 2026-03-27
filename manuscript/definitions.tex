@@ -54,3 +54,34 @@ No theorem-level claim may rely on these terms without first supplying those for
 \begin{remark}[Traceability requirement]
 When the provisional objects are upgraded, each promoted definition should include: (i) explicit hypotheses, (ii) well-posedness statement, and (iii) dependency links to the lemmas/theorems that justify subsequent use.
 \end{remark}
+
+\subsection*{Stage-6 provisional transport-defect interface}
+
+\begin{definition}[No-drift defect functional \texorpdfstring{$\Delta_{\mathrm{nd}}$}{Delta\_nd} \textnormal{(provisional; audit/planning object)}]
+Fix one synchronized Stage-6 package $\mathcal{H}_{\mathrm{S6}}^{\min}$, a contradiction-relevant transfer subclass
+\(
+\mathfrak{C}_{\mathrm{tr}}^{\mathrm{ctr}}\subseteq\mathfrak{C}_{\mathrm{tr}},
+\)
+and a Stage-5 hypothesis tuple
+\(
+\Theta_{\mathrm{S5}}=(\theta_1,\dots,\theta_m).
+\)
+For each $C\in\mathfrak{C}_{\mathrm{tr}}^{\mathrm{ctr}}$, let $U(C)\subseteq\mathcal{A}_{\mathrm{strip}}$ be the transfer-position set, and let
+\(
+\delta_j^{(C)}:U(C)\to[0,\infty]
+\)
+be clause-defect gauges for $\theta_j$.
+Define
+\[
+d_{\Theta}^{(C)}(u):=\max_{1\le j\le m}\delta_j^{(C)}(u),
+\qquad
+\Delta_{\mathrm{nd}}(C;\Theta_{\mathrm{S5}},\delta):=\sup_{u\in U(C)}d_{\Theta}^{(C)}(u).
+\]
+Interpretation (intended, not proved): $\Delta_{\mathrm{nd}}(C)=0$ means no clause loss along $C$; small positive values indicate controlled drift; finite uniform bounds indicate bounded instability; $\infty$ indicates uncontrolled transport.
+\end{definition}
+
+\begin{remark}[Status and dependency boundary]
+This definition is provisional and interface-level.
+It does not select a finalized operator realization and does not assert that the chosen gauges are canonical.
+Its current role is to provide a clean first analytic control target for \cref{lem:stage6-first-concrete-no-drift}, downstream of Stage-5 local uniqueness and upstream of \cref{thm:stage6-neutralizing-transport-uniformity}.
+\end{remark}
