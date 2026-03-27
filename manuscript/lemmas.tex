@@ -101,6 +101,27 @@ Accordingly, the immediate B4 support lemmas are grouped by burden type:
 \end{enumerate}
 This grouping is an audit map only; it does not claim any lemma below is proved.
 
+\begin{lemma}[Provisional structural non-increase target for \texorpdfstring{$\Delta_{\mathrm{nd}}$}{Delta\_nd} under synchronized transport extension \textnormal{(OPEN BRIDGE; primary structural lemma under audit)}]
+\label{lem:b4-delta-structural-nonincrease}
+\placeholder{Primary structural lemma target for the current Stage~6 no-drift route. Proof is not provided in this manuscript version.}
+Work under one fixed synchronized package $\mathcal{H}_{\mathrm{S6}}^{\min}$.
+Fix a Stage-5 clause tuple $\Theta_{\mathrm{S5}}=(\theta_1,\dots,\theta_m)$, transfer class $\mathfrak{C}_{\mathrm{tr}}$ with contradiction-relevant subclass $\mathfrak{C}_{\mathrm{tr}}^{\mathrm{ctr}}\subseteq\mathfrak{C}_{\mathrm{tr}}$, transfer-position sets $U(C)\subseteq\mathcal{A}_{\mathrm{strip}}$, and clause-defect gauges $\delta_j^{(C)}:U(C)\to[0,\infty]$, with
+\[
+d_{\Theta}^{(C)}(u):=\max_{1\le j\le m}\delta_j^{(C)}(u),\qquad
+\Delta_{\mathrm{nd}}(C;\Theta_{\mathrm{S5}},\delta):=\sup_{u\in U(C)}d_{\Theta}^{(C)}(u).
+\]
+Assume $\preceq$ is the synchronized extension relation on $\mathfrak{C}_{\mathrm{tr}}$, where $C_1\preceq C_2$ means $C_2$ extends $C_1$ without changing the synchronized package, tuple type, or clause-gauge interpretation.
+The structural target assertion is
+\[
+\forall\,C_1,C_2\in\mathfrak{C}_{\mathrm{tr}},\qquad
+C_1\preceq C_2\Longrightarrow
+\Delta_{\mathrm{nd}}(C_2;\Theta_{\mathrm{S5}},\delta)\le
+\Delta_{\mathrm{nd}}(C_1;\Theta_{\mathrm{S5}},\delta).
+\]
+Intended interpretation for the no-drift route (not a proof claim): this monotonicity would supply the structural bridge from local-anchor defect initialization to classwise defect control on $\mathfrak{C}_{\mathrm{tr}}^{\mathrm{ctr}}$, which is then reformulated as endpoint-usable no-drift transport.
+\end{lemma}
+\noindent\emph{Feeds into:} \cref{lem:b4-first-delta-control}, then \cref{lem:stage6-first-concrete-no-drift}/\cref{lem:b4-admissibility-stability-transfer}, then \cref{thm:stage6-neutralizing-transport-uniformity}.
+
 \begin{lemma}[First control lemma target for the provisional defect functional \texorpdfstring{$\Delta_{\mathrm{nd}}$}{Delta\_nd} \textnormal{(OPEN BRIDGE; primary analytic entry point)}]
 \label{lem:b4-first-delta-control}
 \placeholder{Establishes the first precise analytic control statement in the Stage~6 stack: under $\mathcal{H}_{\mathrm{S6}}^{\min}$, for every contradiction-relevant transfer object $C\in\mathfrak{C}_{\mathrm{tr}}^{\mathrm{ctr}}\subseteq\mathfrak{C}_{\mathrm{tr}}$, with transfer-position set $U(C)\subseteq\mathcal{A}_{\mathrm{strip}}$, Stage-5 tuple $\Theta_{\mathrm{S5}}=(\theta_1,\dots,\theta_m)$, clause gauges $\delta_j^{(C)}:U(C)\to[0,\infty]$, and
@@ -113,15 +134,7 @@ one has
 \forall C\in\mathfrak{C}_{\mathrm{tr}}^{\mathrm{ctr}},\qquad
 \Delta_{\mathrm{nd}}(C;\Theta_{\mathrm{S5}},\delta)=0.
 \]
-Best current plausibility route (open structural hypothesis, not proved): non-increase of $\Delta_{\mathrm{nd}}$ under synchronized transport extension in $\mathfrak{C}_{\mathrm{tr}}$ under fixed $\mathcal{H}_{\mathrm{S6}}^{\min}$,
-\[
-C_1\preceq C_2\Longrightarrow
-\Delta_{\mathrm{nd}}(C_2;\Theta_{\mathrm{S5}},\delta)
-\le
-\Delta_{\mathrm{nd}}(C_1;\Theta_{\mathrm{S5}},\delta),
-\]
-combined with a base-anchor zero-defect initialization.
-Interpretation target: exact classwise no-drift on the contradiction-relevant transfer subclass. Depends on: B1 admissibility well-posedness, OP7--OP8 (with invoked OP1--OP6 where used), and AC1--AC6 continuation/interchange/uniformity controls. Why it matters: this is the first theorem-style control target on a concrete analytic quantity, and the structural non-increase hypothesis is the current best reason this classwise vanishing statement is believable before transport conclusions are rephrased as endpoint hypothesis persistence.}
+Interpretation target: exact classwise no-drift on the contradiction-relevant transfer subclass. Current primary structural support target is \cref{lem:b4-delta-structural-nonincrease} plus a base-anchor zero-defect initialization, both open. Depends on: B1 admissibility well-posedness, OP7--OP8 (with invoked OP1--OP6 where used), and AC1--AC6 continuation/interchange/uniformity controls. Why it matters: this is the first theorem-style control target on a concrete analytic quantity before transport conclusions are rephrased as endpoint hypothesis persistence.}
 \end{lemma}
 \noindent\emph{Feeds into:} \cref{lem:stage6-first-concrete-no-drift} and its ledger-aligned form \cref{lem:b4-admissibility-stability-transfer}, then \cref{lem:b4-neutralizing-transport-uniformity}.
 
@@ -165,6 +178,7 @@ The first executable draft theorem target is \cref{thm:stage6-first-subtarget-ad
 Within B4, its proof burden is grouped as:
 \begin{enumerate}
   \item \textbf{Contradiction assumption bookkeeping:} the off-line balanced assumption package described in \cref{thm:stage6-first-subtarget-admissibility} and aligned with the placeholder contradiction-route admissibility lemma below.
+  \item \textbf{Primary structural-property lemma burden:} \cref{lem:b4-delta-structural-nonincrease}, i.e. synchronized extension monotonicity target for $\Delta_{\mathrm{nd}}$ on $\mathfrak{C}_{\mathrm{tr}}$.
   \item \textbf{Core first analytic control lemma (current best first technical move):} \cref{lem:b4-first-delta-control}, i.e. classwise vanishing target for $\Delta_{\mathrm{nd}}$ on $\mathfrak{C}_{\mathrm{tr}}^{\mathrm{ctr}}$.
   \item \textbf{Core first transport reformulation:} \cref{lem:b4-admissibility-stability-transfer}, converting that defect control into endpoint-usable no-drift persistence of the full Stage-5 tuple.
   \item \textbf{Primary downstream neutralizing target:} \cref{lem:b4-neutralizing-transport-uniformity}, which aggregates that first lemma into theorem-usable contradiction enabling at transfer-reachable endpoints.

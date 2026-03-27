@@ -461,6 +461,7 @@ The manuscript now records one \emph{single best candidate structural property} 
 \]
 under the present architecture.
 Status: \textbf{open proof-planning hypothesis under audit}, not a proved property.
+Its primary lemma-style formulation is now the open target \cref{lem:b4-delta-structural-nonincrease} in \texttt{lemmas.tex}.
 
 \paragraph{Candidate structural property (current best, not proved).}
 \textbf{Non-increase under synchronized transport extension.}
@@ -472,12 +473,14 @@ C_1\preceq C_2\Longrightarrow
 \le
 \Delta_{\mathrm{nd}}(C_1;\Theta_{\mathrm{S5}},\delta).
 \]
-Equivalent composition-style wording (for composable synchronized segments $C_2\circ C_1$):
+\begin{remark}[Alternate wording only; not the primary lemma form]
+An alternate composition-style phrasing (for composable synchronized segments $C_2\circ C_1$) is:
 \[
 \Delta_{\mathrm{nd}}(C_2\circ C_1;\Theta_{\mathrm{S5}},\delta)
 \le
 \Delta_{\mathrm{nd}}(C_1;\Theta_{\mathrm{S5}},\delta).
 \]
+\end{remark}
 No claim is made that this property is already true, or that it is the final correct structure.
 
 \paragraph{What this property would depend on.}
@@ -500,7 +503,7 @@ The support logic would be:
 \begin{enumerate}
   \item establish a base anchor condition (defect zero at the local start configuration);
   \item iterate non-increase along each synchronized extension step in $\mathfrak{C}_{\mathrm{tr}}^{\mathrm{ctr}}$;
-  \item conclude classwise vanishing of $\Delta_{\mathrm{nd}}$ on contradiction-relevant transfer objects, yielding the statement targeted in \cref{lem:b4-first-delta-control} and then in \cref{lem:stage6-first-concrete-no-drift}.
+  \item conclude classwise vanishing of $\Delta_{\mathrm{nd}}$ on contradiction-relevant transfer objects, yielding first \cref{lem:b4-first-delta-control} and then \cref{lem:stage6-first-concrete-no-drift}.
 \end{enumerate}
 This is a plausibility path only, not a proof.
 
@@ -516,8 +519,8 @@ Even with this structural property, the manuscript would still need:
 \paragraph{Four-way distinction (to prevent burden conflation).}
 \begin{enumerate}
   \item \textbf{Quantity:} $\Delta_{\mathrm{nd}}$ is the provisional analytic defect quantity.
-  \item \textbf{First control lemma target:} \cref{lem:stage6-first-concrete-no-drift} aims to prove classwise vanishing on the contradiction-relevant transfer subclass.
-  \item \textbf{Candidate structural property making first control believable:} non-increase of $\Delta_{\mathrm{nd}}$ under synchronized transport extension (strategic, open).
+  \item \textbf{Primary structural-property lemma target:} \cref{lem:b4-delta-structural-nonincrease} states non-increase of $\Delta_{\mathrm{nd}}$ under synchronized transport extension (strategic, open).
+  \item \textbf{First control lemma target:} \cref{lem:b4-first-delta-control} aims to prove classwise vanishing on the contradiction-relevant transfer subclass.
   \item \textbf{Later theorem targets fed by that control:} first \cref{thm:stage6-neutralizing-transport-uniformity}, then downstream Stage~6 no-alternative-locus and master exclusion targets.
 \end{enumerate}
 
