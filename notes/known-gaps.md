@@ -163,7 +163,7 @@ This includes ambient-space/domain typing, closure/closability control, symmetry
 - If this bridge is not theorem-level, the contradiction step can invoke local uniqueness at an endpoint without proving that the same hypothesis tuple still holds there under $\mathcal{H}_{\mathrm{S6}}^{\min}$.
 - The current best candidate neutralizing result is the open theorem target `thm:stage6-neutralizing-transport-uniformity` (transport-uniformity contradiction enabler) in `manuscript/critical-line-argument.tex`.
 - Current classification of that neutralizing target: **genuinely mixed**, with **analytic dominant burden** and **operator-theoretic supporting burden** in the present first proving attempt.
-- Resolution of this highest-risk step requires that target (or an equivalent theorem) to prove no-drift transfer invariance with explicit OP7--OP8 and AC1--AC6 dependency control under one synchronized package.
+- Resolution of this highest-risk step requires controlling the first concrete defect quantity now named in the manuscript, $\Delta_{\mathrm{nd}}(C)=\sup_{u\in C}d_{\Theta}(u)$ (tuple-drift along $C\in\mathfrak{C}_{\mathrm{tr}}$), and proving its required no-drift vanishing property under explicit OP7--OP8 and AC1--AC6 dependency control in one synchronized package.
 - Even if that repair target is proved, downstream burdens remain open: no-new-off-line-branch closure, no-alternative-locus closure for all of $\mathcal{B}$, and the master Stage-6 exclusion theorem.
 
 ---

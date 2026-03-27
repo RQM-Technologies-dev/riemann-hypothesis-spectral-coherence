@@ -128,9 +128,9 @@ For dependency clarity, the intended theorem flow is:
 \Longrightarrow
 \underbrace{\text{contradiction-ready transfer exclusion target in \cref{thm:stage6-first-subtarget-admissibility}}}_{\text{current first contradiction target (open)}}
 \Longrightarrow
-\underbrace{\text{highest-risk no-drift transport step}}_{\text{open typing risk in the contradiction proof}}
+\underbrace{\text{first concrete analytic quantity }\Delta_{\mathrm{nd}}(C)=\sup_{u\in C}d_{\Theta}(u)}_{\text{no-drift tuple-defect functional (open)}}
 \Longrightarrow
-\underbrace{\text{first concrete lemma target \cref{lem:b4-admissibility-stability-transfer}}}_{\text{uniform no-drift Stage-5 tuple transport (open)}}
+\underbrace{\text{first concrete lemma target \cref{lem:stage6-first-concrete-no-drift}/\cref{lem:b4-admissibility-stability-transfer}}}_{\text{vanishing of }\Delta_{\mathrm{nd}}\text{ on contradiction-relevant transfer class (open)}}
 \Longrightarrow
 \underbrace{\text{neutralizing theorem target \cref{thm:stage6-neutralizing-transport-uniformity}}}_{\text{open contradiction enabler}}
 \Longrightarrow
@@ -165,8 +165,8 @@ This separation is enforced for audit clarity and theorem-status discipline.
 
 
 \paragraph{Single highest-risk dependency inside the first contradiction setup.}
-Within the first contradiction-style Stage~6 target, the present highest-risk dependency is the no-drift transport step, and the first concrete lemma target addressing that step is $\cref{lem:b4-admissibility-stability-transfer}$.
-This bridge is where the argument must show that hypotheses proved/assumed locally on $\mathcal{R}_{\mathrm{loc}}$ remain valid at transfer-reachable endpoints in $\mathcal{A}_{\mathrm{strip}}$ under the same package $\mathcal{H}_{\mathrm{S6}}^{\min}$.
+Within the first contradiction-style Stage~6 target, the present highest-risk dependency is the no-drift transport step, now expressed through the first concrete analytic defect quantity $\Delta_{\mathrm{nd}}(C)=\sup_{u\in C}d_{\Theta}(u)$ on $\mathfrak{C}_{\mathrm{tr}}$.
+The first concrete lemma target addressing that step is $\cref{lem:stage6-first-concrete-no-drift}$ (ledger-aligned with $\cref{lem:b4-admissibility-stability-transfer}$), which aims to force vanishing of this defect on the contradiction-relevant transfer class under the same package $\mathcal{H}_{\mathrm{S6}}^{\min}$.
 If this bridge fails or remains underjustified, the contradiction step is not yet well-typed: Stage-5 uniqueness is invoked at the endpoint without a theorem-level no-drift transfer justification.
 Accordingly, this bridge is the first proof-critical audit checkpoint in the Stage~6 dependency chain.
 The manuscript now names one best candidate neutralizing theorem target for this checkpoint:

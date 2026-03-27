@@ -389,6 +389,48 @@ It does not replace that neutralizing theorem; it is the first concrete proving 
 Open lemma target (not proved).
 \end{drafttheorem}
 
+\subsection*{First candidate analytic defect quantity for \cref{lem:stage6-first-concrete-no-drift} (formulation target only)}
+To make \cref{lem:stage6-first-concrete-no-drift} mathematically executable, the manuscript now fixes one first analytic object to control:
+\[
+\Delta_{\mathrm{nd}}(C):=\sup_{u\in C}\,d_{\Theta}(u).
+\]
+Here $C\in\mathfrak{C}_{\mathrm{tr}}$ is a transfer object, and $d_{\Theta}(u)$ is a nonnegative \emph{tuple-defect gauge} for the Stage-5 hypothesis tuple
+\[
+\Theta_{\mathrm{S5}}=(\theta_1,\dots,\theta_m).
+\]
+The gauge is defined abstractly at statement level by clausewise defects
+\(\delta_j(u)\ge 0\) with
+\[
+ d_{\Theta}(u):=\max_{1\le j\le m}\delta_j(u),
+\]
+where $\delta_j(u)=0$ means clause $\theta_j$ is satisfied at $u$ under the same synchronized package $\mathcal{H}_{\mathrm{S6}}^{\min}$.
+No finalized operator realization is assumed in this definition; it is an interface-level defect quantity.
+
+\paragraph{What data \texorpdfstring{$\Delta_{\mathrm{nd}}$}{Delta\_nd} depends on.}
+The quantity depends on: (i) the transfer class element $C\in\mathfrak{C}_{\mathrm{tr}}$, (ii) the synchronized Stage-5 tuple $\Theta_{\mathrm{S5}}$ transported from $\mathcal{R}_{\mathrm{loc}}$, and (iii) the defect gauges $\delta_j$ supplied by the OP/AC interface under $\mathcal{H}_{\mathrm{S6}}^{\min}$.
+
+\paragraph{Intended use property.}
+The useful theorem-level property is
+\[
+\Delta_{\mathrm{nd}}(C)=0\quad\text{for every transfer object used in the contradiction step},
+\]
+or, in weaker staged form, a uniform bound $\Delta_{\mathrm{nd}}(C)\le \varepsilon$ followed by a separate closure lemma that upgrades $\varepsilon\to 0$ under the same hypotheses.
+Either form is currently open.
+
+\paragraph{How this feeds into \cref{lem:stage6-first-concrete-no-drift}.}
+The lemma \cref{lem:stage6-first-concrete-no-drift} is the assertion that the relevant class satisfies vanishing no-drift defect:
+\(\Delta_{\mathrm{nd}}(C)=0\) uniformly in $C$.
+Thus the quantity is the analytic object; the lemma is the claim controlling it.
+
+\paragraph{Separation from downstream theorem targets.}
+Controlling $\Delta_{\mathrm{nd}}$ is not the neutralizing theorem itself.
+The downstream neutralizing target is \cref{thm:stage6-neutralizing-transport-uniformity}, which uses the no-drift control to make endpoint contradiction use theorem-typed on $\mathcal{B}_{\mathrm{tr}}$.
+That neutralizing target is still not the master Stage~6 endpoint \cref{thm:stage6-master-exclusion-target}.
+
+\paragraph{Status boundary.}
+$\Delta_{\mathrm{nd}}$ is introduced as a strategic audit object for proof work.
+Its adequacy and any vanishing/boundedness property remain open and conditional in the present manuscript version.
+
 \subsection*{Technical character classification of the current neutralizing result (audit judgment)}
 This subsection classifies \cref{thm:stage6-neutralizing-transport-uniformity} for proof-planning clarity.
 The classification is an audit judgment about current dependency structure.
