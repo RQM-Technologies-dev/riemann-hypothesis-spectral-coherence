@@ -1,27 +1,24 @@
-The Riemann Hypothesis (RH) asserts that every nontrivial zero of the Riemann zeta function $\zeta(s)$ lies on the critical line $\RePart(s)=\tfrac12$ within the critical strip $0<\RePart(s)<1$ \cite{Riemann1859,Titchmarsh1986,Edwards1974}. Establishing RH therefore requires two ingredients: a mechanism producing candidates for zeros and a proof that no zero can occur off the critical line.
-
-Classical analytic theory provides the meromorphic continuation of $\zeta$, the completed function
+The Riemann Hypothesis (RH) states that every nontrivial zero of $\zeta(s)$ has real part $\tfrac12$.
+This manuscript attempts a direct reduction built on one explicit function:
 \[
-\xi(s)=\tfrac12 s(s-1)\pi^{-s/2}\Gamma\!\left(\tfrac{s}{2}\right)\zeta(s),
+\Phi(s):=\Gamma(s)(1-s)\zeta(s),\qquad s\in\C.
 \]
-and the functional equation $\xi(s)=\xi(1-s)$ \cite{Titchmarsh1986,Edwards1974}. This gives a reflection symmetry of zeros across the line $\RePart(s)=\tfrac12$, together with conjugation symmetry across the real axis. These symmetries strongly constrain any zero set. They do not, by themselves, exclude symmetric pairs with $\RePart(s)\neq \tfrac12$. In particular, functional-equation symmetry is compatible with off-line quartets unless an additional exclusion mechanism is proved.
 
-This manuscript develops a proposed proof framework in which a symmetry component and a balance-functional component are combined. The argument attempts to show that a certain balance condition, formulated in the manuscript around the direct object $\Phi(s):=\Gamma(s)(1-s)\zeta(s)$ and tied to completed-function symmetries, can be sustained only when zeros are on the critical line. Earlier drafts used spectral-coherence language for related motivation; the current organization foregrounds the balance-functional formulation. The intended role of this additional structure is not to replace classical analysis, but to add a condition that would be violated by off-line zeros.
+The proof spine has three steps.
+First, in the critical strip $0<\RePart(s)<1$, show
+\[
+\Phi(s)=0\iff\zeta(s)=0.
+\]
+This is an elementary correspondence because $\Gamma(s)$ and $1-s$ are nonzero in that domain.
 
-The central burden of proof is therefore the off-line exclusion step. Concretely, one must prove that if a nontrivial zero has $\RePart(s)\neq \tfrac12$, then the associated symmetry orbit forces a failure of the proposed coherence/balance condition. Until this implication is established as a formal theorem under explicit hypotheses, the framework remains incomplete. Computational checks and consistency tests can support plausibility, but they do not substitute for this exclusion proof.
+Second, isolate the only substantial theorem target:
+\[
+\Phi(s)=0\Longrightarrow \RePart(s)=\tfrac12
+\quad (0<\RePart(s)<1).
+\]
+This implication is the central open bridge in the current draft.
 
-For mathematical audit, this introduction separates three layers used throughout:
-\begin{itemize}
-  \item \textbf{Established background:} standard facts about $\zeta$, $\xi$, analytic continuation, and zero symmetries from the classical literature \cite{Titchmarsh1986,Edwards1974}.
-  \item \textbf{Proposed architecture:} the manuscript-specific decomposition into symmetry, spectral, and reduction components intended to interact in a critical-line argument.
-  \item \textbf{Open bridges:} implications that are currently targets rather than proved theorems, especially the off-line exclusion implication described above.
-\end{itemize}
+Third, note the conditional reduction: if the implication above is proved, then RH follows immediately from the strip correspondence.
 
-\paragraph{Reviewer orientation.}
-For efficient audit, read Section~3 first for the formal theorem targets and established inputs, then Section~4 for the dependency-level proof architecture, and then Section~10 for the current list of open bridges requiring proof.
-Sections~6--8 provide the technical components used by that architecture.
-This draft should be read as a proposed proof framework under mathematical audit, not as a completed proof.
-
-The organization of the manuscript is as follows. Section~2 fixes definitions and notation. Section~3 states draft theorem targets together with established inputs. Section~4 gives the proof architecture and dependency structure. Section~5 records lemma-level dependencies and placeholders. Sections~6 and~7 treat the symmetry and spectral frameworks separately. Section~8 presents the critical-line reduction attempt, including where off-line exclusion is required. Section~9 discusses interpretation and scope. Section~10 lists limitations and unresolved bridges requiring proof.
-
-\auditnote{This introduction is intended as conservative orientation for expert review. It states the claimed objective and the main burden of proof without asserting that unresolved bridges are already settled.}
+The manuscript is intentionally audit-first.
+It distinguishes established setup from open burden, and it does not present heuristic or computational support as a substitute for proof.

@@ -10,8 +10,7 @@
 % Core mathematics
 \usepackage{amsmath,amssymb,amsthm,mathtools}
 
-% Tables and links
-\usepackage{booktabs}
+% Links
 \usepackage{xcolor}
 \usepackage[hidelinks]{hyperref}
 \usepackage[nameinlink,noabbrev]{cleveref}
@@ -25,7 +24,7 @@
 ]{biblatex}
 \addbibresource{references.bib}
 
-% Theorem environments (journal-friendly baseline)
+% Theorem environments
 \theoremstyle{plain}
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{lemma}[theorem]{Lemma}
@@ -35,14 +34,10 @@
 
 \theoremstyle{definition}
 \newtheorem{definition}[theorem]{Definition}
-\newtheorem{conjecture}[theorem]{Conjecture}
-\newtheorem{heuristic}[theorem]{Heuristic}
 \newtheorem{remark}[theorem]{Remark}
-\newtheorem{example}[theorem]{Example}
 
 % Draft status macros
 \newcommand{\placeholder}[1]{\textcolor{blue!60!black}{\textbf{[Placeholder: #1]}}}
-\newcommand{\openbridge}[1]{\textcolor{red!70!black}{\textbf{[Open bridge: #1]}}}
 \newcommand{\auditnote}[1]{\textcolor{orange!70!black}{\textbf{[Audit note: #1]}}}
 
 % Basic notation
@@ -52,8 +47,9 @@
 \newcommand{\RePart}{\operatorname{Re}}
 \newcommand{\ImPart}{\operatorname{Im}}
 
-\title{A Balance Functional Approach to the Riemann Hypothesis\\\large Manuscript Skeleton for Mathematical Audit}
-\author{John Garman Van Geem\\CEO / RQM Technologies\\ORCID: 0009-0002-4003-8452}
+\title{A Direct Proof Spine for the Riemann Hypothesis\\
+\large Proposed Proof Framework for Mathematical Audit}
+\author{John Garman Van Geem\\RQM Technologies\\ORCID: 0009-0002-4003-8452}
 \date{\today}
 
 \begin{document}
@@ -64,7 +60,7 @@
 \input{abstract}
 \end{abstract}
 
-\noindent\textbf{Status statement.} This document is a proposed proof framework and manuscript under review. It separates formal claims, heuristic guidance, and unresolved bridges requiring proof.
+\noindent\textbf{Status statement.} This manuscript is under review. It records established inputs, theorem targets, and unresolved bridges explicitly.
 
 \tableofcontents
 \newpage
@@ -75,37 +71,34 @@
 \section{Definitions and Notation}
 \input{definitions}
 
-\section{Main Results (Draft Targets and Established Inputs)}
+\section{Main Results}
 \input{main-results}
 
-\section{Proof Architecture}
+\section{Proof Spine}
 \input{proof-architecture}
 
-\section{Auxiliary Lemmas and Dependency Placeholders}
+\section{Minimal Lemmas}
 \input{lemmas}
 
-\section{Symmetry Framework}
+\section{Critical-Line Burden}
+\input{critical-line-argument}
+
+\section{Supporting Note: Classical Symmetry Boundary}
 \input{symmetry-framework}
 
-\section{Balance-Functional Framework}
+\section{Supporting Note: Spectral Context}
 \input{spectral-framework}
-
-\section{Critical-Line Argument}
-\input{critical-line-argument}
 
 \section{Discussion}
 \input{discussion}
 
-\section{Limitations and Open Bridges}
+\section{Limitations and Open Bridge}
 \input{limitations}
 
 \clearpage
 \appendix
 \section{Heuristic Intuition and Motivation}
 \input{appendix-a-intuition}
-
-\section{Operator-Setup Staging Notes (Provisional)}
-\input{appendix-b-operator-setup}
 
 \section{Computational Audit Notes}
 \input{appendix-c-computational-notes}
